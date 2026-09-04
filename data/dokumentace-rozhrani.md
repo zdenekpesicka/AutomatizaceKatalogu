@@ -41,6 +41,8 @@ Pole hodnot z `domovy`, `terenni`, `bezpeci`, `zdravi`, odpovídá záložkám n
 
 Příznak, že na tomto místě funguje i zdravotní péče uvnitř sociálního zařízení (typicky ošetřovatelský úsek domova pro seniory, evidovaný v registru ÚZIS zvlášť). **Není to samostatný záznam** — informace se připojuje k existujícímu místu, ne jako duplicitní položka v `sluzby[]`. V ukázkových datech viz `misto-79121519`.
 
+Nejde o zařízení, kam se dá jít, ale o zdravotnickou licenci, kterou musí mít domov, aby směl zaměstnávat sestry. Proto z ní **nikdy nevzniká místo ani položka v `sluzby[]`** — buď se připojí jako tento příznak k domovu, nebo, když domov v katalogu není (jeho zřizovatel neposkytuje seniorskou sociální službu, typicky domovy pro osoby se zdravotním postižením), do výstupu nejde vůbec. Důsledek pro vás: v záložce Zdraví jsou jen služby, které si klient může sám vybrat — hospice, LDN, domácí péče, nemocnice následné péče a rehabilitační ústavy — ne ošetřovatelské úseky domovů, které by tam jinak tvořily druhý pin pár desítek metrů od domova samotného.
+
 **Záměrně a trvale se nepromítá do `kategorie[]`.** `poskytujeZdravotniPeci: true` nikdy automaticky nepřidává `zdravi` do kategorií místa. Jde o interní ošetřovatelský úsek konkrétního domova, ne o samostatně vyhledávanou zdravotní službu typu hospic/LDN/domácí péče — proto zůstává jen jako doplňkový příznak (např. badge na kartě domova), místo se dál řadí jen podle svých vlastních služeb. Pokud budete chtít filtrovat i podle tohoto příznaku, udělejte to na frontendu nad `poskytujeZdravotniPeci`, ne přes `kategorie`.
 
 ## Souřadnice (`souradnice`)

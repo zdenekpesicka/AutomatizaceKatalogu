@@ -127,6 +127,18 @@ def kategorie_pro_uzis(druh_nazev: str) -> set[str]:
     return set(UZIS_DRUH_TO_KAT.get(druh_nazev, []))
 
 
+def ruian_klic(row: dict) -> int | None:
+    """Kod adresniho mista z UZIS radku jako int, nebo None kdyz chybi nebo neni cislo.
+    Tentyz klic, pod kterym jsou vedena MPSV mista, takze jde primo pouzit pro adresni shodu."""
+    ruian = row.get("ZZ_RUIAN_kod")
+    if not ruian:
+        return None
+    try:
+        return int(ruian)
+    except ValueError:
+        return None
+
+
 def mpsv_sluzba_to_output(s: dict, typ_kapacity_nazvy: dict, druhy_nazvy: dict) -> dict:
     # Kapacita zustava svazana s formou, ktera ji ma (oprava feedbacku vyvojare - viz mpsv.py).
     formy_out = [
@@ -255,16 +267,33 @@ def main() -> None:
         p["poskytujeZdravotniPeci"] = False
         p["uzis_sluzby"] = []
 
-    uzis_standalone: list[dict] = []
-    priznak_matched = 0
+    # CLAUDE.md 3.4 - "Zdravotni pece v ustavech socialni p." neni zarizeni, kam se da jit. Je to
+    # zdravotnicka licence, kterou musi mit domov, aby smel zamestnavat sestry, a UZIS ji eviduje
+    # zvlast na tez adrese. Nikdy z ni tedy nevznika misto ani polozka v sluzby[], jen priznak
+    # u domova. Nejdriv presna shoda ICO+RUIAN (organizacni identita), pak sdilena adresa; radek,
+    # ktery se nepripoji ani tak, do vystupu nejde vubec.
+    #
+    # Driv tyto radky pri neuspesnem parovani propadaly mezi bezne zaznamy, takze zakladaly
+    # samostatna mista v zalozce Zdravi (338 mist, ctvrtina zalozky) - typicky druhy pin par desitek
+    # metru od tehoz domova, ktery uz v katalogu byl z MPSV. Zaroven to bylo nekonzistentni: tataz
+    # situace koncila bud jako priznak, nebo jako samostatne misto, podle toho, jestli se povedlo
+    # sparovat ICO. Viz CLAUDE.md sekce 8.
+    priznak_ico = priznak_adresa = priznak_zahozeno = 0
     for row in priznaky:
         match = match_uzis_row(row, mpsv_index)
-        if match is not None:
-            places[match]["poskytujeZdravotniPeci"] = True
-            priznak_matched += 1
+        if match is None:
+            klic = ruian_klic(row)
+            match = klic if klic in places else None
+            if match is not None:
+                priznak_adresa += 1
         else:
-            uzis_standalone.append(row)
+            priznak_ico += 1
+        if match is None:
+            priznak_zahozeno += 1
+        else:
+            places[match]["poskytujeZdravotniPeci"] = True
 
+    uzis_standalone: list[dict] = []
     zaznam_matched = 0
     for row in zaznamy:
         match = match_uzis_row(row, mpsv_index)
@@ -275,9 +304,11 @@ def main() -> None:
             uzis_standalone.append(row)
 
     print(
-        f"  parovani: {priznak_matched}/{len(priznaky)} priznaku jako flag, "
-        f"{zaznam_matched}/{len(zaznamy)} zaznamu pripojeno jako dalsi sluzba"
+        f"  priznaky (zdravotni pece v ustavech): {priznak_ico} pripojeno pres ICO+RUIAN, "
+        f"{priznak_adresa} pres sdilenou adresu, {priznak_zahozeno} bez domova v katalogu "
+        f"(nejdou do vystupu, CLAUDE.md 3.4)"
     )
+    print(f"  zaznamy: {zaznam_matched}/{len(zaznamy)} pripojeno k MPSV mistu jako dalsi sluzba")
 
     # Oprava feedbacku vyvojare (bod 6): zaklad. jednotka je fyzicka adresa, ne registrace (CLAUDE.md 4.2).
     # Predchozi verze slucovala UZIS zaznamy s MPSV mistem jen pri shode ICO+RUIAN (organizacni identita).
@@ -287,13 +318,7 @@ def main() -> None:
     # Nyni se nejdriv zkusi adresni shoda (RUIAN kod), teprve zbytek zustava jako samostatna UZIS mista.
     uzis_groups: dict = {}
     for row in uzis_standalone:
-        ruian = row.get("ZZ_RUIAN_kod")
-        key = None
-        if ruian:
-            try:
-                key = int(ruian)
-            except ValueError:
-                key = None
+        key = ruian_klic(row)
         if key is None:
             key = ("no_kod_uzis", row["ZZ_misto_poskytovani_ID"])
         uzis_groups.setdefault(key, []).append(row)
@@ -437,12 +462,22 @@ def main() -> None:
         stare_pocet = stary_meta["pocetMist"]
         delta = abs(len(mista_out) - stare_pocet) / stare_pocet
         if delta > PRAH_ZMENY:
+            # Prah hlida rozbity zdroj, ne zamernou zmenu zpracovani. Kdyz zmenime pravidla na nasi
+            # strane (napr. odstraneni zdravotnickych licenci domovu podle 3.4), prah zabere taky,
+            # a bez teto vyjimky by takovou zmenu neslo publikovat vubec. Prepnout jde jen rucne -
+            # workflow prepinac nikdy nepredava, takze v automatice pojistka plati bez vyjimky.
+            if "--zamerna-velka-zmena" not in sys.argv:
+                print(
+                    f"POJISTKA: pocet mist se zmenil o {delta:.1%} ({stare_pocet} -> {len(mista_out)}), "
+                    f"limit je {PRAH_ZMENY:.0%}. NEPUBLIKUJI, zustava posledni platna verze.",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
             print(
-                f"POJISTKA: pocet mist se zmenil o {delta:.1%} ({stare_pocet} -> {len(mista_out)}), "
-                f"limit je {PRAH_ZMENY:.0%}. NEPUBLIKUJI, zustava posledni platna verze.",
+                f"UPOZORNENI: pocet mist se zmenil o {delta:.1%} ({stare_pocet} -> {len(mista_out)}), "
+                f"prah {PRAH_ZMENY:.0%} prekrocen vedome pres --zamerna-velka-zmena.",
                 file=sys.stderr,
             )
-            sys.exit(1)
 
     # CLAUDE.md 5.3 - porovnavat obsahem (hashem), ne datem, a soubor se nema ani prepsat,
     # kdyz je shodny. Proto se hash pocita a porovnava PRED zapisem, ne az git diffem po nem.

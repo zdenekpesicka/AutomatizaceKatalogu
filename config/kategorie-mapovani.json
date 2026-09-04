@@ -37,8 +37,8 @@
       "Léčebna pro dlouhodobě nemocné (LDN)": ["zdravi"],
       "Hospic": ["zdravi"],
       "Rehabilitační ústav": ["zdravi"],
-      "Zdravotní péče v ústavech sociální p.": ["zdravi"]
+      "Zdravotní péče v ústavech sociální p.": []
     },
-    "_pozn_zdravotni_pece_v_ustavech": "Tento druh musi zustat mezi klici, jinak by nesel vyrobit priznak poskytujeZdravotniPeci (CLAUDE.md 3.4) - pravidlo 'nikdy samostatny zaznam, jen priznak' je strukturalni a resi se v kodu, ne tady. Zarazeni do zalozky je ale otazka konfigurace: viz CLAUDE.md sekce 8, 338 techto zaznamu se nepodarilo pripojit k MPSV mistu a plni zalozku Zdravi jako by to byla samostatna zdravotnicka zarizeni."
+    "_pozn_zdravotni_pece_v_ustavech": "Tento druh musi zustat mezi klici, jinak by se vubec nenacetl a nesel by vyrobit priznak poskytujeZdravotniPeci. Prazdne pole kategorii je tu ale jen pro poradek: z tohoto druhu podle CLAUDE.md 3.4 nevznika misto ani polozka v sluzby[], takze se na zarazeni nikdy nedojde. Neni to zarizeni, kam se da jit, ale zdravotnicka licence domova. Pravidlo je strukturalni a resi se v build_katalog.py, ne tady - zmena hodnoty na ['zdravi'] by nic neudelala."
   }
 }

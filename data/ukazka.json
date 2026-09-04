@@ -414,24 +414,24 @@
       ]
     },
     {
-      "id": "misto-5094194",
-      "kodAdresnihoMista": 5094194,
+      "id": "misto-3482120",
+      "kodAdresnihoMista": 3482120,
       "adresa": {
-        "ulice": "M. J. Husa",
+        "ulice": "Kostelní",
         "cisloDomovni": null,
-        "cisloOrientacni": "1175/3",
-        "psc": "43401",
-        "obec": "Most",
-        "kodObce": "567027",
+        "cisloOrientacni": "93/11",
+        "psc": "59401",
+        "obec": "Velké Meziříčí",
+        "kodObce": "597007",
         "castObce": null,
-        "okres": "Most",
-        "kodOkresu": "CZ0425",
-        "kraj": "Ústecký kraj",
-        "kodKraje": "CZ042"
+        "okres": "Žďár nad Sázavou",
+        "kodOkresu": "CZ0635",
+        "kraj": "Kraj Vysočina",
+        "kodKraje": "CZ063"
       },
       "souradnice": {
-        "lat": 50.4885687,
-        "lng": 13.6498395
+        "lat": 49.3544498,
+        "lng": 16.0148033
       },
       "kategorie": [
         "zdravi"
@@ -439,24 +439,28 @@
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
-          "id": "uzis-182696",
+          "id": "uzis-182734",
           "zdroj": "UZIS",
-          "nazev": "POSEIDON Alzheimer domov s.r.o.",
+          "nazev": "Diecézní charita Brno, Oblastní chararita Žďár nad Sázavou",
           "poskytovatel": {
-            "nazev": "POSEIDON Alzheimer domov s.r.o.",
-            "ico": "24530719"
+            "nazev": "Diecézní charita Brno",
+            "ico": "44990260"
           },
           "druhSluzby": {
-            "kod": "354",
-            "nazev": "Zdravotní péče v ústavech sociální p."
+            "kod": "180",
+            "nazev": "Hospic"
           },
           "oborPece": "Všeobecná sestra",
           "kontakt": {
-            "weby": [],
-            "emaily": [
-              "poseidondomov@gmail.com"
+            "weby": [
+              "http://www.dchb.charita.cz"
             ],
-            "telefony": []
+            "emaily": [
+              "reditelstvi@brno.charita.cz"
+            ],
+            "telefony": [
+              "+420545426610"
+            ]
           }
         }
       ]

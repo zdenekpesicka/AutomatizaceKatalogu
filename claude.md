@@ -404,7 +404,7 @@ Podle sekce 5. Denní i měsíční workflow, prahové kontroly, validace, záka
 | Otázka | Stav |
 |---|---|
 | **Souřadnice chybí u 110 z 2 917 míst (3,8 %).** | Jde o adresní body, které MPSV eviduje, ale aktuální měsíční snapshot RÚIAN je nezná — registry se aktualizují v jiném rytmu. Ve výstupu `souradnice: {lat: null, lng: null}`, schéma to podporuje. Geokódování přes externí zdroj (Nominatim) bylo zvážené a zamítnuté kvůli přesnosti: dalo by ulici nebo obec, ne adresní bod. Počet klesá s každým měsíčním během RÚIAN, ne garantovaně na nulu. Vývojáři sdělit, ať to v UI ošetří jako dočasný stav. |
-| **Znění povinné citace ÚZIS.** | Licence CC BY 4.0 vyžaduje citaci na webu. Přesné znění je na stránce datové sady, zatím neopsané. Předat klientovi při předání (etapa 5, bod 6). |
+| **Umístění citací na webu klienta.** | Povinné uvedení zdroje se týká ÚZIS i ČÚZK, u obou CC BY 4.0 podle NKOD. Znění obou citací je dohledané a zapsané v `README.md`, sekce Zdroje a licence. Zbývá ověřit, že je vývojář na web skutečně umístil (etapa 5, bod 6). |
 | **327 míst nemá žádnou kategorii.** | Mapovací tabulka v 4.3 pokrývá 9 z 21 druhů sociálních služeb, které se u seniorů vyskytují. Nepokryté jsou hlavně odborné sociální poradenství, sociálně aktivizační služby pro seniory, centra denních služeb a sociální rehabilitace. Tato místa jsou ve výstupu se všemi údaji a `kategorie: []`, jen se nezobrazí v žádné záložce. Zařazení se posoudí zvlášť; mapování je v `config/kategorie-mapovani.json`, takže se doplní bez zásahu do kódu. |
 
 ### 8.2 Odchylky proti sekcím 2 a 3

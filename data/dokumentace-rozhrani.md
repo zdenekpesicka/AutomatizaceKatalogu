@@ -16,9 +16,18 @@ Verze schématu 1.0.0. Viz `schema/katalog.schema.json` a `data/katalog.json` �
 
 Jeden záznam v `mista[]` odpovídá jedné fyzické adrese (adresní bod RÚIAN), ne jedné registraci v registru. Na jedné adrese běžně sídlí víc služeb, případně od různých poskytovatelů (např. domov pro seniory jedné organizace a ambulantní poradna jiné organizace ve stejné budově) — proto `sluzby[]` je pole.
 
-`misto.id` je odvozené od `kodAdresnihoMista` (RÚIAN, `misto-<kod>`) a je stabilní mezi jednotlivými běhy — pokud se místo znovu objeví se stejnou adresou, dostane stejné ID. Pro malou část záznamů (u aktivních seniorských zařízení MPSV k 31. 8. 2026 cca 1,8 %) `kodAdresnihoMista` chybí; tyto záznamy mají náhradní stabilní ID `misto-bezadresy-<portalId>`. Obdobně místa vzniklá čistě ze zdravotnických dat ÚZIS mají ID `misto-uzis-<ID místa poskytování>`, případně `misto-uzis-bezadresy-<ID>`, pokud ani ÚZIS nemá RÚIAN kód.
+**`misto.id` je odvozené od `kodAdresnihoMista` (RÚIAN, `misto-<kod>`), a to vždy, bez ohledu na to, ze kterého registru záznam pochází.** Pokud se místo znovu objeví se stejnou adresou, dostane stejné ID — i když se mezitím změnilo složení služeb na té adrese. To je podstatné: když na adrese skončí poslední sociální registrace a zůstane jen zdravotnická (nebo naopak), **ID se nemění** a vy nemusíte nic přezakládat.
 
-**Slučování napříč zdroji je vždy podle adresy, ne podle poskytovatele.** Pokud ÚZIS záznam sdílí `kodAdresnihoMista` s existujícím MPSV místem, stane se další položkou v jeho `sluzby[]` (dostane `misto-<kód>` ID toho místa), i když jde o jiného poskytovatele (typicky nemocnice a zdravotní úsek v budově domova pro seniory). Samostatné `misto-uzis-*` vzniká jen tam, kde na dané adrese žádné MPSV místo není.
+Zbývají dva případy bez RÚIAN kódu, kde se ID odvodit nedá:
+
+| Situace | Tvar ID |
+|---|---|
+| Zařízení MPSV bez `kodAdresnihoMista` (cca 1,8 % aktivních) | `misto-bezadresy-<portalId>-<otisk názvu>` |
+| Místo jen z ÚZIS, které nemá RÚIAN kód ani tam | `misto-uzis-bezadresy-<ID místa poskytování>` |
+
+U prvního tvaru je název zařízení jediný rozlišovač, který registr nabízí — zařízení v MPSV nemá vlastní identifikátor. Když tedy MPSV název zařízení přepíše, dostane místo nové ID a ve `zmeny.json` se objeví jako odebrané a přidané. Týká se to řádově desítek míst z celého katalogu a spolehlivěji to nejde, dokud MPSV zařízením vlastní identifikátor nedá.
+
+**Slučování napříč zdroji je vždy podle adresy, ne podle poskytovatele.** Pokud ÚZIS záznam sdílí `kodAdresnihoMista` s existujícím MPSV místem, stane se další položkou v jeho `sluzby[]`, i když jde o jiného poskytovatele (typicky nemocnice a zdravotní úsek v budově domova pro seniory). Rozlišujte proto zdroj podle `sluzby[].zdroj`, ne podle tvaru ID — z ID to poznat nejde a záměrně nemá.
 
 I když se `misto.kodAdresnihoMista` v datech najde, souřadnice se u malé části adres (aktuálně cca 3 %) nepodařilo dohledat, protože RÚIAN je aktualizovaný měsíčně a mezitím mohl být adresní bod přečíslován — `souradnice.lat/lng` je pak `null`, jak popisuje sekce Souřadnice níže.
 

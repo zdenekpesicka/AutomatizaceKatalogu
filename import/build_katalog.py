@@ -10,6 +10,7 @@ import datetime
 import hashlib
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 
 import jsonschema
@@ -54,6 +55,24 @@ def souradnice_out(coords) -> dict:
         "lat": round(coords[0], SOURADNICE_DESETINNYCH_MIST),
         "lng": round(coords[1], SOURADNICE_DESETINNYCH_MIST),
     }
+
+
+def bezadresy_id(place_key) -> str:
+    """ID pro MPSV misto bez kodAdresnihoMista, tedy bez stabilniho RUIAN identifikatoru.
+
+    Musi nest cely seskupovaci klic z mpsv.build_place_groups, tj. ('no_kod', portalId, nazev).
+    Drive se pouzival jen portalId, takze vsechna bezadresni zarizeni jedne sluzby dostala shodne
+    ID - porusuje to CLAUDE.md 4.2 a fakticky to slucovalo ruzna mista do jednoho pinu (napr.
+    portalId 6569, Dohled na dosah z.s.: Valasske Mezirici, Praha 6, Plzen a Ostrava pod jednim ID).
+
+    Nazev je jediny rozlisovac, ktery je k dispozici - zarizeni v MPSV nema vlastni identifikator
+    (id, portalId i identifikator jsou u vsech null, overeno v datech). Dusledek: kdyz MPSV nazev
+    zarizeni prepise, ID se zmeni. To ale plati uz dnes, protoze podle nazvu se i seskupuje, takze
+    se tim nic nezhorsuje. Hashuje se, aby ID zustalo kratke a bez diakritiky a mezer.
+    """
+    _, portal_id, nazev = place_key
+    otisk = hashlib.sha1((nazev or "").encode("utf-8")).hexdigest()[:8]
+    return f"misto-bezadresy-{portal_id}-{otisk}"
 
 
 def nacti_datum_zdrojovych_dat() -> dict:
@@ -308,7 +327,7 @@ def main() -> None:
             misto_id = f"misto-{k}"
             coords = ruian_body.get(k)
         else:
-            misto_id = f"misto-bezadresy-{k[1]}"
+            misto_id = bezadresy_id(k)
             coords = None
 
         mista_out.append(
@@ -329,7 +348,16 @@ def main() -> None:
         rows_sorted = sorted(rows_, key=lambda r: r["ZZ_misto_poskytovani_ID"])
         first = rows_sorted[0]
         if isinstance(key, int):
-            misto_id = f"misto-uzis-{first['ZZ_misto_poskytovani_ID']}"
+            # ID se odvozuje od adresniho bodu bez ohledu na zdroj, stejne jako u MPSV mist vyse.
+            # Driv tato mista dostavala "misto-uzis-<ZZ_misto_poskytovani_ID>", i kdyz RUIAN kod
+            # mela (985 z 986 ho ma). To ale porusuje CLAUDE.md 4.2 o stabilnich ID: slozeni zdroju
+            # na jedne adrese se v case meni, a s nim se menilo i ID teze budovy. Realny priklad
+            # z behu 4.9.2026 - na adresnim bode 19824068 (Tabor) skoncila posledni socialni
+            # registrace, misto zustalo jen zdravotnicke a preklopilo se z "misto-19824068" na
+            # "misto-uzis-225450". V zmeny.json to vypada jako zanik jednoho mista a vznik jineho,
+            # takze druha strana zahodi zaznam a zalozi novy pro tutez budovu. Plati to i obracene:
+            # jakmile na kterekoli z tech 985 adres pribude socialni sluzba, ID by se preklopilo zpet.
+            misto_id = f"misto-{key}"
             kod_adm = key
         else:
             misto_id = f"misto-uzis-bezadresy-{first['ZZ_misto_poskytovani_ID']}"
@@ -364,6 +392,17 @@ def main() -> None:
     # ne ze by v CR nebyly zadne seniorske sluzby).
     if not mista_out:
         raise RuntimeError("Vystup je prazdny (0 mist) - NEPUBLIKUJI, jde o chybu zpracovani.")
+
+    # CLAUDE.md 4.2 - stabilni identifikatory. Duplicitni ID znamena, ze druha strana neumi zaznamy
+    # rozlisit a zmeny.json u nich ztraci smysl. Schema to neuhlida (mista[] nema uniqueItems a
+    # schema uz je odsouhlasene, nemenime ho), takze kontrola musi byt tady. Neni to teoreticka
+    # pojistka - do 4.9.2026 kolidovala 3 ID na 8 mistech.
+    pocty = Counter(m["id"] for m in mista_out)
+    duplicitni = sorted(mid for mid, n in pocty.items() if n > 1)
+    if duplicitni:
+        raise RuntimeError(
+            f"Duplicitni ID mist ({len(duplicitni)}): {duplicitni[:10]} - NEPUBLIKUJI."
+        )
 
     out = {"verzeSchematu": "1.0.0", "mista": mista_out}
 

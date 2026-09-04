@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/PLACEHOLDER/AutomatizaceKatalogu/main/schema/katalog.schema.json",
+  "title": "Katalog registrovaných služeb pro seniory",
+  "description": "Sjednocená data z RPSS (MPSV) a NRPZS (ÚZIS) pro katalog seniorských služeb. Základní jednotkou je místo (adresní bod), ne jednotlivá registrace.",
+  "type": "object",
+  "required": ["verzeSchematu", "mista"],
+  "additionalProperties": false,
+  "properties": {
+    "verzeSchematu": {
+      "type": "string",
+      "description": "Verze tohoto schématu, sémantické verzování (např. 1.0.0). Nekompatibilní změna zvyšuje major verzi.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "mista": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/misto" }
+    }
+  },
+  "$defs": {
+    "misto": {
+      "type": "object",
+      "required": ["id", "kodAdresnihoMista", "adresa", "souradnice", "kategorie", "poskytujeZdravotniPeci", "sluzby"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stabilní identifikátor místa. Odvozený od kódu adresního místa RÚIAN ('misto-<kodAdresnihoMista>'), neměnný mezi běhy. Pro místa bez RÚIAN kódu je použit náhradní stabilní tvar (viz dokumentace-rozhrani.md, řeší etapa 3)."
+        },
+        "kodAdresnihoMista": {
+          "type": ["integer", "null"],
+          "description": "Kód adresního místa RÚIAN. Null, pokud zdrojová data kód neobsahují (v MPSV datech k 31.8.2026 cca 2,4 % seniorských zařízení)."
+        },
+        "adresa": {
+          "type": ["object", "null"],
+          "description": "Null pouze u výjimečných záznamů bez jakékoli adresy (viz dokumentace).",
+          "additionalProperties": false,
+          "properties": {
+            "ulice": { "type": ["string", "null"] },
+            "cisloDomovni": { "type": ["integer", "null"] },
+            "cisloOrientacni": { "type": ["string", "null"] },
+            "psc": { "type": ["string", "null"] },
+            "obec": { "type": ["string", "null"], "description": "Textový název obce." },
+            "kodObce": { "type": ["string", "null"], "description": "Číselný kód obce ČSÚ/RÚIAN (např. 554782 pro Prahu). U míst ze zdroje MPSV z číselníku obcí, u míst čistě ze zdroje ÚZIS dohledaný přes RÚIAN (ZZ_RUIAN_kod), protože UZIS vlastní kód obce v datech nemá. Null jen výjimečně, když se RÚIAN bod nepodařilo dohledat (viz souřadnice)." },
+            "castObce": { "type": ["string", "null"] },
+            "okres": { "type": ["string", "null"], "description": "Textový název okresu." },
+            "kodOkresu": { "type": ["string", "null"], "description": "Kód okresu LAU 1 (např. CZ0100 pro Prahu, CZ020A pro Praha-západ)." },
+            "kraj": { "type": ["string", "null"], "description": "Textový název kraje." },
+            "kodKraje": { "type": ["string", "null"], "description": "Kód kraje NUTS 3 (např. CZ010 pro Prahu)." }
+          }
+        },
+        "souradnice": {
+          "type": "object",
+          "description": "WGS84. Pole je vždy přítomné; lat/lng jsou null, pokud se nepodařilo určit (nikdy vynechané pole).",
+          "required": ["lat", "lng"],
+          "additionalProperties": false,
+          "properties": {
+            "lat": { "type": ["number", "null"], "minimum": 48, "maximum": 52 },
+            "lng": { "type": ["number", "null"], "minimum": 12, "maximum": 19 }
+          }
+        },
+        "kategorie": {
+          "type": "array",
+          "description": "Kategorie odpovídající záložkám webu. Může být prázdné pole u služeb, jejichž druh mapovací tabulka zatím nepokrývá (viz CLAUDE.md sekce 8) - nejde o chybu.",
+          "items": { "type": "string", "enum": ["domovy", "terenni", "bezpeci", "zdravi"] },
+          "uniqueItems": true
+        },
+        "poskytujeZdravotniPeci": {
+          "type": "boolean",
+          "description": "True, pokud na tomto místě ÚZIS eviduje i 'Zdravotní péče v ústavech sociální péče' (typicky zdravotní úsek domova pro seniory). Nejde o samostatný záznam, jen o příznak u existujícího místa."
+        },
+        "sluzby": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/sluzba" }
+        }
+      }
+    },
+    "sluzba": {
+      "type": "object",
+      "required": ["id", "zdroj", "nazev", "poskytovatel", "druhSluzby", "kontakt"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stabilní identifikátor služby. 'mpsv-<portalId>' pro sociální službu, 'uzis-<ZZ_ID>' pro zdravotní službu."
+        },
+        "zdroj": { "type": "string", "enum": ["MPSV", "UZIS"] },
+        "nazev": { "type": "string" },
+        "poskytovatel": {
+          "type": "object",
+          "required": ["nazev", "ico"],
+          "additionalProperties": false,
+          "properties": {
+            "nazev": { "type": "string" },
+            "ico": {
+              "type": "string",
+              "description": "Vždy 8 znaků, jen číslice, čteno jako text (může mít vedoucí nulu).",
+              "pattern": "^[0-9]{8}$"
+            }
+          }
+        },
+        "druhSluzby": {
+          "type": "object",
+          "description": "U MPSV druhSocialniSluzby, u ÚZIS ZZ_druh_nazev.",
+          "required": ["kod", "nazev"],
+          "additionalProperties": false,
+          "properties": {
+            "kod": { "type": "string" },
+            "nazev": { "type": "string" }
+          }
+        },
+        "formy": {
+          "type": "array",
+          "description": "Jen u zdroje MPSV. Jedna položka za každou formu poskytování (amb/pob/ter), s vlastní registrovanou kapacitou. Služba může mít víc forem zároveň (např. odlehčovací služby pobytové i ambulantní) - kapacity jednotlivých forem se NIKDY nesčítají ani jinak neslučují, proto je kapacita u každé formy zvlášť, ne v jednom společném poli.",
+          "items": { "$ref": "#/$defs/formaSluzby" }
+        },
+        "oborPece": {
+          "type": ["string", "null"],
+          "description": "Jen u zdroje UZIS. Atomický obor péče (ZZ_obor_pece je v datech víceho hodnotové pole oddělené čárkou, zde vždy rozpadnuto na jeden obor - viz CLAUDE.md 3.3)."
+        },
+        "kontakt": {
+          "type": "object",
+          "required": ["weby", "emaily", "telefony"],
+          "additionalProperties": false,
+          "properties": {
+            "weby": { "type": "array", "items": { "type": "string" } },
+            "emaily": { "type": "array", "items": { "type": "string" } },
+            "telefony": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "datumPoskytovaniOd": { "type": ["string", "null"], "format": "date" },
+        "datumPoskytovaniDo": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "formaSluzby": {
+      "type": "object",
+      "required": ["forma", "kapacitaRegistrovana"],
+      "additionalProperties": false,
+      "properties": {
+        "forma": { "type": "string", "enum": ["amb", "pob", "ter"] },
+        "kapacitaRegistrovana": {
+          "type": "array",
+          "description": "Registrovaná maximální kapacita TÉTO formy, NE aktuálně volná místa - ta registr neobsahuje. Prázdné pole, pokud registr u této formy kapacitu neuvádí.",
+          "items": {
+            "type": "object",
+            "required": ["typ", "typNazev", "pocet"],
+            "additionalProperties": false,
+            "properties": {
+              "typ": { "type": "string", "enum": ["klient", "kontakt", "interv", "luzka", "hovor"] },
+              "typNazev": { "type": "string" },
+              "pocet": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

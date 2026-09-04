@@ -1,0 +1,19 @@
+{
+  "verzeSchematu": "1.0.0",
+  "hashKatalogu": "b3cc9e98829d67fd9664813bf37656e8b2f73a03ced95786d6f8bb0abbc435e6",
+  "pocetMist": 3252,
+  "pocetSluzeb": 4388,
+  "pocetMistPodleKategorie": {
+    "domovy": 811,
+    "terenni": 1282,
+    "bezpeci": 24,
+    "zdravi": 1238
+  },
+  "pocetMistBezKategorie": 327,
+  "pocetMistSPoskytovanimZdravotniPece": 421,
+  "datumZdrojovychDat": {
+    "mpsv": "2026-09-04",
+    "uzis": "2026-09-04",
+    "ruian": "2026-09-04"
+  }
+}

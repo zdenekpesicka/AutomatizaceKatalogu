@@ -1,0 +1,40 @@
+{
+  "_popis": "Mapovani druhu socialni sluzby (MPSV) a formy na kategorie webu. Rozhodovaci klic: (druhSocialniSluzby, forma) -> kategorie. Viz CLAUDE.md sekce 4.3 a sekce 8 (otevrena otazka o nepokrytych druzich).",
+  "_zdroj_pravidla": "CLAUDE.md sekce 4.3 - rozdeleni Domovy vs Terenni sluzby podle formy, ne podle druhu",
+  "socialniSluzby": [
+    {"druh": "DruhSocialniSluzby/13", "nazev": "domovy pro seniory", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"]}},
+    {"druh": "DruhSocialniSluzby/14", "nazev": "domovy se zvláštním režimem", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"]}},
+    {"druh": "DruhSocialniSluzby/11", "nazev": "týdenní stacionáře", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"]}},
+    {"druh": "DruhSocialniSluzby/15", "nazev": "chráněné bydlení", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"]}},
+    {"druh": "DruhSocialniSluzby/4", "nazev": "pečovatelská služba", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/3", "nazev": "osobní asistence", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/8", "nazev": "odlehčovací služby", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"], "FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/10", "nazev": "denní stacionáře", "kategorie": {"FormaSocialniSluzby/amb": ["terenni"], "FormaSocialniSluzby/ter": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/32", "nazev": "terénní programy", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/5", "nazev": "tísňová péče", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"]}}
+  ],
+  "_nepokryte_druhy_viz_claude_md_sekce_8": [
+    "DruhSocialniSluzby/1 odborné sociální poradenství (237 služeb)",
+    "DruhSocialniSluzby/29 sociálně aktivizační služby pro seniory a osoby se zdravotním postižením (85)",
+    "DruhSocialniSluzby/9 centra denních služeb (32)",
+    "DruhSocialniSluzby/33 sociální rehabilitace (23)",
+    "DruhSocialniSluzby/18 telefonická krizová pomoc (12)",
+    "DruhSocialniSluzby/30 sociálně terapeutické dílny (4)",
+    "DruhSocialniSluzby/6 průvodcovské a předčitatelské služby (4)",
+    "DruhSocialniSluzby/12 domovy pro osoby se zdravotním postižením (3)",
+    "DruhSocialniSluzby/23 krizová pomoc (3)",
+    "DruhSocialniSluzby/19 tlumočnické služby (1)",
+    "DruhSocialniSluzby/28 sociálně aktivizační služby pro rodiny s dětmi (1)"
+  ],
+  "uzisZdravi": {
+    "_popis": "Kategorie zdravi se plni v etape 2/3 z UZIS podle ZZ_druh_nazev a textoveho filtru pro hospice (viz CLAUDE.md 3.2).",
+    "relevantniDruhyZarizeni": [
+      "Domácí zdravotní péče",
+      "Nemocnice následné péče",
+      "Léčebna pro dlouhodobě nemocné (LDN)",
+      "Hospic",
+      "Rehabilitační ústav"
+    ],
+    "kategorie": ["zdravi"]
+  }
+}

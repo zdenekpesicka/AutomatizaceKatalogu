@@ -1,0 +1,58 @@
+name: Denni import (MPSV)
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r import/requirements.txt
+
+      - name: Zjisti aktualni mesic pro cache klic
+        id: mesic
+        run: echo "yyyymm=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+
+      # UZIS a RUIAN se aktualizuji jen mesicne (CLAUDE.md 5.1). Denni beh je proto nestahuje
+      # znovu, ale obnovi je z cache naplnene mesicnim workflow. Kdyby mesicni beh v danem
+      # mesici jeste neprobehl, restore-keys spadne zpet na posledni dostupnou (o mesic
+      # starsi) verzi - to je v souladu s tim, ze zdroje se stejne meni jen mesicne.
+      - name: Obnov UZIS/RUIAN z cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            _cache/nrpzs.csv
+            _cache/ruian_adr.zip
+            _cache/uzis_ruian_meta.json
+          key: uzis-ruian-${{ steps.mesic.outputs.yyyymm }}
+          restore-keys: |
+            uzis-ruian-
+
+      - name: Stahni MPSV
+        run: python import/stahni_zdroje.py --mpsv
+
+      - name: Sestav katalog
+        run: python import/build_katalog.py
+
+      - name: Commituj zmeny (jen pokud nejake jsou)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Zadna zmena v data/, commit se neprovadi."
+          else
+            git commit -m "Automaticky import: aktualizace dat MPSV"
+            git push
+          fi

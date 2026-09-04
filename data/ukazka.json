@@ -1,0 +1,2874 @@
+{
+  "verzeSchematu": "1.0.0",
+  "mista": [
+    {
+      "id": "misto-79121519",
+      "kodAdresnihoMista": 79121519,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": 125,
+        "cisloOrientacni": null,
+        "psc": "33501",
+        "obec": "Klášter",
+        "kodObce": "557897",
+        "castObce": "Klášter",
+        "okres": "Plzeň-jih",
+        "kodOkresu": "CZ0324",
+        "kraj": "Plzeňský kraj",
+        "kodKraje": "CZ032"
+      },
+      "souradnice": {
+        "lat": 49.4931577009478,
+        "lng": 13.59045324470543
+      },
+      "kategorie": [
+        "domovy",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": true,
+      "sluzby": [
+        {
+          "id": "mpsv-7583",
+          "zdroj": "MPSV",
+          "nazev": "Senevida Nepomuk",
+          "poskytovatel": {
+            "nazev": "ALZHEIMER HOME z.ú.",
+            "ico": "03593207"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 20
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-07-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.senevida.cz"
+            ],
+            "emaily": [
+              "info@senevida.cz"
+            ],
+            "telefony": [
+              "737 123 970"
+            ]
+          }
+        },
+        {
+          "id": "uzis-181227",
+          "zdroj": "UZIS",
+          "nazev": "Soukromá Ošetřovatelská Služba-SOS s.r.o.",
+          "poskytovatel": {
+            "nazev": "Soukromá Ošetřovatelská Služba-SOS s.r.o.",
+            "ico": "26363801"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": null,
+          "kontakt": {
+            "weby": [
+              "http://www.sos-plzen.cz"
+            ],
+            "emaily": [
+              "derner@hcare.cz"
+            ],
+            "telefony": [
+              "+420602277272"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-25965727",
+      "kodAdresnihoMista": 25965727,
+      "adresa": {
+        "ulice": "Podbrdská",
+        "cisloDomovni": 269,
+        "cisloOrientacni": null,
+        "psc": "26101",
+        "obec": "Příbram",
+        "kodObce": "539911",
+        "castObce": "Příbram V-Zdaboř",
+        "okres": "Příbram",
+        "kodOkresu": "CZ020B",
+        "kraj": "Středočeský kraj",
+        "kodKraje": "CZ020"
+      },
+      "souradnice": {
+        "lat": 49.67309236107921,
+        "lng": 13.989718155984878
+      },
+      "kategorie": [
+        "domovy",
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-4429",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčovací služby - Oblastní nemocnice  Příbram, a.s.",
+          "poskytovatel": {
+            "nazev": "Oblastní nemocnice Příbram, a. s.",
+            "ico": "27085031"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 24
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2012-02-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.nemocnicepribram.cz"
+            ],
+            "emaily": [
+              "reditelstvi@onp.cz"
+            ],
+            "telefony": [
+              "318 641 122",
+              "318 641 111",
+              "318 654 140"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-3443",
+          "zdroj": "MPSV",
+          "nazev": "Sociálně aktivizační služby pro seniory a OZP",
+          "poskytovatel": {
+            "nazev": "ALKA, o.p.s.",
+            "ico": "27240185"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/29",
+            "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 12
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 8
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2008-07-07",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.alkaops.cz"
+            ],
+            "emaily": [
+              "kancelar@alkaops.cz"
+            ],
+            "telefony": [
+              "318 654 701",
+              "725 312 147",
+              "725 314 518"
+            ]
+          }
+        },
+        {
+          "id": "uzis-47650",
+          "zdroj": "UZIS",
+          "nazev": "Oblastní nemocnice Příbram, a.s.",
+          "poskytovatel": {
+            "nazev": "Oblastní nemocnice Příbram, a.s.",
+            "ico": "27085031"
+          },
+          "druhSluzby": {
+            "kod": "105",
+            "nazev": "Nemocnice následné péče"
+          },
+          "oborPece": "angiologie",
+          "kontakt": {
+            "weby": [
+              "http://nemocnicepribram.cz"
+            ],
+            "emaily": [
+              "reditelstvi@onp.cz"
+            ],
+            "telefony": [
+              "+420318641123"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-31347118",
+      "kodAdresnihoMista": 31347118,
+      "adresa": {
+        "ulice": "Gen. R. Tesaříka",
+        "cisloDomovni": 86,
+        "cisloOrientacni": null,
+        "psc": "26101",
+        "obec": "Příbram",
+        "kodObce": "539911",
+        "castObce": "Příbram I",
+        "okres": "Příbram",
+        "kodOkresu": "CZ020B",
+        "kraj": "Středočeský kraj",
+        "kodKraje": "CZ020"
+      },
+      "souradnice": {
+        "lat": 49.69327686472715,
+        "lng": 14.012092117479602
+      },
+      "kategorie": [
+        "domovy",
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-4429",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčovací služby - Oblastní nemocnice Příbram",
+          "poskytovatel": {
+            "nazev": "Oblastní nemocnice Příbram, a. s.",
+            "ico": "27085031"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 24
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2012-02-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.nemocnicepribram.cz"
+            ],
+            "emaily": [
+              "reditelstvi@onp.cz"
+            ],
+            "telefony": [
+              "318 641 122",
+              "318 641 111",
+              "318 654 140"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-10291431",
+      "kodAdresnihoMista": 10291431,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": 6,
+        "cisloOrientacni": null,
+        "psc": "76834",
+        "obec": "Pačlavice",
+        "kodObce": "588849",
+        "castObce": "Pačlavice",
+        "okres": "Kroměříž",
+        "kodOkresu": "CZ0721",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.25772172090491,
+        "lng": 17.169175573497142
+      },
+      "kategorie": [
+        "domovy",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-34",
+          "zdroj": "MPSV",
+          "nazev": "Domov pro seniory",
+          "poskytovatel": {
+            "nazev": "Sociální služby Pačlavice, příspěvková organizace",
+            "ico": "75079771"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 31
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [],
+            "emaily": [
+              "radek.jaros@obecpaclavice.cz"
+            ],
+            "telefony": [
+              "573372012"
+            ]
+          }
+        },
+        {
+          "id": "uzis-94325",
+          "zdroj": "UZIS",
+          "nazev": "Sociální služby Pačlavice, příspěvková organizace",
+          "poskytovatel": {
+            "nazev": "Sociální služby Pačlavice, příspěvková organizace",
+            "ico": "75079771"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "kontakt": {
+            "weby": [
+              "http://socialnisluzby.obecpaclavice.cz"
+            ],
+            "emaily": [
+              "socialnisluzby@obecpaclavice.cz"
+            ],
+            "telefony": [
+              "+420573372012"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-uzis-262831",
+      "kodAdresnihoMista": 5094194,
+      "adresa": {
+        "ulice": "M. J. Husa",
+        "cisloDomovni": null,
+        "cisloOrientacni": "1175/3",
+        "psc": "43401",
+        "obec": "Most",
+        "kodObce": "567027",
+        "castObce": null,
+        "okres": "Most",
+        "kodOkresu": "CZ0425",
+        "kraj": "Ústecký kraj",
+        "kodKraje": "CZ042"
+      },
+      "souradnice": {
+        "lat": 50.488568735501,
+        "lng": 13.64983946308
+      },
+      "kategorie": [
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-182696",
+          "zdroj": "UZIS",
+          "nazev": "POSEIDON Alzheimer domov s.r.o.",
+          "poskytovatel": {
+            "nazev": "POSEIDON Alzheimer domov s.r.o.",
+            "ico": "24530719"
+          },
+          "druhSluzby": {
+            "kod": "354",
+            "nazev": "Zdravotní péče v ústavech sociální p."
+          },
+          "oborPece": "Všeobecná sestra",
+          "kontakt": {
+            "weby": [],
+            "emaily": [
+              "poseidondomov@gmail.com"
+            ],
+            "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-27173844",
+      "kodAdresnihoMista": 27173844,
+      "adresa": {
+        "ulice": "Čankovská",
+        "cisloDomovni": 1021,
+        "cisloOrientacni": "19",
+        "psc": "36005",
+        "obec": "Karlovy Vary",
+        "kodObce": "554961",
+        "castObce": "Rybáře",
+        "okres": "Karlovy Vary",
+        "kodOkresu": "CZ0412",
+        "kraj": "Karlovarský kraj",
+        "kodKraje": "CZ041"
+      },
+      "souradnice": {
+        "lat": 50.237518889765546,
+        "lng": 12.84941675263868
+      },
+      "kategorie": [
+        "bezpeci",
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-691",
+          "zdroj": "MPSV",
+          "nazev": "Agentura domácí péče LADARA o.p.s.",
+          "poskytovatel": {
+            "nazev": "Agentura domácí péče LADARA o.p.s.",
+            "ico": "26406608"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 18
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.ladara.eu"
+            ],
+            "emaily": [
+              "ladara@ladara.eu"
+            ],
+            "telefony": [
+              "777 143 124"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-3575",
+          "zdroj": "MPSV",
+          "nazev": "Agentura domácí péče LADARA o.p.s.",
+          "poskytovatel": {
+            "nazev": "Agentura domácí péče LADARA o.p.s.",
+            "ico": "26406608"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/5",
+            "nazev": "tísňová péče"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2008-12-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.ladara.eu"
+            ],
+            "emaily": [
+              "ladara@ladara.eu"
+            ],
+            "telefony": [
+              "777 143 124"
+            ]
+          }
+        },
+        {
+          "id": "uzis-136217",
+          "zdroj": "UZIS",
+          "nazev": "Pavla Andrejkivová - LADARA s.r.o.",
+          "poskytovatel": {
+            "nazev": "Pavla Andrejkivová - LADARA s.r.o.",
+            "ico": "26395134"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Ergoterapeut",
+          "kontakt": {
+            "weby": [
+              "http://www.ladara.eu"
+            ],
+            "emaily": [
+              "ladara.admin@seznam.cz"
+            ],
+            "telefony": [
+              "+420353563595"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-80030152",
+      "kodAdresnihoMista": 80030152,
+      "adresa": {
+        "ulice": "Husova třída",
+        "cisloDomovni": 840,
+        "cisloOrientacni": null,
+        "psc": "34562",
+        "obec": "Holýšov",
+        "kodObce": "553654",
+        "castObce": "Holýšov",
+        "okres": "Plzeň-jih",
+        "kodOkresu": "CZ0324",
+        "kraj": "Plzeňský kraj",
+        "kodKraje": "CZ032"
+      },
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-3410",
+          "zdroj": "MPSV",
+          "nazev": "Dílna U bunkru",
+          "poskytovatel": {
+            "nazev": "Centrum sociálních služeb Stod, příspěvková organizace",
+            "ico": "48333841"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/29",
+            "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 24
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2008-07-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.cssstod.eu"
+            ],
+            "emaily": [
+              "info@cssstod.eu"
+            ],
+            "telefony": [
+              "770 174 926"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-bezadresy-4674",
+      "kodAdresnihoMista": null,
+      "adresa": null,
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-4674",
+          "zdroj": "MPSV",
+          "nazev": "Domov Vlčí mák - Domov se zvláštním režimem",
+          "poskytovatel": {
+            "nazev": "Ústřední vojenská nemocnice - Vojenská fakultní nemocnice Praha",
+            "ico": "61383082"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/14",
+            "nazev": "domovy se zvláštním režimem"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 30
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2013-09-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.uvn.cz"
+            ],
+            "emaily": [
+              "Jana.Zoufala@uvn.cz"
+            ],
+            "telefony": [
+              "973 202 714"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-2937506",
+      "kodAdresnihoMista": 2937506,
+      "adresa": {
+        "ulice": "Máchova",
+        "cisloDomovni": 400,
+        "cisloOrientacni": null,
+        "psc": "25601",
+        "obec": "Benešov",
+        "kodObce": "529303",
+        "castObce": "Benešov",
+        "okres": "Benešov",
+        "kodOkresu": "CZ0201",
+        "kraj": "Středočeský kraj",
+        "kodKraje": "CZ020"
+      },
+      "souradnice": {
+        "lat": 49.786175430053675,
+        "lng": 14.679170370270644
+      },
+      "kategorie": [],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-3803",
+          "zdroj": "MPSV",
+          "nazev": "Nemocnice Rudolfa a Stefanie Benešov,a.s., nemocnice Středočeského kraje",
+          "poskytovatel": {
+            "nazev": "Nemocnice Rudolfa a Stefanie Benešov, a.s., nemocnice Středočeského kraje",
+            "ico": "27253236"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "interv",
+                  "typNazev": "Počet intervencí (30 min. jednání)",
+                  "pocet": 27
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2009-08-28",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.hospital-bn.cz"
+            ],
+            "emaily": [
+              "eva.lazanova@hospital-bn.cz"
+            ],
+            "telefony": [
+              "317 756 579",
+              "317 756 476"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-uzis-245290",
+      "kodAdresnihoMista": 24278017,
+      "adresa": {
+        "ulice": "Žerotínova",
+        "cisloDomovni": null,
+        "cisloOrientacni": "443",
+        "psc": "75701",
+        "obec": "Valašské Meziříčí",
+        "kodObce": "545058",
+        "castObce": null,
+        "okres": "Vsetín",
+        "kodOkresu": "CZ0723",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.47168875925,
+        "lng": 17.977070379749
+      },
+      "kategorie": [
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-176034",
+          "zdroj": "UZIS",
+          "nazev": "Diakonie Valašské Meziříčí",
+          "poskytovatel": {
+            "nazev": "Diakonie Valašské Meziříčí",
+            "ico": "73632783"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "kontakt": {
+            "weby": [
+              "valmez.diakonie.cz"
+            ],
+            "emaily": [
+              "info@diakonievm.cz"
+            ],
+            "telefony": [
+              "+420571629084"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-25928821",
+      "kodAdresnihoMista": 25928821,
+      "adresa": {
+        "ulice": "Vrbenská",
+        "cisloDomovni": 803,
+        "cisloOrientacni": null,
+        "psc": "75701",
+        "obec": "Valašské Meziříčí",
+        "kodObce": "545058",
+        "castObce": "Krásno nad Bečvou",
+        "okres": "Vsetín",
+        "kodOkresu": "CZ0723",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.47478285592737,
+        "lng": 17.97626565092574
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-6276",
+          "zdroj": "MPSV",
+          "nazev": "Osobní asistence",
+          "poskytovatel": {
+            "nazev": "Diakonie Valašské Meziříčí",
+            "ico": "73632783"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/3",
+            "nazev": "osobní asistence"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2020-01-01",
+          "datumPoskytovaniDo": "2026-12-31",
+          "kontakt": {
+            "weby": [
+              "www.diakonievm.cz"
+            ],
+            "emaily": [
+              "info@diakonievm.cz"
+            ],
+            "telefony": [
+              "571 629 084"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-6277",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčovací služby - terénní",
+          "poskytovatel": {
+            "nazev": "Diakonie Valašské Meziříčí",
+            "ico": "73632783"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2020-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.diakonievm.cz"
+            ],
+            "emaily": [
+              "info@diakonievm.cz"
+            ],
+            "telefony": [
+              "571 629 084"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-6281",
+          "zdroj": "MPSV",
+          "nazev": "Pečovatelská služba",
+          "poskytovatel": {
+            "nazev": "Diakonie Valašské Meziříčí",
+            "ico": "73632783"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 12
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2020-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.diakonievm.cz"
+            ],
+            "emaily": [
+              "info@diakonievm.cz"
+            ],
+            "telefony": [
+              "571 629 084"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-7005911",
+      "kodAdresnihoMista": 7005911,
+      "adresa": {
+        "ulice": "Pod Svatoborem",
+        "cisloDomovni": 56,
+        "cisloOrientacni": null,
+        "psc": "34201",
+        "obec": "Sušice",
+        "kodObce": "557153",
+        "castObce": "Sušice II",
+        "okres": "Klatovy",
+        "kodOkresu": "CZ0322",
+        "kraj": "Plzeňský kraj",
+        "kodKraje": "CZ032"
+      },
+      "souradnice": {
+        "lat": 49.230783947623564,
+        "lng": 13.515455777960806
+      },
+      "kategorie": [
+        "bezpeci",
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-4037",
+          "zdroj": "MPSV",
+          "nazev": "Sociálně aktivizační služby pro seniory a osoby se zdravotním postižením",
+          "poskytovatel": {
+            "nazev": "Sociální služby Města Sušice, příspěvková organizace",
+            "ico": "49207482"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/29",
+            "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 20
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2011-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.socialni-susice.cz"
+            ],
+            "emaily": [
+              "pecovatelskasluzba@socialni-susice.cz"
+            ],
+            "telefony": [
+              "376 526 693"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-4038",
+          "zdroj": "MPSV",
+          "nazev": "Sociální poradna",
+          "poskytovatel": {
+            "nazev": "Sociální služby Města Sušice, příspěvková organizace",
+            "ico": "49207482"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2011-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.socialni-susice.cz"
+            ],
+            "emaily": [
+              "pillerova@socialni-susice.cz"
+            ],
+            "telefony": [
+              "723 857 194"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-4039",
+          "zdroj": "MPSV",
+          "nazev": "Pečovatelská služba",
+          "poskytovatel": {
+            "nazev": "Sociální služby Města Sušice, příspěvková organizace",
+            "ico": "49207482"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 18
+                }
+              ]
+            },
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2011-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.socialni-susice.cz"
+            ],
+            "emaily": [
+              "pecovatelskasluzba@socialni-susice.cz"
+            ],
+            "telefony": [
+              "376 526 693",
+              "723 857 194"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-5014",
+          "zdroj": "MPSV",
+          "nazev": "Sociální služby Města Sušice, příspěvková organizace",
+          "poskytovatel": {
+            "nazev": "Sociální služby Města Sušice, příspěvková organizace",
+            "ico": "49207482"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/5",
+            "nazev": "tísňová péče"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2015-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.socialni-susice.cz"
+            ],
+            "emaily": [
+              "pecovatelskasluzba@socialni-susice.cz"
+            ],
+            "telefony": [
+              "376 526 693",
+              "723 857 194"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-12021075",
+      "kodAdresnihoMista": 12021075,
+      "adresa": {
+        "ulice": "Pod Strání",
+        "cisloDomovni": 467,
+        "cisloOrientacni": null,
+        "psc": "36452",
+        "obec": "Žlutice",
+        "kodObce": "555762",
+        "castObce": "Žlutice",
+        "okres": "Karlovy Vary",
+        "kodOkresu": "CZ0412",
+        "kraj": "Karlovarský kraj",
+        "kodKraje": "CZ041"
+      },
+      "souradnice": {
+        "lat": 50.0899772789965,
+        "lng": 13.167157463598567
+      },
+      "kategorie": [
+        "bezpeci",
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-1854",
+          "zdroj": "MPSV",
+          "nazev": "Pečovatelská služba",
+          "poskytovatel": {
+            "nazev": "Pečovatelská služba Žlutice, příspěvková organizace",
+            "ico": "70891079"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.pszlutice.cz"
+            ],
+            "emaily": [
+              "reditel@pszlutice.cz"
+            ],
+            "telefony": [
+              "725 958 988",
+              "353 393 269"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-6643",
+          "zdroj": "MPSV",
+          "nazev": "Tísňová péče",
+          "poskytovatel": {
+            "nazev": "Pečovatelská služba Žlutice, příspěvková organizace",
+            "ico": "70891079"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/5",
+            "nazev": "tísňová péče"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2022-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.pszlutice.cz"
+            ],
+            "emaily": [
+              "reditel@pszlutice.cz"
+            ],
+            "telefony": [
+              "725 958 988",
+              "353 393 269"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-7388",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčovací služby",
+          "poskytovatel": {
+            "nazev": "Pečovatelská služba Žlutice, příspěvková organizace",
+            "ico": "70891079"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.pszlutice.cz"
+            ],
+            "emaily": [
+              "reditel@pszlutice.cz"
+            ],
+            "telefony": [
+              "353393269",
+              "725958988"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-11867906",
+      "kodAdresnihoMista": 11867906,
+      "adresa": {
+        "ulice": "Nemocniční",
+        "cisloDomovni": 2272,
+        "cisloOrientacni": "54",
+        "psc": "35201",
+        "obec": "Aš",
+        "kodObce": "554499",
+        "castObce": "Aš",
+        "okres": "Cheb",
+        "kodOkresu": "CZ0411",
+        "kraj": "Karlovarský kraj",
+        "kodKraje": "CZ041"
+      },
+      "souradnice": {
+        "lat": 50.223070986396024,
+        "lng": 12.202473613842772
+      },
+      "kategorie": [
+        "domovy",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-4951",
+          "zdroj": "MPSV",
+          "nazev": "Domov pro seniory Carvac s.r.o.",
+          "poskytovatel": {
+            "nazev": "CARVAC s. r. o.",
+            "ico": "63504260"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 32
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2014-03-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.carvac.cz"
+            ],
+            "emaily": [
+              "ldn@carvac.cz",
+              "dps@carvac.cz"
+            ],
+            "telefony": [
+              "354 403 131",
+              "354 403 120"
+            ]
+          }
+        },
+        {
+          "id": "uzis-40705",
+          "zdroj": "UZIS",
+          "nazev": "CARVAC s.r.o., LDN",
+          "poskytovatel": {
+            "nazev": "CARVAC s.r.o.",
+            "ico": "63504260"
+          },
+          "druhSluzby": {
+            "kod": "110",
+            "nazev": "Léčebna pro dlouhodobě nemocné (LDN)"
+          },
+          "oborPece": null,
+          "kontakt": {
+            "weby": [
+              "http://www.carvac.cz"
+            ],
+            "emaily": [
+              "ldn@carvac.cz"
+            ],
+            "telefony": [
+              "+420354403120"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-25600273",
+      "kodAdresnihoMista": 25600273,
+      "adresa": {
+        "ulice": "Žerotínova",
+        "cisloDomovni": 319,
+        "cisloOrientacni": "21",
+        "psc": "75701",
+        "obec": "Valašské Meziříčí",
+        "kodObce": "545058",
+        "castObce": "Valašské Meziříčí",
+        "okres": "Vsetín",
+        "kodOkresu": "CZ0723",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.47162080494042,
+        "lng": 17.976640646639982
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-6279",
+          "zdroj": "MPSV",
+          "nazev": "Denní stacionář Dobromysl",
+          "poskytovatel": {
+            "nazev": "Diakonie Valašské Meziříčí",
+            "ico": "73632783"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/10",
+            "nazev": "denní stacionáře"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 12
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2020-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.diakonievm.cz"
+            ],
+            "emaily": [
+              "info@diakonievm.cz"
+            ],
+            "telefony": [
+              "571 629 084"
+            ]
+          }
+        },
+        {
+          "id": "uzis-137453",
+          "zdroj": "UZIS",
+          "nazev": "Diakonie Valašské Meziříčí - hospic CITADELA",
+          "poskytovatel": {
+            "nazev": "Diakonie Valašské Meziříčí",
+            "ico": "73632783"
+          },
+          "druhSluzby": {
+            "kod": "180",
+            "nazev": "Hospic"
+          },
+          "oborPece": "paliativní medicína",
+          "kontakt": {
+            "weby": [
+              "valmez.diakonie.cz"
+            ],
+            "emaily": [
+              "info@diakonievm.cz"
+            ],
+            "telefony": [
+              "+420571629084"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-24277789",
+      "kodAdresnihoMista": 24277789,
+      "adresa": {
+        "ulice": "J. K. Tyla",
+        "cisloDomovni": 418,
+        "cisloOrientacni": null,
+        "psc": "75701",
+        "obec": "Valašské Meziříčí",
+        "kodObce": "545058",
+        "castObce": "Valašské Meziříčí",
+        "okres": "Vsetín",
+        "kodOkresu": "CZ0723",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.4634361573625,
+        "lng": 17.97135335321193
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-6281",
+          "zdroj": "MPSV",
+          "nazev": "Pečovatelská služba",
+          "poskytovatel": {
+            "nazev": "Diakonie Valašské Meziříčí",
+            "ico": "73632783"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 12
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2020-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.diakonievm.cz"
+            ],
+            "emaily": [
+              "info@diakonievm.cz"
+            ],
+            "telefony": [
+              "571 629 084"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-18660738",
+      "kodAdresnihoMista": 18660738,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": 1,
+        "cisloOrientacni": null,
+        "psc": "67560",
+        "obec": "Myslibořice",
+        "kodObce": "591190",
+        "castObce": "Myslibořice",
+        "okres": "Třebíč",
+        "kodOkresu": "CZ0634",
+        "kraj": "Kraj Vysočina",
+        "kodKraje": "CZ063"
+      },
+      "souradnice": {
+        "lat": 49.10262082560443,
+        "lng": 15.983161374030407
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": true,
+      "sluzby": [
+        {
+          "id": "mpsv-4",
+          "zdroj": "MPSV",
+          "nazev": "Diakonie ČCE - středisko v Myslibořicích",
+          "poskytovatel": {
+            "nazev": "Diakonie ČCE - středisko v Myslibořicích",
+            "ico": "00839345"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 68
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "1992-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.domovmysliborice.cz"
+            ],
+            "emaily": [
+              "diakonie@domovmysliborice.cz"
+            ],
+            "telefony": [
+              "568 834 931"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-8459932",
+      "kodAdresnihoMista": 8459932,
+      "adresa": {
+        "ulice": "Štefánikova",
+        "cisloDomovni": 1301,
+        "cisloOrientacni": "4",
+        "psc": "74221",
+        "obec": "Kopřivnice",
+        "kodObce": "599565",
+        "castObce": "Kopřivnice",
+        "okres": "Nový Jičín",
+        "kodOkresu": "CZ0804",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": 49.595558886685744,
+        "lng": 18.145609234367704
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-3768",
+          "zdroj": "MPSV",
+          "nazev": "THERÁPON 98, a.s.",
+          "poskytovatel": {
+            "nazev": "THERÁPON 98, a. s.",
+            "ico": "25399195"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2003-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.therapon98.cz"
+            ],
+            "emaily": [
+              "therapon98@therapon98.cz"
+            ],
+            "telefony": [
+              "556 870 111"
+            ]
+          }
+        },
+        {
+          "id": "uzis-106382",
+          "zdroj": "UZIS",
+          "nazev": "THERÁPON 98, a.s.",
+          "poskytovatel": {
+            "nazev": "THERÁPON 98, a.s.",
+            "ico": "25399195"
+          },
+          "druhSluzby": {
+            "kod": "105",
+            "nazev": "Nemocnice následné péče"
+          },
+          "oborPece": "alergologie a klinická imunologie",
+          "kontakt": {
+            "weby": [
+              "http://www.therapon98.cz"
+            ],
+            "emaily": [
+              "therapon98@therapon98.cz"
+            ],
+            "telefony": [
+              "+420556870111"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-3787320",
+      "kodAdresnihoMista": 3787320,
+      "adresa": {
+        "ulice": "U Hřiště",
+        "cisloDomovni": 552,
+        "cisloOrientacni": null,
+        "psc": "59442",
+        "obec": "Měřín",
+        "kodObce": "596116",
+        "castObce": "Měřín",
+        "okres": "Žďár nad Sázavou",
+        "kodOkresu": "CZ0635",
+        "kraj": "Kraj Vysočina",
+        "kodKraje": "CZ063"
+      },
+      "souradnice": {
+        "lat": 49.39262973359758,
+        "lng": 15.88651210442844
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-6",
+          "zdroj": "MPSV",
+          "nazev": "Městys Měřín - penzion",
+          "poskytovatel": {
+            "nazev": "Městys Měřín",
+            "ico": "00294799"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "1993-10-06",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.merin.cz"
+            ],
+            "emaily": [
+              "dps@merin.cz"
+            ],
+            "telefony": [
+              "564109158"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-bezadresy-5473",
+      "kodAdresnihoMista": null,
+      "adresa": null,
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-5473",
+          "zdroj": "MPSV",
+          "nazev": "Domov Vlčí mák - Domov pro seniory",
+          "poskytovatel": {
+            "nazev": "Ústřední vojenská nemocnice - Vojenská fakultní nemocnice Praha",
+            "ico": "61383082"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 49
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2016-04-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.uvn.cz"
+            ],
+            "emaily": [
+              "lenka.gutova@uvn.cz"
+            ],
+            "telefony": [
+              "973 202 714"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-2554674",
+      "kodAdresnihoMista": 2554674,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": 28,
+        "cisloOrientacni": null,
+        "psc": "29430",
+        "obec": "Niměřice",
+        "kodObce": "571121",
+        "castObce": "Dolní Cetno",
+        "okres": "Mladá Boleslav",
+        "kodOkresu": "CZ0207",
+        "kraj": "Středočeský kraj",
+        "kodKraje": "CZ020"
+      },
+      "souradnice": {
+        "lat": 50.40666627138778,
+        "lng": 14.802452403374824
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": true,
+      "sluzby": [
+        {
+          "id": "mpsv-7",
+          "zdroj": "MPSV",
+          "nazev": "Domov Dolní Cetno, poskytovatel sociálních služeb",
+          "poskytovatel": {
+            "nazev": "Domov Dolní Cetno, poskytovatel sociálních služeb",
+            "ico": "00874728"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 48
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.dolnicetno.cz"
+            ],
+            "emaily": [
+              "ddcetno@seznam.cz"
+            ],
+            "telefony": [
+              "326356216"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-20946911",
+      "kodAdresnihoMista": 20946911,
+      "adresa": {
+        "ulice": "Bergmannova",
+        "cisloDomovni": 195,
+        "cisloOrientacni": null,
+        "psc": "35604",
+        "obec": "Dolní Rychnov",
+        "kodObce": "538591",
+        "castObce": "Dolní Rychnov",
+        "okres": "Sokolov",
+        "kodOkresu": "CZ0413",
+        "kraj": "Karlovarský kraj",
+        "kodKraje": "CZ041"
+      },
+      "souradnice": {
+        "lat": 50.162039454133755,
+        "lng": 12.636645186130263
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-2491",
+          "zdroj": "MPSV",
+          "nazev": "VILA MARIA - domov pro seniory",
+          "poskytovatel": {
+            "nazev": "DOP - HC s.r.o.",
+            "ico": "26356589"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 20
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-09-10",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://dop-hc.cz"
+            ],
+            "emaily": [
+              "hajna@dop-hc.cz",
+              "info@dop-hc.cz"
+            ],
+            "telefony": [
+              "352 678 335",
+              "352 678 334"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-2493",
+          "zdroj": "MPSV",
+          "nazev": "VILA MARIA - domov se zvláštním režimem",
+          "poskytovatel": {
+            "nazev": "DOP - HC s.r.o.",
+            "ico": "26356589"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/14",
+            "nazev": "domovy se zvláštním režimem"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 29
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-09-10",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.dop-hc.cz"
+            ],
+            "emaily": [
+              "info@dop-hc.cz",
+              "cockova@dop-hc.cz",
+              "kutheil@dop-hc.cz"
+            ],
+            "telefony": [
+              "352 628 698",
+              "739 457 574",
+              "731 010 002",
+              "352 678 334"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-22373284",
+      "kodAdresnihoMista": 22373284,
+      "adresa": {
+        "ulice": "Šimůnkova",
+        "cisloDomovni": 1600,
+        "cisloOrientacni": "5",
+        "psc": "18200",
+        "obec": "Praha",
+        "kodObce": "554782",
+        "castObce": "Kobylisy",
+        "okres": null,
+        "kodOkresu": null,
+        "kraj": "Hlavní město Praha",
+        "kodKraje": "CZ010"
+      },
+      "souradnice": {
+        "lat": 50.13409026069537,
+        "lng": 14.471252014496226
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-3105",
+          "zdroj": "MPSV",
+          "nazev": "Gerontologické centrum",
+          "poskytovatel": {
+            "nazev": "Gerontologické centrum",
+            "ico": "45250022"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/10",
+            "nazev": "denní stacionáře"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 21
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "1996-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.gerontocentrum.cz"
+            ],
+            "emaily": [
+              "iva.holmerova@gerontocentrum.cz"
+            ],
+            "telefony": [
+              "286 883 676"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-3864",
+          "zdroj": "MPSV",
+          "nazev": "Gerontologické centrum",
+          "poskytovatel": {
+            "nazev": "Gerontologické centrum",
+            "ico": "45250022"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/3",
+            "nazev": "osobní asistence"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 40
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2009-10-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.gerontocentrum.cz"
+            ],
+            "emaily": [
+              "iva.holmerova@gerontocentrum.cz"
+            ],
+            "telefony": [
+              "286 883 676"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-3282",
+          "zdroj": "MPSV",
+          "nazev": "Respitní péče České alzheimerovské společnosti",
+          "poskytovatel": {
+            "nazev": "Česká alzheimerovská společnost, o.p.s.",
+            "ico": "66000971"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 30
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.alzheimer.cz"
+            ],
+            "emaily": [
+              "info@alzheimer.cz"
+            ],
+            "telefony": [
+              "283 880 346"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-3283",
+          "zdroj": "MPSV",
+          "nazev": "Konzultace České alzheimerovské společnosti",
+          "poskytovatel": {
+            "nazev": "Česká alzheimerovská společnost, o.p.s.",
+            "ico": "66000971"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "interv",
+                  "typNazev": "Počet intervencí (30 min. jednání)",
+                  "pocet": 3000
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.alzheimer.cz"
+            ],
+            "emaily": [
+              "info@alzheimer.cz"
+            ],
+            "telefony": [
+              "283 880 346"
+            ]
+          }
+        },
+        {
+          "id": "uzis-137958",
+          "zdroj": "UZIS",
+          "nazev": "Gerontologické centrum",
+          "poskytovatel": {
+            "nazev": "Gerontologické centrum",
+            "ico": "45250022"
+          },
+          "druhSluzby": {
+            "kod": "105",
+            "nazev": "Nemocnice následné péče"
+          },
+          "oborPece": "Fyzioterapeut",
+          "kontakt": {
+            "weby": [
+              "http://www.gerontocentrum.cz"
+            ],
+            "emaily": [],
+            "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-2660920",
+      "kodAdresnihoMista": 2660920,
+      "adresa": {
+        "ulice": "Komenského",
+        "cisloDomovni": 907,
+        "cisloOrientacni": null,
+        "psc": "67602",
+        "obec": "Moravské Budějovice",
+        "kodObce": "591181",
+        "castObce": "Moravské Budějovice",
+        "okres": "Třebíč",
+        "kodOkresu": "CZ0634",
+        "kraj": "Kraj Vysočina",
+        "kodKraje": "CZ063"
+      },
+      "souradnice": {
+        "lat": 49.045693347782255,
+        "lng": 15.810451680219197
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": true,
+      "sluzby": [
+        {
+          "id": "mpsv-17",
+          "zdroj": "MPSV",
+          "nazev": "Dům sv. Antonína",
+          "poskytovatel": {
+            "nazev": "Dům sv. Antonína",
+            "ico": "00394190"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 84
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "1992-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.dsvamb.cz"
+            ],
+            "emaily": [
+              "domov@dsvamb.cz"
+            ],
+            "telefony": [
+              "568420061"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-bezadresy-7470",
+      "kodAdresnihoMista": null,
+      "adresa": null,
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7470",
+          "zdroj": "MPSV",
+          "nazev": "Dům sv. Antonína",
+          "poskytovatel": {
+            "nazev": "Dům sv. Antonína",
+            "ico": "00394190"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/10",
+            "nazev": "denní stacionáře"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 20
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-04-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.dsvamb.cz"
+            ],
+            "emaily": [
+              "domov@dsvamb.cz"
+            ],
+            "telefony": [
+              "568420061"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-20569726",
+      "kodAdresnihoMista": 20569726,
+      "adresa": {
+        "ulice": "Palackého",
+        "cisloDomovni": 129,
+        "cisloOrientacni": null,
+        "psc": "73801",
+        "obec": "Frýdek-Místek",
+        "kodObce": "598003",
+        "castObce": "Místek",
+        "okres": "Frýdek-Místek",
+        "kodOkresu": "CZ0802",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": 49.674508263629924,
+        "lng": 18.343697965099004
+      },
+      "kategorie": [],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-18",
+          "zdroj": "MPSV",
+          "nazev": "Občanská poradna",
+          "poskytovatel": {
+            "nazev": "Centrum nové naděje z. ú.",
+            "ico": "70632031"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "interv",
+                  "typNazev": "Počet intervencí (30 min. jednání)",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2001-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.cnnfm.cz"
+            ],
+            "emaily": [
+              "cnnfm@cnnfm.cz"
+            ],
+            "telefony": [
+              "773 173 604"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-10609695",
+      "kodAdresnihoMista": 10609695,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": 95,
+        "cisloOrientacni": null,
+        "psc": "79803",
+        "obec": "Plumlov",
+        "kodObce": "589896",
+        "castObce": "Soběsuky",
+        "okres": "Prostějov",
+        "kodOkresu": "CZ0713",
+        "kraj": "Olomoucký kraj",
+        "kodKraje": "CZ071"
+      },
+      "souradnice": {
+        "lat": 49.46329005003802,
+        "lng": 16.99809229671271
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": true,
+      "sluzby": [
+        {
+          "id": "mpsv-25",
+          "zdroj": "MPSV",
+          "nazev": "Domov pro seniory Soběsuky, příspěvková organizace",
+          "poskytovatel": {
+            "nazev": "Domov pro seniory Soběsuky, příspěvková organizace",
+            "ico": "70939284"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 55
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.dpssobesuky.cz"
+            ],
+            "emaily": [
+              "dps@dpssobesuky.cz"
+            ],
+            "telefony": [
+              "582 394 025"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-17897483",
+      "kodAdresnihoMista": 17897483,
+      "adresa": {
+        "ulice": "Rozcestí",
+        "cisloDomovni": 798,
+        "cisloOrientacni": "9",
+        "psc": "40007",
+        "obec": "Ústí nad Labem",
+        "kodObce": "554804",
+        "castObce": "Krásné Březno",
+        "okres": "Ústí nad Labem",
+        "kodOkresu": "CZ0427",
+        "kraj": "Ústecký kraj",
+        "kodKraje": "CZ042"
+      },
+      "souradnice": {
+        "lat": 50.66966834598573,
+        "lng": 14.093523911546503
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": true,
+      "sluzby": [
+        {
+          "id": "mpsv-26",
+          "zdroj": "MPSV",
+          "nazev": "Domov pro seniory Krásné Březno, p.o.",
+          "poskytovatel": {
+            "nazev": "Domov pro seniory Krásné Březno, p.o.",
+            "ico": "44555334"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 153
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.dpskb.cz"
+            ],
+            "emaily": [
+              "info@dpskb.cz",
+              "reditel@dpskb.cz"
+            ],
+            "telefony": [
+              "472733058"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-3591255",
+      "kodAdresnihoMista": 3591255,
+      "adresa": {
+        "ulice": "Dlouhá",
+        "cisloDomovni": 103,
+        "cisloOrientacni": null,
+        "psc": "59451",
+        "obec": "Křižanov",
+        "kodObce": "595926",
+        "castObce": "Křižanov",
+        "okres": "Žďár nad Sázavou",
+        "kodOkresu": "CZ0635",
+        "kraj": "Kraj Vysočina",
+        "kodKraje": "CZ063"
+      },
+      "souradnice": {
+        "lat": 49.38619064686533,
+        "lng": 16.108933673445712
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-27",
+          "zdroj": "MPSV",
+          "nazev": "Pečovatelská služba",
+          "poskytovatel": {
+            "nazev": "Městys Křižanov",
+            "ico": "00294616"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2003-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.krizanov.cz"
+            ],
+            "emaily": [
+              "dpskrizanov@seznam.cz"
+            ],
+            "telefony": [
+              "566543443"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-25935097",
+      "kodAdresnihoMista": 25935097,
+      "adresa": {
+        "ulice": "Pod Korábem",
+        "cisloDomovni": 669,
+        "cisloOrientacni": null,
+        "psc": "34506",
+        "obec": "Kdyně",
+        "kodObce": "553786",
+        "castObce": "Kdyně",
+        "okres": "Domažlice",
+        "kodOkresu": "CZ0321",
+        "kraj": "Plzeňský kraj",
+        "kodKraje": "CZ032"
+      },
+      "souradnice": {
+        "lat": 49.39236142297605,
+        "lng": 13.05470354599137
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": true,
+      "sluzby": [
+        {
+          "id": "mpsv-29",
+          "zdroj": "MPSV",
+          "nazev": "Dům seniorů Kdyně, příspěvková organizace",
+          "poskytovatel": {
+            "nazev": "Dům seniorů Kdyně, příspěvková organizace",
+            "ico": "75007746"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 101
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.dskdyne.cz"
+            ],
+            "emaily": [
+              "info@dskdyne.cz"
+            ],
+            "telefony": [
+              "379 791 111"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-6061",
+          "zdroj": "MPSV",
+          "nazev": "Dům seniorů Kdyně, příspěvková organizace",
+          "poskytovatel": {
+            "nazev": "Dům seniorů Kdyně, příspěvková organizace",
+            "ico": "75007746"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2020-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.dskdyne.cz"
+            ],
+            "emaily": [
+              "info@dskdyne.cz"
+            ],
+            "telefony": [
+              "379 791 111"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-23112093",
+      "kodAdresnihoMista": 23112093,
+      "adresa": {
+        "ulice": "Sadová",
+        "cisloDomovni": 2755,
+        "cisloOrientacni": null,
+        "psc": "54401",
+        "obec": "Dvůr Králové nad Labem",
+        "kodObce": "579203",
+        "castObce": "Dvůr Králové nad Labem",
+        "okres": "Trutnov",
+        "kodOkresu": "CZ0525",
+        "kraj": "Královéhradecký kraj",
+        "kodKraje": "CZ052"
+      },
+      "souradnice": {
+        "lat": 50.4342869777625,
+        "lng": 15.822154426051004
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-30",
+          "zdroj": "MPSV",
+          "nazev": "Pečovatelská služba Města Dvůr Králové nad Labem - středisko osobní hygieny",
+          "poskytovatel": {
+            "nazev": "Pečovatelská služba Města Dvůr Králové nad Labem",
+            "ico": "75065649"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 13
+                }
+              ]
+            },
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.psdvurkralove.cz"
+            ],
+            "emaily": [
+              "ticha@psdvurkralove.cz"
+            ],
+            "telefony": [
+              "731 637 970"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-25827324",
+      "kodAdresnihoMista": 25827324,
+      "adresa": {
+        "ulice": "Elišky Krásnohorské",
+        "cisloDomovni": 2962,
+        "cisloOrientacni": null,
+        "psc": "54401",
+        "obec": "Dvůr Králové nad Labem",
+        "kodObce": "579203",
+        "castObce": "Dvůr Králové nad Labem",
+        "okres": "Trutnov",
+        "kodOkresu": "CZ0525",
+        "kraj": "Královéhradecký kraj",
+        "kodKraje": "CZ052"
+      },
+      "souradnice": {
+        "lat": 50.43529060841266,
+        "lng": 15.806867224904801
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-30",
+          "zdroj": "MPSV",
+          "nazev": "Pečovatelská služba města Dvůr Králové nad Labem",
+          "poskytovatel": {
+            "nazev": "Pečovatelská služba Města Dvůr Králové nad Labem",
+            "ico": "75065649"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 13
+                }
+              ]
+            },
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.psdvurkralove.cz"
+            ],
+            "emaily": [
+              "ticha@psdvurkralove.cz"
+            ],
+            "telefony": [
+              "731 637 970"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

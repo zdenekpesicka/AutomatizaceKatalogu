@@ -1,6 +1,6 @@
 # Dokumentace rozhraní — katalog registrovaných služeb pro seniory
 
-Verze schématu 1.0.0. Viz `schema/katalog.schema.json` a `data/katalog.json` — plná data, 3 252 míst z ostrých dat MPSV a ÚZIS (stav zdrojových dat: MPSV 31. 8. 2026, ÚZIS 1. 9. 2026, RÚIAN 31. 7. 2026, viz `data/meta.json`).
+Verze schématu 1.0.0. Viz `schema/katalog.schema.json` a `data/katalog.json` — plná data z ostrých dat MPSV a ÚZIS. Aktuální počet míst a datum zdrojových dat najdete vždy v `data/meta.json`; tady je záměrně neopakujeme, aby se obě čísla časem nerozešla.
 
 ## Soubory
 
@@ -10,6 +10,7 @@ Verze schématu 1.0.0. Viz `schema/katalog.schema.json` a `data/katalog.json` �
 | `schema/katalog.schema.json` | JSON Schema (draft-07) pro validaci na vaší straně. Doporučujeme validovat při každém stažení. |
 | `data/meta.json` | Verze schématu, hash obsahu, počty záznamů, datum zdrojových dat. Podle hashe poznáte, že se data změnila. **Neobsahuje čas běhu importu** — to, kdy import naposledy proběhl, není totéž jako to, kdy se data naposledy změnila. |
 | `data/zmeny.json` | ID přidaných, změněných a odebraných míst od posledního běhu, kdy k reálné změně došlo. |
+| `data/ukazka.json` | **Neodebírejte, nejsou to živá data.** Zmrazený výřez 32 míst, na kterém se odsouhlasila struktura a formát. Slouží už jen jako ilustrace k této dokumentaci a dál se neaktualizuje. |
 
 ## Základní jednotka: místo, ne registrace
 

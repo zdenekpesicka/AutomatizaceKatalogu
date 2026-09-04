@@ -26,15 +26,19 @@
     "DruhSocialniSluzby/19 tlumočnické služby (1)",
     "DruhSocialniSluzby/28 sociálně aktivizační služby pro rodiny s dětmi (1)"
   ],
-  "uzisZdravi": {
-    "_popis": "Kategorie zdravi se plni v etape 2/3 z UZIS podle ZZ_druh_nazev a textoveho filtru pro hospice (viz CLAUDE.md 3.2).",
-    "relevantniDruhyZarizeni": [
-      "Domácí zdravotní péče",
-      "Nemocnice následné péče",
-      "Léčebna pro dlouhodobě nemocné (LDN)",
-      "Hospic",
-      "Rehabilitační ústav"
-    ],
-    "kategorie": ["zdravi"]
+  "zdravotniSluzby": {
+    "_popis": "Mapovani druhu zdravotnickeho zarizeni (UZIS, sloupec ZZ_druh_nazev) na kategorie webu. Obdoba socialniSluzby vyse, jen bez formy - UZIS formu poskytovani neeviduje.",
+    "_zdroj_pravidla": "CLAUDE.md 4.3 - mapovaci tabulka patri do konfiguracniho souboru, ne do kodu.",
+    "_klice_urcuji_i_filtr": "Klice objektu druhyZarizeni zaroven urcuji, ktere druhy vubec vstupuji do zpracovani (filtr relevance, CLAUDE.md 2.2). Zadny druhy seznam druhu uz v kodu neni - kdyz se druh odsud odebere, zmizi z vystupu uplne.",
+    "_prazdne_pole": "Prazdne pole kategorii neznamena vyrazeni. Misto zustava ve vystupu se vsemi udaji, jen se nezobrazi v zadne zalozce - stejne chovani jako u nepokrytych socialnich druhu vyse.",
+    "druhyZarizeni": {
+      "Domácí zdravotní péče": ["zdravi"],
+      "Nemocnice následné péče": ["zdravi"],
+      "Léčebna pro dlouhodobě nemocné (LDN)": ["zdravi"],
+      "Hospic": ["zdravi"],
+      "Rehabilitační ústav": ["zdravi"],
+      "Zdravotní péče v ústavech sociální p.": ["zdravi"]
+    },
+    "_pozn_zdravotni_pece_v_ustavech": "Tento druh musi zustat mezi klici, jinak by nesel vyrobit priznak poskytujeZdravotniPeci (CLAUDE.md 3.4) - pravidlo 'nikdy samostatny zaznam, jen priznak' je strukturalni a resi se v kodu, ne tady. Zarazeni do zalozky je ale otazka konfigurace: viz CLAUDE.md sekce 8, 338 techto zaznamu se nepodarilo pripojit k MPSV mistu a plni zalozku Zdravi jako by to byla samostatna zdravotnicka zarizeni."
   }
 }

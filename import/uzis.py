@@ -3,17 +3,12 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any, Container, Dict, Iterable, List, Optional, Tuple
 
-# CLAUDE.md 2.2 - relevantni druhy zarizeni pro seniorsky katalog
-RELEVANT_DRUHY = {
-    "Domácí zdravotní péče",
-    "Zdravotní péče v ústavech sociální p.",
-    "Nemocnice následné péče",
-    "Léčebna pro dlouhodobě nemocné (LDN)",
-    "Hospic",
-    "Rehabilitační ústav",
-}
+# CLAUDE.md 2.2 - relevantni druhy zarizeni pro seniorsky katalog. Seznam zamerne NENI tady, ale
+# v config/kategorie-mapovani.json (klice zdravotniSluzby.druhyZarizeni), aby existoval jen jednou:
+# tyz seznam urcuje filtr relevance i zarazeni do kategorie a driv byl na obou mistech zvlast,
+# takze config sliboval paku, kterou kod necetl. Viz CLAUDE.md 4.3 a filter_relevant nize.
 
 # CLAUDE.md 3.4 - tento druh se nikdy neposila jako samostatny zaznam, jen jako priznak
 DRUH_ZDRAVOTNI_PECE_V_USTAVU = "Zdravotní péče v ústavech sociální p."
@@ -40,12 +35,12 @@ def split_obor_pece(hodnota: Optional[str]) -> List[str]:
 def is_hospic_like(row: Dict[str, Any]) -> bool:
     """CLAUDE.md 3.2 - hospic nelze filtrovat jen podle druhu zarizeni, kombinuje druh+obor+text nazvu.
 
-    Zamerne se NEPOUZIVA ve filter_relevant/RELEVANT_DRUHY. Overeno na realnych datech (zaznam v
+    Zamerne se NEPOUZIVA ve filter_relevant. Overeno na realnych datech (zaznam v
     CLAUDE.md sekce 8): kdyby tato funkce rozsirovala filtr, pridalo by to cca 118 zaznamu s druhem
     typu "Nemocnice", "Fakultni nemocnice" nebo "Samostatna ordinace lekare specialisty" - tedy cele
     nemocnice a soukrome ordinace jen proto, ze maji oddeleni/obor paliativni mediciny. To by pro
     seniorsky katalog bylo spatne (nejde o domovy/hospice, ale o velke obecne instituce). Domaci
-    hospice uz jsou pokryte pres druh "Domácí zdravotní péče" v RELEVANT_DRUHY. Funkce zustava jako
+    hospice uz jsou pokryte pres druh "Domácí zdravotní péče" v configu. Funkce zustava jako
     zdokumentovany vysledek tohoto overeni, ne jako zapomenuty nedodelek."""
     if row["ZZ_druh_nazev"] == "Hospic":
         return True
@@ -77,11 +72,16 @@ def has_contact(row: Dict[str, Any]) -> bool:
     return bool(row.get("poskytovatel_web") or row.get("poskytovatel_email") or row.get("poskytovatel_telefon"))
 
 
-def filter_relevant(rows: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """CLAUDE.md 2.2 + 3.5: relevantni druhy, domaci pece jen s kontaktem, ostatni i bez."""
+def filter_relevant(
+    rows: Iterable[Dict[str, Any]], relevantni_druhy: Container[str]
+) -> List[Dict[str, Any]]:
+    """CLAUDE.md 2.2 + 3.5: relevantni druhy, domaci pece jen s kontaktem, ostatni i bez.
+
+    relevantni_druhy prichazi z configu (klice zdravotniSluzby.druhyZarizeni), ne z konstanty tady.
+    """
     out = []
     for r in rows:
-        if r["ZZ_druh_nazev"] not in RELEVANT_DRUHY:
+        if r["ZZ_druh_nazev"] not in relevantni_druhy:
             continue
         if r["ZZ_druh_nazev"] in DRUHY_VYZADUJICI_KONTAKT and not has_contact(r):
             continue

@@ -105,7 +105,12 @@ with open(ROOT / "config" / "kategorie-mapovani.json", encoding="utf-8") as f:
     KAT_CFG = json.load(f)
 
 DRUH_TO_KAT = {entry["druh"]: entry["kategorie"] for entry in KAT_CFG["socialniSluzby"]}
-UZIS_KATEGORIE = KAT_CFG["uzisZdravi"]["kategorie"]
+
+# UZIS: druh zarizeni -> kategorie. Klice slouzi zaroven jako filtr relevance (CLAUDE.md 2.2),
+# aby seznam druhu existoval jen jednou. Driv byl natvrdo v uzis.RELEVANT_DRUHY a kategorie se
+# pridelovala plosne kazdemu UZIS mistu bez ohledu na druh, takze seznam v configu byl mrtvy.
+UZIS_DRUH_TO_KAT = KAT_CFG["zdravotniSluzby"]["druhyZarizeni"]
+UZIS_RELEVANT_DRUHY = set(UZIS_DRUH_TO_KAT)
 
 
 def kategorie_pro_sluzbu(druh_id: str, formy: list[str]) -> set[str]:
@@ -116,6 +121,10 @@ def kategorie_pro_sluzbu(druh_id: str, formy: list[str]) -> set[str]:
     for forma in formy:
         out |= set(mapovani.get(forma, []))
     return out
+
+
+def kategorie_pro_uzis(druh_nazev: str) -> set[str]:
+    return set(UZIS_DRUH_TO_KAT.get(druh_nazev, []))
 
 
 def mpsv_sluzba_to_output(s: dict, typ_kapacity_nazvy: dict, druhy_nazvy: dict) -> dict:
@@ -236,7 +245,7 @@ def main() -> None:
 
     print("Nacitam UZIS...")
     rows = load_nrpzs(CACHE / "nrpzs.csv")
-    relevant = filter_relevant(rows)
+    relevant = filter_relevant(rows, UZIS_RELEVANT_DRUHY)
     zaznamy, priznaky = split_zaznamy_a_priznaky(relevant)
     print(f"  {len(rows)} radku, {len(relevant)} relevantnich, {len(zaznamy)} zaznamu, {len(priznaky)} priznaku")
 
@@ -320,8 +329,8 @@ def main() -> None:
         kategorie = set()
         for s in p["sluzby"]:
             kategorie |= kategorie_pro_sluzbu(s["druhSocialniSluzby"], s["formy"])
-        if p["uzis_sluzby"]:
-            kategorie |= set(UZIS_KATEGORIE)
+        for r in p["uzis_sluzby"]:
+            kategorie |= kategorie_pro_uzis(r["ZZ_druh_nazev"])
 
         if isinstance(k, int):
             misto_id = f"misto-{k}"
@@ -381,7 +390,9 @@ def main() -> None:
                 "kodAdresnihoMista": kod_adm,
                 "adresa": adresa,
                 "souradnice": souradnice_out(coords),
-                "kategorie": sorted(UZIS_KATEGORIE),
+                "kategorie": sorted(
+                    {k for r in rows_sorted for k in kategorie_pro_uzis(r["ZZ_druh_nazev"])}
+                ),
                 "poskytujeZdravotniPeci": False,
                 "sluzby": [uzis_sluzba_to_output(r) for r in rows_sorted],
             }

@@ -1,10 +1,10 @@
 {
   "verzeSchematu": "1.0.0",
-  "hashKatalogu": "8f58fd7b3a4f185c30dffdbb6ed979c76882a71db6d29bfe4cfb96e0f2f6c0df",
+  "hashKatalogu": "fdfb8ab8f07d5640140d0e55b4dc977c3b38adaa2dcec0955ac25b312a673763",
   "pocetMist": 3252,
-  "pocetSluzeb": 4389,
+  "pocetSluzeb": 4388,
   "pocetMistPodleKategorie": {
-    "domovy": 813,
+    "domovy": 811,
     "terenni": 1282,
     "bezpeci": 24,
     "zdravi": 1238

@@ -35,6 +35,26 @@ TODAY = datetime.date.today().isoformat()
 
 PRAH_ZMENY = 0.05  # CLAUDE.md 5.2 bod 3 - vice nez 5 % zmena poctu mist = nepublikovat
 
+# Presnost souradnic je vlastnost rozhrani, ne jednotlivych zdroju, proto se zaokrouhluje na
+# jednom miste pro oba (RUIAN i UZIS) - jinak by vystup michal ruzne presna cisla podle toho,
+# odkud misto pochazi. 7 desetinnych mist je ~1,1 cm zem. sirky, coz pojme cele rozliseni zdroju:
+# RUIAN uvadi S-JTSK na 2 desetinna mista v metrech (1 cm), UZIS ma v ZZ_GPS az 12 cislic, ale
+# sama transformace S-JTSK->WGS84 ma deklarovanou presnost 1 m. Dalsi cislice uz nejsou informace
+# o poloze, ale artefakt binarni aritmetiky - a pri zmene verze pyproj/PROJ by delaly falesne
+# diffy pres cely katalog (CLAUDE.md 5.3).
+SOURADNICE_DESETINNYCH_MIST = 7
+
+
+def souradnice_out(coords) -> dict:
+    """Souradnice pro vystup. Pole je vzdy pritomne, lat/lng jsou null, kdyz je nelze urcit
+    (CLAUDE.md 4.2 - nikdy vynechane pole)."""
+    if not coords:
+        return {"lat": None, "lng": None}
+    return {
+        "lat": round(coords[0], SOURADNICE_DESETINNYCH_MIST),
+        "lng": round(coords[1], SOURADNICE_DESETINNYCH_MIST),
+    }
+
 
 def nacti_datum_zdrojovych_dat() -> dict:
     """CLAUDE.md 5.3 - datum zdrojovych dat, ne cas behu importu. Zjisteno stahni_zdroje.py
@@ -296,7 +316,7 @@ def main() -> None:
                 "id": misto_id,
                 "kodAdresnihoMista": k if isinstance(k, int) else None,
                 "adresa": mpsv_addr_text(p["adresa"], ciselniky, kody),
-                "souradnice": {"lat": coords[0], "lng": coords[1]} if coords else {"lat": None, "lng": None},
+                "souradnice": souradnice_out(coords),
                 "kategorie": sorted(kategorie),
                 "poskytujeZdravotniPeci": p["poskytujeZdravotniPeci"],
                 "sluzby": sluzby_out,
@@ -332,7 +352,7 @@ def main() -> None:
                 "id": misto_id,
                 "kodAdresnihoMista": kod_adm,
                 "adresa": adresa,
-                "souradnice": {"lat": coords[0], "lng": coords[1]} if coords else {"lat": None, "lng": None},
+                "souradnice": souradnice_out(coords),
                 "kategorie": sorted(UZIS_KATEGORIE),
                 "poskytujeZdravotniPeci": False,
                 "sluzby": [uzis_sluzba_to_output(r) for r in rows_sorted],

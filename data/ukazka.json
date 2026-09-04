@@ -18,8 +18,8 @@
         "kodKraje": "CZ032"
       },
       "souradnice": {
-        "lat": 49.4931577009478,
-        "lng": 13.59045324470543
+        "lat": 49.4931577,
+        "lng": 13.5904532
       },
       "kategorie": [
         "domovy",
@@ -109,8 +109,8 @@
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 49.67309236107921,
-        "lng": 13.989718155984878
+        "lat": 49.6730924,
+        "lng": 13.9897182
       },
       "kategorie": [
         "domovy",
@@ -263,8 +263,8 @@
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 49.69327686472715,
-        "lng": 14.012092117479602
+        "lat": 49.6932769,
+        "lng": 14.0120921
       },
       "kategorie": [
         "domovy",
@@ -341,8 +341,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": 49.25772172090491,
-        "lng": 17.169175573497142
+        "lat": 49.2577217,
+        "lng": 17.1691756
       },
       "kategorie": [
         "domovy",
@@ -430,8 +430,8 @@
         "kodKraje": "CZ042"
       },
       "souradnice": {
-        "lat": 50.488568735501,
-        "lng": 13.64983946308
+        "lat": 50.4885687,
+        "lng": 13.6498395
       },
       "kategorie": [
         "zdravi"
@@ -478,8 +478,8 @@
         "kodKraje": "CZ041"
       },
       "souradnice": {
-        "lat": 50.237518889765546,
-        "lng": 12.84941675263868
+        "lat": 50.2375189,
+        "lng": 12.8494168
       },
       "kategorie": [
         "bezpeci",
@@ -724,8 +724,8 @@
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 49.786175430053675,
-        "lng": 14.679170370270644
+        "lat": 49.7861754,
+        "lng": 14.6791704
       },
       "kategorie": [],
       "poskytujeZdravotniPeci": false,
@@ -788,8 +788,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": 49.47168875925,
-        "lng": 17.977070379749
+        "lat": 49.4716888,
+        "lng": 17.9770704
       },
       "kategorie": [
         "zdravi"
@@ -840,8 +840,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": 49.47478285592737,
-        "lng": 17.97626565092574
+        "lat": 49.4747829,
+        "lng": 17.9762657
       },
       "kategorie": [
         "terenni"
@@ -981,8 +981,8 @@
         "kodKraje": "CZ032"
       },
       "souradnice": {
-        "lat": 49.230783947623564,
-        "lng": 13.515455777960806
+        "lat": 49.2307839,
+        "lng": 13.5154558
       },
       "kategorie": [
         "bezpeci",
@@ -1193,8 +1193,8 @@
         "kodKraje": "CZ041"
       },
       "souradnice": {
-        "lat": 50.0899772789965,
-        "lng": 13.167157463598567
+        "lat": 50.0899773,
+        "lng": 13.1671575
       },
       "kategorie": [
         "bezpeci",
@@ -1348,8 +1348,8 @@
         "kodKraje": "CZ041"
       },
       "souradnice": {
-        "lat": 50.223070986396024,
-        "lng": 12.202473613842772
+        "lat": 50.223071,
+        "lng": 12.2024736
       },
       "kategorie": [
         "domovy",
@@ -1441,8 +1441,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": 49.47162080494042,
-        "lng": 17.976640646639982
+        "lat": 49.4716208,
+        "lng": 17.9766406
       },
       "kategorie": [
         "terenni",
@@ -1532,8 +1532,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": 49.4634361573625,
-        "lng": 17.97135335321193
+        "lat": 49.4634362,
+        "lng": 17.9713534
       },
       "kategorie": [
         "terenni"
@@ -1597,8 +1597,8 @@
         "kodKraje": "CZ063"
       },
       "souradnice": {
-        "lat": 49.10262082560443,
-        "lng": 15.983161374030407
+        "lat": 49.1026208,
+        "lng": 15.9831614
       },
       "kategorie": [
         "domovy"
@@ -1662,8 +1662,8 @@
         "kodKraje": "CZ080"
       },
       "souradnice": {
-        "lat": 49.595558886685744,
-        "lng": 18.145609234367704
+        "lat": 49.5955589,
+        "lng": 18.1456092
       },
       "kategorie": [
         "terenni",
@@ -1753,8 +1753,8 @@
         "kodKraje": "CZ063"
       },
       "souradnice": {
-        "lat": 49.39262973359758,
-        "lng": 15.88651210442844
+        "lat": 49.3926297,
+        "lng": 15.8865121
       },
       "kategorie": [
         "terenni"
@@ -1871,8 +1871,8 @@
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 50.40666627138778,
-        "lng": 14.802452403374824
+        "lat": 50.4066663,
+        "lng": 14.8024524
       },
       "kategorie": [
         "domovy"
@@ -1936,8 +1936,8 @@
         "kodKraje": "CZ041"
       },
       "souradnice": {
-        "lat": 50.162039454133755,
-        "lng": 12.636645186130263
+        "lat": 50.1620395,
+        "lng": 12.6366452
       },
       "kategorie": [
         "domovy"
@@ -2046,8 +2046,8 @@
         "kodKraje": "CZ010"
       },
       "souradnice": {
-        "lat": 50.13409026069537,
-        "lng": 14.471252014496226
+        "lat": 50.1340903,
+        "lng": 14.471252
       },
       "kategorie": [
         "terenni",
@@ -2247,8 +2247,8 @@
         "kodKraje": "CZ063"
       },
       "souradnice": {
-        "lat": 49.045693347782255,
-        "lng": 15.810451680219197
+        "lat": 49.0456933,
+        "lng": 15.8104517
       },
       "kategorie": [
         "domovy"
@@ -2365,8 +2365,8 @@
         "kodKraje": "CZ080"
       },
       "souradnice": {
-        "lat": 49.674508263629924,
-        "lng": 18.343697965099004
+        "lat": 49.6745083,
+        "lng": 18.343698
       },
       "kategorie": [],
       "poskytujeZdravotniPeci": false,
@@ -2428,8 +2428,8 @@
         "kodKraje": "CZ071"
       },
       "souradnice": {
-        "lat": 49.46329005003802,
-        "lng": 16.99809229671271
+        "lat": 49.4632901,
+        "lng": 16.9980923
       },
       "kategorie": [
         "domovy"
@@ -2493,8 +2493,8 @@
         "kodKraje": "CZ042"
       },
       "souradnice": {
-        "lat": 50.66966834598573,
-        "lng": 14.093523911546503
+        "lat": 50.6696683,
+        "lng": 14.0935239
       },
       "kategorie": [
         "domovy"
@@ -2559,8 +2559,8 @@
         "kodKraje": "CZ063"
       },
       "souradnice": {
-        "lat": 49.38619064686533,
-        "lng": 16.108933673445712
+        "lat": 49.3861906,
+        "lng": 16.1089337
       },
       "kategorie": [
         "terenni"
@@ -2634,8 +2634,8 @@
         "kodKraje": "CZ032"
       },
       "souradnice": {
-        "lat": 49.39236142297605,
-        "lng": 13.05470354599137
+        "lat": 49.3923614,
+        "lng": 13.0547035
       },
       "kategorie": [
         "domovy"
@@ -2737,8 +2737,8 @@
         "kodKraje": "CZ052"
       },
       "souradnice": {
-        "lat": 50.4342869777625,
-        "lng": 15.822154426051004
+        "lat": 50.434287,
+        "lng": 15.8221544
       },
       "kategorie": [
         "terenni"
@@ -2812,8 +2812,8 @@
         "kodKraje": "CZ052"
       },
       "souradnice": {
-        "lat": 50.43529060841266,
-        "lng": 15.806867224904801
+        "lat": 50.4352906,
+        "lng": 15.8068672
       },
       "kategorie": [
         "terenni"

@@ -8,9 +8,16 @@ on:
 permissions:
   contents: write
 
+# Denni a mesicni beh obojí commituji a pushuji do data/ - kdyby bezely soubezne (napr. rucni
+# trigger prekryvajici se s cronem), druhy push by mohl spadnout na non-fast-forward. Skupina
+# spolecna pro oba workflow serializuje jejich behy misto souboznosti.
+concurrency:
+  group: import-katalogu
+
 jobs:
   import:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +37,11 @@ jobs:
       # Ulozi cerstve stazene UZIS/RUIAN soubory do cache pod klicem aktualniho mesice,
       # aby je denni beh (import.yml) mohl po zbytek mesice jen obnovovat (restore), ne
       # stahovat znovu - CLAUDE.md 5.1, UZIS a RUIAN se aktualizuji jen mesicne.
+      #
+      # Pozn.: klic cache je pro dany mesic nemenny. Pri druhem rucnim spusteni tohoto
+      # workflow ve stejnem mesici tento krok jen tise neulozi (bez chyby) - vystup toho
+      # behu je porad spravny, jen denni beh dal cerpa ze starsiho ulozeneho snapshotu az
+      # do dalsiho mesice. Nizke riziko, ÚZIS/RÚIAN se stejne meni jen mesicne.
       - name: Uloz UZIS/RUIAN do cache
         uses: actions/cache/save@v4
         with:

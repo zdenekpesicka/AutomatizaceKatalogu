@@ -8,9 +8,16 @@ on:
 permissions:
   contents: write
 
+# Denni a mesicni beh obojí commituji a pushuji do data/ - kdyby bezely soubezne (napr. rucni
+# trigger prekryvajici se s cronem), druhy push by mohl spadnout na non-fast-forward. Skupina
+# spolecna pro oba workflow serializuje jejich behy misto souboznosti.
+concurrency:
+  group: import-katalogu
+
 jobs:
   import:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 

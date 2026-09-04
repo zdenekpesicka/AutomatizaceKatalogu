@@ -38,7 +38,15 @@ def split_obor_pece(hodnota: Optional[str]) -> List[str]:
 
 
 def is_hospic_like(row: Dict[str, Any]) -> bool:
-    """CLAUDE.md 3.2 - hospic nelze filtrovat jen podle druhu zarizeni, kombinuje druh+obor+text nazvu."""
+    """CLAUDE.md 3.2 - hospic nelze filtrovat jen podle druhu zarizeni, kombinuje druh+obor+text nazvu.
+
+    Zamerne se NEPOUZIVA ve filter_relevant/RELEVANT_DRUHY. Overeno na realnych datech (zaznam v
+    CLAUDE.md sekce 8): kdyby tato funkce rozsirovala filtr, pridalo by to cca 118 zaznamu s druhem
+    typu "Nemocnice", "Fakultni nemocnice" nebo "Samostatna ordinace lekare specialisty" - tedy cele
+    nemocnice a soukrome ordinace jen proto, ze maji oddeleni/obor paliativni mediciny. To by pro
+    seniorsky katalog bylo spatne (nejde o domovy/hospice, ale o velke obecne instituce). Domaci
+    hospice uz jsou pokryte pres druh "Domácí zdravotní péče" v RELEVANT_DRUHY. Funkce zustava jako
+    zdokumentovany vysledek tohoto overeni, ne jako zapomenuty nedodelek."""
     if row["ZZ_druh_nazev"] == "Hospic":
         return True
     if "hospic" in (row.get("ZZ_nazev") or "").lower():

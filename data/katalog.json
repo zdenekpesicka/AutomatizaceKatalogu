@@ -720,10 +720,10 @@
               "www.uvn.cz"
             ],
             "emaily": [
-              "Jana.Zoufala@uvn.cz"
+              "jana.zoufala@uvn.cz"
             ],
             "telefony": [
-              "973 202 714"
+              "973 208 430"
             ]
           }
         }
@@ -773,10 +773,10 @@
               "www.uvn.cz"
             ],
             "emaily": [
-              "lenka.gutova@uvn.cz"
+              "jana.zoufala@uvn.cz"
             ],
             "telefony": [
-              "973 202 714"
+              "973 208 430"
             ]
           }
         }
@@ -1946,10 +1946,10 @@
               "http://www.psdvurkralove.cz"
             ],
             "emaily": [
-              "ticha@psdvurkralove.cz"
+              "konradova@psdvurkralove.cz"
             ],
             "telefony": [
-              "731 637 970"
+              "734 769 413"
             ]
           }
         }
@@ -2021,10 +2021,10 @@
               "http://www.psdvurkralove.cz"
             ],
             "emaily": [
-              "ticha@psdvurkralove.cz"
+              "konradova@psdvurkralove.cz"
             ],
             "telefony": [
-              "731 637 970"
+              "734 769 413"
             ]
           }
         }
@@ -4421,7 +4421,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "http://www.pisek.diakonie.cz"
+              "https://www.pisek.diakonie.cz"
             ],
             "emaily": [
               "domovproseniory@diakoniepisek.cz"
@@ -4459,7 +4459,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "http://www.pisek.diakonie.cz"
+              "https://www.pisek.diakonie.cz"
             ],
             "emaily": [
               "vazka@diakoniepisek.cz"
@@ -4497,7 +4497,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "http://www.pisek.diakonie.cz"
+              "https://www.pisek.diakonie.cz"
             ],
             "emaily": [
               "stepankova@diakoniepisek.cz",
@@ -11256,11 +11256,11 @@
       ]
     },
     {
-      "id": "misto-10246231",
-      "kodAdresnihoMista": 10246231,
+      "id": "misto-80149756",
+      "kodAdresnihoMista": 80149756,
       "adresa": {
-        "ulice": "Kyjovská",
-        "cisloDomovni": 77,
+        "ulice": "Zámecká",
+        "cisloDomovni": 952,
         "cisloOrientacni": null,
         "psc": "76805",
         "obec": "Koryčany",
@@ -11272,8 +11272,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": 49.1052435,
-        "lng": 17.1606935
+        "lat": null,
+        "lng": null
       },
       "kategorie": [
         "domovy"
@@ -11322,11 +11322,11 @@
       ]
     },
     {
-      "id": "misto-42751004",
-      "kodAdresnihoMista": 42751004,
+      "id": "misto-10246231",
+      "kodAdresnihoMista": 10246231,
       "adresa": {
-        "ulice": "Nádražní",
-        "cisloDomovni": 805,
+        "ulice": "Kyjovská",
+        "cisloDomovni": 77,
         "cisloOrientacni": null,
         "psc": "76805",
         "obec": "Koryčany",
@@ -11338,8 +11338,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": 49.1101887,
-        "lng": 17.1602885
+        "lat": 49.1052435,
+        "lng": 17.1606935
       },
       "kategorie": [
         "terenni"
@@ -12590,7 +12590,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.psrakovnik.cz"
@@ -22567,6 +22567,7 @@
         "lng": 14.1131503
       },
       "kategorie": [
+        "domovy",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -22667,6 +22668,16 @@
                   "typ": "klient",
                   "typNazev": "Počet klientů",
                   "pocet": 7
+                }
+              ]
+            },
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 8
                 }
               ]
             }
@@ -40579,7 +40590,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 11
+                  "pocet": 13
                 }
               ]
             }
@@ -40655,7 +40666,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 11
+                  "pocet": 13
                 }
               ]
             }
@@ -50526,13 +50537,12 @@
               "http://www.policka.charita.cz"
             ],
             "emaily": [
-              "op.ndc@pol.hk.caritas.cz",
+              "poradna.obcanska@pol.hk.caritas.cz",
               "poradna.paliativni@pol.hk.caritas.cz",
               "poradna.pecujici@pol.hk.caritas.cz"
             ],
             "telefony": [
               "731 604 683",
-              "461 723 758",
               "734 660 026",
               "734 660 023"
             ]
@@ -50629,13 +50639,12 @@
               "http://www.policka.charita.cz"
             ],
             "emaily": [
-              "op.ndc@pol.hk.caritas.cz",
+              "poradna.obcanska@pol.hk.caritas.cz",
               "poradna.paliativni@pol.hk.caritas.cz",
               "poradna.pecujici@pol.hk.caritas.cz"
             ],
             "telefony": [
               "731 604 683",
-              "461 723 758",
               "734 660 026",
               "734 660 023"
             ]
@@ -50709,13 +50718,12 @@
               "http://www.policka.charita.cz"
             ],
             "emaily": [
-              "op.ndc@pol.hk.caritas.cz",
+              "poradna.obcanska@pol.hk.caritas.cz",
               "poradna.paliativni@pol.hk.caritas.cz",
               "poradna.pecujici@pol.hk.caritas.cz"
             ],
             "telefony": [
               "731 604 683",
-              "461 723 758",
               "734 660 026",
               "734 660 023"
             ]
@@ -60177,7 +60185,7 @@
             }
           ],
           "datumPoskytovaniOd": "2006-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.zlin.charita.cz"
@@ -79033,7 +79041,8 @@
             ],
             "telefony": [
               "731 669 950",
-              "731 402 910"
+              "731 402 910",
+              "732 025 018"
             ]
           }
         }
@@ -79547,7 +79556,8 @@
             ],
             "telefony": [
               "731 669 950",
-              "731 402 910"
+              "731 402 910",
+              "732 025 018"
             ]
           }
         }
@@ -81721,7 +81731,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 6
+                  "pocet": 8
                 }
               ]
             }
@@ -81770,7 +81780,7 @@
         {
           "id": "mpsv-3922",
           "zdroj": "MPSV",
-          "nazev": "Sociální služby města MImoň, příspěvková organizace",
+          "nazev": "Sociální služby města Mimoň, příspěvková organizace",
           "poskytovatel": {
             "nazev": "Sociální služby města Mimoň, příspěvková organizace",
             "ico": "48282901"
@@ -81796,7 +81806,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 6
+                  "pocet": 8
                 }
               ]
             }
@@ -81872,7 +81882,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 6
+                  "pocet": 8
                 }
               ]
             }
@@ -102926,7 +102936,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 3
+                  "pocet": 10
                 }
               ]
             }
@@ -102938,11 +102948,10 @@
               "www.stredisko-vitecek.cz"
             ],
             "emaily": [
-              "royal.ichthys@seznam.cz"
+              "socialni.pracovnik.stredisko.vitecek@seznam.cz"
             ],
             "telefony": [
-              "606 500 252",
-              "724 512 289"
+              "702 049 854"
             ]
           }
         }
@@ -133643,10 +133652,10 @@
               "www.ddkobylisy.cz"
             ],
             "emaily": [
-              "iveta.demianova@dskobylisy.cz"
+              "info@ddkobylisy.cz"
             ],
             "telefony": [
-              "284 001 711"
+              "778 970 370"
             ]
           }
         }
@@ -153494,7 +153503,73 @@
         {
           "id": "mpsv-7048",
           "zdroj": "MPSV",
-          "nazev": "Denní stacionář u kapličky",
+          "nazev": "Denní stacionář u kapličky - Pampeliška",
+          "poskytovatel": {
+            "nazev": "Charita Vlašim",
+            "ico": "47084359"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/10",
+            "nazev": "denní stacionáře"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 13
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2024-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.vlasimcharita.cz"
+            ],
+            "emaily": [
+              "charita.vlasim@seznam.cz",
+              "reditelka@charitavlasim.cz"
+            ],
+            "telefony": [
+              "736 472 794"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-80151209",
+      "kodAdresnihoMista": 80151209,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": 204,
+        "cisloOrientacni": null,
+        "psc": "25801",
+        "obec": "Vlašim",
+        "kodObce": "530883",
+        "castObce": "Bolina",
+        "okres": "Benešov",
+        "kodOkresu": "CZ0201",
+        "kraj": "Středočeský kraj",
+        "kodKraje": "CZ020"
+      },
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7048",
+          "zdroj": "MPSV",
+          "nazev": "Denni stacionář u kapličky - Mateřídouška",
           "poskytovatel": {
             "nazev": "Charita Vlašim",
             "ico": "47084359"
@@ -154319,7 +154394,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 20
+                  "pocet": 17
                 }
               ]
             }
@@ -154767,7 +154842,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 50
+                  "pocet": 10
                 }
               ]
             }
@@ -159532,7 +159607,8 @@
               "sekretariat@spokojeny-domov.cz"
             ],
             "telefony": [
-              "773 633 411"
+              "725 447 312",
+              "775 961 457"
             ]
           }
         }
@@ -159725,7 +159801,8 @@
               "sekretariat@spokojeny-domov.cz"
             ],
             "telefony": [
-              "773 633 411"
+              "725 447 312",
+              "775 961 457"
             ]
           }
         }
@@ -179413,6 +179490,7 @@
         "lng": null
       },
       "kategorie": [
+        "domovy",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -179437,6 +179515,16 @@
                   "typ": "klient",
                   "typNazev": "Počet klientů",
                   "pocet": 7
+                }
+              ]
+            },
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 8
                 }
               ]
             }
@@ -194691,7 +194779,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 8
+                  "pocet": 22
                 }
               ]
             }
@@ -195358,6 +195446,104 @@
             "telefony": [
               "736 530 538"
             ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-19824068",
+      "kodAdresnihoMista": 19824068,
+      "adresa": {
+        "ulice": "Vančurova",
+        "cisloDomovni": 2904,
+        "cisloOrientacni": null,
+        "psc": "39001",
+        "obec": "Tábor",
+        "kodObce": "552046",
+        "castObce": "Tábor",
+        "okres": "Tábor",
+        "kodOkresu": "CZ0317",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 49.413276,
+        "lng": 14.6655119
+      },
+      "kategorie": [
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7633",
+          "zdroj": "MPSV",
+          "nazev": "Centrum barevná MOZAIKA sociálních a aktivizačních služeb z. ú.",
+          "poskytovatel": {
+            "nazev": "Centrum barevná MOZAIKA sociálních a aktivizačních služeb z. ú.",
+            "ico": "24465381"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/29",
+            "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-09-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.barevnamozaika.cz"
+            ],
+            "emaily": [
+              "lintnerova@barevnamozaika.cz"
+            ],
+            "telefony": [
+              "602 250 671"
+            ]
+          }
+        },
+        {
+          "id": "uzis-137658",
+          "zdroj": "UZIS",
+          "nazev": "ProCare Medical s.r.o.",
+          "poskytovatel": {
+            "nazev": "ProCare Medical s.r.o.",
+            "ico": "27571271"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "kontakt": {
+            "weby": [
+              "http://www.procare.cz"
+            ],
+            "emaily": [
+              "procare@procare.cz"
+            ],
+            "telefony": []
           }
         }
       ]
@@ -210198,56 +210384,6 @@
       "sluzby": [
         {
           "id": "uzis-137683",
-          "zdroj": "UZIS",
-          "nazev": "ProCare Medical s.r.o.",
-          "poskytovatel": {
-            "nazev": "ProCare Medical s.r.o.",
-            "ico": "27571271"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "kontakt": {
-            "weby": [
-              "http://www.procare.cz"
-            ],
-            "emaily": [
-              "procare@procare.cz"
-            ],
-            "telefony": []
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-19824068",
-      "kodAdresnihoMista": 19824068,
-      "adresa": {
-        "ulice": "Vančurova",
-        "cisloDomovni": null,
-        "cisloOrientacni": "2904",
-        "psc": "39001",
-        "obec": "Tábor",
-        "kodObce": "552046",
-        "castObce": null,
-        "okres": "Tábor",
-        "kodOkresu": "CZ0317",
-        "kraj": "Jihočeský kraj",
-        "kodKraje": "CZ031"
-      },
-      "souradnice": {
-        "lat": 49.4132791,
-        "lng": 14.665518
-      },
-      "kategorie": [
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "uzis-137658",
           "zdroj": "UZIS",
           "nazev": "ProCare Medical s.r.o.",
           "poskytovatel": {

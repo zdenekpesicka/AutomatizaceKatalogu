@@ -1,41 +1,11 @@
 {
   "verzeSchematu": "1.0.0",
-  "pridano": [
-    "misto-80149756",
-    "misto-80151209"
-  ],
+  "pridano": [],
   "zmeneno": [
-    "misto-10246231",
-    "misto-10383417",
-    "misto-15544681",
-    "misto-15605281",
+    "misto-15931889",
     "misto-15933776",
-    "misto-16602820",
-    "misto-16603737",
     "misto-1794957",
-    "misto-19824068",
-    "misto-21253790",
-    "misto-21443050",
-    "misto-22245294",
-    "misto-22367357",
-    "misto-23112093",
-    "misto-23775335",
-    "misto-25171542",
-    "misto-25827324",
-    "misto-26122529",
-    "misto-28314689",
-    "misto-28490835",
-    "misto-3094430",
-    "misto-5545838",
-    "misto-6944264",
-    "misto-72797851",
-    "misto-8660506",
-    "misto-8680302",
-    "misto-bezadresy-4674-f7e6ac50",
-    "misto-bezadresy-5473-754d0fb5",
-    "misto-bezadresy-6768-a5b637f7"
+    "misto-28314689"
   ],
-  "odebrano": [
-    "misto-42751004"
-  ]
+  "odebrano": []
 }

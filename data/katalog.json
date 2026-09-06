@@ -50501,7 +50501,7 @@
           "zdroj": "MPSV",
           "nazev": "Občanská poradna, Poradna pro pečující, Poradna pro osoby s paliativní potřebou.",
           "poskytovatel": {
-            "nazev": "Oblastní charita Polička",
+            "nazev": "Charita Polička",
             "ico": "49325515"
           },
           "druhSluzby": {
@@ -50515,7 +50515,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 430
+                  "pocet": 3
                 }
               ]
             },
@@ -50525,7 +50525,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 100
+                  "pocet": 4
                 }
               ]
             }
@@ -50603,7 +50603,7 @@
           "zdroj": "MPSV",
           "nazev": "Občanská poradna",
           "poskytovatel": {
-            "nazev": "Oblastní charita Polička",
+            "nazev": "Charita Polička",
             "ico": "49325515"
           },
           "druhSluzby": {
@@ -50617,7 +50617,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 430
+                  "pocet": 3
                 }
               ]
             },
@@ -50627,7 +50627,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 100
+                  "pocet": 4
                 }
               ]
             }
@@ -50682,7 +50682,7 @@
           "zdroj": "MPSV",
           "nazev": "Občanská poradna",
           "poskytovatel": {
-            "nazev": "Oblastní charita Polička",
+            "nazev": "Charita Polička",
             "ico": "49325515"
           },
           "druhSluzby": {
@@ -50696,7 +50696,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 430
+                  "pocet": 3
                 }
               ]
             },
@@ -50706,7 +50706,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 100
+                  "pocet": 4
                 }
               ]
             }
@@ -50797,9 +50797,9 @@
         {
           "id": "mpsv-797",
           "zdroj": "MPSV",
-          "nazev": "Charitní pečovatelská služba",
+          "nazev": "Pečovatelská služba",
           "poskytovatel": {
-            "nazev": "Oblastní charita Polička",
+            "nazev": "Charita Polička",
             "ico": "49325515"
           },
           "druhSluzby": {
@@ -50813,7 +50813,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 40
+                  "pocet": 50
                 }
               ]
             }
@@ -50825,7 +50825,7 @@
               "www.policka.charita.cz"
             ],
             "emaily": [
-              "chps.oa@pol.hk.caritas.cz"
+              "pecovatelka@pol.hk.caritas.cz"
             ],
             "telefony": [
               "731 598 814"
@@ -50835,9 +50835,9 @@
         {
           "id": "mpsv-4142",
           "zdroj": "MPSV",
-          "nazev": "Oblastní charita Polička",
+          "nazev": "Charita Polička",
           "poskytovatel": {
-            "nazev": "Oblastní charita Polička",
+            "nazev": "Charita Polička",
             "ico": "49325515"
           },
           "druhSluzby": {
@@ -50851,7 +50851,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 22
+                  "pocet": 25
                 }
               ]
             }
@@ -50863,7 +50863,7 @@
               "www.policka.charita.cz"
             ],
             "emaily": [
-              "chps.oa@pol.hk.caritas.cz"
+              "asistence@pol.hk.caritas.cz"
             ],
             "telefony": [
               "731 598 814"

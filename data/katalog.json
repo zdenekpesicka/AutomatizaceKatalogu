@@ -1,5 +1,5 @@
 {
-  "verzeSchematu": "1.0.0",
+  "verzeSchematu": "1.1.0",
   "mista": [
     {
       "id": "misto-11867906",
@@ -4530,107 +4530,6 @@
             ],
             "telefony": [
               "+420382219057"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-22189271",
-      "kodAdresnihoMista": 22189271,
-      "adresa": {
-        "ulice": "Wuchterlova",
-        "cisloDomovni": 362,
-        "cisloOrientacni": "11",
-        "psc": "16000",
-        "obec": "Praha",
-        "kodObce": "554782",
-        "castObce": "Dejvice",
-        "okres": null,
-        "kodOkresu": null,
-        "kraj": "Hlavní město Praha",
-        "kodKraje": "CZ010"
-      },
-      "souradnice": {
-        "lat": 50.0980181,
-        "lng": 14.3962969
-      },
-      "kategorie": [],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-57",
-          "zdroj": "MPSV",
-          "nazev": "Centrum pro zdravotně postižené kraje Praha",
-          "poskytovatel": {
-            "nazev": "Centrum pro zdravotně postižené kraje Praha",
-            "ico": "26594226"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/1",
-            "nazev": "odborné sociální poradenství"
-          },
-          "formy": [
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "interv",
-                  "typNazev": "Počet intervencí (30 min. jednání)",
-                  "pocet": 2278
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": "2012-03-31",
-          "kontakt": {
-            "weby": [
-              "http://czppraha.cz"
-            ],
-            "emaily": [
-              "jzavadilova@tiscali.cz"
-            ],
-            "telefony": [
-              "233 324 406"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-64",
-          "zdroj": "MPSV",
-          "nazev": "Centrum pro zdravotně postižené kraje Praha",
-          "poskytovatel": {
-            "nazev": "Centrum pro zdravotně postižené kraje Praha",
-            "ico": "26594226"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/29",
-            "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením"
-          },
-          "formy": [
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 250
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": "2012-03-31",
-          "kontakt": {
-            "weby": [
-              "http://czppraha.cz"
-            ],
-            "emaily": [
-              "jzavadilova@tiscali.cz"
-            ],
-            "telefony": [
-              "233 324 406 736 509 900"
             ]
           }
         }
@@ -20439,44 +20338,6 @@
               "720 674 574"
             ]
           }
-        },
-        {
-          "id": "mpsv-311",
-          "zdroj": "MPSV",
-          "nazev": "Domov pro seniory Bukov, příspěvková organizace",
-          "poskytovatel": {
-            "nazev": "Domov pro seniory Bukov, příspěvková organizace",
-            "ico": "44555661"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/13",
-            "nazev": "domovy pro seniory"
-          },
-          "formy": [
-            {
-              "forma": "pob",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "luzka",
-                  "typNazev": "Počet lůžek",
-                  "pocet": 122
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "zacharova@domovbukov.cz",
-              "stichova@domovbukov.cz"
-            ],
-            "telefony": [
-              "722 353 214",
-              "720 674 574"
-            ]
-          }
         }
       ]
     },
@@ -23542,54 +23403,10 @@
           "id": "mpsv-368",
           "zdroj": "MPSV",
           "nazev": "DUHA o. p. s.",
-          "poskytovatel": {
-            "nazev": "DUHA o. p. s.",
-            "ico": "25999150"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 8
-                }
-              ]
-            },
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 1
-                }
-              ]
-            }
+          "zarizeni": [
+            "DUHA o. p. s.",
+            "DUHA o.p.s. - středisko osobní hygieny"
           ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.pomocseniorum.cz"
-            ],
-            "emaily": [
-              "zdarskai@duhanb.cz"
-            ],
-            "telefony": [
-              "734 782 726"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-368",
-          "zdroj": "MPSV",
-          "nazev": "DUHA o.p.s. - středisko osobní hygieny",
           "poskytovatel": {
             "nazev": "DUHA o. p. s.",
             "ico": "25999150"
@@ -27589,31 +27406,6 @@
           }
         },
         {
-          "id": "uzis-47888",
-          "zdroj": "UZIS",
-          "nazev": "``HVĚZDA z.ú.``",
-          "poskytovatel": {
-            "nazev": "``HVĚZDA z.ú.``",
-            "ico": "70829560"
-          },
-          "druhSluzby": {
-            "kod": "180",
-            "nazev": "Hospic"
-          },
-          "oborPece": "paliativní medicína",
-          "kontakt": {
-            "weby": [
-              "http://www.hvezdazu.cz"
-            ],
-            "emaily": [
-              "sekretariat@hvezdazu.cz"
-            ],
-            "telefony": [
-              "+420606722666"
-            ]
-          }
-        },
-        {
           "id": "uzis-181452",
           "zdroj": "UZIS",
           "nazev": "Global Partner Zdraví, s.r.o.",
@@ -27635,6 +27427,31 @@
             ],
             "telefony": [
               "+420604248252"
+            ]
+          }
+        },
+        {
+          "id": "uzis-47888",
+          "zdroj": "UZIS",
+          "nazev": "``HVĚZDA z.ú.``",
+          "poskytovatel": {
+            "nazev": "``HVĚZDA z.ú.``",
+            "ico": "70829560"
+          },
+          "druhSluzby": {
+            "kod": "180",
+            "nazev": "Hospic"
+          },
+          "oborPece": "paliativní medicína",
+          "kontakt": {
+            "weby": [
+              "http://www.hvezdazu.cz"
+            ],
+            "emaily": [
+              "sekretariat@hvezdazu.cz"
+            ],
+            "telefony": [
+              "+420606722666"
             ]
           }
         }
@@ -49143,44 +48960,6 @@
               "604298497"
             ]
           }
-        },
-        {
-          "id": "mpsv-4028",
-          "zdroj": "MPSV",
-          "nazev": "Pečovatelská služba",
-          "poskytovatel": {
-            "nazev": "Sociální služby Jiříkov, příspěvková organizace",
-            "ico": "47274581"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 7
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2010-07-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.ddfilipov.cz"
-            ],
-            "emaily": [
-              "goldbergova@ddfilipov.cz"
-            ],
-            "telefony": [
-              "604298497"
-            ]
-          }
         }
       ]
     },
@@ -51723,55 +51502,10 @@
           "id": "mpsv-802",
           "zdroj": "MPSV",
           "nazev": "Centrum sociálních služeb Naděje Broumov",
-          "poskytovatel": {
-            "nazev": "Centrum sociálních služeb Naděje Broumov",
-            "ico": "48623865"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 70
-                }
-              ]
-            },
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 3
-                }
-              ]
-            }
+          "zarizeni": [
+            "Centrum sociálních služeb Naděje Broumov",
+            "Centrum sociálních služeb Naděje Broumov - středisko osobní hygieny"
           ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.nadejebroumov.cz"
-            ],
-            "emaily": [
-              "hovorkova@nadejebroumov.cz"
-            ],
-            "telefony": [
-              "774 450 633",
-              "491 524 808"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-802",
-          "zdroj": "MPSV",
-          "nazev": "Centrum sociálních služeb Naděje Broumov - středisko osobní hygieny",
           "poskytovatel": {
             "nazev": "Centrum sociálních služeb Naděje Broumov",
             "ico": "48623865"
@@ -52554,55 +52288,10 @@
           "id": "mpsv-811",
           "zdroj": "MPSV",
           "nazev": "Pečovatelská služba",
-          "poskytovatel": {
-            "nazev": "Diakonie ČCE - středisko ve Dvoře Králové nad Labem",
-            "ico": "43462162"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 8
-                }
-              ]
-            },
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 8
-                }
-              ]
-            }
+          "zarizeni": [
+            "Pečovatelská služba",
+            "Pečovatelská služba - středisko osobní hygieny"
           ],
-          "datumPoskytovaniOd": "1991-10-15",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "https://www.dvurkralove.diakonie.cz"
-            ],
-            "emaily": [
-              "dvurkralove@diakoniedk.cz"
-            ],
-            "telefony": [
-              "739 244 728",
-              "499 621 094"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-811",
-          "zdroj": "MPSV",
-          "nazev": "Pečovatelská služba - středisko osobní hygieny",
           "poskytovatel": {
             "nazev": "Diakonie ČCE - středisko ve Dvoře Králové nad Labem",
             "ico": "43462162"
@@ -64838,44 +64527,10 @@
           "id": "mpsv-1016",
           "zdroj": "MPSV",
           "nazev": "Charita Starý Knín - Středisko terénních sociálních služeb pro seniory a OZP Kamýk nad Vltavou",
-          "poskytovatel": {
-            "nazev": "Charita Starý Knín",
-            "ico": "47068531"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 310
-                }
-              ]
-            }
+          "zarizeni": [
+            "Charita Starý Knín - Středisko terénních sociálních služeb pro seniory a OZP Kamýk nad Vltavou",
+            "Charita Starý Knín - středisko terénních sociálních služeb pro seniory a OZP Svaté Pole"
           ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.socialnipece.cz"
-            ],
-            "emaily": [
-              "info@socialnipece.cz"
-            ],
-            "telefony": [
-              "720 053 420"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-1016",
-          "zdroj": "MPSV",
-          "nazev": "Charita Starý Knín - středisko terénních sociálních služeb pro seniory a OZP Svaté Pole",
           "poskytovatel": {
             "nazev": "Charita Starý Knín",
             "ico": "47068531"
@@ -64914,44 +64569,10 @@
           "id": "mpsv-1018",
           "zdroj": "MPSV",
           "nazev": "Charita Starý Knín - středisko terénních sociálních služeb pro seniory a OZP Svaté Pole",
-          "poskytovatel": {
-            "nazev": "Charita Starý Knín",
-            "ico": "47068531"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 710
-                }
-              ]
-            }
+          "zarizeni": [
+            "Charita Starý Knín - středisko terénních sociálních služeb pro seniory a OZP Svaté Pole",
+            "Charita Starý Knín - Středisko terénních sociálních služeb pro seniory a OZP Kamýk nad Vltavou"
           ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.socialnipece.cz"
-            ],
-            "emaily": [
-              "info@socialnipece.cz"
-            ],
-            "telefony": [
-              "720 053 420"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-1018",
-          "zdroj": "MPSV",
-          "nazev": "Charita Starý Knín - Středisko terénních sociálních služeb pro seniory a OZP Kamýk nad Vltavou",
           "poskytovatel": {
             "nazev": "Charita Starý Knín",
             "ico": "47068531"
@@ -66652,58 +66273,10 @@
           "id": "mpsv-1066",
           "zdroj": "MPSV",
           "nazev": "Město Police nad Metují - pečovatelská služba",
-          "poskytovatel": {
-            "nazev": "Město Police nad Metují",
-            "ico": "00272949"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 65
-                }
-              ]
-            },
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 2
-                }
-              ]
-            }
+          "zarizeni": [
+            "Město Police nad Metují - pečovatelská služba",
+            "Město Police nad Metují - pečovatelská služba (středisko osobní hygieny)"
           ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "http://www.meu-police.cz"
-            ],
-            "emaily": [
-              "ps@policenm.cz",
-              "landova@policenm.cz"
-            ],
-            "telefony": [
-              "491 541 122",
-              "491 509 995",
-              "775 442 409",
-              "721 082 382"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-1066",
-          "zdroj": "MPSV",
-          "nazev": "Město Police nad Metují - pečovatelská služba (středisko osobní hygieny)",
           "poskytovatel": {
             "nazev": "Město Police nad Metují",
             "ico": "00272949"
@@ -72909,54 +72482,10 @@
           "id": "mpsv-4081",
           "zdroj": "MPSV",
           "nazev": "Pečovatelská služba Lázně Bělohrad",
-          "poskytovatel": {
-            "nazev": "Město Lázně Bělohrad",
-            "ico": "00271730"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 50
-                }
-              ]
-            },
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 1
-                }
-              ]
-            }
+          "zarizeni": [
+            "Pečovatelská služba Lázně Bělohrad",
+            "Středisko osobní hygieny Pečovatelské služby Lázně Bělohrad"
           ],
-          "datumPoskytovaniOd": "2010-09-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "http://www.lazne-belohrad.cz"
-            ],
-            "emaily": [
-              "ps@lazne-belohrad.cz"
-            ],
-            "telefony": [
-              "605207790"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-4081",
-          "zdroj": "MPSV",
-          "nazev": "Středisko osobní hygieny Pečovatelské služby Lázně Bělohrad",
           "poskytovatel": {
             "nazev": "Město Lázně Bělohrad",
             "ico": "00271730"
@@ -103600,56 +103129,10 @@
           "id": "mpsv-2627",
           "zdroj": "MPSV",
           "nazev": "Pečovatelská služba",
-          "poskytovatel": {
-            "nazev": "Město Vamberk",
-            "ico": "00275492"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 62
-                }
-              ]
-            },
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 20
-                }
-              ]
-            }
+          "zarizeni": [
+            "Pečovatelská služba",
+            "Středisko osobní hygieny"
           ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "http://www.vamberk-city.cz"
-            ],
-            "emaily": [
-              "pecovatelska.sluzba@vamberk-city.cz",
-              "sektetariat@vamberk-city.cz"
-            ],
-            "telefony": [
-              "494548119",
-              "494541547"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-2627",
-          "zdroj": "MPSV",
-          "nazev": "Středisko osobní hygieny",
           "poskytovatel": {
             "nazev": "Město Vamberk",
             "ico": "00275492"
@@ -105994,6 +105477,29 @@
           }
         },
         {
+          "id": "uzis-61432",
+          "zdroj": "UZIS",
+          "nazev": "SESTŘIČKA.CZ - DOMÁCÍ PÉČE 02 s.r.o.",
+          "poskytovatel": {
+            "nazev": "SESTŘIČKA.CZ - DOMÁCÍ PÉČE 02 s.r.o.",
+            "ico": "29240263"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "kontakt": {
+            "weby": [
+              "https://www.sestricka.cz/"
+            ],
+            "emaily": [
+              "info@sestricka.cz"
+            ],
+            "telefony": []
+          }
+        },
+        {
           "id": "uzis-46939",
           "zdroj": "UZIS",
           "nazev": "Sanus Brno ",
@@ -106016,29 +105522,6 @@
             "telefony": [
               "+420541236090"
             ]
-          }
-        },
-        {
-          "id": "uzis-61432",
-          "zdroj": "UZIS",
-          "nazev": "SESTŘIČKA.CZ - DOMÁCÍ PÉČE 02 s.r.o.",
-          "poskytovatel": {
-            "nazev": "SESTŘIČKA.CZ - DOMÁCÍ PÉČE 02 s.r.o.",
-            "ico": "29240263"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "kontakt": {
-            "weby": [
-              "https://www.sestricka.cz/"
-            ],
-            "emaily": [
-              "info@sestricka.cz"
-            ],
-            "telefony": []
           }
         }
       ]
@@ -146896,44 +146379,10 @@
           "id": "mpsv-3346",
           "zdroj": "MPSV",
           "nazev": "Ledax o.p.s. středisko Týn nad Vltavou",
-          "poskytovatel": {
-            "nazev": "Ledax o.p.s.",
-            "ico": "28068955"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 42
-                }
-              ]
-            }
+          "zarizeni": [
+            "Ledax o.p.s. středisko Týn nad Vltavou",
+            "Ledax o.p.s. středisko Prachatice"
           ],
-          "datumPoskytovaniOd": "2009-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "http://www.ledax.cz"
-            ],
-            "emaily": [
-              "sekretariat@ledax.cz"
-            ],
-            "telefony": [
-              "724771027"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-3346",
-          "zdroj": "MPSV",
-          "nazev": "Ledax o.p.s. středisko Prachatice",
           "poskytovatel": {
             "nazev": "Ledax o.p.s.",
             "ico": "28068955"
@@ -147065,44 +146514,10 @@
           "id": "mpsv-3346",
           "zdroj": "MPSV",
           "nazev": "Ledax o.p.s. středisko Kaplice",
-          "poskytovatel": {
-            "nazev": "Ledax o.p.s.",
-            "ico": "28068955"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 42
-                }
-              ]
-            }
+          "zarizeni": [
+            "Ledax o.p.s. středisko Kaplice",
+            "Ledax o.p.s. středisko Trhové Sviny"
           ],
-          "datumPoskytovaniOd": "2009-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "http://www.ledax.cz"
-            ],
-            "emaily": [
-              "sekretariat@ledax.cz"
-            ],
-            "telefony": [
-              "724771027"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-3346",
-          "zdroj": "MPSV",
-          "nazev": "Ledax o.p.s. středisko Trhové Sviny",
           "poskytovatel": {
             "nazev": "Ledax o.p.s.",
             "ico": "28068955"
@@ -156245,105 +155660,6 @@
       ]
     },
     {
-      "id": "misto-23767880",
-      "kodAdresnihoMista": 23767880,
-      "adresa": {
-        "ulice": "nám. Soukenné",
-        "cisloDomovni": 115,
-        "cisloOrientacni": "6",
-        "psc": "46007",
-        "obec": "Liberec",
-        "kodObce": "563889",
-        "castObce": "Liberec III-Jeřáb",
-        "okres": "Liberec",
-        "kodOkresu": "CZ0513",
-        "kraj": "Liberecký kraj",
-        "kodKraje": "CZ051"
-      },
-      "souradnice": {
-        "lat": 50.7671396,
-        "lng": 15.0549268
-      },
-      "kategorie": [
-        "terenni"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-3954",
-          "zdroj": "MPSV",
-          "nazev": "Sociálně aktivizační služby pro seniory",
-          "poskytovatel": {
-            "nazev": "E - PROJECT o. s.",
-            "ico": "28551494"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/29",
-            "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 56
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2010-03-01",
-          "datumPoskytovaniDo": "2012-07-31",
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "filip.calek@proprio.cz"
-            ],
-            "telefony": [
-              "+420775700701"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-3955",
-          "zdroj": "MPSV",
-          "nazev": "Pečovatelská služba pro seniory",
-          "poskytovatel": {
-            "nazev": "E - PROJECT o. s.",
-            "ico": "28551494"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 30
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2010-03-01",
-          "datumPoskytovaniDo": "2012-07-31",
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "filip.calek@proprio.cz"
-            ],
-            "telefony": [
-              "+420775700701"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "misto-20822502",
       "kodAdresnihoMista": 20822502,
       "adresa": {
@@ -157011,132 +156327,6 @@
             "telefony": [
               "739 001 123",
               "283 880 316"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-bezadresy-4057-47f97e20",
-      "kodAdresnihoMista": null,
-      "adresa": {
-        "ulice": "Revoluční",
-        "cisloDomovni": 1502,
-        "cisloOrientacni": "30",
-        "psc": "11000",
-        "obec": "Praha",
-        "kodObce": "554782",
-        "castObce": "Nové Město",
-        "okres": null,
-        "kodOkresu": null,
-        "kraj": "Hlavní město Praha",
-        "kodKraje": "CZ010"
-      },
-      "souradnice": {
-        "lat": null,
-        "lng": null
-      },
-      "kategorie": [],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-4057",
-          "zdroj": "MPSV",
-          "nazev": "HOME SENIOR s. r. o.",
-          "poskytovatel": {
-            "nazev": "Home senior s. r. o.",
-            "ico": "29011272"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/29",
-            "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 15
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2010-08-13",
-          "datumPoskytovaniDo": "2012-06-30",
-          "kontakt": {
-            "weby": [
-              "www.homesenior.cz"
-            ],
-            "emaily": [
-              "sluzby@homesenior.cz"
-            ],
-            "telefony": [
-              "800 888 014"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-bezadresy-4058-47f97e20",
-      "kodAdresnihoMista": null,
-      "adresa": {
-        "ulice": "Revoluční",
-        "cisloDomovni": 1502,
-        "cisloOrientacni": "30",
-        "psc": "11000",
-        "obec": "Praha",
-        "kodObce": "554782",
-        "castObce": "Nové Město",
-        "okres": null,
-        "kodOkresu": null,
-        "kraj": "Hlavní město Praha",
-        "kodKraje": "CZ010"
-      },
-      "souradnice": {
-        "lat": null,
-        "lng": null
-      },
-      "kategorie": [],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-4058",
-          "zdroj": "MPSV",
-          "nazev": "HOME SENIOR s. r. o.",
-          "poskytovatel": {
-            "nazev": "Home senior s. r. o.",
-            "ico": "29011272"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/33",
-            "nazev": "sociální rehabilitace"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 15
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2010-08-13",
-          "datumPoskytovaniDo": "2012-06-30",
-          "kontakt": {
-            "weby": [
-              "www.homesenior.cz"
-            ],
-            "emaily": [
-              "sluzby@homesenior.cz"
-            ],
-            "telefony": [
-              "800 888 014"
             ]
           }
         }
@@ -158129,27 +157319,6 @@
           }
         },
         {
-          "id": "uzis-53951",
-          "zdroj": "UZIS",
-          "nazev": "AHC Centrum následné péče Sedlec-Prčice a.s.",
-          "poskytovatel": {
-            "nazev": "AHC Centrum následné péče Sedlec-Prčice a.s.",
-            "ico": "25579282"
-          },
-          "druhSluzby": {
-            "kod": "110",
-            "nazev": "Léčebna pro dlouhodobě nemocné (LDN)"
-          },
-          "oborPece": null,
-          "kontakt": {
-            "weby": [
-              "http://gerimed.cz"
-            ],
-            "emaily": [],
-            "telefony": []
-          }
-        },
-        {
           "id": "uzis-161787",
           "zdroj": "UZIS",
           "nazev": "SESTŘIČKA.CZ - DOMÁCÍ PÉČE PŘÍBRAMSKO s.r.o.",
@@ -158172,6 +157341,27 @@
             "telefony": [
               "+420314004951"
             ]
+          }
+        },
+        {
+          "id": "uzis-53951",
+          "zdroj": "UZIS",
+          "nazev": "AHC Centrum následné péče Sedlec-Prčice a.s.",
+          "poskytovatel": {
+            "nazev": "AHC Centrum následné péče Sedlec-Prčice a.s.",
+            "ico": "25579282"
+          },
+          "druhSluzby": {
+            "kod": "110",
+            "nazev": "Léčebna pro dlouhodobě nemocné (LDN)"
+          },
+          "oborPece": null,
+          "kontakt": {
+            "weby": [
+              "http://gerimed.cz"
+            ],
+            "emaily": [],
+            "telefony": []
           }
         }
       ]
@@ -161402,136 +160592,6 @@
             ],
             "telefony": [
               "607 816 380"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-14880806",
-      "kodAdresnihoMista": 14880806,
-      "adresa": {
-        "ulice": null,
-        "cisloDomovni": 3,
-        "cisloOrientacni": null,
-        "psc": "46401",
-        "obec": "Bulovka",
-        "kodObce": "563935",
-        "castObce": "Dolní Oldřiš",
-        "okres": "Liberec",
-        "kodOkresu": "CZ0513",
-        "kraj": "Liberecký kraj",
-        "kodKraje": "CZ051"
-      },
-      "souradnice": {
-        "lat": 51.0027258,
-        "lng": 15.1575754
-      },
-      "kategorie": [
-        "terenni"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-4442",
-          "zdroj": "MPSV",
-          "nazev": "Domácí péče Markéty z Lemberka, o.p.s.",
-          "poskytovatel": {
-            "nazev": "Domácí péče Markéty z Lemberka, o.p.s.",
-            "ico": "28750195"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 10
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2012-03-05",
-          "datumPoskytovaniDo": "2012-07-26",
-          "kontakt": {
-            "weby": [
-              "www.marketinapece.cz"
-            ],
-            "emaily": [
-              "info@marketinapece.cz"
-            ],
-            "telefony": [
-              "773 133 001"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-23476206",
-      "kodAdresnihoMista": 23476206,
-      "adresa": {
-        "ulice": "Slovanka",
-        "cisloDomovni": 1850,
-        "cisloOrientacni": null,
-        "psc": "47001",
-        "obec": "Česká Lípa",
-        "kodObce": "561380",
-        "castObce": "Česká Lípa",
-        "okres": "Česká Lípa",
-        "kodOkresu": "CZ0511",
-        "kraj": "Liberecký kraj",
-        "kodKraje": "CZ051"
-      },
-      "souradnice": {
-        "lat": 50.6894275,
-        "lng": 14.5315793
-      },
-      "kategorie": [
-        "terenni"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-4443",
-          "zdroj": "MPSV",
-          "nazev": "Domácí péče Markéty z Lemberka, o.p.s.",
-          "poskytovatel": {
-            "nazev": "Domácí péče Markéty z Lemberka, o.p.s.",
-            "ico": "28750195"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/8",
-            "nazev": "odlehčovací služby"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 10
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2012-03-05",
-          "datumPoskytovaniDo": "2012-09-30",
-          "kontakt": {
-            "weby": [
-              "www.marketinapece.cz"
-            ],
-            "emaily": [
-              "info@marketinapece.cz"
-            ],
-            "telefony": [
-              "773 213 002"
             ]
           }
         }
@@ -192028,44 +191088,10 @@
           "id": "mpsv-7228",
           "zdroj": "MPSV",
           "nazev": "Domov Chrudim s.r.o. - 2. nadzemní podlaží",
-          "poskytovatel": {
-            "nazev": "Domov Chrudim s.r.o.",
-            "ico": "17940915"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/14",
-            "nazev": "domovy se zvláštním režimem"
-          },
-          "formy": [
-            {
-              "forma": "pob",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "luzka",
-                  "typNazev": "Počet lůžek",
-                  "pocet": 95
-                }
-              ]
-            }
+          "zarizeni": [
+            "Domov Chrudim s.r.o. - 2. nadzemní podlaží",
+            "Domov Chrudim s.r.o. - 3. nadzemní podlaží"
           ],
-          "datumPoskytovaniOd": "2025-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.seniorgarden.cz"
-            ],
-            "emaily": [
-              "socialni3.chrudim@seniorgarden.cz"
-            ],
-            "telefony": [
-              "720 767 977"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-7228",
-          "zdroj": "MPSV",
-          "nazev": "Domov Chrudim s.r.o. - 3. nadzemní podlaží",
           "poskytovatel": {
             "nazev": "Domov Chrudim s.r.o.",
             "ico": "17940915"

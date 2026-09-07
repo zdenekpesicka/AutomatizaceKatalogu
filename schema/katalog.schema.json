@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/PLACEHOLDER/AutomatizaceKatalogu/main/schema/katalog.schema.json",
+  "$id": "https://raw.githubusercontent.com/zdenekpesicka/AutomatizaceKatalogu/main/schema/katalog.schema.json",
   "title": "Katalog registrovaných služeb pro seniory",
   "description": "Sjednocená data z RPSS (MPSV) a NRPZS (ÚZIS) pro katalog seniorských služeb. Základní jednotkou je místo (adresní bod), ne jednotlivá registrace.",
   "type": "object",
@@ -87,6 +87,12 @@
         },
         "zdroj": { "type": "string", "enum": ["MPSV", "UZIS"] },
         "nazev": { "type": "string" },
+        "zarizeni": {
+          "type": "array",
+          "description": "Jen u zdroje MPSV a jen tam, kde tatáž registrace zahrnuje na tomto adresním bodě víc zařízení (např. pečovatelská služba a její středisko osobní hygieny v jednom domě, nebo dvě nadzemní podlaží jedné budovy). Obsahuje názvy všech těchto zařízení včetně toho v `nazev`, který je z nich první. Když pole chybí, má registrace na tomto místě jediné zařízení a jeho název je v `nazev`. Registrace je v `sluzby[]` vždy právě jednou, takže `kapacitaRegistrovana` se nikdy nezapočítá vícekrát - kapacita je v MPSV vedená na službu, ne na zařízení.",
+          "minItems": 2,
+          "items": { "type": "string" }
+        },
         "poskytovatel": {
           "type": "object",
           "required": ["nazev", "ico"],

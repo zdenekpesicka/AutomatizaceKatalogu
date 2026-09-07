@@ -22,8 +22,6 @@ from uzis import (  # noqa: E402
     load_nrpzs,
     filter_relevant,
     split_zaznamy_a_priznaky,
-    build_mpsv_index,
-    match_uzis_row,
     parse_gps,
 )
 from ciselniky import load_all, load_kody  # noqa: E402
@@ -35,6 +33,12 @@ DATA = ROOT / "data"
 TODAY = datetime.date.today().isoformat()
 
 PRAH_ZMENY = 0.05  # CLAUDE.md 5.2 bod 3 - vice nez 5 % zmena poctu mist = nepublikovat
+
+# Verzi nesou vsechny tri vystupni soubory, proto stoji na jednom miste - driv byla vepsana
+# trikrat zvlast a mohly se rozejit. CLAUDE.md 4.2: nekompatibilni zmena zvysuje major verzi.
+# 1.1.0 pridalo nepovinne sluzby[].zarizeni, tedy aditivni zmenu, ktera stavajiciho ctenare
+# schematu 1.0.0 nerozbije.
+VERZE_SCHEMATU = "1.1.0"
 
 # Presnost souradnic je vlastnost rozhrani, ne jednotlivych zdroju, proto se zaokrouhluje na
 # jednom miste pro oba (RUIAN i UZIS) - jinak by vystup michal ruzne presna cisla podle toho,
@@ -139,7 +143,43 @@ def ruian_klic(row: dict) -> int | None:
         return None
 
 
-def mpsv_sluzba_to_output(s: dict, typ_kapacity_nazvy: dict, druhy_nazvy: dict) -> dict:
+def slouc_zarizeni_jedne_sluzby(sluzby: list[dict]) -> list[tuple[dict, list[str]]]:
+    """Jedna registrace = jedna polozka v sluzby[], i kdyz pod ni MPSV vede na tomtez adresnim bode
+    vic zarizeni.
+
+    build_place_groups rozpada sluzbu na zarizeni, takze na jednom miste muze tataz registrace
+    skoncit vickrat - napr. mpsv-2627 ve Vamberku jako "Pecovatelska sluzba" a "Stredisko osobni
+    hygieny". Overeno na plnych datech: takovych nadbytecnych polozek je 13 a lisi se VYHRADNE
+    nazvem zarizeni. Vsechna ostatni pole (poskytovatel, druh, formy, kapacita, kontakty, data
+    poskytovani) jsou shodna, protoze jsou vlastnosti registrace, ne zarizeni.
+
+    Nechat je oddelene znamena dvakrat vypsat tataz cisla, a to primo skodi: kapacita je v MPSV
+    registrovana na sluzbu, ne na zarizeni. Na misto-27763331 (Domov Chrudim) jsou tri registrace
+    s 20, 5 a 95 luzky, tedy 120, ale mpsv-7228 byla v poli dvakrat (jednou za 2. a jednou za
+    3. nadzemni podlazi), takze secteni kapacit pres sluzby[] davalo 215.
+
+    Slucuje se podle portalId, tedy podle identifikatoru registrace, nikdy podle nazvu - nazvy
+    zarizeni jsou v MPSV nepresne a rozlisovacem byt nemohou (CLAUDE.md Etapa 2, bod 6).
+
+    Vraci dvojice (prvni vyskyt registrace, nazvy vsech jejich zarizeni na tomto miste), v poradi
+    ve kterem prisly ze zdroje.
+    """
+    poradi: dict = {}
+    for s in sluzby:
+        nazev = s["nazevZarizeni"]
+        zaznam = poradi.get(s["portalId"])
+        if zaznam is None:
+            poradi[s["portalId"]] = (s, [nazev])
+        # Porovnava se orezane, protoze koncova mezera neni odlisujici udaj, jen preklep v registru
+        # (mpsv-311, "Domov pro seniory Bukov, prispevkova organizace" a totez s mezerou navic).
+        # Do vystupu jde nazev vzdy v puvodnim tvaru, orez slouzi jen k rozhodnuti, jestli jde
+        # o dalsi zarizeni - prepisovat udaj registru nechceme.
+        elif (nazev or "").strip() not in [(n or "").strip() for n in zaznam[1]]:
+            zaznam[1].append(nazev)
+    return list(poradi.values())
+
+
+def mpsv_sluzba_to_output(s: dict, zarizeni_nazvy: list[str], typ_kapacity_nazvy: dict, druhy_nazvy: dict) -> dict:
     # Kapacita zustava svazana s formou, ktera ji ma (oprava feedbacku vyvojare - viz mpsv.py).
     formy_out = [
         {
@@ -158,17 +198,27 @@ def mpsv_sluzba_to_output(s: dict, typ_kapacity_nazvy: dict, druhy_nazvy: dict) 
     weby = s["kontaktySluzba"]["weby"] or s["kontaktyPoskytovatel"]["weby"]
     emaily = s["kontaktySluzba"]["emaily"] or s["kontaktyPoskytovatel"]["emaily"]
     telefony = s["kontaktySluzba"]["telefony"] or s["kontaktyPoskytovatel"]["telefony"]
-    return {
+    out = {
         "id": f"mpsv-{s['portalId']}",
         "zdroj": "MPSV",
         "nazev": s["nazevZarizeni"],
-        "poskytovatel": {"nazev": s["poskytovatelNazev"], "ico": s["poskytovatelIco"]},
-        "druhSluzby": {"kod": s["druhSocialniSluzby"], "nazev": druhy_nazvy.get(s["druhSocialniSluzby"], "?")},
-        "formy": formy_out,
-        "datumPoskytovaniOd": s["datumPoskytovaniOd"],
-        "datumPoskytovaniDo": s["datumPoskytovaniDo"],
-        "kontakt": {"weby": weby, "emaily": emaily, "telefony": telefony},
     }
+    # Pole je jen tam, kde skutecne nese informaci navic, tedy kdyz registrace zahrnuje na tomto
+    # miste vic nez jedno zarizeni. Jinak by to byl u vsech ~3300 MPSV polozek jednoprvkovy seznam
+    # opakujici "nazev".
+    if len(zarizeni_nazvy) > 1:
+        out["zarizeni"] = zarizeni_nazvy
+    out.update(
+        {
+            "poskytovatel": {"nazev": s["poskytovatelNazev"], "ico": s["poskytovatelIco"]},
+            "druhSluzby": {"kod": s["druhSocialniSluzby"], "nazev": druhy_nazvy.get(s["druhSocialniSluzby"], "?")},
+            "formy": formy_out,
+            "datumPoskytovaniOd": s["datumPoskytovaniOd"],
+            "datumPoskytovaniDo": s["datumPoskytovaniDo"],
+            "kontakt": {"weby": weby, "emaily": emaily, "telefony": telefony},
+        }
+    )
+    return out
 
 
 def uzis_sluzba_to_output(r: dict) -> dict:
@@ -261,8 +311,6 @@ def main() -> None:
     zaznamy, priznaky = split_zaznamy_a_priznaky(relevant)
     print(f"  {len(rows)} radku, {len(relevant)} relevantnich, {len(zaznamy)} zaznamu, {len(priznaky)} priznaku")
 
-    mpsv_index = build_mpsv_index(places)
-
     for p in places.values():
         p["poskytujeZdravotniPeci"] = False
         p["uzis_sluzby"] = []
@@ -270,52 +318,37 @@ def main() -> None:
     # CLAUDE.md 3.4 - "Zdravotni pece v ustavech socialni p." neni zarizeni, kam se da jit. Je to
     # zdravotnicka licence, kterou musi mit domov, aby smel zamestnavat sestry, a UZIS ji eviduje
     # zvlast na tez adrese. Nikdy z ni tedy nevznika misto ani polozka v sluzby[], jen priznak
-    # u domova. Nejdriv presna shoda ICO+RUIAN (organizacni identita), pak sdilena adresa; radek,
-    # ktery se nepripoji ani tak, do vystupu nejde vubec.
+    # u domova na tomtez adresnim bode; radek, ktery zadny takovy domov v katalogu nema, do vystupu
+    # nejde vubec.
     #
     # Driv tyto radky pri neuspesnem parovani propadaly mezi bezne zaznamy, takze zakladaly
     # samostatna mista v zalozce Zdravi (338 mist, ctvrtina zalozky) - typicky druhy pin par desitek
     # metru od tehoz domova, ktery uz v katalogu byl z MPSV. Zaroven to bylo nekonzistentni: tataz
     # situace koncila bud jako priznak, nebo jako samostatne misto, podle toho, jestli se povedlo
     # sparovat ICO. Viz CLAUDE.md sekce 8.
-    priznak_ico = priznak_adresa = priznak_zahozeno = 0
+    priznak_pripojeno = priznak_zahozeno = 0
     for row in priznaky:
-        match = match_uzis_row(row, mpsv_index)
-        if match is None:
-            klic = ruian_klic(row)
-            match = klic if klic in places else None
-            if match is not None:
-                priznak_adresa += 1
+        klic = ruian_klic(row)
+        if klic in places:
+            places[klic]["poskytujeZdravotniPeci"] = True
+            priznak_pripojeno += 1
         else:
-            priznak_ico += 1
-        if match is None:
             priznak_zahozeno += 1
-        else:
-            places[match]["poskytujeZdravotniPeci"] = True
 
-    uzis_standalone: list[dict] = []
-    zaznam_matched = 0
-    for row in zaznamy:
-        match = match_uzis_row(row, mpsv_index)
-        if match is not None:
-            places[match]["uzis_sluzby"].append(row)
-            zaznam_matched += 1
-        else:
-            uzis_standalone.append(row)
+    uzis_standalone: list[dict] = list(zaznamy)
 
     print(
-        f"  priznaky (zdravotni pece v ustavech): {priznak_ico} pripojeno pres ICO+RUIAN, "
-        f"{priznak_adresa} pres sdilenou adresu, {priznak_zahozeno} bez domova v katalogu "
+        f"  priznaky (zdravotni pece v ustavech): {priznak_pripojeno} pripojeno k domovu na tomtez "
+        f"adresnim bode, {priznak_zahozeno} bez domova v katalogu "
         f"(nejdou do vystupu, CLAUDE.md 3.4)"
     )
-    print(f"  zaznamy: {zaznam_matched}/{len(zaznamy)} pripojeno k MPSV mistu jako dalsi sluzba")
 
     # Oprava feedbacku vyvojare (bod 6): zaklad. jednotka je fyzicka adresa, ne registrace (CLAUDE.md 4.2).
-    # Predchozi verze slucovala UZIS zaznamy s MPSV mistem jen pri shode ICO+RUIAN (organizacni identita).
-    # Zaznamy, ktere touto shodou neprosly, ale sdileji RUIAN kod se stavajicim MPSV mistem (tedy jsou na
-    # stejne fyzicke adrese, jen od jineho poskytovatele), driv zakladaly samostatne "misto-uzis-*" misto
-    # se stejnou adresou jako uz existujici "misto-<kod>" - dve mista pro jednu adresu, nekonzistentni ID.
-    # Nyni se nejdriv zkusi adresni shoda (RUIAN kod), teprve zbytek zustava jako samostatna UZIS mista.
+    # UZIS zaznam se pripoji k MPSV mistu prave tehdy, kdyz sdili kod adresniho mista - jeden adresni
+    # bod je jedno misto a jeden pin, bez ohledu na to, kolik poskytovatelu za nim stoji. Shoda ICO se
+    # zamerne nepouziva ani jako doplnkove kriterium: vic zarizeni na jedne adrese ma byt jedno misto
+    # (ICO by je roztrhlo) a vic pobocek jedne organizace ma zustat oddelenych (ICO by je slepilo).
+    # Zbytek, tedy radky bez MPSV mista na teze adrese, zaklada samostatna UZIS mista.
     uzis_groups: dict = {}
     for row in uzis_standalone:
         key = ruian_klic(row)
@@ -332,8 +365,8 @@ def main() -> None:
         else:
             uzis_only_groups[key] = rows_
 
-    print(f"  {len(uzis_standalone)} UZIS zaznamu bez shody ICO+RUIAN, z toho:")
-    print(f"    {adresa_matched} pripojeno k existujicimu MPSV mistu podle sdilene adresy (RUIAN kodu)")
+    print(f"  {len(uzis_standalone)} UZIS zaznamu, z toho:")
+    print(f"    {adresa_matched} pripojeno k existujicimu MPSV mistu podle sdileneho adresniho bodu (RUIAN kodu)")
     print(f"    {len(uzis_standalone) - adresa_matched} zustava jako samostatna UZIS mista ({len(uzis_only_groups)} mist)")
 
     # needed_kody zahrnuje i UZIS-only mista (klic = jejich RUIAN kod) - RUIAN CSV ma primo sloupec
@@ -348,7 +381,10 @@ def main() -> None:
     mista_out = []
 
     for k, p in places.items():
-        sluzby_out = [mpsv_sluzba_to_output(s, typ_kapacity_nazvy, druhy_nazvy) for s in p["sluzby"]]
+        sluzby_out = [
+            mpsv_sluzba_to_output(s, zarizeni_nazvy, typ_kapacity_nazvy, druhy_nazvy)
+            for s, zarizeni_nazvy in slouc_zarizeni_jedne_sluzby(p["sluzby"])
+        ]
         sluzby_out += [uzis_sluzba_to_output(r) for r in p["uzis_sluzby"]]
 
         kategorie = set()
@@ -440,7 +476,7 @@ def main() -> None:
             f"Duplicitni ID mist ({len(duplicitni)}): {duplicitni[:10]} - NEPUBLIKUJI."
         )
 
-    out = {"verzeSchematu": "1.0.0", "mista": mista_out}
+    out = {"verzeSchematu": VERZE_SCHEMATU, "mista": mista_out}
 
     print("Validuji vystup proti schematu...")
     with open(ROOT / "schema" / "katalog.schema.json", encoding="utf-8") as f:
@@ -508,7 +544,7 @@ def main() -> None:
         kat: sum(1 for m in mista_out if kat in m["kategorie"]) for kat in ["domovy", "terenni", "bezpeci", "zdravi"]
     }
     meta = {
-        "verzeSchematu": "1.0.0",
+        "verzeSchematu": VERZE_SCHEMATU,
         "hashKatalogu": content_hash,
         "pocetMist": len(mista_out),
         "pocetSluzeb": sum(len(m["sluzby"]) for m in mista_out),
@@ -522,7 +558,7 @@ def main() -> None:
     print("Zapsano data/meta.json")
 
     zmeny = {
-        "verzeSchematu": "1.0.0",
+        "verzeSchematu": VERZE_SCHEMATU,
         "pridano": pridano,
         "zmeneno": zmeneno,
         "odebrano": odebrano,

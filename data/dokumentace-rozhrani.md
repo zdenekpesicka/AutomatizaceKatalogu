@@ -1,6 +1,6 @@
 # Dokumentace rozhraní — katalog registrovaných služeb pro seniory
 
-Verze schématu 1.0.0. Viz `schema/katalog.schema.json` a `data/katalog.json` — plná data z ostrých dat MPSV a ÚZIS. Aktuální počet míst a datum zdrojových dat najdete vždy v `data/meta.json`; tady je záměrně neopakujeme, aby se obě čísla časem nerozešla.
+Verze schématu 1.1.0. Viz `schema/katalog.schema.json` a `data/katalog.json` — plná data z ostrých dat MPSV a ÚZIS. Aktuální počet míst a datum zdrojových dat najdete vždy v `data/meta.json`; tady je záměrně neopakujeme, aby se obě čísla časem nerozešla.
 
 ## Soubory
 
@@ -10,7 +10,7 @@ Verze schématu 1.0.0. Viz `schema/katalog.schema.json` a `data/katalog.json` �
 | `schema/katalog.schema.json` | JSON Schema (draft-07) pro validaci na vaší straně. Doporučujeme validovat při každém stažení. |
 | `data/meta.json` | Verze schématu, hash obsahu, počty záznamů, datum zdrojových dat. Podle hashe poznáte, že se data změnila. **Neobsahuje čas běhu importu** — to, kdy import naposledy proběhl, není totéž jako to, kdy se data naposledy změnila. |
 | `data/zmeny.json` | ID přidaných, změněných a odebraných míst od posledního běhu, kdy k reálné změně došlo. |
-| `data/ukazka.json` | **Neodebírejte, nejsou to živá data.** Zmrazený výřez 32 míst, na kterém se odsouhlasila struktura a formát. Slouží už jen jako ilustrace k této dokumentaci a dál se neaktualizuje. |
+| `data/ukazka.json` | **Neodebírejte, nejsou to živá data.** Zmrazený výřez 32 míst, na kterém se odsouhlasila struktura a formát. Slouží už jen jako ilustrace k této dokumentaci a dál se neaktualizuje, proto v něm zůstává `verzeSchematu: "1.0.0"` a nenajdete v něm pole `sluzby[].zarizeni` přidané v 1.1.0. |
 
 ## Základní jednotka: místo, ne registrace
 
@@ -22,14 +22,46 @@ Zbývají dva případy bez RÚIAN kódu, kde se ID odvodit nedá:
 
 | Situace | Tvar ID |
 |---|---|
-| Zařízení MPSV bez `kodAdresnihoMista` (cca 1,8 % aktivních) | `misto-bezadresy-<portalId>-<otisk názvu>` |
+| Zařízení MPSV bez `kodAdresnihoMista` (cca 1,3 % aktivních) | `misto-bezadresy-<portalId>-<otisk názvu>` |
 | Místo jen z ÚZIS, které nemá RÚIAN kód ani tam | `misto-uzis-bezadresy-<ID místa poskytování>` |
 
 U prvního tvaru je název zařízení jediný rozlišovač, který registr nabízí — zařízení v MPSV nemá vlastní identifikátor. Když tedy MPSV název zařízení přepíše, dostane místo nové ID a ve `zmeny.json` se objeví jako odebrané a přidané. Týká se to řádově desítek míst z celého katalogu a spolehlivěji to nejde, dokud MPSV zařízením vlastní identifikátor nedá.
 
+**U těchto míst může být celé `adresa` rovno `null`** — ne prázdný objekt, ale `null`. Registr u nich neuvádí ani ulici a obec, takže není co vypsat. Aktuálně je takových míst 36 z 39 bez RÚIAN kódu; zbylá 3 adresní text mají, jen k němu chybí kód (např. `misto-bezadresy-316-9d95f40b`, Žižkova, Příbram). **Ošetřete to při čtení**, `misto.adresa.obec` na těchto záznamech spadne. Místo samo je platné a má název, kontakt i kategorii, jen bez adresy se nedá umístit na mapu ani filtrovat podle území.
+
 **Slučování napříč zdroji je vždy podle adresy, ne podle poskytovatele.** Pokud ÚZIS záznam sdílí `kodAdresnihoMista` s existujícím MPSV místem, stane se další položkou v jeho `sluzby[]`, i když jde o jiného poskytovatele (typicky nemocnice a zdravotní úsek v budově domova pro seniory). Rozlišujte proto zdroj podle `sluzby[].zdroj`, ne podle tvaru ID — z ID to poznat nejde a záměrně nemá.
 
-I když se `misto.kodAdresnihoMista` v datech najde, souřadnice se u malé části adres (aktuálně cca 3 %) nepodařilo dohledat, protože RÚIAN je aktualizovaný měsíčně a mezitím mohl být adresní bod přečíslován — `souradnice.lat/lng` je pak `null`, jak popisuje sekce Souřadnice níže.
+**Jedno místo je jeden adresní bod, i když areál má bodů víc.** Registry evidují adresní body nezávisle a rozlehlejší areál jich má běžně několik: tentýž komplex může mít v MPSV jiný `kodAdresnihoMista` než v ÚZIS a i uvnitř jednoho registru má dům se dvěma vchody dva body. Slučování je nespojí, takže v katalogu zůstanou dvě místa se stejným IČO pár desítek metrů od sebe. **19 takových dvojic vzniká mezi registry** (jedno místo jen z ÚZIS, druhé se sociální službou téhož poskytovatele, 10 až 95 m — např. `misto-14264633` a `misto-72537001`, Charita Šumperk, 25 m) a **dalších 143 uvnitř jednoho zdroje**. Ty druhé ale z velké části oddělené být mají, jde o sousední budovy jedné organizace, ne o jeden areál. Rozlišit to za vás nemůžeme — registry vazbu „tyto body patří k sobě“ nevedou a dopočítávat ji ze vzdálenosti by znamenalo vymýšlet data. Pokud vám blízké piny vadí, shlukněte si je na frontendu podle shody `sluzby[].poskytovatel.ico` a vzdálenosti; kde je hranice, je pak vaše rozhodnutí.
+
+Souřadnice chybí u části míst ze dvou různých důvodů. **Kód adresního místa je vyplněný, ale aktuální snapshot RÚIAN ho nezná** (2,4 % míst) — RÚIAN se aktualizuje měsíčně a adresní bod mezitím mohl vzniknout nebo být přečíslován. `misto.id` je v tomto případě normální `misto-<kód>` a je stabilní, `null` jsou jen souřadnice; s dalším měsíčním během RÚIAN se část z nich doplní. Druhá skupina jsou místa **bez kódu adresního místa vůbec** (tvary ID z tabulky výše), tam se souřadnice dohledat nemá z čeho a stav se sám nezlepší. V obou případech je `souradnice.lat/lng` rovno `null`, viz sekce Souřadnice níže.
+
+## Jedna registrace je v `sluzby[]` právě jednou (`zarizeni`)
+
+**`sluzby[].id` je v rámci jednoho místa unikátní.** Můžete podle něj bezpečně párovat, klíčovat v Reactu i deduplikovat na své straně.
+
+Není to samozřejmé, protože MPSV vede pod jednou registrací seznam zařízení a jedna registrace může mít na jedné adrese víc zařízení — typicky pečovatelská služba a její středisko osobní hygieny v témže domě, nebo dvě nadzemní podlaží jedné budovy. Do verze 1.0.0 se taková registrace objevila v `sluzby[]` vícekrát se stejným `id`.
+
+Od 1.1.0 je registrace v poli jednou a názvy zařízení nese nepovinné pole `zarizeni`:
+
+```json
+{
+  "id": "mpsv-2627",
+  "zdroj": "MPSV",
+  "nazev": "Pečovatelská služba",
+  "zarizeni": ["Pečovatelská služba", "Středisko osobní hygieny"],
+  "formy": [{"forma": "ter", "kapacitaRegistrovana": [{"typ": "klient", "typNazev": "Počet klientů", "pocet": 62}]}]
+}
+```
+
+Pravidla, na která se můžete spolehnout:
+
+- `zarizeni` je **jen u `zdroj: "MPSV"`** a **jen tam, kde má registrace na daném místě víc než jedno zařízení**. Jinak pole chybí úplně a název je v `nazev`. Čtěte tedy `sluzby[].zarizeni ?? [sluzby[].nazev]`.
+- Když je pole přítomné, `nazev` je vždy jeho první prvek. Žádný název se cestou neztrácí.
+- Týká se to dnes 11 položek v celém katalogu, ale spoléhejte na pravidlo, ne na to číslo.
+
+**Proč to bylo potřeba: kapacita je v MPSV registrovaná na službu, ne na zařízení.** Dokud byla registrace v poli dvakrát, byla dvakrát i její kapacita. U Domova Chrudim (`misto-27763331`) jsou registrace tři — 20, 5 a 95 lůžek, dohromady 120 — ale ta poslední byla v poli dvakrát, jednou za 2. a jednou za 3. nadzemní podlaží, takže součet přes `sluzby[]` dával 215. Teď se sčítat dá.
+
+Poslední věc k názvům v `zarizeni`: u čtyř zařízení uvádí MPSV název jednoho města a adresní kód jiného (např. „Ledax o.p.s. středisko Prachatice“ s adresním bodem v Týně nad Vltavou). Místo umisťujeme podle kódu, tedy správně; nesprávný je název. Opravit ho nemůžeme, dohledat správné přiřazení není z čeho — proto ho vypisujeme tak, jak ho registr vede. Když název zařízení zobrazujete, počítejte s tím, že nemusí odpovídat obci v `adresa`.
 
 ## Kategorie (`kategorie`)
 
@@ -47,7 +79,7 @@ Nejde o zařízení, kam se dá jít, ale o zdravotnickou licenci, kterou musí 
 
 ## Souřadnice (`souradnice`)
 
-Vždy objekt `{"lat": ..., "lng": ...}`, nikdy vynechané pole. `lat`/`lng` jsou `null`, když se souřadnice nepodařilo určit (viz `misto-bezadresy-4674` v ukázce). Souřadnice jsou vždy WGS84 (běžný formát pro mapy, GPS), i u zdrojů, které interně používají jiný systém.
+Vždy objekt `{"lat": ..., "lng": ...}`, nikdy vynechané pole. `lat`/`lng` jsou `null`, když se souřadnice nepodařilo určit — v ukázce viz `misto-bezadresy-4674-f7e6ac50` (místo bez kódu adresního místa) a `misto-80030152` (kód je vyplněný, jen ho snapshot RÚIAN nezná). Souřadnice jsou vždy WGS84 (běžný formát pro mapy, GPS), i u zdrojů, které interně používají jiný systém.
 
 ## Formy a kapacita (`formy`, `kapacitaRegistrovana`)
 
@@ -60,6 +92,8 @@ Vždy objekt `{"lat": ..., "lng": ...}`, nikdy vynechané pole. `lat`/`lng` jsou
 ]
 ```
 
+Kapacita je registrovaná **na službu, ne na zařízení**. Každá registrace je v `sluzby[]` právě jednou (viz sekce výše), takže součet kapacit přes `sluzby[]` jednoho místa je správný a nic se v něm nezapočítá dvakrát.
+
 **`kapacitaRegistrovana` je registrovaná maximální kapacita, ne aktuální volná místa.** Registr volná místa neobsahuje. Pole `typ` nabývá hodnot `klient`, `kontakt`, `interv`, `luzka`, `hovor` (počet klientů / kontaktů 10min. jednání / intervencí 30min. jednání / lůžek / hovorů) — jednotku vždy zobrazujte podle `typNazev`, ať nevznikne třeba "32 lůžek" u pečovatelské služby, která lůžka nemá.
 
 ## Adresa u zdroje ÚZIS: `cisloOrientacni` může obsahovat obojí
@@ -68,7 +102,9 @@ U `zdroj: "MPSV"` jsou `cisloDomovni` a `cisloOrientacni` dvě oddělená pole t
 
 ## Kódy obce, okresu a kraje (`kodObce`, `kodOkresu`, `kodKraje`)
 
-Vedle textového názvu je u obce, okresu a kraje k dispozici i oficiální kód pro jednoznačné rozlišení (např. "Kraj Vysočina" vs. "Vysočina", nebo shodné názvy obcí v různých krajích): `kodObce` je číselný kód ČSÚ/RÚIAN (např. `554782` pro Prahu), `kodOkresu` je kód LAU 1 (např. `CZ0100` pro Prahu, `CZ020A` pro Prahu-západ), `kodKraje` je kód NUTS 3 (např. `CZ010` pro Prahu). `kodOkresu`/`kodKraje` mají stejný formát u obou zdrojů (MPSV i ÚZIS mají tento kód přímo v datech). U míst čistě ze zdroje ÚZIS `kodObce` v samotných ÚZIS datech chybí (jen textový název), proto se dohledává přes RÚIAN (stejný zdroj jako souřadnice, přes `ZZ_RUIAN_kod`) — pokrytí 99,8 %. `kodObce` je `null` jen výjimečně, u míst bez dohledaného RÚIAN bodu (stejná skupina jako místa bez souřadnic, viz výše).
+Vedle textového názvu je u obce, okresu a kraje k dispozici i oficiální kód pro jednoznačné rozlišení (např. "Kraj Vysočina" vs. "Vysočina", nebo shodné názvy obcí v různých krajích): `kodObce` je číselný kód ČSÚ/RÚIAN (např. `554782` pro Prahu), `kodOkresu` je kód LAU 1 (např. `CZ0100` pro Prahu, `CZ020A` pro Prahu-západ), `kodKraje` je kód NUTS 3 (např. `CZ010` pro Prahu). `kodOkresu`/`kodKraje` mají stejný formát u obou zdrojů (MPSV i ÚZIS mají tento kód přímo v datech). U míst čistě ze zdroje ÚZIS `kodObce` v samotných ÚZIS datech chybí (jen textový název), proto se dohledává přes RÚIAN (stejný zdroj jako souřadnice, přes `ZZ_RUIAN_kod`) — pokrytí 99,7 %, tedy 649 ze 651 míst čistě ze zdroje ÚZIS. `kodObce` je `null` jen výjimečně, u míst bez dohledaného RÚIAN bodu (stejná skupina jako místa bez souřadnic, viz výše).
+
+**Filtrujte a seskupujte podle kódu, ne podle názvu obce.** Textový název přebíráme z registru, ze kterého místo pochází, a oba registry ho pro Prahu píší jinak: místa se sociální službou mají `obec: "Praha"` (193 míst), místa jen ze zdroje ÚZIS mají městskou část, tedy `"Praha 1"` až `"Praha 16"` (83 míst). Filtr na `obec == "Praha"` by vám tedy 83 pražských míst zahodil. `kodObce` je přitom u 276 z těch 277 míst shodně `554782` (u jednoho se RÚIAN bod nedohledal, viz výše), takže při filtrování podle kódu problém nevzniká. Totéž platí obecně — název je pro zobrazení, kód pro logiku.
 
 ## IČO
 
@@ -84,14 +120,16 @@ Vždy 8 znaků, jen číslice, jako text (`"03017621"` je platné IČO se sedmi 
 
 ## Datum poskytování (`datumPoskytovaniOd`, `datumPoskytovaniDo`)
 
-Jen u `MPSV`. `datumPoskytovaniOd` je vyplněné u všech seniorských služeb, `datumPoskytovaniDo` jen u služeb, které mají v registru evidované ukončení (cca 15 %) — u aktivní služby je `null`. Do výstupu jdou jen aktivní služby (viz filtr v `import/mpsv.py`), takže `datumPoskytovaniDo` tu buď chybí, nebo je v budoucnosti, nikdy v minulosti.
+Jen u `MPSV`. `datumPoskytovaniOd` je vyplněné u všech položek. `datumPoskytovaniDo` je u služby, která má v registru evidované ukončení, jinak `null`.
+
+**Ve výstupu je `datumPoskytovaniDo` vždy buď `null`, nebo v budoucnosti, nikdy v minulosti.** Ukončené registrace se do katalogu nedostanou: v registru jich je 380 z 2 602 seniorských služeb, do výstupu nejde ani jedna. Zůstává jen 9 služeb s ohlášeným ukončením k budoucímu datu, které se ve výstupu objeví jako 16 položek (jedna registrace může být na víc adresních bodech), tedy 0,4 %. Příjemce tak nemusí datum sám vyhodnocovat — co je v katalogu, to se poskytuje.
 
 ## `zmeny.json` a zaniklé záznamy
 
 Formát:
 ```json
 {
-  "verzeSchematu": "1.0.0",
+  "verzeSchematu": "1.1.0",
   "pridano": ["misto-123456"],
   "zmeneno": ["misto-234567"],
   "odebrano": ["misto-345678"]
@@ -99,11 +137,21 @@ Formát:
 ```
 Zaniklé místo je **explicitně** v `odebrano`, nikdy se nemá odvozovat z toho, že v novém `katalog.json` chybí. Pokud se od posledního běhu nic nezměnilo, `zmeny.json` se nepřepisuje — zůstává poslední platná verze, nikdy nedostanete prázdný seznam změn, který byste museli rozlišovat od chyby.
 
+**Nespoléhejte se na pořadí prvků v `mista[]` ani v `sluzby[]`.** Kopíruje pořadí záznamů ve zdrojových registrech a není nijak garantované — párujte vždy podle `id`, tak jak to dělá i `zmeny.json`. Kdyby některý registr vyexportoval tatáž data v jiném pořadí, dostanete `katalog.json` s jinak seřazenými prvky, ale `zmeny.json` u něj bude hlásit nulové změny. To je korektní stav, ne chyba: obsah je stejný, jen přeskupený.
+
 ## Verzování
 
 `verzeSchematu` je sémantické verzování (`MAJOR.MINOR.PATCH`). Nekompatibilní změna (přejmenování/odebrání pole, změna typu) zvedne MAJOR verzi a bude ohlášena dopředu, nikdy tichým přepsáním produkčních dat.
 
-## Co ve schématu ještě chybí a doplní se v další fázi
+| Verze | Změna |
+|---|---|
+| 1.1.0 | Přibylo nepovinné `sluzby[].zarizeni`. Registrace je nově v `sluzby[]` právě jednou, takže `sluzby[].id` je v rámci místa unikátní a kapacity se dají sčítat. Zároveň se přestaly publikovat služby s ukončenou registrací (viz Datum poskytování). Žádné pole nezmizelo ani nezměnilo typ, čtenář 1.0.0 běží dál beze změny. Přechodový běh označil ve `zmeny.json` 15 míst jako změněná a 6 jako odebraná (ty s ukončenou registrací), žádné jako přidané. U změněných míst se lišilo výhradně pole `sluzby` — `misto.id`, souřadnice, adresy, kategorie ani `poskytujeZdravotniPeci` se nezměnily u žádného místa. |
+| 1.0.0 | Výchozí odsouhlasené schéma. |
 
-- Automatizované denní/měsíční běhy a pojistky (validace, prahové kontroly, commit jen při změně) — teď je `data/katalog.json` výsledkem ručně spuštěného plného běhu, ne automatizace.
-- `data/zmeny.json` u tohoto běhu obsahuje jen `pridano` (jde o první produkční verzi, nemá se s čím porovnávat). Od příštího běhu, kdy už bude existovat předchozí verze, se budou plnit i `zmeneno` a `odebrano`.
+## Provoz
+
+Aktualizace je automatická: MPSV denně (`0 4 * * *` UTC), ÚZIS a RÚIAN měsíčně (`0 5 3 * *` UTC), obojí přes GitHub Actions. Naplánované běhy nemají garantovaný čas, zpoždění 5 až 30 minut je běžné.
+
+**Commit vzniká jen tehdy, když se obsah `katalog.json` skutečně změnil.** Běh bez commitu je úspěšný běh beze změny ve zdrojích, ne chyba. Změnu poznáte podle `hashKatalogu` v `meta.json`.
+
+Před každou publikací běží validace zdrojových dat proti schématu registru, validace výstupu proti `schema/katalog.schema.json`, kontrola na duplicitní `misto.id` a prahová kontrola na změnu počtu míst o víc než 5 %. Když kterákoli neprojde, do `data/` se nezapíše nic a zůstane poslední platná verze — nikdy nedostanete prázdný ani useknutý soubor.

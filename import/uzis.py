@@ -101,23 +101,12 @@ def split_zaznamy_a_priznaky(rows: Iterable[Dict[str, Any]]) -> Tuple[List[Dict[
     return zaznamy, priznaky
 
 
-def build_mpsv_index(places: Dict[Any, Dict[str, Any]]) -> Dict[Tuple[str, str], Any]:
-    """Index (ICO, kodAdresnihoMista-jako-text) -> klic mista, pro parovani s UZIS.
-    Parovani vyhradne pres ICO + RUIAN kod, nikdy pres nazev (CLAUDE.md Etapa 2, bod 6)."""
-    index = {}
-    for misto_klic, misto in places.items():
-        if not isinstance(misto_klic, int):
-            continue
-        for s in misto["sluzby"]:
-            ico = s.get("poskytovatelIco")
-            if ico:
-                index[(ico, str(misto_klic))] = misto_klic
-    return index
-
-
-def match_uzis_row(row: Dict[str, Any], mpsv_index: Dict[Tuple[str, str], Any]) -> Optional[Any]:
-    ico = row.get("poskytovatel_ICO")
-    ruian = row.get("ZZ_RUIAN_kod")
-    if not ico or not ruian:
-        return None
-    return mpsv_index.get((ico, ruian))
+# Parovani UZIS radku s MPSV mistem je vyhradne na kodu adresniho mista (RUIAN), nikdy na nazvu
+# (CLAUDE.md Etapa 2, bod 6). Dela ho primo build_katalog.ruian_klic, protoze klic MPSV mista JE
+# ten kod - neni tedy co indexovat.
+#
+# Driv tu byl jeste stupen s klicem (ICO, kod adresniho mista) a zkousel se pred adresni shodou.
+# Byl to zuzeny zapis teze podminky, ne samostatne kriterium: index se stavel klicem
+# (ICO, str(klic_mista)), takze shoda mohla nastat jedine tam, kde se klic mista rovna RUIAN kodu
+# radku - presne tam, kde uspeje i adresa. Overeno na plnych datech: z 1713 relevantnich radku
+# jich stupen na ICO nasel 606, adresa 688, a rozpor (jine misto z ICO nez z adresy) 0.

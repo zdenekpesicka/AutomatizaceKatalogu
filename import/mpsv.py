@@ -24,6 +24,21 @@ def filter_senior_services(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return out
 
 
+def is_sluzba_active(service: Dict[str, Any], today: str) -> bool:
+    """Registrace sluzby jeste bezi, tj. datumPoskytovaniDo je null nebo v budoucnu.
+
+    Podminka je samostatna, ne odvoditelna z is_zarizeni_active. RPSS vede datum ukonceni na dvou
+    urovnich zvlast a ty se v datech rozchazeji: registrace muze byt ukoncena, ale zarizeni pod ni
+    zustane s poskytujeDo null, protoze ho registr pri ukonceni sluzby nezavre. Bez teto kontroly
+    prosly do katalogu sluzby s registraci ukoncenou v roce 2012 (portalId 57, 64, 3954, 3955, 4057,
+    4058, 4442, 4443) - jejich zarizeni vypada aktivne a filtr na urovni zarizeni je nechyti.
+    Zdrojove schema je jednoznacne: datumPoskytovaniDo znamena "Sluzba je poskytovana do urciteho
+    data", takze datum v minulosti = sluzba se uz neposkytuje a do katalogu nepatri.
+    """
+    do = service.get("datumPoskytovaniDo")
+    return not (do and do <= today)
+
+
 def is_zarizeni_active(z: Dict[str, Any], today: str) -> bool:
     """Zarizeni je aktivni, pokud jiz zacalo poskytovat a jeste neskoncilo (poskytujeDo null nebo v budoucnu)."""
     od = z.get("poskytujeOd")
@@ -73,6 +88,8 @@ def build_place_groups(services: List[Dict[str, Any]], today: str) -> Dict[Any, 
     """
     places: Dict[Any, Dict[str, Any]] = {}
     for service in services:
+        if not is_sluzba_active(service, today):
+            continue
         for z in active_zarizeni(service, today):
             adresa = z.get("adresa") or {}
             kod = adresa.get("kodAdresnihoMista")

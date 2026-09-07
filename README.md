@@ -24,6 +24,16 @@ Soubory jsou statické, staví se přímo z větve `main`, žádné API se nepro
 
 Naplánované běhy GitHub Actions nemají garantovaný čas, zpoždění 5 až 30 minut je běžné. Oba workflow jdou spustit i ručně přes **Actions → vybrat workflow → Run workflow** (`workflow_dispatch`).
 
+**Denní běh ÚZIS a RÚIAN nestahuje znovu.** Oba zdroje se mění jen měsíčně, takže je měsíční workflow uloží do cache GitHub Actions pod klíč `uzis-ruian-<rok-měsíc>` (65 MB) a denní běh je odtud jen obnovuje — stahuje se tedy jen `rpss.json`. Tři stavy, do kterých se přitom může dostat:
+
+| Stav cache | Co se stane |
+|---|---|
+| aktuální měsíc | běžný provoz |
+| jen starší měsíc (typicky 1.–2. v měsíci, než proběhne měsíční běh) | použije se starší snapshot; `meta.json` v tom případě hlásí starší `datumZdrojovychDat`, takže je to na výstupu vidět |
+| žádná | denní běh si ÚZIS a RÚIAN sám dostáhne a uloží, import se nezastaví |
+
+Cache mizí po sedmi dnech bez přečtení. Denní běh ji čtením sám udržuje, takže třetí stav za běžného provozu nenastane — jen po ručním smazání cache, po vypnutí a zapnutí workflow nebo po převodu repozitáře.
+
 **Commit vzniká jen tehdy, když se data skutečně změnila.** Běh, který doběhne bez commitu, je úspěšný běh beze změny ve zdrojích, ne chyba. Že import proběhl, je vidět v historii běhů; `meta.json` proto záměrně neobsahuje čas běhu, jen údaje odvozené od dat. Změnu obsahu poznáte podle `hashKatalogu` v `meta.json`.
 
 ## Když běh selže

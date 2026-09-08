@@ -1,6 +1,6 @@
 # Dokumentace rozhraní — katalog registrovaných služeb pro seniory
 
-Verze schématu 1.1.0. Viz `schema/katalog.schema.json` a `data/katalog.json` — plná data z ostrých dat MPSV a ÚZIS. Aktuální počet míst a datum zdrojových dat najdete vždy v `data/meta.json`; tady je záměrně neopakujeme, aby se obě čísla časem nerozešla.
+Verze schématu 1.2.0. Viz `schema/katalog.schema.json` a `data/katalog.json` — plná data z ostrých dat MPSV a ÚZIS. Aktuální počet míst a datum zdrojových dat najdete vždy v `data/meta.json`; tady je záměrně neopakujeme, aby se obě čísla časem nerozešla.
 
 ## Soubory
 
@@ -10,7 +10,7 @@ Verze schématu 1.1.0. Viz `schema/katalog.schema.json` a `data/katalog.json` �
 | `schema/katalog.schema.json` | JSON Schema (draft-07) pro validaci na vaší straně. Doporučujeme validovat při každém stažení. |
 | `data/meta.json` | Verze schématu, hash obsahu, počty záznamů, datum zdrojových dat. Podle hashe poznáte, že se data změnila. **Neobsahuje čas běhu importu** — to, kdy import naposledy proběhl, není totéž jako to, kdy se data naposledy změnila. |
 | `data/zmeny.json` | ID přidaných, změněných a odebraných míst od posledního běhu, kdy k reálné změně došlo. |
-| `data/ukazka.json` | **Neodebírejte, nejsou to živá data.** Zmrazený výřez 32 míst, na kterém se odsouhlasila struktura a formát. Slouží už jen jako ilustrace k této dokumentaci a dál se neaktualizuje, proto v něm zůstává `verzeSchematu: "1.0.0"` a nenajdete v něm pole `sluzby[].zarizeni` přidané v 1.1.0. |
+| `data/ukazka.json` | **Neodebírejte, nejsou to živá data.** Zmrazený výřez 32 míst, na kterém se odsouhlasila struktura a formát. Slouží už jen jako ilustrace k této dokumentaci a dál se neaktualizuje, proto v něm zůstává `verzeSchematu: "1.0.0"` a nenajdete v něm pole `sluzby[].zarizeni` přidané v 1.1.0 ani `sluzby[].oboryPece` přidané v 1.2.0. |
 
 ## Základní jednotka: místo, ne registrace
 
@@ -116,7 +116,13 @@ Vždy 8 znaků, jen číslice, jako text (`"03017621"` je platné IČO se sedmi 
 
 ## Zdroj (`zdroj`)
 
-`MPSV` (sociální služby, id začíná `mpsv-`) nebo `UZIS` (zdravotní služby, id začíná `uzis-`). Pole `formy` dává smysl jen u `MPSV` (u ÚZIS chybí úplně, ne prázdné pole). Pole `oborPece` jen u `UZIS`.
+`MPSV` (sociální služby, id začíná `mpsv-`) nebo `UZIS` (zdravotní služby, id začíná `uzis-`). Pole `formy` dává smysl jen u `MPSV` (u ÚZIS chybí úplně, ne prázdné pole). Pole `oborPece` a `oboryPece` jen u `UZIS`.
+
+## Obor péče (`oborPece`, `oboryPece`)
+
+**Používejte `oboryPece`.** Zdrojové pole ÚZIS je vícehodnotové, obory jsou v jedné buňce oddělené čárkou. `oboryPece` je pole se všemi obory v pořadí registru (prázdné, když registr obor neuvádí), `oborPece` je jen jeho první prvek.
+
+`oborPece` existovalo dřív než `oboryPece` a zůstává kvůli kompatibilitě se schématem 1.0.0. Kdo podle něj filtruje, přijde o obory na dalších pozicích: ze 930 publikovaných ÚZIS služeb jich 242 uvádí oborů víc, maximum na jedné službě je 32. Konkrétně u 20 služeb není v `oborPece` vidět „paliativní medicína", protože ji registr neuvádí jako první — mezi nimi Hospicová péče sv. Kleofáše a PAHOP. Pro rozpoznání hospicové a paliativní péče je proto `oboryPece` jediné použitelné pole.
 
 ## Datum poskytování (`datumPoskytovaniOd`, `datumPoskytovaniDo`)
 
@@ -129,7 +135,7 @@ Jen u `MPSV`. `datumPoskytovaniOd` je vyplněné u všech položek. `datumPoskyt
 Formát:
 ```json
 {
-  "verzeSchematu": "1.1.0",
+  "verzeSchematu": "1.2.0",
   "pridano": ["misto-123456"],
   "zmeneno": ["misto-234567"],
   "odebrano": ["misto-345678"]
@@ -145,6 +151,7 @@ Zaniklé místo je **explicitně** v `odebrano`, nikdy se nemá odvozovat z toho
 
 | Verze | Změna |
 |---|---|
+| 1.2.0 | Přibylo nepovinné `sluzby[].oboryPece` s úplným seznamem oborů péče. `oborPece` zůstává beze změny typu i obsahu, čtenář 1.1.0 běží dál beze změny. Ověřeno porovnáním celého výstupu: proti 1.1.0 se u žádného z 2 912 míst nezměnilo nic jiného než přibylé pole, `oborPece` se u žádné z 930 ÚZIS služeb neliší od prvního prvku `oboryPece`. Ve `zmeny.json` je 890 míst jako změněná (ta, která obsahují ÚZIS službu), 0 přidaných a 0 odebraných. |
 | 1.1.0 | Přibylo nepovinné `sluzby[].zarizeni`. Registrace je nově v `sluzby[]` právě jednou, takže `sluzby[].id` je v rámci místa unikátní a kapacity se dají sčítat. Zároveň se přestaly publikovat služby s ukončenou registrací (viz Datum poskytování). Žádné pole nezmizelo ani nezměnilo typ, čtenář 1.0.0 běží dál beze změny. Přechodový běh označil ve `zmeny.json` 15 míst jako změněná a 6 jako odebraná (ty s ukončenou registrací), žádné jako přidané. U změněných míst se lišilo výhradně pole `sluzby` — `misto.id`, souřadnice, adresy, kategorie ani `poskytujeZdravotniPeci` se nezměnily u žádného místa. |
 | 1.0.0 | Výchozí odsouhlasené schéma. |
 

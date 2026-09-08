@@ -23,6 +23,7 @@ from uzis import (  # noqa: E402
     filter_relevant,
     split_zaznamy_a_priznaky,
     parse_gps,
+    split_obor_pece,
 )
 from ciselniky import load_all, load_kody  # noqa: E402
 from ruian import load_address_points  # noqa: E402
@@ -38,7 +39,7 @@ PRAH_ZMENY = 0.05  # CLAUDE.md 5.2 bod 3 - vice nez 5 % zmena poctu mist = nepub
 # trikrat zvlast a mohly se rozejit. CLAUDE.md 4.2: nekompatibilni zmena zvysuje major verzi.
 # 1.1.0 pridalo nepovinne sluzby[].zarizeni, tedy aditivni zmenu, ktera stavajiciho ctenare
 # schematu 1.0.0 nerozbije.
-VERZE_SCHEMATU = "1.1.0"
+VERZE_SCHEMATU = "1.2.0"
 
 # Presnost souradnic je vlastnost rozhrani, ne jednotlivych zdroju, proto se zaokrouhluje na
 # jednom miste pro oba (RUIAN i UZIS) - jinak by vystup michal ruzne presna cisla podle toho,
@@ -226,7 +227,10 @@ def uzis_sluzba_to_output(r: dict) -> dict:
     weby = [r["poskytovatel_web"]] if r["poskytovatel_web"] else []
     emaily = [r["poskytovatel_email"]] if r["poskytovatel_email"] else []
     telefony = [r["poskytovatel_telefon"]] if r["poskytovatel_telefon"] else []
-    obor = (r["ZZ_obor_pece"] or "").split(",")[0].strip() or None
+    # ZZ_obor_pece je vicehodnotove pole oddelene carkou (CLAUDE.md 3.3). Uplny seznam jde do
+    # oboryPece; oborPece drzi prvni obor a zustava kvuli kompatibilite se schematem 1.0.0.
+    obory = split_obor_pece(r["ZZ_obor_pece"])
+    obor = obory[0] if obory else None
     return {
         "id": f"uzis-{r['ZZ_ID']}",
         "zdroj": "UZIS",
@@ -234,6 +238,7 @@ def uzis_sluzba_to_output(r: dict) -> dict:
         "poskytovatel": {"nazev": r["poskytovatel_nazev"], "ico": ico},
         "druhSluzby": {"kod": r["ZZ_druh_kod"], "nazev": r["ZZ_druh_nazev"]},
         "oborPece": obor,
+        "oboryPece": obory,
         "kontakt": {"weby": weby, "emaily": emaily, "telefony": telefony},
     }
 

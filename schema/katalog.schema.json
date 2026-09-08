@@ -123,7 +123,12 @@
         },
         "oborPece": {
           "type": ["string", "null"],
-          "description": "Jen u zdroje UZIS. Atomický obor péče (ZZ_obor_pece je v datech víceho hodnotové pole oddělené čárkou, zde vždy rozpadnuto na jeden obor - viz CLAUDE.md 3.3)."
+          "description": "Jen u zdroje UZIS. PRVNÍ obor péče v pořadí, ve kterém ho uvádí registr, ne jediný. Zdrojové pole ZZ_obor_pece je vícehodnotové (viz CLAUDE.md 3.3) a u 316 z 1 899 relevantních řádků má oborů víc. Pole zůstává kvůli kompatibilitě se schématem 1.0.0; úplný seznam je v oboryPece a pro filtrování a zobrazení se má používat ten."
+        },
+        "oboryPece": {
+          "type": "array",
+          "description": "Jen u zdroje UZIS. Všechny obory péče rozpadnuté z ZZ_obor_pece, ořezané o okolní mezery, v pořadí registru. Prázdné pole, když registr obor neuvádí (386 relevantních řádků). Nadmnožina oborPece, který je prvním prvkem tohoto pole.",
+          "items": { "type": "string" }
         },
         "kontakt": {
           "type": "object",

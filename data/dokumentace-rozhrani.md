@@ -161,4 +161,6 @@ Aktualizace je automatická: MPSV denně (`0 4 * * *` UTC), ÚZIS a RÚIAN měs�
 
 **Commit vzniká jen tehdy, když se obsah `katalog.json` skutečně změnil.** Běh bez commitu je úspěšný běh beze změny ve zdrojích, ne chyba. Změnu poznáte podle `hashKatalogu` v `meta.json`.
 
+**`datumZdrojovychDat` nepoužívejte k posouzení, jestli import běží.** Je to datum snapshotu, ze kterého jsou postavená *právě publikovaná* data, ne datum poslední kontroly zdroje. Celý `meta.json` se totiž přepisuje jen spolu s katalogem — když registr vydá nový soubor, ale na seniorských službách se nic nezmění, katalog i `meta.json` zůstanou beze změny a datum se neposune. Reálný příklad: 8. 9. 2026 měl `rpss.json` u MPSV datum 7. 9., ale publikované `meta.json` uvádělo 5. 9., protože poslední skutečná změna dat byla z 5. 9. Je to důsledek pravidla o commitech výše, ne zpoždění importu — kdyby se datum přepisovalo při každém běhu, vznikal by commit každý den. Že import běží, ověříte v historii běhů na GitHubu (**Actions**).
+
 Před každou publikací běží validace zdrojových dat proti schématu registru, validace výstupu proti `schema/katalog.schema.json`, kontrola na duplicitní `misto.id` a prahová kontrola na změnu počtu míst o víc než 5 %. Když kterákoli neprojde, do `data/` se nezapíše nic a zůstane poslední platná verze — nikdy nedostanete prázdný ani useknutý soubor.

@@ -19,20 +19,23 @@ Soubory jsou statické, staví se přímo z větve `main`, žádné API se nepro
 
 | Běh | Zdroje | Plán (UTC) | Workflow |
 |---|---|---|---|
-| denní | MPSV | `0 4 * * *` | `.github/workflows/import.yml` |
-| měsíční | ÚZIS + RÚIAN + MPSV | `0 5 3 * *` | `.github/workflows/import-mesicni.yml` |
+| denní | MPSV vždy, ÚZIS + RÚIAN při změně | `0 4 * * *` | `.github/workflows/import.yml` |
+| ruční | ÚZIS + RÚIAN + MPSV | bez plánu | `.github/workflows/import-mesicni.yml` |
 
-Naplánované běhy GitHub Actions nemají garantovaný čas, zpoždění 5 až 30 minut je běžné. Oba workflow jdou spustit i ručně přes **Actions → vybrat workflow → Run workflow** (`workflow_dispatch`).
+Naplánované běhy GitHub Actions nemají garantovaný čas, zpoždění 5 až 30 minut je běžné. Obě workflow jdou spustit ručně přes **Actions → vybrat workflow → Run workflow** (`workflow_dispatch`).
 
-**Denní běh ÚZIS a RÚIAN nestahuje znovu.** Oba zdroje se mění jen měsíčně, takže je měsíční workflow uloží do cache GitHub Actions pod klíč `uzis-ruian-<rok-měsíc>` (65 MB) a denní běh je odtud jen obnovuje — stahuje se tedy jen `rpss.json`. Tři stavy, do kterých se přitom může dostat:
+**Všechno obstarává denní běh, včetně ÚZIS a RÚIAN.** Ty se mění jen jednou měsíčně, takže by bylo plýtvání stahovat 87 MB každý den. Denní běh se proto nejdřív levně zeptá, jakou verzi zdroje právě nabízejí — ÚZIS přes hlavičku `Last-Modified`, ČÚZK přes název souboru v ATOM feedu — a z odpovědí složí klíč cache, například `uzis-ruian-2026-09-01-2026-08-31`:
 
-| Stav cache | Co se stane |
+| Situace | Co se stane |
 |---|---|
-| aktuální měsíc | běžný provoz |
-| jen starší měsíc (typicky 1.–2. v měsíci, než proběhne měsíční běh) | použije se starší snapshot; `meta.json` v tom případě hlásí starší `datumZdrojovychDat`, takže je to na výstupu vidět |
-| žádná | denní běh si ÚZIS a RÚIAN sám dostáhne a uloží, import se nezastaví |
+| klíč sedí na uloženou cache | zdroje se nezměnily, stahuje se jen `rpss.json` |
+| klíč nesedí | zdroje vydaly novou verzi, ÚZIS i RÚIAN se stáhnou a uloží pod nový klíč |
+| cache neexistuje | totéž, stáhne se |
+| verzi nejde zjistit (výpadek zdroje) | pokračuje se nad poslední uloženou verzí, aby výpadek ČÚZK nezastavil i import MPSV |
 
-Cache mizí po sedmi dnech bez přečtení. Denní běh ji čtením sám udržuje, takže třetí stav za běžného provozu nenastane — jen po ručním smazání cache, po vypnutí a zapnutí workflow nebo po převodu repozitáře.
+Protože klíč popisuje **data, ne kalendář**, nová verze se použije v nejbližším denním běhu po jejím vydání a není kam se zaseknout — na obsazeném klíči nemůže uvíznout starší snapshot. Cache mizí po sedmi dnech bez přečtení, denní běh ji čtením sám udržuje.
+
+Ruční workflow `import-mesicni.yml` stahuje ÚZIS a RÚIAN vždy načisto, bez ohledu na cache. Slouží k vynucení čerstvého stažení, běžný provoz ho nepotřebuje.
 
 **Commit vzniká jen tehdy, když se data skutečně změnila.** Běh, který doběhne bez commitu, je úspěšný běh beze změny ve zdrojích, ne chyba. Že import proběhl, je vidět v historii běhů; `meta.json` proto záměrně neobsahuje čas běhu, jen údaje odvozené od dat. Změnu obsahu poznáte podle `hashKatalogu` v `meta.json`.
 

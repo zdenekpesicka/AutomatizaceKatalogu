@@ -157,7 +157,7 @@ Zaniklé místo je **explicitně** v `odebrano`, nikdy se nemá odvozovat z toho
 
 ## Provoz
 
-Aktualizace je automatická: MPSV denně (`0 4 * * *` UTC), ÚZIS a RÚIAN měsíčně (`0 5 3 * *` UTC), obojí přes GitHub Actions. Naplánované běhy nemají garantovaný čas, zpoždění 5 až 30 minut je běžné.
+Aktualizace je automatická jedním denním během přes GitHub Actions (`0 4 * * *` UTC). MPSV se stahuje vždy, ÚZIS a RÚIAN jen tehdy, když u zdroje vyjde nová verze — běh se na ni nejdřív levně zeptá a podle odpovědi buď stáhne, nebo použije poslední uloženou. Nová měsíční verze se tak projeví v nejbližším denním běhu po jejím vydání. Naplánované běhy nemají garantovaný čas, zpoždění 5 až 30 minut je běžné.
 
 **Commit vzniká jen tehdy, když se obsah `katalog.json` skutečně změnil.** Běh bez commitu je úspěšný běh beze změny ve zdrojích, ne chyba. Změnu poznáte podle `hashKatalogu` v `meta.json`.
 

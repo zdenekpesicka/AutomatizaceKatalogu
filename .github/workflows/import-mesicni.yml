@@ -1,8 +1,12 @@
-name: Mesicni import (UZIS + RUIAN)
+name: Rucni import (UZIS + RUIAN)
 
+# Bez cronu, spousti se jen rucne. Do 8. 9. 2026 tohle workflow behalo 3. v mesici a bylo
+# jedinym mistem, ktere UZIS a RUIAN stahovalo. Od zavedeni klice cache odvozeneho od dat
+# zdroju (viz import.yml) si novou verzi vezme denni beh sam v den, kdy vyjde, takze
+# naplanovany mesicni beh uz nema co delat - jen by do teze cache zapisoval druhy pisatel.
+# Zustava jako rucni "stahni znovu a preskoc cache" pro pripad, kdy je potreba vynutit
+# cerstve stazeni (poskozeny snapshot, zmena zpracovani).
 on:
-  schedule:
-    - cron: "0 5 3 * *"
   workflow_dispatch: {}
 
 permissions:
@@ -27,21 +31,16 @@ jobs:
 
       - run: pip install -r import/requirements.txt
 
-      - name: Zjisti aktualni mesic pro cache klic
-        id: mesic
-        run: echo "yyyymm=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
-
       - name: Stahni UZIS + RUIAN (vzdy cerstve, ne z cache)
         run: python import/stahni_zdroje.py --uzis-ruian
 
-      # Ulozi cerstve stazene UZIS/RUIAN soubory do cache pod klicem aktualniho mesice,
-      # aby je denni beh (import.yml) mohl po zbytek mesice jen obnovovat (restore), ne
-      # stahovat znovu - CLAUDE.md 5.1, UZIS a RUIAN se aktualizuji jen mesicne.
-      #
-      # Pozn.: klic cache je pro dany mesic nemenny. Pri druhem rucnim spusteni tohoto
-      # workflow ve stejnem mesici tento krok jen tise neulozi (bez chyby) - vystup toho
-      # behu je porad spravny, jen denni beh dal cerpa ze starsiho ulozeneho snapshotu az
-      # do dalsiho mesice. Nizke riziko, ÚZIS/RÚIAN se stejne meni jen mesicne.
+      - name: Zjisti verze zdroju pro klic cache
+        id: verze
+        run: python import/stahni_zdroje.py --verze-zdroju >> "$GITHUB_OUTPUT"
+
+      # Tentyz klic odvozeny od dat jako v import.yml, aby oba behy sdilely jednu cache misto
+      # dvou navzajem si prekazejicich jmennych prostoru. Kdyz uz cache pod timto klicem je,
+      # save tise skonci - stazena data jsou v tom pripade shodna s ulozenymi.
       - name: Uloz UZIS/RUIAN do cache
         uses: actions/cache/save@v4
         with:
@@ -49,7 +48,7 @@ jobs:
             _cache/nrpzs.csv
             _cache/ruian_adr.zip
             _cache/uzis_ruian_meta.json
-          key: uzis-ruian-${{ steps.mesic.outputs.yyyymm }}
+          key: ${{ steps.verze.outputs.klic }}
 
       - name: Stahni MPSV
         run: python import/stahni_zdroje.py --mpsv

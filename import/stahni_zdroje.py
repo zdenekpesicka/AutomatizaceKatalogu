@@ -74,11 +74,8 @@ def fetch_uzis_ruian() -> None:
     print(f"  odkaz: {zip_url}")
     download(zip_url, CACHE / "ruian_adr.zip")
 
-    match = RUIAN_DATE_RE.search(zip_url)
-    if match:
-        raw = match.group(1)
-        ruian_datum = f"{raw[0:4]}-{raw[4:6]}-{raw[6:8]}"
-    else:
+    ruian_datum = ruian_datum_z_url(zip_url)
+    if ruian_datum is None:
         ruian_datum = date.today().isoformat()
         print(f"  VAROVANI: datum nejde vytahnout z nazvu souboru RUIAN, pouzivam dnesni datum {ruian_datum}", file=sys.stderr)
 
@@ -87,15 +84,70 @@ def fetch_uzis_ruian() -> None:
     print(f"  datum zdrojovych dat UZIS: {uzis_datum}, RUIAN: {ruian_datum}")
 
 
+def ruian_datum_z_url(zip_url: str) -> str | None:
+    match = RUIAN_DATE_RE.search(zip_url)
+    if not match:
+        return None
+    raw = match.group(1)
+    return f"{raw[0:4]}-{raw[4:6]}-{raw[6:8]}"
+
+
+def vypis_verze_zdroju() -> None:
+    """Zjisti datum prave nabizenych mesicnich zdroju, aniz by se stahly, a vypis klic cache.
+
+    Vystup je ve tvaru pro GITHUB_OUTPUT (radky `klic=`, `uzis=`, `ruian=`). Klic je odvozeny od
+    dat zdroju, ne od kalendarniho mesice: kdyz UZIS nebo CUZK vyda novy soubor, zmeni se klic,
+    cache mine a denni beh si data sam stahne. Kalendarni klic tohle neumel - CUZK publikuje
+    pozdeji nez 3. v mesici (zmereno 8. 9. 2026), takze mesicni beh sahal po starsim souboru a
+    pod obsazenym klicem uz ho do konce mesice nic nenahradilo.
+
+    Dotazy jsou levne: na UZIS jde jen HEAD kvuli hlavicce Last-Modified, ATOM feed CUZK ma par kB.
+
+    Kdyz se verze zjistit nepodari (vypadek zdroje, zmena formatu feedu), vypise se nahradni klic
+    a chyba na stderr. Cache pak mine, ale `restore-keys` v workflow spadne na posledni ulozenou
+    verzi a import pokracuje nad ni - vypadek CUZK tak nezastavi ani import MPSV.
+    """
+    klic = "uzis-ruian-neurceno"
+    uzis = ruian = ""
+    try:
+        uzis = last_modified(NRPZS_URL) or ""
+        atom_resp = requests.get(ATOM_FEED_URL, timeout=60)
+        atom_resp.raise_for_status()
+        ruian = ruian_datum_z_url(resolve_download_url(atom_resp.content)) or ""
+        if uzis and ruian:
+            klic = f"uzis-ruian-{uzis}-{ruian}"
+        else:
+            print(
+                f"VAROVANI: verze zdroju nejsou uplne (uzis={uzis!r}, ruian={ruian!r}), "
+                "pouzivam nahradni klic cache.",
+                file=sys.stderr,
+            )
+    except Exception as exc:  # noqa: BLE001 - vypadek zdroje nesmi zastavit cely import
+        print(f"VAROVANI: verze zdroju nejdou zjistit ({exc}), pouzivam nahradni klic cache.", file=sys.stderr)
+
+    print(f"klic={klic}")
+    print(f"uzis={uzis}")
+    print(f"ruian={ruian}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mpsv", action="store_true", help="stahnout rpss.json + ciselniky")
     parser.add_argument("--uzis-ruian", action="store_true", help="stahnout nrpzs.csv + RUIAN ZIP")
     parser.add_argument("--all", action="store_true", help="stahnout obojí (lokalni test)")
+    parser.add_argument(
+        "--verze-zdroju",
+        action="store_true",
+        help="jen zjistit a vypsat verze UZIS/RUIAN a klic cache, nestahovat",
+    )
     args = parser.parse_args()
 
+    if args.verze_zdroju:
+        vypis_verze_zdroju()
+        return
+
     if not (args.mpsv or args.uzis_ruian or args.all):
-        parser.error("zadej alespon jeden z prepinacu --mpsv / --uzis-ruian / --all")
+        parser.error("zadej alespon jeden z prepinacu --mpsv / --uzis-ruian / --all / --verze-zdroju")
 
     if args.mpsv or args.all:
         fetch_mpsv()

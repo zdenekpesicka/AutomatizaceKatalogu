@@ -27,57 +27,56 @@ jobs:
 
       - run: pip install -r import/requirements.txt
 
-      - name: Zjisti aktualni mesic pro cache klic
-        id: mesic
-        run: echo "yyyymm=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+      # Klic cache je odvozeny od DAT zdroju, ne od kalendarniho mesice: zepta se UZIS na
+      # Last-Modified a CUZK na nazev souboru v ATOM feedu (obojí levne, par kB). Kalendarni
+      # klic tuto praci delat nemohl - CUZK publikuje pozdeji nez 3. v mesici, takze mesicni
+      # beh sahal po o mesic starsim souboru a pod uz obsazenym klicem ho do konce mesice nic
+      # nenahradilo. Kdyz je klic odvozeny od dat, novy soubor u zdroje = novy klic = cache
+      # mine = stahne se, a to v nejblizsim dennim behu.
+      - name: Zjisti verze zdroju UZIS a RUIAN
+        id: verze
+        run: python import/stahni_zdroje.py --verze-zdroju >> "$GITHUB_OUTPUT"
 
-      # UZIS a RUIAN se aktualizuji jen mesicne (CLAUDE.md 5.1). Denni beh je proto nestahuje
-      # znovu, ale obnovi je z cache naplnene mesicnim workflow. Kdyby mesicni beh v danem
-      # mesici jeste neprobehl, restore-keys spadne zpet na posledni dostupnou (o mesic
-      # starsi) verzi - to je v souladu s tim, ze zdroje se stejne meni jen mesicne.
+      # restore-keys je zachrana pro dva pripady: zdroje se zmenily (presny klic mine, ale
+      # posledni verze se hodi jako podklad) a verze nejdou zjistit (klic je nahradni).
       - name: Obnov UZIS/RUIAN z cache
+        id: cache
         uses: actions/cache/restore@v4
         with:
           path: |
             _cache/nrpzs.csv
             _cache/ruian_adr.zip
             _cache/uzis_ruian_meta.json
-          key: uzis-ruian-${{ steps.mesic.outputs.yyyymm }}
+          key: ${{ steps.verze.outputs.klic }}
           restore-keys: |
             uzis-ruian-
 
-      # Pojistka pro pripad, kdy cache neexistuje vubec - ani pod klicem mesice, ani starsi.
-      # Za normalniho provozu nenastane: GitHub maze cache neprecteneou 7 dni a denni beh ji
-      # ctenim vyse sam obnovuje. Dojde k tomu jen tehdy, kdyz se 7 dni po sobe zadny beh
-      # nedostane az sem - tedy po rucnim smazani cache, po vypnuti a zapnuti workflow (dela
-      # se v etape 5 kvuli predani notifikaci) nebo po prevodu repozitare, kde dokumentace
-      # GitHubu osud cache neuvadi. Bez teto pojistky by build spadl na chybejicim
-      # _cache/nrpzs.csv a denni import by stal az do 3. dne dalsiho mesice.
-      #
-      # Podminka se pta na existenci souboru, ne na cache-hit: pri castecne shode pres
-      # restore-keys je cache-hit false, ale soubory jsou na disku a stahovat se nema.
-      - name: Dostahni UZIS/RUIAN, kdyz cache chybi
+      # Tri stavy, ktere musi dopadnout ruzne:
+      #   1. presna shoda klice -> cache odpovida prave nabizenym zdrojum, nestahuje se
+      #   2. nahradni klic (verze nejdou zjistit) a soubory na disku -> vypadek zdroje nesmi
+      #      zastavit import MPSV, pokracuje se nad posledni ulozenou verzi
+      #   3. zbytek (zdroje maji novejsi verzi, nebo cache neexistuje vubec) -> stahnout
+      # Stav 3 pokryva i drivejsi samostatnou pojistku na uplne chybejici cache.
+      - name: Stahni UZIS/RUIAN, kdyz cache neodpovida zdrojum
         id: dostahni
+        env:
+          KLIC: ${{ steps.verze.outputs.klic }}
+          SHODA: ${{ steps.cache.outputs.cache-hit }}
         run: |
-          if [ -f _cache/nrpzs.csv ] && [ -f _cache/ruian_adr.zip ]; then
-            echo "UZIS i RUIAN jsou z cache, nestahuji se."
+          if [ "$SHODA" = "true" ]; then
+            echo "Cache odpovida aktualni verzi zdroju ($KLIC), nestahuje se."
+          elif [ "$KLIC" = "uzis-ruian-neurceno" ] && [ -f _cache/nrpzs.csv ] && [ -f _cache/ruian_adr.zip ]; then
+            echo "Verze zdroju nejdou zjistit, pokracuji nad posledni ulozenou verzi z cache."
           else
-            echo "Cache chybi, stahuji UZIS a RUIAN."
+            echo "Zdroje maji novejsi verzi nebo cache chybi, stahuji UZIS a RUIAN."
             python import/stahni_zdroje.py --uzis-ruian
             echo "stahovano=true" >> "$GITHUB_OUTPUT"
           fi
 
-      # Ulozi jen tehdy, kdyz se skutecne stahovalo. Bez toho by dalsi denni beh nasel cache
-      # zase prazdnou a 87 MB by se stahovalo kazdy den znovu.
-      #
-      # Klic je zamerne jiny nez klic mesicniho workflow (uzis-ruian-<mesic>), aby mu tato
-      # vetev nesahla na jeho misto. Kdyby oba ukladaly pod tentyz klic a pojistka zabrala
-      # 1. nebo 2. v mesici, mesicni beh 3. by pod obsazenym klicem uz nic neulozil (save
-      # pri existujicim klici jen tise skonci) a denni behy by cely mesic cetly snapshot
-      # stazeny pred mesicni aktualizaci zdroju. Prefix zustava spolecny, takze restore-keys
-      # tuto cache najde; jakmile mesicni beh ulozi svou, ma prednost, protoze na ni sedi
-      # presny klic. run_id navic zaruci, ze ulozeni projde i pri opakovanem vypadku cache.
-      - name: Uloz dostazene UZIS/RUIAN do cache
+      # Uklada se pod tentyz klic odvozeny od dat, takze druhy beh nad nezmenenymi zdroji
+      # najde presnou shodu a uz nestahuje. Kdyz klic mezitim nekdo obsadil (dva behy tyz den),
+      # save tise skonci - a je to spravne, pod stejnym klicem jsou stejna data.
+      - name: Uloz UZIS/RUIAN do cache
         if: steps.dostahni.outputs.stahovano == 'true'
         uses: actions/cache/save@v4
         with:
@@ -85,7 +84,7 @@ jobs:
             _cache/nrpzs.csv
             _cache/ruian_adr.zip
             _cache/uzis_ruian_meta.json
-          key: uzis-ruian-${{ steps.mesic.outputs.yyyymm }}-dodatecny-${{ github.run_id }}
+          key: ${{ steps.verze.outputs.klic }}
 
       - name: Stahni MPSV
         run: python import/stahni_zdroje.py --mpsv

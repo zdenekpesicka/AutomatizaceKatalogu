@@ -1,20 +1,23 @@
-name: Rucni import (UZIS + RUIAN)
+name: Rucni import (vynuti stazeni UZIS + RUIAN)
 
-# Bez cronu, spousti se jen rucne. Do 8. 9. 2026 tohle workflow behalo 3. v mesici a bylo
-# jedinym mistem, ktere UZIS a RUIAN stahovalo. Od zavedeni klice cache odvozeneho od dat
-# zdroju (viz import.yml) si novou verzi vezme denni beh sam v den, kdy vyjde, takze
-# naplanovany mesicni beh uz nema co delat - jen by do teze cache zapisoval druhy pisatel.
-# Zustava jako rucni "stahni znovu a preskoc cache" pro pripad, kdy je potreba vynutit
-# cerstve stazeni (poskozeny snapshot, zmena zpracovani).
+# Bez cronu, spousti se jen rucne. Dela totez co denni beh, jen UZIS a RUIAN stahuje vzdy
+# cerstve misto cteni z cache - proto "vynuti stazeni". MPSV se stahuje a katalog sestavuje
+# stejne jako v dennim behu.
+#
+# Do 8. 9. 2026 tohle workflow behalo 3. v mesici a bylo jedinym mistem, ktere UZIS a RUIAN
+# stahovalo. Od zavedeni klice cache odvozeneho od dat zdroju (viz import.yml) si novou verzi
+# vezme denni beh sam v den, kdy vyjde, takze naplanovany mesicni beh uz nema co delat - jen
+# by do teze cache zapisoval druhy pisatel. Zustava jako rucni pojistka pro pripad, kdy je
+# potreba vynutit cerstve stazeni (poskozeny snapshot, zmena zpracovani).
 on:
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
-# Denni a mesicni beh obojí commituji a pushuji do data/ - kdyby bezely soubezne (napr. rucni
-# trigger prekryvajici se s cronem), druhy push by mohl spadnout na non-fast-forward. Skupina
-# spolecna pro oba workflow serializuje jejich behy misto souboznosti.
+# Denni i rucni beh obojí commituji a pushuji do data/ - kdyby bezely soubezne (napr. rucni
+# beh prekryvajici se s cronem denniho), druhy push by mohl spadnout na non-fast-forward.
+# Skupina spolecna pro oba workflow serializuje jejich behy misto souboznosti.
 concurrency:
   group: import-katalogu
 
@@ -64,6 +67,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Zadna zmena v data/, commit se neprovadi."
           else
-            git commit -m "Automaticky import: aktualizace dat UZIS/RUIAN"
+            git commit -m "Automaticky import: aktualizace dat"
             git push
           fi

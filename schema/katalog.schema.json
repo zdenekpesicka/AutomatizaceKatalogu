@@ -29,7 +29,7 @@
         },
         "kodAdresnihoMista": {
           "type": ["integer", "null"],
-          "description": "Kód adresního místa RÚIAN. Null, pokud zdrojová data kód neobsahují (v MPSV datech k 31.8.2026 cca 2,4 % seniorských zařízení)."
+          "description": "Kód adresního místa RÚIAN, od kterého je odvozené misto.id. Null, pokud zdrojová data kód neobsahují - 39 z 2 912 míst, tedy 1,3 %. Nezaměňovat s místy, kde je kód vyplněný, ale aktuální snapshot RÚIAN ho nezná; tam je null jen v souradnice."
         },
         "adresa": {
           "type": ["object", "null"],
@@ -123,11 +123,11 @@
         },
         "oborPece": {
           "type": ["string", "null"],
-          "description": "Jen u zdroje UZIS. PRVNÍ obor péče v pořadí, ve kterém ho uvádí registr, ne jediný. Zdrojové pole ZZ_obor_pece je vícehodnotové (viz CLAUDE.md 3.3) a u 316 z 1 899 relevantních řádků má oborů víc. Pole zůstává kvůli kompatibilitě se schématem 1.0.0; úplný seznam je v oboryPece a pro filtrování a zobrazení se má používat ten."
+          "description": "Jen u zdroje UZIS. PRVNÍ obor péče v pořadí, ve kterém ho uvádí registr, ne jediný. Zdrojové pole ZZ_obor_pece je vícehodnotové (viz CLAUDE.md 3.3) a u 242 z 930 publikovaných UZIS služeb má oborů víc, maximum je 32. Pole zůstává kvůli kompatibilitě se schématem 1.0.0; úplný seznam je v oboryPece a pro filtrování a zobrazení se má používat ten."
         },
         "oboryPece": {
           "type": "array",
-          "description": "Jen u zdroje UZIS. Všechny obory péče rozpadnuté z ZZ_obor_pece, ořezané o okolní mezery, v pořadí registru. Prázdné pole, když registr obor neuvádí (386 relevantních řádků). Nadmnožina oborPece, který je prvním prvkem tohoto pole.",
+          "description": "Jen u zdroje UZIS. Všechny obory péče rozpadnuté z ZZ_obor_pece, ořezané o okolní mezery, v pořadí registru. Prázdné pole, když registr obor neuvádí (73 z 930 publikovaných UZIS služeb). Nadmnožina oborPece, který je prvním prvkem tohoto pole.",
           "items": { "type": "string" }
         },
         "kontakt": {

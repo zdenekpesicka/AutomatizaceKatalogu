@@ -1,4 +1,4 @@
-name: Denni import (MPSV)
+name: Denni import
 
 on:
   schedule:
@@ -8,9 +8,9 @@ on:
 permissions:
   contents: write
 
-# Denni a mesicni beh obojí commituji a pushuji do data/ - kdyby bezely soubezne (napr. rucni
-# trigger prekryvajici se s cronem), druhy push by mohl spadnout na non-fast-forward. Skupina
-# spolecna pro oba workflow serializuje jejich behy misto souboznosti.
+# Denni i rucni beh obojí commituji a pushuji do data/ - kdyby bezely soubezne (napr. rucni
+# beh prekryvajici se s cronem denniho), druhy push by mohl spadnout na non-fast-forward.
+# Skupina spolecna pro oba workflow serializuje jejich behy misto souboznosti.
 concurrency:
   group: import-katalogu
 
@@ -100,6 +100,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Zadna zmena v data/, commit se neprovadi."
           else
-            git commit -m "Automaticky import: aktualizace dat MPSV"
+            git commit -m "Automaticky import: aktualizace dat"
             git push
           fi

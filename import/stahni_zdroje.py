@@ -98,8 +98,9 @@ def vypis_verze_zdroju() -> None:
     Vystup je ve tvaru pro GITHUB_OUTPUT (radky `klic=`, `uzis=`, `ruian=`). Klic je odvozeny od
     dat zdroju, ne od kalendarniho mesice: kdyz UZIS nebo CUZK vyda novy soubor, zmeni se klic,
     cache mine a denni beh si data sam stahne. Kalendarni klic tohle neumel - CUZK publikuje
-    pozdeji nez 3. v mesici (zmereno 8. 9. 2026), takze mesicni beh sahal po starsim souboru a
-    pod obsazenym klicem uz ho do konce mesice nic nenahradilo.
+    pozdeji nez 3. v mesici (zmereno 8. 9. 2026), takze naplanovany mesicni beh, ktery do te doby
+    UZIS a RUIAN stahoval, sahal po starsim souboru a pod obsazenym klicem uz ho do konce mesice
+    nic nenahradilo. Od 8. 9. 2026 mesicni beh naplanovany neni, viz import-mesicni.yml.
 
     Dotazy jsou levne: na UZIS jde jen HEAD kvuli hlavicce Last-Modified, ATOM feed CUZK ma par kB.
 

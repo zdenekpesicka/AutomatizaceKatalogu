@@ -11,31 +11,34 @@ Repozitář sjednocuje data o sociálních a zdravotních službách pro seniory
 | [`data/zmeny.json`](https://raw.githubusercontent.com/zdenekpesicka/AutomatizaceKatalogu/main/data/zmeny.json) | ID přidaných, změněných a odebraných míst od posledního běhu se změnou |
 | [`schema/katalog.schema.json`](https://raw.githubusercontent.com/zdenekpesicka/AutomatizaceKatalogu/main/schema/katalog.schema.json) | JSON Schema (draft-07) pro validaci na straně příjemce |
 
-Soubory jsou statické, staví se přímo z větve `main`, žádné API se neprovozuje. `data/ukazka.json` je zmrazená ilustrace k dokumentaci, neodebírá se.
+Soubory jsou statické, staví se přímo z větve `main`, žádné API se neprovozuje. Aktuální verze schématu je **1.2.0**, uvedená v `meta.json` i v `katalog.json`. `data/ukazka.json` je zmrazená ilustrace k dokumentaci ve verzi 1.0.0, neaktualizuje se a neodebírá se.
 
 **Popis polí, sémantika ID, kategorie, souřadnice a práce se `zmeny.json`: [`data/dokumentace-rozhrani.md`](data/dokumentace-rozhrani.md).**
 
 ## Aktualizace
 
-| Běh | Zdroje | Plán (UTC) | Workflow |
+| Workflow | Soubor | Zdroje | Plán (UTC) |
 |---|---|---|---|
-| denní | MPSV vždy, ÚZIS + RÚIAN při změně | `0 4 * * *` | `.github/workflows/import.yml` |
-| ruční | ÚZIS + RÚIAN + MPSV | bez plánu | `.github/workflows/import-mesicni.yml` |
+| **Denni import** | `.github/workflows/import.yml` | MPSV vždy, ÚZIS + RÚIAN při změně | `0 4 * * *` |
+| **Rucni import (vynuti stazeni UZIS + RUIAN)** | `.github/workflows/import-mesicni.yml` | MPSV vždy, ÚZIS + RÚIAN vždy | bez plánu |
 
 Naplánované běhy GitHub Actions nemají garantovaný čas, zpoždění 5 až 30 minut je běžné. Obě workflow jdou spustit ručně přes **Actions → vybrat workflow → Run workflow** (`workflow_dispatch`).
 
-**Všechno obstarává denní běh, včetně ÚZIS a RÚIAN.** Ty se mění jen jednou měsíčně, takže by bylo plýtvání stahovat 87 MB každý den. Denní běh se proto nejdřív levně zeptá, jakou verzi zdroje právě nabízejí — ÚZIS přes hlavičku `Last-Modified`, ČÚZK přes název souboru v ATOM feedu — a z odpovědí složí klíč cache, například `uzis-ruian-2026-09-01-2026-08-31`:
+**Všechno obstarává denní běh, včetně ÚZIS a RÚIAN.** Ty se mění jen jednou měsíčně, takže by bylo plýtvání stahovat 92 MB každý den. Denní běh se proto nejdřív levně zeptá, jakou verzi zdroje právě nabízejí — ÚZIS přes hlavičku `Last-Modified`, ČÚZK přes název souboru v ATOM feedu — a z odpovědí složí klíč cache, například `uzis-ruian-2026-09-01-2026-08-31`:
 
 | Situace | Co se stane |
 |---|---|
-| klíč sedí na uloženou cache | zdroje se nezměnily, stahuje se jen `rpss.json` |
+| klíč sedí na uloženou cache | zdroje se nezměnily, stahují se jen data MPSV |
 | klíč nesedí | zdroje vydaly novou verzi, ÚZIS i RÚIAN se stáhnou a uloží pod nový klíč |
 | cache neexistuje | totéž, stáhne se |
-| verzi nejde zjistit (výpadek zdroje) | pokračuje se nad poslední uloženou verzí, aby výpadek ČÚZK nezastavil i import MPSV |
+| verzi nejde zjistit (výpadek zdroje) **a zároveň jsou oba soubory v cache** | pokračuje se nad poslední uloženou verzí, aby výpadek ČÚZK nezastavil i import MPSV |
+| verzi nejde zjistit **a soubor chybí** | stáhne se; když ani to nejde, běh selže a `data/` zůstane beze změny |
+
+Z MPSV se stahuje jedenáct souborů: `rpss.json`, jeho schéma a devět číselníků (druhy služeb, cílové skupiny, formy a územní číselníky).
 
 Protože klíč popisuje **data, ne kalendář**, nová verze se použije v nejbližším denním běhu po jejím vydání a není kam se zaseknout — na obsazeném klíči nemůže uvíznout starší snapshot. Cache mizí po sedmi dnech bez přečtení, denní běh ji čtením sám udržuje.
 
-Ruční workflow `import-mesicni.yml` stahuje ÚZIS a RÚIAN vždy načisto, bez ohledu na cache. Slouží k vynucení čerstvého stažení, běžný provoz ho nepotřebuje.
+Ruční workflow **Rucni import** dělá totéž co denní, jen ÚZIS a RÚIAN stahuje vždy načisto, bez ohledu na cache. Slouží k vynucení čerstvého stažení (poškozený snapshot, změna zpracování), běžný provoz ho nepotřebuje.
 
 **Commit vzniká jen tehdy, když se data skutečně změnila.** Běh, který doběhne bez commitu, je úspěšný běh beze změny ve zdrojích, ne chyba. Že import proběhl, je vidět v historii běhů; `meta.json` proto záměrně neobsahuje čas běhu, jen údaje odvozené od dat. Změnu obsahu poznáte podle `hashKatalogu` v `meta.json`.
 
@@ -44,9 +47,10 @@ Ruční workflow `import-mesicni.yml` stahuje ÚZIS a RÚIAN vždy načisto, bez
 Do `data/` se nic nezapíše a zůstane poslední platná verze. Publikace se zastaví, pokud:
 
 - zdrojová data neprojdou validací proti schématu registru,
+- výstup neobsahuje ani jedno místo,
+- ve výstupu vznikne duplicitní `misto.id`,
 - vlastní výstup neprojde validací proti `schema/katalog.schema.json`,
-- se počet míst změní o víc než 5 % proti poslední publikované verzi,
-- ve výstupu vznikne duplicitní `misto.id`.
+- se počet míst změní o víc než 5 % proti poslední publikované verzi.
 
 Prahová kontrola hlídá rozbitý zdroj. Když je velká změna záměrná (úprava zpracování na naší straně), překlene se ručním přepínačem `--zamerna-velka-zmena` při lokálním běhu. Workflow ho nikdy nepředává, v automatice tedy platí bez výjimky.
 
@@ -55,12 +59,13 @@ Notifikace o selhání naplánovaného běhu chodí jen tomu, kdo workflow napos
 ## Lokální běh
 
 ```
-pip install -r import/requirements.txt      # Python 3.11
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r import/requirements.txt      # v CI běží Python 3.11
 python import/stahni_zdroje.py --all        # nebo --mpsv / --uzis-ruian
 python import/build_katalog.py
 ```
 
-Stažené zdroje se ukládají do `_cache/`. `build_katalog.py` zapisuje do `data/` jen při skutečné změně obsahu, stejně jako v automatice.
+Stažené zdroje se ukládají do `_cache/` (asi 190 MB, není verzované). `build_katalog.py` zapisuje do `data/` jen při skutečné změně obsahu, stejně jako v automatice.
 
 ## Struktura
 
@@ -69,7 +74,7 @@ import/             stahování zdrojů a sestavení katalogu
 config/             mapování druhů služeb na kategorie webu
 data/               katalog.json, meta.json, zmeny.json, dokumentace, ukázka
 schema/             katalog.schema.json
-.github/workflows/  denní a měsíční import
+.github/workflows/  denní běh a ruční vynucené stažení
 ```
 
 `CLAUDE.md` je zadání a technický záznam k realizaci: ověřená fakta o zdrojích, datové pasti, pravidla rozhraní a odchylky od původního zadání.

@@ -46,13 +46,20 @@ Ruční workflow **Rucni import** dělá totéž co denní, jen ÚZIS a RÚIAN s
 
 Do `data/` se nic nezapíše a zůstane poslední platná verze. Publikace se zastaví, pokud:
 
+- testy nad zpracováním neprojdou (běží před stahováním, viz níže),
+- některý ze zdrojů je starší než 50 dnů,
 - zdrojová data neprojdou validací proti schématu registru,
 - výstup neobsahuje ani jedno místo,
 - ve výstupu vznikne duplicitní `misto.id`,
 - vlastní výstup neprojde validací proti `schema/katalog.schema.json`,
-- se počet míst změní o víc než 5 % proti poslední publikované verzi.
+- se počet míst změní o víc než 5 % proti poslední publikované verzi,
+- přibude víc než 30 míst bez souřadnic proti poslední publikované verzi.
 
-Prahová kontrola hlídá rozbitý zdroj. Když je velká změna záměrná (úprava zpracování na naší straně), překlene se ručním přepínačem `--zamerna-velka-zmena` při lokálním běhu. Workflow ho nikdy nepředává, v automatice tedy platí bez výjimky.
+Testy z `tests/` běží jako první krok obou workflow, ještě před stahováním: když je rozbité zpracování, nemá smysl tahat 190 MB dat. Nesahají na síť ani na `_cache/`, takže v tu chvíli mají všechno, co potřebují.
+
+Kontrola stáří zdrojů hlídá stav, kdy sonda na verzi zdroje trvale selhává a běh se tiše drží starého snapshotu v cache — zelený build nad daty z loňska. Zdroje vycházejí měsíčně, takže zdravé maximum je kolem 32 dnů; při ručním běhu nad záměrně starým `_cache/` se překlene přepínačem `--zastarale-zdroje-ok`.
+
+Prahové kontroly hlídají rozbitý zdroj: počet míst i počet míst bez souřadnic. Druhá zabírá tam, kde by se RÚIAN stáhl useknutý — míst by zůstal stejný počet, jen by přišly o souřadnice, a první kontrola by to nepoznala. Když je velká změna záměrná (úprava zpracování na naší straně), obojí se překlene ručním přepínačem `--zamerna-velka-zmena` při lokálním běhu. Workflow žádný z těchto přepínačů nepředává, v automatice tedy platí bez výjimky.
 
 Notifikace o selhání naplánovaného běhu chodí jen tomu, kdo workflow naposledy zapnul, a jen když má v **Settings → Notifications → System → Actions** přepnuto na Email (výchozí stav je „Don't notify"). Kdo workflow vypne a znovu zapne, stane se příjemcem.
 
@@ -60,10 +67,13 @@ Notifikace o selhání naplánovaného běhu chodí jen tomu, kdo workflow napos
 
 ```
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r import/requirements.txt      # v CI běží Python 3.11
+pip install -r import/requirements-dev.txt  # v CI běží Python 3.11
+python -m pytest tests/ -q
 python import/stahni_zdroje.py --all        # nebo --mpsv / --uzis-ruian
 python import/build_katalog.py
 ```
+
+`import/requirements.txt` obsahuje jen to, co potřebuje samotné sestavení katalogu; `requirements-dev.txt` k tomu přidává `pytest`.
 
 Stažené zdroje se ukládají do `_cache/` (asi 190 MB, není verzované). `build_katalog.py` zapisuje do `data/` jen při skutečné změně obsahu, stejně jako v automatice.
 
@@ -74,6 +84,7 @@ import/             stahování zdrojů a sestavení katalogu
 config/             mapování druhů služeb na kategorie webu
 data/               katalog.json, meta.json, zmeny.json, dokumentace, ukázka
 schema/             katalog.schema.json
+tests/              testy nad zpracováním, běží před stahováním
 .github/workflows/  denní běh a ruční vynucené stažení
 ```
 

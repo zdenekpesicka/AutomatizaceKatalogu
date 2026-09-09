@@ -112,6 +112,8 @@ Pole hodnot z `domovy`, `terenni`, `bezpeci`, `zdravi`, odpovídá záložkám n
 
 **Důležité:** pole může být prázdné (`[]`). Nejde o chybu, ale o službu, jejíž druh naše mapovací tabulka zatím nezařazuje do žádné záložky (typicky odborné sociální poradenství a několik dalších menších druhů služeb — netýká se domovů, terénních služeb ani zdravotní péče). Tato místa jsou ve výstupu, aby se informace neztratila, ale nezobrazí se v žádné záložce, dokud se zařazení nedořeší. Řešíme to s klientem zvlášť, ne teď v rámci tohoto schématu.
 
+**V záložce Domovy nejsou jen domovy pro seniory.** Rozhoduje forma poskytování, ne druh služby, takže pobytová odlehčovací služba patří do Domovů stejně jako domov pro seniory — je to pobytová služba s lůžky, jen na dobu určitou. Změřeno na aktuálním výstupu: z 813 míst v Domovech je **122 tam výhradně kvůli pobytové odlehčovací službě**, tedy bez domova pro seniory, domova se zvláštním režimem, týdenního stacionáře nebo chráněného bydlení na téže adrese. Registrovanou kapacitu má všech 122 (121 v lůžkách, dohromady 1 824 lůžek v rozmezí 1 až 54 na místo; `misto-9164898` má kapacitu registrovanou v klientech, ne v lůžkách). 87 z nich je zároveň v Terénních službách, protože táž organizace na téže adrese provozuje i terénní službu. Pokud budete chtít na webu odlišit trvalé bydlení od pobytu na přechodnou dobu, poznáte to podle `sluzby[].druhSluzby.kod` — `DruhSocialniSluzby/8` jsou odlehčovací služby. Filtrovat je ven z Domovů ale nedoporučujeme, uživatel hledající úlevu pro pečujícího je hledá právě tam.
+
 ## `poskytujeZdravotniPeci`
 
 Příznak, že na tomto místě funguje i zdravotní péče uvnitř sociálního zařízení (typicky ošetřovatelský úsek domova pro seniory, evidovaný v registru ÚZIS zvlášť). **Není to samostatný záznam** — informace se připojuje k existujícímu místu, ne jako duplicitní položka v `sluzby[]`. V ukázkových datech viz `misto-79121519`.
@@ -190,13 +192,16 @@ Jen u `MPSV`. `datumPoskytovaniOd` je vyplněné u všech položek. `datumPoskyt
   "pocetMistPodleKategorie": {"domovy": 813, "terenni": 1280, "bezpeci": 24, "zdravi": 890},
   "pocetMistBezKategorie": 324,
   "pocetMistSPoskytovanimZdravotniPece": 430,
-  "datumZdrojovychDat": {"mpsv": "2026-09-05", "uzis": "2026-09-01", "ruian": "2026-07-31"}
+  "pocetMistBezSouradnic": 110,
+  "datumZdrojovychDat": {"mpsv": "2026-09-08", "uzis": "2026-09-01", "ruian": "2026-08-31"}
 }
 ```
 
 **`hashKatalogu` je SHA-256 obsahu `katalog.json`** (hex, malá písmena), počítaný nad souborem tak, jak se zapisuje — UTF-8, `indent=2`, bez escapování diakritiky. Je to jediný spolehlivý indikátor toho, že se data změnila: stáhněte `meta.json` (pár set bajtů), porovnejte hash s tím, který máte, a `katalog.json` tahejte, jen když se liší.
 
 `pocetMistPodleKategorie` **se nesečte na `pocetMist`** — jedno místo může být ve víc kategoriích zároveň a 324 míst nemá kategorii žádnou.
+
+`pocetMistBezSouradnic` je počet míst, kde je `souradnice.lat` i `lng` rovno `null`. Slouží k provozní kontrole na naší straně (viz Provoz níže) a příjemci dává čitelný podíl míst, která nejde vykreslit na mapu — dlouhodobě kolem 110 z 2 912, tedy 3,8 %. **Pole přibylo 9. 9. 2026 a v `meta.json` se objeví až s nejbližší publikovanou změnou dat**, protože se `meta.json` přepisuje jen spolu s katalogem.
 
 `datumZdrojovychDat` jsou **tři samostatná data**, jedno za každý registr, protože se každý aktualizuje jinak často (MPSV denně, ÚZIS a RÚIAN měsíčně). Není to jedno datum běhu, viz Provoz níže.
 
@@ -235,4 +240,4 @@ Aktualizace je automatická jedním denním během přes GitHub Actions (`0 4 * 
 
 **`datumZdrojovychDat` nepoužívejte k posouzení, jestli import běží.** Je to datum snapshotu, ze kterého jsou postavená *právě publikovaná* data, ne datum poslední kontroly zdroje. Celý `meta.json` se totiž přepisuje jen spolu s katalogem — když registr vydá nový soubor, ale na seniorských službách se nic nezmění, katalog i `meta.json` zůstanou beze změny a datum se neposune. Reálný příklad: 8. 9. 2026 měl `rpss.json` u MPSV datum 7. 9., ale publikované `meta.json` uvádělo 5. 9., protože poslední skutečná změna dat byla z 5. 9. Je to důsledek pravidla o commitech výše, ne zpoždění importu — kdyby se datum přepisovalo při každém běhu, vznikal by commit každý den. Že import běží, ověříte v historii běhů na GitHubu (**Actions**).
 
-Před každou publikací běží pět kontrol: validace zdrojových dat proti schématu registru, kontrola, že výstup obsahuje aspoň jedno místo, kontrola na duplicitní `misto.id`, validace výstupu proti `schema/katalog.schema.json` a prahová kontrola na změnu počtu míst o víc než 5 %. Když kterákoli neprojde, do `data/` se nezapíše nic a zůstane poslední platná verze — nikdy nedostanete prázdný ani useknutý soubor.
+Před každou publikací běží sedm kontrol: stáří zdrojových dat (žádný snapshot starší než 50 dnů), validace zdrojových dat proti schématu registru, kontrola, že výstup obsahuje aspoň jedno místo, kontrola na duplicitní `misto.id`, validace výstupu proti `schema/katalog.schema.json`, prahová kontrola na změnu počtu míst o víc než 5 % a prahová kontrola na nárůst počtu míst bez souřadnic o víc než 30. Když kterákoli neprojde, do `data/` se nezapíše nic a zůstane poslední platná verze — nikdy nedostanete prázdný ani useknutý soubor.

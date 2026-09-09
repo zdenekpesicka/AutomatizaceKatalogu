@@ -34,7 +34,7 @@ Soubory jsou statické, staví se přímo z větve `main`, žádné API se nepro
 | verzi nejde zjistit (výpadek zdroje) **a zároveň jsou oba soubory v cache** | pokračuje se nad poslední uloženou verzí, aby výpadek ČÚZK nezastavil i import MPSV |
 | verzi nejde zjistit **a soubor chybí** | stáhne se; když ani to nejde, běh selže a `data/` zůstane beze změny |
 
-Z MPSV se stahuje jedenáct souborů: `rpss.json`, jeho schéma a devět číselníků (druhy služeb, cílové skupiny, formy a územní číselníky).
+Z MPSV se stahuje jedenáct souborů: `rpss.json`, jeho schéma a devět číselníků — druhy služeb, cílové skupiny, formy, typy kapacity, věkové skupiny a čtyři územní (kraje, okresy, obce, části obcí).
 
 Protože klíč popisuje **data, ne kalendář**, nová verze se použije v nejbližším denním běhu po jejím vydání a není kam se zaseknout — na obsazeném klíči nemůže uvíznout starší snapshot. Cache mizí po sedmi dnech bez přečtení, denní běh ji čtením sám udržuje.
 
@@ -48,6 +48,7 @@ Do `data/` se nic nezapíše a zůstane poslední platná verze. Publikace se za
 
 - testy nad zpracováním neprojdou (běží před stahováním, viz níže),
 - některý ze zdrojů je starší než 50 dnů,
+- u některého ze zdrojů se nepodařilo zjistit datum vydání a dosadilo se dnešní (platí bez ohledu na práh 50 dnů — dosazené datum je vždy čerstvé, takže by ho práh nikdy nezachytil),
 - zdrojová data neprojdou validací proti schématu registru,
 - výstup neobsahuje ani jedno místo,
 - ve výstupu vznikne duplicitní `misto.id`,
@@ -55,9 +56,9 @@ Do `data/` se nic nezapíše a zůstane poslední platná verze. Publikace se za
 - se počet míst změní o víc než 5 % proti poslední publikované verzi,
 - přibude víc než 30 míst bez souřadnic proti poslední publikované verzi.
 
-Testy z `tests/` běží jako první krok obou workflow, ještě před stahováním: když je rozbité zpracování, nemá smysl tahat 190 MB dat. Nesahají na síť ani na `_cache/`, takže v tu chvíli mají všechno, co potřebují.
+Testy z `tests/` běží v obou workflow hned po instalaci závislostí, ještě před stahováním zdrojů: když je rozbité zpracování, nemá smysl tahat 190 MB dat. Nesahají na síť ani na `_cache/`, takže v tu chvíli mají všechno, co potřebují.
 
-Kontrola stáří zdrojů hlídá stav, kdy sonda na verzi zdroje trvale selhává a běh se tiše drží starého snapshotu v cache — zelený build nad daty z loňska. Zdroje vycházejí měsíčně, takže zdravé maximum je kolem 32 dnů; při ručním běhu nad záměrně starým `_cache/` se překlene přepínačem `--zastarale-zdroje-ok`.
+Kontrola stáří zdrojů hlídá stav, kdy sonda na verzi zdroje trvale selhává a běh se tiše drží starého snapshotu v cache — zelený build nad daty z loňska. Kontrole podléhají všechny tři zdroje; ÚZIS a RÚIAN vycházejí měsíčně, takže jejich zdravé maximum je kolem 32 dnů, MPSV vychází denně a k prahu se nikdy nepřiblíží. Při ručním běhu nad záměrně starým `_cache/` se kontrola překlene přepínačem `--zastarale-zdroje-ok`; tentýž přepínač povoluje i běh s dosazeným datem.
 
 Prahové kontroly hlídají rozbitý zdroj: počet míst i počet míst bez souřadnic. Druhá zabírá tam, kde by se RÚIAN stáhl useknutý — míst by zůstal stejný počet, jen by přišly o souřadnice, a první kontrola by to nepoznala. Když je velká změna záměrná (úprava zpracování na naší straně), obojí se překlene ručním přepínačem `--zamerna-velka-zmena` při lokálním běhu. Workflow žádný z těchto přepínačů nepředává, v automatice tedy platí bez výjimky.
 
@@ -81,7 +82,9 @@ Stažené zdroje se ukládají do `_cache/` (asi 190 MB, není verzované). `bui
 
 ```
 import/             stahování zdrojů a sestavení katalogu
-config/             mapování druhů služeb na kategorie webu
+config/             mapování na kategorie webu: druhy sociálních služeb (MPSV)
+                    i druhy zařízení (ÚZIS); klíče u ÚZIS zároveň určují,
+                    které druhy jsou vůbec relevantní
 data/               katalog.json, meta.json, zmeny.json, dokumentace, ukázka
 schema/             katalog.schema.json
 tests/              testy nad zpracováním, běží před stahováním

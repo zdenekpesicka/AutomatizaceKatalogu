@@ -36,7 +36,7 @@ Soubory jsou statické, staví se přímo z větve `main`, žádné API se nepro
 
 Z MPSV se stahuje jedenáct souborů: `rpss.json`, jeho schéma a devět číselníků — druhy služeb, cílové skupiny, formy, typy kapacity, věkové skupiny a čtyři územní (kraje, okresy, obce, části obcí).
 
-Protože klíč popisuje **data, ne kalendář**, nová verze se použije v nejbližším denním běhu po jejím vydání a není kam se zaseknout — na obsazeném klíči nemůže uvíznout starší snapshot. Cache mizí po sedmi dnech bez přečtení, denní běh ji čtením sám udržuje.
+Protože klíč popisuje **data, ne kalendář**, nová verze se použije v nejbližším denním běhu po jejím vydání: jiná data mají jiný klíč, takže na obsazeném klíči nemůže uvíznout starší snapshot. Neplatí to bezvýhradně — klíč pokrývá jen případy, kdy sonda funguje, a proti trvale selhávající sondě stojí kontrola stáří zdrojů popsaná níže. Cache mizí po sedmi dnech bez přečtení, denní běh ji čtením sám udržuje.
 
 Ruční workflow **Rucni import** dělá totéž co denní, jen ÚZIS a RÚIAN stahuje vždy načisto, bez ohledu na cache. Slouží k vynucení čerstvého stažení (poškozený snapshot, změna zpracování), běžný provoz ho nepotřebuje.
 
@@ -56,11 +56,26 @@ Do `data/` se nic nezapíše a zůstane poslední platná verze. Publikace se za
 - se počet míst změní o víc než 5 % proti poslední publikované verzi,
 - přibude víc než 30 míst bez souřadnic proti poslední publikované verzi.
 
-Testy z `tests/` běží v obou workflow hned po instalaci závislostí, ještě před stahováním zdrojů: když je rozbité zpracování, nemá smysl tahat 190 MB dat. Nesahají na síť ani na `_cache/`, takže v tu chvíli mají všechno, co potřebují.
+Testy z `tests/` běží v obou workflow hned po instalaci závislostí, ještě před stahováním zdrojů: když je rozbité zpracování, nemá smysl tahat 190 MB dat. Nesahají na síť a chybějící `_cache/` jim nevadí, takže v tu chvíli mají všechno, co potřebují.
 
 Kontrola stáří zdrojů hlídá stav, kdy sonda na verzi zdroje trvale selhává a běh se tiše drží starého snapshotu v cache — zelený build nad daty z loňska. Kontrole podléhají všechny tři zdroje; ÚZIS a RÚIAN vycházejí měsíčně, takže jejich zdravé maximum je kolem 32 dnů, MPSV vychází denně a k prahu se nikdy nepřiblíží. Při ručním běhu nad záměrně starým `_cache/` se kontrola překlene přepínačem `--zastarale-zdroje-ok`; tentýž přepínač povoluje i běh s dosazeným datem.
 
 Prahové kontroly hlídají rozbitý zdroj: počet míst i počet míst bez souřadnic. Druhá zabírá tam, kde by se RÚIAN stáhl useknutý — míst by zůstal stejný počet, jen by přišly o souřadnice, a první kontrola by to nepoznala. Když je velká změna záměrná (úprava zpracování na naší straně), obojí se překlene ručním přepínačem `--zamerna-velka-zmena` při lokálním běhu. Workflow žádný z těchto přepínačů nepředává, v automatice tedy platí bez výjimky.
+
+Oba přepínače `build_katalog.py` čte přímo z argumentů příkazu a nezná jiné; **překlep se proto neohlásí, jen se přepínač neuplatní** a běh skončí odmítnutím, jako by zadaný nebyl.
+
+### Když selže opakovaně na stáří zdrojů
+
+Selhání na dosazeném datu se za normálních okolností samo vyřeší příštím během. Pokud se opakuje každý den, může být v cache uložený snapshot, u kterého se datum vydání nepodařilo zjistit. Poznáte to podle toho, že krok **Stahni UZIS/RUIAN** hlásí `Cache odpovida aktualni verzi zdroju`, ale běh přesto padá na kontrole stáří.
+
+Obnova je smazání cache; nový běh si data stáhne znovu:
+
+```
+gh cache list
+gh cache delete <klíč>
+```
+
+Totéž jde v **Actions → Caches**. Ruční workflow na to nestačí: ukládá pod stejný klíč a `cache/save` na obsazeném klíči tiše skončí, takže uloženou cache nepřepíše.
 
 Notifikace o selhání naplánovaného běhu chodí jen tomu, kdo workflow naposledy zapnul, a jen když má v **Settings → Notifications → System → Actions** přepnuto na Email (výchozí stav je „Don't notify"). Kdo workflow vypne a znovu zapne, stane se příjemcem.
 

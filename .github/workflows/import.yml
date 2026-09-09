@@ -28,7 +28,7 @@ jobs:
       - run: pip install -r import/requirements-dev.txt
 
       # Testy bezi pred stahovanim: kdyz je rozbite zpracovani, nema smysl tahnout 190 MB dat.
-      # Nesahaji na sit ani na _cache, takze v tuhle chvili uz maji vsechno, co potrebuji.
+      # Nesahaji na sit a chybejici _cache jim nevadi, takze uz maji vsechno, co potrebuji.
       - name: Testy
         run: python -m pytest tests/ -q
 
@@ -84,12 +84,24 @@ jobs:
           else
             echo "Zdroje maji novejsi verzi nebo cache chybi, stahuji UZIS a RUIAN."
             python import/stahni_zdroje.py --uzis-ruian
-            echo "stahovano=true" >> "$GITHUB_OUTPUT"
+            NAHRADNI=$(python -c 'import json;print(",".join(json.load(open("_cache/uzis_ruian_meta.json")).get("nahradniDatum", [])))')
+            if [ -n "$NAHRADNI" ]; then
+              echo "::warning title=Datum zdroje se nepodarilo zjistit::Dosazeno dnesni datum pro: $NAHRADNI. Cache se neuklada, aby se nahradni datum nezafixovalo pod platnym klicem. Beh spadne na kontrole stari zdroju a pristi beh stahne znovu."
+            else
+              echo "stahovano=true" >> "$GITHUB_OUTPUT"
+            fi
           fi
 
       # Uklada se pod tentyz klic odvozeny od dat, takze druhy beh nad nezmenenymi zdroji
       # najde presnou shodu a uz nestahuje. Kdyz klic mezitim nekdo obsadil (dva behy tyz den),
       # save tise skonci - a je to spravne, pod stejnym klicem jsou stejna data.
+      #
+      # Neuklada se, kdyz se u nektereho zdroje nepodarilo zjistit datum a dosadilo se dnesni.
+      # Takova cache by uvizla: klic z sondy je platny, takze pristi beh trefi presnou shodu,
+      # nestahne a nacte tentyz nahradni udaj znovu - a protoze `cache/save` na obsazenem klici
+      # tise skonci, neopravil by to ani rucni beh. Beh sam pritom uz spadne na kontrole stari
+      # zdroju (build_katalog.zkontroluj_stari_zdroju), takze se nic nepublikuje tak jako tak;
+      # tato podminka jen brani tomu, aby porucha prezila do dalsich behu.
       - name: Uloz UZIS/RUIAN do cache
         if: steps.dostahni.outputs.stahovano == 'true'
         uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0

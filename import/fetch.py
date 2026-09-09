@@ -88,26 +88,40 @@ def get_bytes(url: str, *, max_retries: int = 5) -> bytes:
     raise RuntimeError(f"Stazeni {url} selhalo po {max_retries} pokusech")
 
 
-def last_modified(url: str) -> Optional[str]:
+def last_modified(url: str, *, max_retries: int = 5) -> Optional[str]:
     """Zjisti datum posledni zmeny zdroje pres HEAD pozadavek (hlavicka Last-Modified).
 
     Vraci ISO datum (YYYY-MM-DD), nebo None, pokud server hlavicku neposila nebo HEAD selze -
     CLAUDE.md 5.3 pozaduje datum zdrojovych dat v meta.json, ale neni to blokujici udaj,
     volajici si v takovem pripade poradi sam (typicky fallback na dnesni datum + varovani).
-    """
-    try:
-        resp = requests.head(url, timeout=TIMEOUT, allow_redirects=True)
-        resp.raise_for_status()
-    except requests.RequestException as exc:
-        logger.warning("HEAD pozadavek na %s selhal: %s", url, exc)
-        return None
 
-    raw = resp.headers.get("Last-Modified")
-    if not raw:
-        return None
-    try:
-        dt = datetime.strptime(raw, "%a, %d %b %Y %H:%M:%S %Z").replace(tzinfo=timezone.utc)
-    except ValueError:
-        logger.warning("Last-Modified hlavicka v neocekavanem formatu: %r", raw)
-        return None
-    return dt.date().isoformat()
+    Opakuje se stejnym odstupem jako `download` a `get_bytes`. Bez toho stacil jediny neuspesny
+    HEAD k tomu, aby se do `_cache/uzis_ruian_meta.json` zapsalo nahradni datum - a to je drazsi
+    porucha, nez vypada: beh na nem spadne v kontrole stari zdroju, ale meta soubor se mezitim
+    ulozi do cache pod platny klic sondy, takze ho tam kazdy dalsi denni beh najde znovu.
+    """
+    attempt = 0
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            resp = requests.head(url, timeout=TIMEOUT, allow_redirects=True)
+            resp.raise_for_status()
+        except requests.RequestException as exc:
+            logger.warning("HEAD pokus %d/%d selhal pro %s: %s", attempt, max_retries, url, exc)
+            if attempt >= max_retries:
+                return None
+            odstup = min(BACKOFF_ZAKLAD ** attempt, BACKOFF_STROP)
+            logger.info("Cekam %d s pred dalsim pokusem", odstup)
+            time.sleep(odstup)
+            continue
+
+        raw = resp.headers.get("Last-Modified")
+        if not raw:
+            return None
+        try:
+            dt = datetime.strptime(raw, "%a, %d %b %Y %H:%M:%S %Z").replace(tzinfo=timezone.utc)
+        except ValueError:
+            logger.warning("Last-Modified hlavicka v neocekavanem formatu: %r", raw)
+            return None
+        return dt.date().isoformat()
+    return None

@@ -4,7 +4,10 @@ Zamerne pokryvaji prave ta mista, kde uz jednou vznikla chyba v datech nebo kde 
 aktivne zvou - datove pasti z CLAUDE.md sekce 3 a rozhodnuti ze sekce 8.3. Nejsou to testy
 "pro pokryti"; kazdy odpovida konkretni vlastnosti zdroje, kterou nelze odvodit z kodu.
 
-Nesahaji na sit ani na _cache, takze bezi i pred stazenim zdroju.
+Nesahaji na sit, takze bezi i pred stazenim zdroju. Na _cache sahaji jen nepricmo: import
+`build_katalog` spusti `nacti_datum_zdrojovych_dat()`, ktera meta soubory precte, kdyz existuji.
+Kdyz chybi, jen varuje na stderr a dosadi dnesni datum, takze testum to nevadi - v CI bezi
+prave nad neexistujicim _cache.
 """
 from __future__ import annotations
 
@@ -164,6 +167,52 @@ def test_get_bytes_ceka_mezi_pokusy(monkeypatch):
     assert fetch.get_bytes("https://example.invalid/feed") == b"data"
     assert len(pokusy) == 3
     assert cekani == [2, 4]
+
+
+# --- last_modified: jedine selhani HEAD zapisovalo do meta souboru nahradni datum, ktere se
+# --- pak ulozilo do cache pod platny klic sondy a kazdy dalsi denni beh na nem spadl znovu.
+
+class _FakeHead:
+    headers = {"Last-Modified": "Mon, 01 Sep 2026 03:00:00 GMT"}
+
+    def raise_for_status(self):
+        pass
+
+
+def test_last_modified_ceka_mezi_pokusy(monkeypatch):
+    pokusy = []
+    cekani = []
+
+    def fake_head(url, timeout, allow_redirects):
+        pokusy.append(url)
+        if len(pokusy) < 3:
+            raise fetch.requests.RequestException("simulovany vypadek")
+        return _FakeHead()
+
+    monkeypatch.setattr(fetch.requests, "head", fake_head)
+    monkeypatch.setattr(fetch.time, "sleep", cekani.append)
+
+    assert fetch.last_modified("https://example.invalid/csv") == "2026-09-01"
+    assert len(pokusy) == 3
+    assert cekani == [2, 4]
+
+
+def test_last_modified_vrati_none_az_po_vycerpani_pokusu(monkeypatch):
+    pokusy = []
+    cekani = []
+
+    def fake_head(url, timeout, allow_redirects):
+        pokusy.append(url)
+        raise fetch.requests.RequestException("simulovany vypadek")
+
+    monkeypatch.setattr(fetch.requests, "head", fake_head)
+    monkeypatch.setattr(fetch.time, "sleep", cekani.append)
+
+    # Na rozdil od get_bytes se nevyhazuje - datum zdroje neni blokujici udaj, volajici
+    # si dosadi dnesni a zapise zdroj do nahradniDatum. Musi to ale byt az posledni moznost.
+    assert fetch.last_modified("https://example.invalid/csv") is None
+    assert len(pokusy) == 5
+    assert cekani == [2, 4, 8, 16]
 
 
 def test_get_bytes_selze_po_vycerpani_pokusu(monkeypatch):

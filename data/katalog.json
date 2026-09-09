@@ -18836,7 +18836,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 85
+                  "pocet": 81
                 }
               ]
             }
@@ -28296,9 +28296,9 @@
         {
           "id": "mpsv-507",
           "zdroj": "MPSV",
-          "nazev": "Farní charita Dolní Újezd",
+          "nazev": "Charita Dolní Újezd",
           "poskytovatel": {
-            "nazev": "Farní charita Dolní Újezd",
+            "nazev": "Charita Dolní Újezd",
             "ico": "49324357"
           },
           "druhSluzby": {
@@ -60235,12 +60235,12 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 45
+                  "pocet": 44
                 },
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 45
+                  "pocet": 44
                 }
               ]
             }
@@ -107094,8 +107094,8 @@
         "kodKraje": "CZ042"
       },
       "souradnice": {
-        "lat": 50.6676586,
-        "lng": 14.0165993
+        "lat": 50.6676429,
+        "lng": 14.0165706
       },
       "kategorie": [
         "terenni"

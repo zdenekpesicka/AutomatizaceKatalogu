@@ -15,6 +15,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "import"))
 
+import fetch  # noqa: E402
 from ruian import resolve_download_url  # noqa: E402
 from stahni_zdroje import ruian_datum_z_url  # noqa: E402
 from uzis import parse_gps, split_obor_pece  # noqa: E402
@@ -134,3 +135,48 @@ def test_resolve_download_url_rozbity_feed(xml):
 def test_resolve_download_url_neocekavany_odkaz(url):
     with pytest.raises(ValueError):
         resolve_download_url(_feed(url))
+
+
+# --- Odstup mezi pokusy. Bez nej probehne vsech pet pokusu behem milisekund, tedy driv, nez
+# --- stihne odeznit i ten nejkratsi vypadek zdroje, a retry jen zopakuje tutez chybu.
+# --- Sit se nepouziva, requests.get i time.sleep jsou nahrazene.
+
+class _FakeResponse:
+    content = b"data"
+
+    def raise_for_status(self):
+        pass
+
+
+def test_get_bytes_ceka_mezi_pokusy(monkeypatch):
+    pokusy = []
+    cekani = []
+
+    def fake_get(url, timeout):
+        pokusy.append(url)
+        if len(pokusy) < 3:
+            raise fetch.requests.RequestException("simulovany vypadek")
+        return _FakeResponse()
+
+    monkeypatch.setattr(fetch.requests, "get", fake_get)
+    monkeypatch.setattr(fetch.time, "sleep", cekani.append)
+
+    assert fetch.get_bytes("https://example.invalid/feed") == b"data"
+    assert len(pokusy) == 3
+    assert cekani == [2, 4]
+
+
+def test_get_bytes_selze_po_vycerpani_pokusu(monkeypatch):
+    cekani = []
+
+    def fake_get(url, timeout):
+        raise fetch.requests.RequestException("simulovany vypadek")
+
+    monkeypatch.setattr(fetch.requests, "get", fake_get)
+    monkeypatch.setattr(fetch.time, "sleep", cekani.append)
+
+    with pytest.raises(fetch.requests.RequestException):
+        fetch.get_bytes("https://example.invalid/feed")
+    # Strop 16 s drzi celkove cekani na nejvyse 30 s, tedy hluboko pod limitem jobu.
+    assert cekani == [2, 4, 8, 16]
+    assert sum(cekani) <= 30

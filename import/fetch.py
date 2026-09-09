@@ -16,8 +16,8 @@ TIMEOUT = 60
 
 # Odstup mezi pokusy: 2, 4, 8, 16 s. Bez nej probehne vsech pet pokusu behem milisekund,
 # tedy driv, nez staci odeznit i ten nejkratsi vypadek zdroje - retry pak jen zopakuje
-# tutez chybu a beh spadne. Strop drzi celkove cekani pod 30 s, aby se timeout jobu
-# (30 minut) nevycerpal cekanim misto stahovanim.
+# tutez chybu a beh spadne. Strop drzi celkove cekani na nejvyse 30 s na soubor (2+4+8+16),
+# tedy hluboko pod limitem jobu (15 minut u denniho behu, 30 u rucniho).
 BACKOFF_ZAKLAD = 2
 BACKOFF_STROP = 16
 
@@ -53,6 +53,31 @@ def download(url: str, dest: Path, *, max_retries: int = 5) -> Path:
             tmp.replace(dest)
             logger.info("Stazeno %s (%d bajtu)", dest, dest.stat().st_size)
             return dest
+        except requests.RequestException as exc:
+            logger.warning("Pokus %d/%d selhal pro %s: %s", attempt, max_retries, url, exc)
+            if attempt >= max_retries:
+                raise
+            odstup = min(BACKOFF_ZAKLAD ** attempt, BACKOFF_STROP)
+            logger.info("Cekam %d s pred dalsim pokusem", odstup)
+            time.sleep(odstup)
+    raise RuntimeError(f"Stazeni {url} selhalo po {max_retries} pokusech")
+
+
+def get_bytes(url: str, *, max_retries: int = 5) -> bytes:
+    """Stahne maly soubor do pameti, se stejnym odstupem mezi pokusy jako `download`.
+
+    Pro ATOM feed CUZK: je to par kB, takze streamovani ani Range nema smysl, ale odolnost
+    proti kratkemu vypadku ano. Bez retry shodil jediny neuspesny pozadavek cele stazeni
+    UZIS a RUIAN, pripadne poslal denni beh zbytecne na nahradni klic cache - a ten stoji
+    92 MB stazeni navic.
+    """
+    attempt = 0
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            resp = requests.get(url, timeout=TIMEOUT)
+            resp.raise_for_status()
+            return resp.content
         except requests.RequestException as exc:
             logger.warning("Pokus %d/%d selhal pro %s: %s", attempt, max_retries, url, exc)
             if attempt >= max_retries:

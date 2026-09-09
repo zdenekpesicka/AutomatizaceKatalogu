@@ -42,6 +42,15 @@ jobs:
         id: verze
         run: python import/stahni_zdroje.py --verze-zdroju >> "$GITHUB_OUTPUT"
 
+      # Sonda sama nikdy neshodi beh, aby vypadek CUZK nezastavil i import MPSV - jeji varovani
+      # na stderr ale zapadne v logu a beh skonci zelene. Anotace ho vytahne na stranku behu.
+      # Nevypisuje se `::warning::` primo ze sondy: jeji stdout jde do $GITHUB_OUTPUT, takze by
+      # se anotace zapsala do vystupu kroku misto do logu.
+      - name: Upozorni, kdyz sonda na verze zdroju selhala
+        if: steps.verze.outputs.klic == 'uzis-ruian-neurceno'
+        run: |
+          echo "::warning title=Verze zdroju nejdou zjistit::Sonda vratila nahradni klic cache. Beh pokracuje nad posledni ulozenou verzi UZIS a RUIAN. Kdyz to potrva, zabere kontrola stari zdroju a beh zacne selhavat."
+
       # restore-keys je zachrana pro dva pripady: zdroje se zmenily (presny klic mine, ale
       # posledni verze se hodi jako podklad) a verze nejdou zjistit (klic je nahradni).
       - name: Obnov UZIS/RUIAN z cache

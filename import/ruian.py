@@ -24,6 +24,13 @@ ATOM_NS = {"a": "http://www.w3.org/2005/Atom"}
 # Odkaz z feedu se pouziva ke stazeni, takze se drzi na ocekavanem hostu a tvaru nazvu souboru.
 # Host je pinovany zamerne: <id> ve feedu je jen retezec a bez kontroly by presmerovani nebo
 # zmena feedu poslala stahovani kamkoli.
+#
+# Vzor je uzsi, nez by musel byt, a je to zamer. `\S*/` vyzaduje aspon dva segmenty cesty, takze
+# by odmitl i legitimni https://vdp.cuzk.gov.cz/20260831_OB_ADR_csv.zip, a `\S` propousti tecky,
+# takze `../` v ceste neblokuje. Ani jedno neni mezera v obrane: host je pinovany, takze `..`
+# nemuze odvest stahovani jinam, a kdyby CUZK cestu zkratil, chceme selhat hlasite a hned.
+# Tichy pad na nahradni klic cache by znamenal beh nad starym snapshotem, tedy horsi stav nez
+# srozumitelna chyba.
 RUIAN_ZIP_URL_RE = re.compile(
     r"^https://vdp\.cuzk\.gov\.cz/\S*/\d{8}_OB_ADR_csv\.zip$"
 )

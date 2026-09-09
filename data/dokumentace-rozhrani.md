@@ -234,7 +234,7 @@ Jak se tři seznamy určují: porovnává se nový a poslední publikovaný `kat
 
 ## Provoz
 
-Aktualizace je automatická jedním denním během přes GitHub Actions (`0 4 * * *` UTC). MPSV se stahuje vždy, ÚZIS a RÚIAN jen tehdy, když u zdroje vyjde nová verze — běh se na ni nejdřív levně zeptá a podle odpovědi buď stáhne, nebo použije poslední uloženou. Nová měsíční verze se tak projeví v nejbližším denním běhu po jejím vydání. Naplánované běhy nemají garantovaný čas, zpoždění 5 až 30 minut je běžné.
+Aktualizace je automatická jedním denním během přes GitHub Actions (`0 4 * * *` UTC). MPSV se stahuje vždy, ÚZIS a RÚIAN jen tehdy, když u zdroje vyjde nová verze — běh se na ni nejdřív levně zeptá a podle odpovědi buď stáhne, nebo použije poslední uloženou. Nová měsíční verze se tak projeví v nejbližším denním běhu po jejím vydání. Čas v plánu je nejdřívější možný start, ne závazek — GitHub naplánované běhy řadí do fronty a spuštění může nastat i o několik hodin později. Odebírejte proto podle změny `hashKatalogu`, ne podle očekávané hodiny.
 
 **Commit vzniká jen tehdy, když se obsah `katalog.json` skutečně změnil.** Běh bez commitu je úspěšný běh beze změny ve zdrojích, ne chyba. Změnu poznáte podle `hashKatalogu` v `meta.json`.
 

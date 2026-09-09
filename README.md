@@ -22,7 +22,7 @@ Soubory jsou statické, staví se přímo z větve `main`, žádné API se nepro
 | **Denni import** | `.github/workflows/import.yml` | MPSV vždy, ÚZIS + RÚIAN při změně | `0 4 * * *` |
 | **Rucni import (vynuti stazeni UZIS + RUIAN)** | `.github/workflows/import-mesicni.yml` | MPSV vždy, ÚZIS + RÚIAN vždy | bez plánu |
 
-Naplánované běhy GitHub Actions nemají garantovaný čas, zpoždění 5 až 30 minut je běžné. Obě workflow jdou spustit ručně přes **Actions → vybrat workflow → Run workflow** (`workflow_dispatch`).
+Čas v plánu je nejdřívější možný start, ne závazek. GitHub naplánované běhy řadí do fronty podle vytížení a spuštění může nastat i o několik hodin později; na konkrétní hodinu se proto nelze spoléhat. Skutečné časy jsou v historii běhů. Obě workflow jdou spustit ručně přes **Actions → vybrat workflow → Run workflow** (`workflow_dispatch`).
 
 **Všechno obstarává denní běh, včetně ÚZIS a RÚIAN.** Ty se mění jen jednou měsíčně, takže by bylo plýtvání stahovat 92 MB každý den. Denní běh se proto nejdřív levně zeptá, jakou verzi zdroje právě nabízejí — ÚZIS přes hlavičku `Last-Modified`, ČÚZK přes název souboru v ATOM feedu — a z odpovědí složí klíč cache, například `uzis-ruian-2026-09-01-2026-08-31`:
 

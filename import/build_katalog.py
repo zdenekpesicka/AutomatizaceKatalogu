@@ -82,27 +82,36 @@ def bezadresy_id(place_key) -> str:
     return f"misto-bezadresy-{portal_id}-{otisk}"
 
 
+# Zdroje, u kterych se skutecne datum zjistit nepodarilo a dosadilo se dnesni. Plni
+# nacti_datum_zdrojovych_dat(), cte zkontroluj_stari_zdroju() - dosazene datum je vzdy
+# cerstve, takze by nad nim byla kontrola stari slepa.
+NAHRADNI_DATA: set[str] = set()
+
+
 def nacti_datum_zdrojovych_dat() -> dict:
     """CLAUDE.md 5.3 - datum zdrojovych dat, ne cas behu importu. Zjisteno stahni_zdroje.py
     z Last-Modified hlavicky zdrojovych souboru (MPSV/UZIS) a z nazvu souboru (RUIAN, mesicni
     snapshot), viz _cache/mpsv_meta.json a _cache/uzis_ruian_meta.json. Pokud meta soubory
-    chybi (napr. rucni beh bez stahni_zdroje.py), spadneme zpet na dnesni datum - jde jen
-    o informativni udaj v meta.json, ne o blokujici chybu."""
+    chybi (napr. rucni beh bez stahni_zdroje.py), spadneme zpet na dnesni datum a zdroj se
+    zapise do NAHRADNI_DATA - v meta.json je to jen informativni udaj, ale kontrola stari
+    zdroju na nej musi spadnout, jinak by prave ta porucha, kterou ma odhalit, kontrolu
+    umlcela dosazenim vzdy cerstveho data."""
     out = {}
-    mpsv_meta = CACHE / "mpsv_meta.json"
-    if mpsv_meta.exists():
-        out.update(json.loads(mpsv_meta.read_text(encoding="utf-8")))
-    else:
-        print(f"VAROVANI: {mpsv_meta} chybi, pouzivam dnesni datum pro mpsv", file=sys.stderr)
-        out["mpsv"] = TODAY
-
-    uzis_ruian_meta = CACHE / "uzis_ruian_meta.json"
-    if uzis_ruian_meta.exists():
-        out.update(json.loads(uzis_ruian_meta.read_text(encoding="utf-8")))
-    else:
-        print(f"VAROVANI: {uzis_ruian_meta} chybi, pouzivam dnesni datum pro uzis/ruian", file=sys.stderr)
-        out["uzis"] = TODAY
-        out["ruian"] = TODAY
+    for meta_soubor, klice in (
+        (CACHE / "mpsv_meta.json", ("mpsv",)),
+        (CACHE / "uzis_ruian_meta.json", ("uzis", "ruian")),
+    ):
+        if meta_soubor.exists():
+            data = json.loads(meta_soubor.read_text(encoding="utf-8"))
+            NAHRADNI_DATA.update(data.pop("nahradniDatum", []))
+            out.update(data)
+        else:
+            print(
+                f"VAROVANI: {meta_soubor} chybi, pouzivam dnesni datum pro {'/'.join(klice)}",
+                file=sys.stderr,
+            )
+            NAHRADNI_DATA.update(klice)
+            out.update({klic: TODAY for klic in klice})
     return out
 
 
@@ -294,6 +303,30 @@ def validuj_zdroj_rpss() -> None:
     jsonschema.validate(data, schema)
 
 
+def referencni_pocet_bez_souradnic(stary_meta: dict | None) -> int | None:
+    """Referencni hodnota pro prah na mista bez souradnic (PRAH_BEZ_SOURADNIC).
+
+    Prednostne se cte `pocetMistBezSouradnic` z publikovaneho meta.json. To pole ale vzniklo
+    az 9. 9. 2026 a meta.json se prepisuje jen pri zmene katalogu (CLAUDE.md 5.3), takze
+    v publikovanych datech chybi tak dlouho, dokud nepribude prvni zmena obsahu - a prave
+    v tom okne by pojistka mlcela. Referenci proto v takovem pripade spocitame primo
+    z posledniho publikovaneho data/katalog.json, ktery je zdrojem te hodnoty tak jako tak.
+
+    Vraci None jen pri uplne prvnim behu, kdy zadny publikovany katalog neexistuje a neni
+    proti cemu porovnavat.
+    """
+    if stary_meta is not None and stary_meta.get("pocetMistBezSouradnic") is not None:
+        return stary_meta["pocetMistBezSouradnic"]
+
+    stary_katalog = DATA / "katalog.json"
+    if not stary_katalog.exists():
+        return None
+    mista = json.loads(stary_katalog.read_text(encoding="utf-8"))["mista"]
+    pocet = sum(1 for m in mista if m["souradnice"]["lat"] is None)
+    print(f"  reference pro prah bez souradnic dopoctena z data/katalog.json: {pocet}")
+    return pocet
+
+
 def zkontroluj_stari_zdroju() -> None:
     """Pojistka proti tise zastaralym zdrojum.
 
@@ -310,29 +343,37 @@ def zkontroluj_stari_zdroju() -> None:
     Prah 50 dni: MPSV vydava denne, UZIS a RUIAN mesicne, takze ve zdravem provozu je nejstarsi
     snapshot ~31 dni plus zpozdeni do nejblizsiho denniho behu. Zmereno 9. 9. 2026: mpsv 1 den,
     uzis 8 dni, ruian 9 dni. Rezerva do prahu je tedy zhruba 18 dni nad nejhorsim zdravym stavem.
+
+    Zdroj z NAHRADNI_DATA je zavada bez ohledu na prah: dosazene dnesni datum je vzdy cerstve,
+    takze by prah nikdy neprekrocilo a kontrola by mlcela prave v pripade, kdy o stari zdroje
+    nic nevime.
     """
     dnes = datetime.date.today()
-    zastarale = []
+    zavady = []
     for zdroj, datum in sorted(DATUM_ZDROJOVYCH_DAT.items()):
+        if zdroj in NAHRADNI_DATA:
+            print(f"  {zdroj}: {datum} (dosazene dnesni datum, skutecne nezname)")
+            zavady.append(f"{zdroj} - datum zdroje nezjisteno, dosazeno dnesni")
+            continue
         stari = (dnes - datetime.date.fromisoformat(datum)).days
         print(f"  {zdroj}: {datum} ({stari} dni)")
         if stari > PRAH_STARI_ZDROJU:
-            zastarale.append(f"{zdroj} {datum} ({stari} dni)")
+            zavady.append(f"{zdroj} {datum} ({stari} dni)")
 
-    if not zastarale:
+    if not zavady:
         return
     if "--zastarale-zdroje-ok" in sys.argv:
         print(
-            f"UPOZORNENI: zastarale zdroje ({', '.join(zastarale)}), limit je "
+            f"UPOZORNENI: zdroje neprosly kontrolou stari ({', '.join(zavady)}), limit je "
             f"{PRAH_STARI_ZDROJU} dni. Pokracuji vedome pres --zastarale-zdroje-ok.",
             file=sys.stderr,
         )
         return
     print(
-        f"POJISTKA: zdrojova data jsou starsi nez {PRAH_STARI_ZDROJU} dni ({', '.join(zastarale)}). "
-        "NEPUBLIKUJI, zustava posledni platna verze. Overte, ze sonda na verze zdroju funguje "
-        "a ze zdroj skutecne vydava nove verze; kdyz je prodleva na strane zdroje a je zamerne "
-        "prijata, prepnete rucne pres --zastarale-zdroje-ok.",
+        f"POJISTKA: stari zdrojovych dat neni v poradku ({', '.join(zavady)}), limit je "
+        f"{PRAH_STARI_ZDROJU} dni. NEPUBLIKUJI, zustava posledni platna verze. Overte, ze sonda "
+        "na verze zdroju funguje a ze zdroj skutecne vydava nove verze; kdyz je prodleva na strane "
+        "zdroje a je zamerne prijata, prepnete rucne pres --zastarale-zdroje-ok.",
         file=sys.stderr,
     )
     sys.exit(1)
@@ -582,8 +623,8 @@ def main() -> None:
     # souradnic je 110 az 112, tedy rozptyl 2, a nepohnula s nim ani vymena mesicniho snapshotu
     # RUIAN 31. 7. -> 31. 8. Prah 30 je proti tomu patnactinasobna rezerva a proti popsanemu
     # scenari porad o rad nizsi, nez by byl jeho dopad.
-    if stary_meta is not None and stary_meta.get("pocetMistBezSouradnic") is not None:
-        stare_bez = stary_meta["pocetMistBezSouradnic"]
+    stare_bez = referencni_pocet_bez_souradnic(stary_meta)
+    if stare_bez is not None:
         narust = pocet_bez_souradnic - stare_bez
         if narust > PRAH_BEZ_SOURADNIC:
             if "--zamerna-velka-zmena" not in sys.argv:

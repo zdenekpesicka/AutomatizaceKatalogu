@@ -9,7 +9,9 @@ a UZIS+RUIAN jen mesicne:
 
 Kazdy rezim si vedle stazenych dat zapisuje vlastni meta soubor s datem zdrojovych
 dat (_cache/mpsv_meta.json, _cache/uzis_ruian_meta.json), ktery pak cte build_katalog.py
-misto drivejsi natvrdo zapsane konstanty.
+misto drivejsi natvrdo zapsane konstanty. Klic `nahradniDatum` je seznam zdroju, u kterych
+se datum zjistit nepodarilo a dosadilo se dnesni - takove datum je vzdy cerstve, takze by
+kontrola stari zdroju v build_katalog.py nad nim byla slepa a musi na nej misto toho spadnout.
 """
 from __future__ import annotations
 
@@ -22,11 +24,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from fetch import download, last_modified  # noqa: E402
+from fetch import download, get_bytes, last_modified  # noqa: E402
 from ciselniky import BASE_URL as CISELNIKY_BASE_URL, FILES as CISELNIK_FILES  # noqa: E402
 from ruian import ATOM_FEED_URL, resolve_download_url  # noqa: E402
-
-import requests  # noqa: E402
 
 ROOT = Path(__file__).parent.parent
 CACHE = ROOT / "_cache"
@@ -51,11 +51,13 @@ def fetch_mpsv() -> None:
         download(CISELNIKY_BASE_URL.format(name=filename), CACHE / f"{filename}.json")
 
     datum = last_modified(RPSS_URL)
+    nahradni = []
     if datum is None:
         datum = date.today().isoformat()
+        nahradni.append("mpsv")
         print(f"  VAROVANI: Last-Modified pro rpss.json nezjisteno, pouzivam dnesni datum {datum}", file=sys.stderr)
     with open(CACHE / "mpsv_meta.json", "w", encoding="utf-8") as f:
-        json.dump({"mpsv": datum}, f)
+        json.dump({"mpsv": datum, "nahradniDatum": nahradni}, f)
     print(f"  datum zdrojovych dat MPSV: {datum}")
 
 
@@ -63,24 +65,25 @@ def fetch_uzis_ruian() -> None:
     print("Stahuji nrpzs.csv...")
     download(NRPZS_URL, CACHE / "nrpzs.csv")
     uzis_datum = last_modified(NRPZS_URL)
+    nahradni = []
     if uzis_datum is None:
         uzis_datum = date.today().isoformat()
+        nahradni.append("uzis")
         print(f"  VAROVANI: Last-Modified pro nrpzs.csv nezjisteno, pouzivam dnesni datum {uzis_datum}", file=sys.stderr)
 
     print("Zjistuji aktualni odkaz na RUIAN ZIP z ATOM feedu...")
-    atom_resp = requests.get(ATOM_FEED_URL, timeout=60)
-    atom_resp.raise_for_status()
-    zip_url = resolve_download_url(atom_resp.content)
+    zip_url = resolve_download_url(get_bytes(ATOM_FEED_URL))
     print(f"  odkaz: {zip_url}")
     download(zip_url, CACHE / "ruian_adr.zip")
 
     ruian_datum = ruian_datum_z_url(zip_url)
     if ruian_datum is None:
         ruian_datum = date.today().isoformat()
+        nahradni.append("ruian")
         print(f"  VAROVANI: datum nejde vytahnout z nazvu souboru RUIAN, pouzivam dnesni datum {ruian_datum}", file=sys.stderr)
 
     with open(CACHE / "uzis_ruian_meta.json", "w", encoding="utf-8") as f:
-        json.dump({"uzis": uzis_datum, "ruian": ruian_datum}, f)
+        json.dump({"uzis": uzis_datum, "ruian": ruian_datum, "nahradniDatum": nahradni}, f)
     print(f"  datum zdrojovych dat UZIS: {uzis_datum}, RUIAN: {ruian_datum}")
 
 
@@ -112,9 +115,7 @@ def vypis_verze_zdroju() -> None:
     uzis = ruian = ""
     try:
         uzis = last_modified(NRPZS_URL) or ""
-        atom_resp = requests.get(ATOM_FEED_URL, timeout=60)
-        atom_resp.raise_for_status()
-        ruian = ruian_datum_z_url(resolve_download_url(atom_resp.content)) or ""
+        ruian = ruian_datum_z_url(resolve_download_url(get_bytes(ATOM_FEED_URL))) or ""
         if uzis and ruian:
             klic = f"uzis-ruian-{uzis}-{ruian}"
         else:

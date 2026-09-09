@@ -19,13 +19,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
           python-version: "3.11"
 
-      - run: pip install -r import/requirements.txt
+      - run: pip install -r import/requirements-dev.txt
+
+      # Testy bezi pred stahovanim: kdyz je rozbite zpracovani, nema smysl tahnout 190 MB dat.
+      # Nesahaji na sit ani na _cache, takze v tuhle chvili uz maji vsechno, co potrebuji.
+      - name: Testy
+        run: python -m pytest tests/ -q
 
       # Klic cache je odvozeny od DAT zdroju, ne od kalendarniho mesice: zepta se UZIS na
       # Last-Modified a CUZK na nazev souboru v ATOM feedu (obojí levne, par kB). Kalendarni
@@ -41,7 +46,7 @@ jobs:
       # posledni verze se hodi jako podklad) a verze nejdou zjistit (klic je nahradni).
       - name: Obnov UZIS/RUIAN z cache
         id: cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
           path: |
             _cache/nrpzs.csv
@@ -78,7 +83,7 @@ jobs:
       # save tise skonci - a je to spravne, pod stejnym klicem jsou stejna data.
       - name: Uloz UZIS/RUIAN do cache
         if: steps.dostahni.outputs.stahovano == 'true'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
           path: |
             _cache/nrpzs.csv

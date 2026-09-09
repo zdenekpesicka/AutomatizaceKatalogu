@@ -26,26 +26,38 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
           python-version: "3.11"
 
-      - run: pip install -r import/requirements.txt
+      - run: pip install -r import/requirements-dev.txt
 
-      - name: Stahni UZIS + RUIAN (vzdy cerstve, ne z cache)
-        run: python import/stahni_zdroje.py --uzis-ruian
+      # Testy bezi pred stahovanim: kdyz je rozbite zpracovani, nema smysl tahnout 190 MB dat.
+      # Nesahaji na sit ani na _cache, takze v tuhle chvili uz maji vsechno, co potrebuji.
+      - name: Testy
+        run: python -m pytest tests/ -q
 
+      # Sonda musi byt PRED stazenim, ne za nim. Kdyz CUZK publikuje mezi obema kroky, sonda
+      # spustena az po stazeni vrati novejsi datum, nez jaka data se prave stahla, a ulozi je
+      # pod klic nove verze. Takova cache je pak trvale spatne: denni beh na ni trefi presnou
+      # shodu klice, takze uz nikdy nestahne - a protoze `cache/save` na obsazenem klici tise
+      # skonci, neopravi to ani opakovany rucni beh. V tomto poradi je nejhorsi mozny dopad
+      # opacny a neskodny: klic ukazuje starsi verzi, nez jaka se stahla, takze pristi beh
+      # jednou zbytecne stahne znovu.
       - name: Zjisti verze zdroju pro klic cache
         id: verze
         run: python import/stahni_zdroje.py --verze-zdroju >> "$GITHUB_OUTPUT"
+
+      - name: Stahni UZIS + RUIAN (vzdy cerstve, ne z cache)
+        run: python import/stahni_zdroje.py --uzis-ruian
 
       # Tentyz klic odvozeny od dat jako v import.yml, aby oba behy sdilely jednu cache misto
       # dvou navzajem si prekazejicich jmennych prostoru. Kdyz uz cache pod timto klicem je,
       # save tise skonci - stazena data jsou v tom pripade shodna s ulozenymi.
       - name: Uloz UZIS/RUIAN do cache
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
           path: |
             _cache/nrpzs.csv

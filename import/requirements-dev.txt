@@ -1,0 +1,4 @@
+# Zavislosti navic pro testy. Oddelene od requirements.txt, aby produkcni beh instaloval
+# jen to, co k sestaveni katalogu skutecne potrebuje.
+-r requirements.txt
+pytest==8.4.2

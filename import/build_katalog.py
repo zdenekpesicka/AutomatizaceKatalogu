@@ -34,6 +34,8 @@ DATA = ROOT / "data"
 TODAY = datetime.date.today().isoformat()
 
 PRAH_ZMENY = 0.05  # CLAUDE.md 5.2 bod 3 - vice nez 5 % zmena poctu mist = nepublikovat
+PRAH_BEZ_SOURADNIC = 30  # narust mist bez souradnic o vic = nepublikovat, viz pojistka nize
+PRAH_STARI_ZDROJU = 50  # dni; starsi snapshot = nepublikovat, viz zkontroluj_stari_zdroju()
 
 # Verzi nesou vsechny tri vystupni soubory, proto stoji na jednom miste - driv byla vepsana
 # trikrat zvlast a mohly se rozejit. CLAUDE.md 4.2: nekompatibilni zmena zvysuje major verzi.
@@ -292,7 +294,54 @@ def validuj_zdroj_rpss() -> None:
     jsonschema.validate(data, schema)
 
 
+def zkontroluj_stari_zdroju() -> None:
+    """Pojistka proti tise zastaralym zdrojum.
+
+    Denni beh drzi UZIS a RUIAN v cache GitHub Actions a stahuje je, az kdyz sonda ohlasi novou
+    verzi. Kdyz sonda trvale selhava (vypadek CUZK, zmena formatu feedu), spadne beh do vetve
+    "pokracuji nad posledni ulozenou verzi", cteni cache pokazde obnovi jeji sedmidennu lhutu
+    a build zustava zeleny nad libovolne starymi daty. Prahova kontrola to nezachyti, protoze
+    ta hlida zmenu poctu mist, a ta zadna neni - data se prece nemeni.
+
+    Cte se datum z _cache/*_meta.json, tedy ze snapshotu, nad kterym se prave stavi, ne
+    z publikovaneho data/meta.json - to zaostava zamerne (zapisuje se az za kontrolou hashe)
+    a jeho stari o cerstvosti zdroje nevypovida.
+
+    Prah 50 dni: MPSV vydava denne, UZIS a RUIAN mesicne, takze ve zdravem provozu je nejstarsi
+    snapshot ~31 dni plus zpozdeni do nejblizsiho denniho behu. Zmereno 9. 9. 2026: mpsv 1 den,
+    uzis 8 dni, ruian 9 dni. Rezerva do prahu je tedy zhruba 18 dni nad nejhorsim zdravym stavem.
+    """
+    dnes = datetime.date.today()
+    zastarale = []
+    for zdroj, datum in sorted(DATUM_ZDROJOVYCH_DAT.items()):
+        stari = (dnes - datetime.date.fromisoformat(datum)).days
+        print(f"  {zdroj}: {datum} ({stari} dni)")
+        if stari > PRAH_STARI_ZDROJU:
+            zastarale.append(f"{zdroj} {datum} ({stari} dni)")
+
+    if not zastarale:
+        return
+    if "--zastarale-zdroje-ok" in sys.argv:
+        print(
+            f"UPOZORNENI: zastarale zdroje ({', '.join(zastarale)}), limit je "
+            f"{PRAH_STARI_ZDROJU} dni. Pokracuji vedome pres --zastarale-zdroje-ok.",
+            file=sys.stderr,
+        )
+        return
+    print(
+        f"POJISTKA: zdrojova data jsou starsi nez {PRAH_STARI_ZDROJU} dni ({', '.join(zastarale)}). "
+        "NEPUBLIKUJI, zustava posledni platna verze. Overte, ze sonda na verze zdroju funguje "
+        "a ze zdroj skutecne vydava nove verze; kdyz je prodleva na strane zdroje a je zamerne "
+        "prijata, prepnete rucne pres --zastarale-zdroje-ok.",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+
+
 def main() -> None:
+    print("Kontroluji stari zdrojovych dat...")
+    zkontroluj_stari_zdroju()
+
     print("Validuji zdrojova data MPSV proti rpss.schema.json...")
     validuj_zdroj_rpss()
     print("  OK")
@@ -486,11 +535,16 @@ def main() -> None:
     print("Validuji vystup proti schematu...")
     with open(ROOT / "schema" / "katalog.schema.json", encoding="utf-8") as f:
         schema = json.load(f)
-    jsonschema.validate(out, schema)
+    # format_checker je nutny explicitne: bez nej jsonschema klicove slovo "format" jen anotuje
+    # a nekontroluje, takze by "format": "date" u datumPoskytovaniOd/Do neodhalilo nic.
+    jsonschema.validate(out, schema, format_checker=jsonschema.Draft7Validator.FORMAT_CHECKER)
     print("  OK, 0 chyb")
 
     content = json.dumps(out, ensure_ascii=False, indent=2)
     content_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()
+
+    pocet_bez_souradnic = sum(1 for m in mista_out if m["souradnice"]["lat"] is None)
+    print(f"Mist bez souradnic: {pocet_bez_souradnic} z {len(mista_out)}")
 
     stary_meta_path = DATA / "meta.json"
     stary_meta = None
@@ -517,6 +571,33 @@ def main() -> None:
             print(
                 f"UPOZORNENI: pocet mist se zmenil o {delta:.1%} ({stare_pocet} -> {len(mista_out)}), "
                 f"prah {PRAH_ZMENY:.0%} prekrocen vedome pres --zamerna-velka-zmena.",
+                file=sys.stderr,
+            )
+
+    # Pojistka na tise zahozene souradnice. Prahova kontrola vyse hlida POCET mist, ne jejich
+    # vyplnenost, takze by nezabrala na scenari, ktery je u tohoto zdroje realny: kdyby UZIS
+    # opravil poradi lat/lng (CLAUDE.md 3.1), padly by vsechny jeho souradnice mimo bounding box
+    # CR, parse_gps by vratil None a ~650 UZIS mist by naraz prislo o pin, aniz by ubylo jedine
+    # misto. Zmereno pres celou historii data/katalog.json (10 verzi, 4. az 9. 9. 2026): mist bez
+    # souradnic je 110 az 112, tedy rozptyl 2, a nepohnula s nim ani vymena mesicniho snapshotu
+    # RUIAN 31. 7. -> 31. 8. Prah 30 je proti tomu patnactinasobna rezerva a proti popsanemu
+    # scenari porad o rad nizsi, nez by byl jeho dopad.
+    if stary_meta is not None and stary_meta.get("pocetMistBezSouradnic") is not None:
+        stare_bez = stary_meta["pocetMistBezSouradnic"]
+        narust = pocet_bez_souradnic - stare_bez
+        if narust > PRAH_BEZ_SOURADNIC:
+            if "--zamerna-velka-zmena" not in sys.argv:
+                print(
+                    f"POJISTKA: mist bez souradnic pribylo o {narust} ({stare_bez} -> "
+                    f"{pocet_bez_souradnic}), limit je {PRAH_BEZ_SOURADNIC}. NEPUBLIKUJI, "
+                    "zustava posledni platna verze.",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
+            print(
+                f"UPOZORNENI: mist bez souradnic pribylo o {narust} ({stare_bez} -> "
+                f"{pocet_bez_souradnic}), prah {PRAH_BEZ_SOURADNIC} prekrocen vedome "
+                "pres --zamerna-velka-zmena.",
                 file=sys.stderr,
             )
 
@@ -556,6 +637,7 @@ def main() -> None:
         "pocetMistPodleKategorie": pocet_podle_kategorie,
         "pocetMistBezKategorie": sum(1 for m in mista_out if not m["kategorie"]),
         "pocetMistSPoskytovanimZdravotniPece": sum(1 for m in mista_out if m["poskytujeZdravotniPeci"]),
+        "pocetMistBezSouradnic": pocet_bez_souradnic,
         "datumZdrojovychDat": DATUM_ZDROJOVYCH_DAT,
     }
     with open(DATA / "meta.json", "w", encoding="utf-8") as f:

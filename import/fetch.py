@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import logging
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
@@ -12,6 +13,13 @@ logger = logging.getLogger(__name__)
 
 CHUNK_SIZE = 1024 * 1024  # 1 MB
 TIMEOUT = 60
+
+# Odstup mezi pokusy: 2, 4, 8, 16 s. Bez nej probehne vsech pet pokusu behem milisekund,
+# tedy driv, nez staci odeznit i ten nejkratsi vypadek zdroje - retry pak jen zopakuje
+# tutez chybu a beh spadne. Strop drzi celkove cekani pod 30 s, aby se timeout jobu
+# (30 minut) nevycerpal cekanim misto stahovanim.
+BACKOFF_ZAKLAD = 2
+BACKOFF_STROP = 16
 
 
 def download(url: str, dest: Path, *, max_retries: int = 5) -> Path:
@@ -49,6 +57,9 @@ def download(url: str, dest: Path, *, max_retries: int = 5) -> Path:
             logger.warning("Pokus %d/%d selhal pro %s: %s", attempt, max_retries, url, exc)
             if attempt >= max_retries:
                 raise
+            odstup = min(BACKOFF_ZAKLAD ** attempt, BACKOFF_STROP)
+            logger.info("Cekam %d s pred dalsim pokusem", odstup)
+            time.sleep(odstup)
     raise RuntimeError(f"Stazeni {url} selhalo po {max_retries} pokusech")
 
 

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import csv
 import io
+import re
 import zipfile
 from pathlib import Path
 from typing import Dict, Optional, Set, Tuple
@@ -19,6 +20,13 @@ from pyproj.aoi import AreaOfInterest
 
 ATOM_FEED_URL = "https://atom.cuzk.gov.cz/get.ashx?theme=RUIAN-CSV-ADR-ST"
 ATOM_NS = {"a": "http://www.w3.org/2005/Atom"}
+
+# Odkaz z feedu se pouziva ke stazeni, takze se drzi na ocekavanem hostu a tvaru nazvu souboru.
+# Host je pinovany zamerne: <id> ve feedu je jen retezec a bez kontroly by presmerovani nebo
+# zmena feedu poslala stahovani kamkoli.
+RUIAN_ZIP_URL_RE = re.compile(
+    r"^https://vdp\.cuzk\.gov\.cz/\S*/\d{8}_OB_ADR_csv\.zip$"
+)
 
 CZ_LAT_RANGE = (48.0, 52.0)
 CZ_LNG_RANGE = (12.0, 19.0)
@@ -42,11 +50,29 @@ _TRANSFORMER = Transformer.from_crs(
 
 
 def resolve_download_url(atom_xml: bytes) -> str:
-    """Rozparsuje ATOM feed CUZK a vrati aktualni odkaz na ZIP s adresnimi misty CR."""
+    """Rozparsuje ATOM feed CUZK a vrati aktualni odkaz na ZIP s adresnimi misty CR.
+
+    Feed ma jediny <entry> a odkaz je v jeho <id> (overeno proti zivemu feedu 9. 9. 2026,
+    kde se <id> shoduje s <link rel="alternate" href>). Tvar odkazu se kontroluje, protoze
+    z nej `stahni_zdroje.ruian_datum_z_url` cte datum do klice cache: kdyby CUZK zmenil
+    strukturu feedu, bez kontroly by se stahovala nahodna URL, nebo by se datum nedohledalo
+    a beh by tise spadl na nahradni klic. Radsi selhat hned a srozumitelne.
+    """
     root = ET.fromstring(atom_xml)
     entry = root.find("a:entry", ATOM_NS)
+    if entry is None:
+        raise ValueError("ATOM feed CUZK neobsahuje zadny <entry>, zmenil se format feedu")
     id_el = entry.find("a:id", ATOM_NS)
-    return id_el.text.strip()
+    if id_el is None or not (id_el.text or "").strip():
+        raise ValueError("ATOM feed CUZK: <entry> nema <id> s odkazem, zmenil se format feedu")
+
+    url = id_el.text.strip()
+    if not RUIAN_ZIP_URL_RE.match(url):
+        raise ValueError(
+            f"ATOM feed CUZK vratil neocekavany odkaz {url!r}, cekal se "
+            "https://vdp.cuzk.gov.cz/.../RRRRMMDD_OB_ADR_csv.zip"
+        )
+    return url
 
 
 def load_address_points(

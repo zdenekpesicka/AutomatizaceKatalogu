@@ -137,6 +137,8 @@ Vždy objekt `{"lat": ..., "lng": ...}`, nikdy vynechané pole. `lat`/`lng` jsou
 
 Kapacita je registrovaná **na službu, ne na zařízení**. Každá registrace je v `sluzby[]` právě jednou (viz sekce výše), takže součet kapacit přes `sluzby[]` jednoho místa je správný a nic se v něm nezapočítá dvakrát.
 
+**Přes víc míst se ale kapacity sčítat nesmějí bez odečtení duplicit.** Táž registrace je u všech svých adresních bodů se stejnou kapacitou, protože MPSV kapacitu vede na registraci a neuvádí, kolik z ní připadá na kterou adresu. Změřeno na aktuálním výstupu: 412 z 2 216 MPSV registrací je na víc místech (maximum 15), a naivní součet přes všechna místa napočítá 54 806 lůžek proti skutečným 44 599, tedy o 23 % víc; u typu `klient` je to 101 447 proti 39 226, tedy o 159 % víc. Příklad: `mpsv-922` (Podkrušnohorské domovy, 137 lůžek) je u 4 míst, `mpsv-1572` (odlehčovací služby terénní, Poděbrady, 24 lůžek) u 8. **Před jakýmkoli součtem za okres, kraj nebo celý katalog proto nejdřív deduplikujte podle `sluzby[].id`.** Rozpočítat kapacitu mezi adresní body nelze, ten údaj registr neobsahuje.
+
 **`kapacitaRegistrovana` je registrovaná maximální kapacita, ne aktuální volná místa.** Registr volná místa neobsahuje. Pole `typ` nabývá hodnot `klient`, `kontakt`, `interv`, `luzka`, `hovor` (počet klientů / kontaktů 10min. jednání / intervencí 30min. jednání / lůžek / hovorů) — jednotku vždy zobrazujte podle `typNazev`, ať nevznikne třeba "32 lůžek" u pečovatelské služby, která lůžka nemá.
 
 ## Adresa u zdroje ÚZIS: `cisloOrientacni` může obsahovat obojí

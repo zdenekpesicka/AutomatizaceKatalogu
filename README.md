@@ -75,7 +75,7 @@ gh cache list
 gh cache delete <klíč>
 ```
 
-Totéž jde v **Actions → Caches**. Ruční workflow na to nestačí: ukládá pod stejný klíč a `cache/save` na obsazeném klíči tiše skončí, takže uloženou cache nepřepíše.
+Totéž jde v **Actions → Caches**. Ruční workflow na to nestačí: ukládá pod stejný klíč a `cache/save` na obsazeném klíči nic nepřepíše — krok skončí úspěchem a jen vypíše anotaci `Cache save failed.`
 
 Notifikace o selhání naplánovaného běhu chodí jen tomu, kdo workflow naposledy zapnul, a jen když má v **Settings → Notifications → System → Actions** přepnuto na Email (výchozí stav je „Don't notify"). Kdo workflow vypne a znovu zapne, stane se příjemcem.
 

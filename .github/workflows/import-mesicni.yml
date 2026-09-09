@@ -63,7 +63,8 @@ jobs:
 
       # Tentyz klic odvozeny od dat jako v import.yml, aby oba behy sdilely jednu cache misto
       # dvou navzajem si prekazejicich jmennych prostoru. Kdyz uz cache pod timto klicem je,
-      # save tise skonci - stazena data jsou v tom pripade shodna s ulozenymi.
+      # save nic neprepise (krok uspeje a vypise anotaci `Cache save failed.`) - stazena data
+      # jsou v tom pripade shodna s ulozenymi.
       #
       # Pozor na hranici te uvahy: shodna jsou jen velka data, meta soubor s datem zdroje shodny
       # byt nemusi. Prave proto se cache neuklada, kdyz se datum nepodarilo zjistit - jinak by

@@ -4,7 +4,7 @@ Zamerne pokryvaji prave ta mista, kde uz jednou vznikla chyba v datech nebo kde 
 aktivne zvou - datove pasti z CLAUDE.md sekce 3 a rozhodnuti ze sekce 8.3. Nejsou to testy
 "pro pokryti"; kazdy odpovida konkretni vlastnosti zdroje, kterou nelze odvodit z kodu.
 
-Nesahaji na sit, takze bezi i pred stazenim zdroju. Na _cache sahaji jen nepricmo: import
+Nesahaji na sit, takze bezi i pred stazenim zdroju. Na _cache sahaji jen neprimo: import
 `build_katalog` spusti `nacti_datum_zdrojovych_dat()`, ktera meta soubory precte, kdyz existuji.
 Kdyz chybi, jen varuje na stderr a dosadi dnesni datum, takze testum to nevadi - v CI bezi
 prave nad neexistujicim _cache.

@@ -74631,22 +74631,12 @@
           },
           "formy": [
             {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 1
-                }
-              ]
-            },
-            {
               "forma": "ter",
               "kapacitaRegistrovana": [
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 7
+                  "pocet": 8
                 }
               ]
             }

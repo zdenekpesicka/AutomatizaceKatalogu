@@ -1,6 +1,6 @@
 # Dokumentace rozhraní — katalog registrovaných služeb pro seniory
 
-Verze schématu 1.3.0. Viz `schema/katalog.schema.json` a `data/katalog.json` — plná data z ostrých dat MPSV a ÚZIS. Aktuální počet míst a datum zdrojových dat najdete vždy v `data/meta.json`; tady je záměrně neopakujeme, aby se obě čísla časem nerozešla.
+Verze schématu 1.4.0. Viz `schema/katalog.schema.json` a `data/katalog.json` — plná data z ostrých dat MPSV a ÚZIS. Aktuální počet míst a datum zdrojových dat najdete vždy v `data/meta.json`; tady je záměrně neopakujeme, aby se obě čísla časem nerozešla.
 
 ## Soubory
 
@@ -10,7 +10,7 @@ Verze schématu 1.3.0. Viz `schema/katalog.schema.json` a `data/katalog.json` �
 | `schema/katalog.schema.json` | JSON Schema (draft-07) pro validaci na vaší straně. Doporučujeme validovat při každém stažení. |
 | `data/meta.json` | Verze schématu, hash obsahu, počty záznamů, datum zdrojových dat. Podle hashe poznáte, že se data změnila. **Neobsahuje čas běhu importu** — to, kdy import naposledy proběhl, není totéž jako to, kdy se data naposledy změnila. |
 | `data/zmeny.json` | ID přidaných, změněných a odebraných míst od posledního běhu, kdy k reálné změně došlo. |
-| `data/ukazka.json` | **Neodebírejte, nejsou to živá data.** Zmrazený výřez 32 míst, na kterém se odsouhlasila struktura a formát. Slouží už jen jako ilustrace k této dokumentaci a dál se neaktualizuje, proto v něm zůstává `verzeSchematu: "1.0.0"` a nenajdete v něm pole `sluzby[].zarizeni` přidané v 1.1.0, `sluzby[].oboryPece` přidané v 1.2.0 ani kategorii `poradenstvi` přidanou v 1.3.0. |
+| `data/ukazka.json` | **Neodebírejte, nejsou to živá data.** Zmrazený výřez 32 míst, na kterém se odsouhlasila struktura a formát. Slouží už jen jako ilustrace k této dokumentaci a dál se neaktualizuje, proto v něm zůstává `verzeSchematu: "1.0.0"` a nenajdete v něm pole `sluzby[].zarizeni` přidané v 1.1.0, `sluzby[].oboryPece` přidané v 1.2.0 ani kategorie `poradenstvi` a `pecovatelske` přidané v 1.3.0 a 1.4.0. Zatřídění v něm odpovídá pravidlům platným v 1.0.0, ne dnešním. |
 
 ## Struktura souboru
 
@@ -72,7 +72,7 @@ Zbývají dva případy bez RÚIAN kódu, kde se ID odvodit nedá:
 
 U prvního tvaru je název zařízení jediný rozlišovač, který registr nabízí — zařízení v MPSV nemá vlastní identifikátor. Když tedy MPSV název zařízení přepíše, dostane místo nové ID a ve `zmeny.json` se objeví jako odebrané a přidané. Týká se to řádově desítek míst z celého katalogu a spolehlivěji to nejde, dokud MPSV zařízením vlastní identifikátor nedá.
 
-**U těchto míst může být celé `adresa` rovno `null`** — ne prázdný objekt, ale `null`. Registr u nich neuvádí ani ulici a obec, takže není co vypsat. Aktuálně je takových míst 36 z 39 bez RÚIAN kódu; zbylá 3 adresní text mají, jen k němu chybí kód (např. `misto-bezadresy-316-9d95f40b`, Žižkova, Příbram). **Ošetřete to při čtení**, `misto.adresa.obec` na těchto záznamech spadne. Místo samo je platné a má název i kontakt, jen bez adresy se nedá umístit na mapu ani filtrovat podle území. Od doplnění zatřídění v 1.3.0 má kategorii všech 36 — do 1.2.0 jich pět zůstávalo bez kategorie, protože šlo o poradenství a aktivizační služby, které mapovací tabulka tehdy nepokrývala.
+**U těchto míst může být celé `adresa` rovno `null`** — ne prázdný objekt, ale `null`. Registr u nich neuvádí ani ulici a obec, takže není co vypsat. Aktuálně je takových míst 36 z 39 bez RÚIAN kódu; zbylá 3 adresní text mají, jen k němu chybí kód (např. `misto-bezadresy-316-9d95f40b`, Žižkova, Příbram). **Ošetřete to při čtení**, `misto.adresa.obec` na těchto záznamech spadne. Místo samo je platné a má název i kontakt, jen bez adresy se nedá umístit na mapu ani filtrovat podle území. Kategorii má 31 z těch 36; zbylých 5 jsou denní stacionáře, které od 1.4.0 nepatří do žádné záložky (viz Kategorie).
 
 **Slučování napříč zdroji je vždy podle adresy, ne podle poskytovatele.** Pokud ÚZIS záznam sdílí `kodAdresnihoMista` s existujícím MPSV místem, stane se další položkou v jeho `sluzby[]`, i když jde o jiného poskytovatele (typicky nemocnice a zdravotní úsek v budově domova pro seniory). Rozlišujte proto zdroj podle `sluzby[].zdroj`, ne podle tvaru ID — z ID to poznat nejde a záměrně nemá.
 
@@ -115,13 +115,21 @@ Poslední věc k názvům v `zarizeni`: u čtyř zařízení uvádí MPSV název
 
 ## Kategorie (`kategorie`)
 
-Pole hodnot z `domovy`, `terenni`, `bezpeci`, `zdravi`, `poradenstvi`, odpovídá záložkám na webu. Jedno místo může mít víc kategorií zároveň, pokud tam sídlí služby z různých kategorií.
+Pole hodnot z `domovy`, `terenni`, `pecovatelske`, `bezpeci`, `zdravi`, `poradenstvi`, odpovídá záložkám na webu. Jedno místo může mít víc kategorií zároveň, pokud tam sídlí služby z různých kategorií.
 
-**`poradenstvi` přibylo ve verzi 1.3.0**, spolu s doplněním zatřídění u dalších šesti druhů sociálních služeb. Pro zobrazení je potřeba doplnit pátou záložku; bez ní se 217 míst, která mají jen poradenství, nezobrazí nikde (zbylých 157 má i jinou kategorii a zobrazuje se pod ní dál). Naplňuje ji odborné sociální poradenství (`DruhSocialniSluzby/1`), tedy služba, která sama péči neposkytuje, ale je obvykle prvním krokem rodiny, která péči shání. Ze 374 míst je 217 jen v této kategorii, zbylých 157 má vedle poradenství i jinou službu. Touž změnou se rozšířily i dvě stávající kategorie: `terenni` o sociálně aktivizační služby pro seniory, sociální rehabilitaci, centra denních služeb a průvodcovské a předčitatelské služby (1 280 → 1 381 míst), `bezpeci` o telefonickou krizovou pomoc a krizovou pomoc (24 → 35 míst). Žádné místo o kategorii nepřišlo, jen přibývaly.
+**Verze 1.4.0 přestavěla zatřídění podle definic záložek webu.** Změnila se dvě pravidla a přibyla jedna kategorie; žádné pole nepřibylo ani nezměnilo typ.
 
-**Důležité:** pole může být prázdné (`[]`). Nejde o chybu, ale o službu, jejíž druh mapovací tabulka nezařazuje do žádné záložky. Po doplnění zatřídění v 1.3.0 jsou taková místa už jen 3: `misto-13000209` (domov pro osoby se zdravotním postižením) a `misto-25253867` a `misto-3250377` (sociálně terapeutické dílny). Zdravotní péče ze zdroje ÚZIS je zařazená vždy — nezařazené jsou výhradně sociální služby z MPSV. Tato místa jsou ve výstupu, aby se informace neztratila, ale nezobrazí se v žádné záložce. **Prázdné pole ošetřete i tak**, počet se mění s tím, jak registr přibírá nové druhy služeb u seniorské cílové skupiny.
+**`terenni` nově znamená výhradně služby, které za klientem dojedou.** Do 1.3.0 tam byly i ambulantní formy, tedy provozovny, kam klient dochází. Nově rozhoduje forma `ter` u sociálních služeb a u zdravotních služeb druh „Domácí zdravotní péče“, který sem patří ze stejného důvodu — sestra jede za pacientem domů. Mobilní hospice jsou v tom zahrnuté, protože je registr vede právě jako domácí zdravotní péči, ne jako hospic. Kategorie tím vzrostla z 1 381 na **1 818 míst**: přibylo 558 míst s domácí zdravotní péčí (734 jich má celkem, z toho 526 nemá žádnou sociální službu) a ubylo 121 míst, která měla jen ambulantní formu.
 
-**V záložce Domovy nejsou jen domovy pro seniory.** Rozhoduje forma poskytování, ne druh služby, takže pobytová odlehčovací služba patří do Domovů stejně jako domov pro seniory — je to pobytová služba s lůžky, jen na dobu určitou. Změřeno na aktuálním výstupu: z 810 míst v Domovech je **122 tam výhradně kvůli pobytové odlehčovací službě**, tedy bez domova pro seniory, domova se zvláštním režimem, týdenního stacionáře nebo chráněného bydlení na téže adrese. Registrovanou kapacitu má všech 122 (121 v lůžkách, dohromady 1 824 lůžek v rozmezí 1 až 54 na místo; `misto-9164898` má kapacitu registrovanou v klientech, ne v lůžkách). 87 z nich je zároveň v Terénních službách, protože táž organizace na téže adrese provozuje i terénní službu. Pokud budete chtít na webu odlišit trvalé bydlení od pobytu na přechodnou dobu, poznáte to podle `sluzby[].druhSluzby.kod` — `DruhSocialniSluzby/8` jsou odlehčovací služby. Filtrovat je ven z Domovů ale nedoporučujeme, uživatel hledající úlevu pro pečujícího je hledá právě tam.
+**`pecovatelske` je nová kategorie, 1 328 míst.** Naplňuje ji pečovatelská služba (`DruhSocialniSluzby/4`), odborné sociální poradenství (`/1`) a sociálně aktivizační služby pro seniory a osoby se zdravotním postižením (`/29`), a to v terénní i ambulantní formě. Terénní forma pečovatelské služby a aktivizačních služeb je proto zároveň v `terenni` i `pecovatelske` — to je záměr, ne duplicita. Jen 22 z 1 328 míst nemá žádnou jinou kategorii.
+
+**`poradenstvi` už nemá žádné výhradní místo.** Ve verzi 1.3.0 se 217 ze 374 míst bez páté záložky nezobrazilo nikde. Od 1.4.0 je odborné sociální poradenství zároveň v `pecovatelske`, takže **všech 374 míst je vidět i pod Pečovatelskými službami**. Záložka Poradenství tedy zůstává jako samostatný pohled, ale už není podmínkou, aby se nějaké místo vůbec zobrazilo.
+
+`domovy` (810), `bezpeci` (35) a `zdravi` (890) se v 1.4.0 nezměnily.
+
+**Důležité:** pole může být prázdné (`[]`). Nejde o chybu, ale o službu, jejíž druh mapovací tabulka nezařazuje do žádné záložky. Po přestavbě v 1.4.0 je takových míst **57**, tedy víc než 3 v předchozí verzi. Přibyla mezi nimi místa s výhradně ambulantní denní docházkovou péčí, pro kterou zatím žádná záložka není: 42 s denními stacionáři a 12 s centry denních služeb. Zbylá 3 jsou beze změny `misto-13000209` (domov pro osoby se zdravotním postižením), `misto-25253867` a `misto-3250377` (sociálně terapeutické dílny). Zdravotní péče ze zdroje ÚZIS je zařazená vždy — nezařazené jsou výhradně sociální služby z MPSV. Tato místa jsou ve výstupu, aby se informace neztratila, ale nezobrazí se v žádné záložce. **Prázdné pole ošetřete i tak**, počet se mění s tím, jak registr přibírá nové druhy služeb u seniorské cílové skupiny.
+
+**V záložce Domovy nejsou jen domovy pro seniory.** Rozhoduje forma poskytování, ne druh služby, takže pobytová odlehčovací služba patří do Domovů stejně jako domov pro seniory — je to pobytová služba s lůžky, jen na dobu určitou. Změřeno na aktuálním výstupu: z 810 míst v Domovech je **122 tam výhradně kvůli pobytové odlehčovací službě**, tedy bez domova pro seniory, domova se zvláštním režimem, týdenního stacionáře nebo chráněného bydlení na téže adrese. Registrovanou kapacitu má všech 122 (121 v lůžkách, dohromady 1 824 lůžek v rozmezí 1 až 54 na místo; `misto-9164898` má kapacitu registrovanou v klientech, ne v lůžkách). 71 z nich je zároveň v Terénních službách a 56 v Pečovatelských, protože táž organizace na téže adrese provozuje i tyto služby. Pokud budete chtít na webu odlišit trvalé bydlení od pobytu na přechodnou dobu, poznáte to podle `sluzby[].druhSluzby.kod` — `DruhSocialniSluzby/8` jsou odlehčovací služby. Filtrovat je ven z Domovů ale nedoporučujeme, uživatel hledající úlevu pro pečujícího je hledá právě tam.
 
 ## `poskytujeZdravotniPeci`
 
@@ -198,12 +206,12 @@ Ukázka odpovídá stavu publikovanému k 11. 9. 2026; aktuální hodnoty vždy 
 
 ```json
 {
-  "verzeSchematu": "1.3.0",
-  "hashKatalogu": "945e1e82…",
+  "verzeSchematu": "1.4.0",
+  "hashKatalogu": "009e0bfd…",
   "pocetMist": 2907,
   "pocetSluzeb": 4003,
-  "pocetMistPodleKategorie": {"bezpeci": 35, "domovy": 810, "poradenstvi": 374, "terenni": 1381, "zdravi": 890},
-  "pocetMistBezKategorie": 3,
+  "pocetMistPodleKategorie": {"bezpeci": 35, "domovy": 810, "pecovatelske": 1328, "poradenstvi": 374, "terenni": 1818, "zdravi": 890},
+  "pocetMistBezKategorie": 57,
   "pocetMistSPoskytovanimZdravotniPece": 429,
   "pocetMistBezSouradnic": 109,
   "datumZdrojovychDat": {"mpsv": "2026-09-10", "uzis": "2026-09-01", "ruian": "2026-08-31"}
@@ -212,7 +220,7 @@ Ukázka odpovídá stavu publikovanému k 11. 9. 2026; aktuální hodnoty vždy 
 
 **`hashKatalogu` je SHA-256 obsahu `katalog.json`** (hex, malá písmena), počítaný nad souborem tak, jak se zapisuje — UTF-8, `indent=2`, bez escapování diakritiky. Je to jediný spolehlivý indikátor toho, že se data změnila: stáhněte `meta.json` (pár set bajtů), porovnejte hash s tím, který máte, a `katalog.json` tahejte, jen když se liší.
 
-`pocetMistPodleKategorie` **se nesečte na `pocetMist`** — jedno místo může být ve víc kategoriích zároveň a 3 místa nemají kategorii žádnou. Klíče tohoto objektu se odvozují z mapovací tabulky, takže **s přibytím kategorie přibude i klíč**; čtěte ho jako slovník, ne jako pevnou pětici. Od 1.3.0 jsou klíče seřazené abecedně.
+`pocetMistPodleKategorie` **se nesečte na `pocetMist`** — jedno místo může být ve víc kategoriích zároveň a 57 míst nemá kategorii žádnou. Klíče tohoto objektu se odvozují z mapovací tabulky, takže **s přibytím kategorie přibude i klíč**; čtěte ho jako slovník, ne jako pevný počet položek. Od 1.3.0 jsou klíče seřazené abecedně.
 
 `pocetMistBezSouradnic` je počet míst, kde je `souradnice.lat` i `lng` rovno `null`. Slouží k provozní kontrole na naší straně (viz Provoz níže) a příjemci dává čitelný podíl míst, která nejde vykreslit na mapu — dlouhodobě kolem 110 z 2 900, tedy necelá 4 %.
 
@@ -223,7 +231,7 @@ Ukázka odpovídá stavu publikovanému k 11. 9. 2026; aktuální hodnoty vždy 
 Formát:
 ```json
 {
-  "verzeSchematu": "1.3.0",
+  "verzeSchematu": "1.4.0",
   "pridano": ["misto-123456"],
   "zmeneno": ["misto-234567"],
   "odebrano": ["misto-345678"]
@@ -239,10 +247,15 @@ Jak se tři seznamy určují: porovnává se nový a poslední publikovaný `kat
 
 `verzeSchematu` je sémantické verzování (`MAJOR.MINOR.PATCH`). Nekompatibilní změna (přejmenování/odebrání pole, změna typu) zvedne MAJOR verzi a bude ohlášena dopředu, nikdy tichým přepsáním produkčních dat.
 
-**Rozšíření výčtu hodnot hlásíme taky, i když je to MINOR změna.** Přidání hodnoty do `kategorie[]` (1.3.0) žádné pole neodebírá ani nemění typ, takže čtení dat ani validace proti schématu z tohoto repozitáře se tím nemění. Jediný praktický důsledek je, že dokud pro novou kategorii nevznikne záložka, místa, která nemají žádnou jinou kategorii, se na webu neobjeví — u `poradenstvi` je jich 217 z 374. Nic nespadne, jen se nezobrazí.
+**Rozšíření výčtu hodnot hlásíme taky, i když je to MINOR změna.** Přidání hodnoty do `kategorie[]` (1.3.0, 1.4.0) žádné pole neodebírá ani nemění typ, takže čtení dat ani validace proti schématu z tohoto repozitáře se tím nemění. Jediný praktický důsledek je, že dokud pro novou kategorii nevznikne záložka, místa, která nemají žádnou jinou kategorii, se na webu neobjeví — u `pecovatelske` je jich 22 z 1 328.
+
+**Přesun místa mezi kategoriemi hlásíme ze stejného důvodu.** Verze 1.4.0 je první, kde místo o kategorii i přišlo, ne jen získalo: 121 míst vypadlo z `terenni` a 54 míst nemá po přestavbě žádnou kategorii. Struktura dat se tím nemění — pole `kategorie[]` má dál stejný typ a čtení nespadne — ale místo, které se dřív na webu zobrazovalo, se zobrazovat přestane. Kdo si výsledky zatřídění někam uložil, měl by je po přechodu na 1.4.0 postavit znovu.
+
+**Schéma berte vždy ze stejného místa a stejného stažení jako data, ne ze zmrazené kopie.** Schéma má na všech úrovních `additionalProperties: false` a `kategorie[]` je uzavřený výčet, takže **starší kopie schématu novější data odmítne** — i když jsou změny čistě přírůstkové. Změřeno: dnešní `katalog.json` proti schématu ve verzi 1.0.0 dává 2 643 chyb validace — 930 na poli `sluzby[].oboryPece` (přibylo v 1.2.0), 11 na `sluzby[].zarizeni` (1.1.0), 374 na hodnotě `poradenstvi` a 1 328 na hodnotě `pecovatelske` ve výčtu kategorií. Žádná z nich není chyba dat: ani jedno pole nechybí a ani jedno nemá jiný typ, než mělo v 1.0.0 — zmrazená ukázka `data/ukazka.json` ve verzi 1.0.0 projde dnešním schématem s nulou chyb. Obojí je v tomto repozitáři vedle sebe a publikuje se týmž během, takže při stahování z `raw.githubusercontent.com` tento rozpor nevznikne; každý běh importu validuje výstup proti schématu z téhož commitu a bez nulového počtu chyb nic nepublikuje. Když si schéma přesto kešujete, obnovujte ho spolu s daty a řiďte se hodnotou `verzeSchematu`, která je v `katalog.json` i v `meta.json`.
 
 | Verze | Změna |
 |---|---|
+| 1.4.0 | Přestavba zatřídění podle definic záložek webu. Přibyla kategorie `pecovatelske` (1 328 míst), výčet `kategorie[]` má nově šest hodnot místo pěti. `terenni` nově znamená jen služby, které za klientem dojedou: přibyla do ní domácí zdravotní péče ze zdroje ÚZIS a vypadly z ní čistě ambulantní formy (1 381 → 1 818 míst). Míst bez kategorie přibylo z 3 na 57, protože denní stacionáře a centra denních služeb zatím žádnou záložku nenaplňují. `domovy`, `bezpeci` a `zdravi` beze změny. Žádné pole nepřibylo, nezmizelo ani nezměnilo typ. Přechodový běh označil ve `zmeny.json` 1 961 míst jako změněná, 0 jako přidaná a 0 jako odebraná; u **všech 1 961 se liší výhradně pole `kategorie`** a počet míst (2 907) ani počet služeb (4 003) se nezměnil. |
 | 1.3.0 | Přibyla kategorie `poradenstvi`, výčet `kategorie[]` má nově pět hodnot místo čtyř. Zároveň se doplnilo zatřídění u sedmi druhů sociálních služeb, které dosud žádnou záložku nenaplňovaly, takže míst bez kategorie ubylo z 324 na 3. Žádné pole nepřibylo, nezmizelo ani nezměnilo typ, žádné místo o kategorii nepřišlo — všechny změny jsou přírůstkové. Přechodový běh označil ve `zmeny.json` 468 míst jako změněná, 6 jako odebraná a 1 jako přidané; ze 468 se u 464 liší **výhradně pole `kategorie`**, zbylé 4 a všechna přidaná i odebraná místa jsou běžný denní pohyb registru MPSV (nový snapshot z 10. 9. 2026), ne důsledek této změny. |
 | 1.2.0 | Přibylo nepovinné `sluzby[].oboryPece` s úplným seznamem oborů péče. `oborPece` zůstává beze změny typu i obsahu, čtenář 1.1.0 běží dál beze změny. Ověřeno porovnáním celého výstupu: proti 1.1.0 se u žádného z 2 912 míst nezměnilo nic jiného než přibylé pole, `oborPece` se u žádné z 930 ÚZIS služeb neliší od prvního prvku `oboryPece`. Ve `zmeny.json` je 890 míst jako změněná (ta, která obsahují ÚZIS službu), 0 přidaných a 0 odebraných. |
 | 1.1.0 | Přibylo nepovinné `sluzby[].zarizeni`. Registrace je nově v `sluzby[]` právě jednou, takže `sluzby[].id` je v rámci místa unikátní a kapacity se dají sčítat. Zároveň se přestaly publikovat služby s ukončenou registrací (viz Datum poskytování). Žádné pole nezmizelo ani nezměnilo typ, čtenář 1.0.0 běží dál beze změny. Přechodový běh označil ve `zmeny.json` 15 míst jako změněná a 6 jako odebraná (ty s ukončenou registrací), žádné jako přidané. U změněných míst se lišilo výhradně pole `sluzby` — `misto.id`, souřadnice, adresy, kategorie ani `poskytujeZdravotniPeci` se nezměnily u žádného místa. |

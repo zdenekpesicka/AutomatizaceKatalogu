@@ -41,7 +41,7 @@ PRAH_STARI_ZDROJU = 50  # dni; starsi snapshot = nepublikovat, viz zkontroluj_st
 # trikrat zvlast a mohly se rozejit. CLAUDE.md 4.2: nekompatibilni zmena zvysuje major verzi.
 # 1.1.0 pridalo nepovinne sluzby[].zarizeni, tedy aditivni zmenu, ktera stavajiciho ctenare
 # schematu 1.0.0 nerozbije.
-VERZE_SCHEMATU = "1.3.0"
+VERZE_SCHEMATU = "1.4.0"
 
 # Presnost souradnic je vlastnost rozhrani, ne jednotlivych zdroju, proto se zaokrouhluje na
 # jednom miste pro oba (RUIAN i UZIS) - jinak by vystup michal ruzne presna cisla podle toho,

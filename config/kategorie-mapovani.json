@@ -1,31 +1,31 @@
 {
   "_popis": "Mapovani druhu socialni sluzby (MPSV) a formy na kategorie webu. Rozhodovaci klic: (druhSocialniSluzby, forma) -> kategorie. Viz CLAUDE.md sekce 4.3 a sekce 8 (otevrena otazka o nepokrytych druzich).",
   "_zdroj_pravidla": "CLAUDE.md sekce 4.3 - rozdeleni Domovy vs Terenni sluzby podle formy, ne podle druhu",
+  "_pozn_prestavba_11_9_2026": "Zatrideni prestaveno 11. 9. 2026 podle definic zalozek webu (viz CLAUDE.md 8.3). Zasadni zmena: do 'terenni' patri uz jen forma ter, tedy sluzby, ktere za klientem dojedou. Ambulantni formy jdou do 'pecovatelske' nebo nikam. Sluzba muze byt ve vice kategoriich zaroven - pecovatelska sluzba v terenni forme je v 'terenni' i 'pecovatelske'.",
   "socialniSluzby": [
     {"druh": "DruhSocialniSluzby/13", "nazev": "domovy pro seniory", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"]}},
     {"druh": "DruhSocialniSluzby/14", "nazev": "domovy se zvláštním režimem", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"]}},
     {"druh": "DruhSocialniSluzby/11", "nazev": "týdenní stacionáře", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"]}},
     {"druh": "DruhSocialniSluzby/15", "nazev": "chráněné bydlení", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"]}},
-    {"druh": "DruhSocialniSluzby/4", "nazev": "pečovatelská služba", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
-    {"druh": "DruhSocialniSluzby/3", "nazev": "osobní asistence", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
-    {"druh": "DruhSocialniSluzby/8", "nazev": "odlehčovací služby", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"], "FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
-    {"druh": "DruhSocialniSluzby/10", "nazev": "denní stacionáře", "kategorie": {"FormaSocialniSluzby/amb": ["terenni"], "FormaSocialniSluzby/ter": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/8", "nazev": "odlehčovací služby", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"], "FormaSocialniSluzby/ter": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/4", "nazev": "pečovatelská služba", "kategorie": {"FormaSocialniSluzby/ter": ["terenni", "pecovatelske"], "FormaSocialniSluzby/amb": ["pecovatelske"]}},
+    {"druh": "DruhSocialniSluzby/3", "nazev": "osobní asistence", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"]}},
     {"druh": "DruhSocialniSluzby/32", "nazev": "terénní programy", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/6", "nazev": "průvodcovské a předčitatelské služby", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/33", "nazev": "sociální rehabilitace", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/29", "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením", "kategorie": {"FormaSocialniSluzby/ter": ["terenni", "pecovatelske"], "FormaSocialniSluzby/amb": ["pecovatelske"]}},
+    {"druh": "DruhSocialniSluzby/1", "nazev": "odborné sociální poradenství", "kategorie": {"FormaSocialniSluzby/ter": ["poradenstvi", "pecovatelske"], "FormaSocialniSluzby/amb": ["poradenstvi", "pecovatelske"]}},
     {"druh": "DruhSocialniSluzby/5", "nazev": "tísňová péče", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"]}},
-    {"druh": "DruhSocialniSluzby/29", "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
-    {"druh": "DruhSocialniSluzby/33", "nazev": "sociální rehabilitace", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
-    {"druh": "DruhSocialniSluzby/9", "nazev": "centra denních služeb", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
-    {"druh": "DruhSocialniSluzby/6", "nazev": "průvodcovské a předčitatelské služby", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
     {"druh": "DruhSocialniSluzby/18", "nazev": "telefonická krizová pomoc", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"], "FormaSocialniSluzby/amb": ["bezpeci"]}},
-    {"druh": "DruhSocialniSluzby/23", "nazev": "krizová pomoc", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"], "FormaSocialniSluzby/amb": ["bezpeci"]}},
-    {"druh": "DruhSocialniSluzby/1", "nazev": "odborné sociální poradenství", "kategorie": {"FormaSocialniSluzby/ter": ["poradenstvi"], "FormaSocialniSluzby/amb": ["poradenstvi"]}}
+    {"druh": "DruhSocialniSluzby/23", "nazev": "krizová pomoc", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"], "FormaSocialniSluzby/amb": ["bezpeci"]}}
   ],
-  "_pozn_doplneni_11_9_2026": "Poslednich sedm druhu vyse doplnil klient 11. 9. 2026 (viz CLAUDE.md 8.3, radek o zalozce Poradenstvi). Pobytova forma se u nich nemapuje zamerne - zadny z nich pobytove poskytovan neni a prazdna mapa formy znamena nezarazeno, ne chybu.",
+  "_pozn_pobytova_forma": "Pobytova forma se mapuje jen u peti druhu vyse. U ostatnich prazdna mapa formy znamena nezarazeno, ne chybu.",
   "_nepokryte_druhy_viz_claude_md_sekce_8": [
-    "DruhSocialniSluzby/30 sociálně terapeutické dílny (4 služby)",
+    "DruhSocialniSluzby/10 denní stacionáře (135 mist, vyhradne forma amb)",
+    "DruhSocialniSluzby/9 centra denních služeb (32 mist, vyhradne forma amb)",
+    "DruhSocialniSluzby/30 sociálně terapeutické dílny (3 mista)",
     "DruhSocialniSluzby/12 domovy pro osoby se zdravotním postižením (3)",
-    "DruhSocialniSluzby/19 tlumočnické služby (1)",
-    "DruhSocialniSluzby/28 sociálně aktivizační služby pro rodiny s dětmi (1)"
+    "DruhSocialniSluzby/19 tlumočnické služby (1)"
   ],
   "zdravotniSluzby": {
     "_popis": "Mapovani druhu zdravotnickeho zarizeni (UZIS, sloupec ZZ_druh_nazev) na kategorie webu. Obdoba socialniSluzby vyse, jen bez formy - UZIS formu poskytovani neeviduje.",
@@ -33,13 +33,14 @@
     "_klice_urcuji_i_filtr": "Klice objektu druhyZarizeni zaroven urcuji, ktere druhy vubec vstupuji do zpracovani (filtr relevance, CLAUDE.md 2.2). Zadny druhy seznam druhu uz v kodu neni - kdyz se druh odsud odebere, zmizi z vystupu uplne.",
     "_prazdne_pole": "Prazdne pole kategorii neznamena vyrazeni. Misto zustava ve vystupu se vsemi udaji, jen se nezobrazi v zadne zalozce - stejne chovani jako u nepokrytych socialnich druhu vyse.",
     "druhyZarizeni": {
-      "Domácí zdravotní péče": ["zdravi"],
+      "Domácí zdravotní péče": ["zdravi", "terenni"],
       "Nemocnice následné péče": ["zdravi"],
       "Léčebna pro dlouhodobě nemocné (LDN)": ["zdravi"],
       "Hospic": ["zdravi"],
       "Rehabilitační ústav": ["zdravi"],
       "Zdravotní péče v ústavech sociální p.": []
     },
+    "_pozn_domaci_zdravotni_pece": "Jediny druh ze zdroje UZIS, ktery je ve dvou kategoriich. Domaci zdravotni pece za klientem dojizdi, takze patri i do 'terenni' - stejne pravidlo jako u terenni formy socialnich sluzeb. Mobilni hospice jsou v tomto druhu zahrnute, protoze je registr jako 'Hospic' nevede (CLAUDE.md 3.2).",
     "_pozn_zdravotni_pece_v_ustavech": "Tento druh musi zustat mezi klici, jinak by se vubec nenacetl a nesel by vyrobit priznak poskytujeZdravotniPeci. Prazdne pole kategorii je tu ale jen pro poradek: z tohoto druhu podle CLAUDE.md 3.4 nevznika misto ani polozka v sluzby[], takze se na zarazeni nikdy nedojde. Neni to zarizeni, kam se da jit, ale zdravotnicka licence domova. Pravidlo je strukturalni a resi se v build_katalog.py, ne tady - zmena hodnoty na ['zdravi'] by nic neudelala."
   }
 }

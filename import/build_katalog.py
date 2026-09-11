@@ -41,7 +41,7 @@ PRAH_STARI_ZDROJU = 50  # dni; starsi snapshot = nepublikovat, viz zkontroluj_st
 # trikrat zvlast a mohly se rozejit. CLAUDE.md 4.2: nekompatibilni zmena zvysuje major verzi.
 # 1.1.0 pridalo nepovinne sluzby[].zarizeni, tedy aditivni zmenu, ktera stavajiciho ctenare
 # schematu 1.0.0 nerozbije.
-VERZE_SCHEMATU = "1.2.0"
+VERZE_SCHEMATU = "1.3.0"
 
 # Presnost souradnic je vlastnost rozhrani, ne jednotlivych zdroju, proto se zaokrouhluje na
 # jednom miste pro oba (RUIAN i UZIS) - jinak by vystup michal ruzne presna cisla podle toho,
@@ -127,6 +127,14 @@ DRUH_TO_KAT = {entry["druh"]: entry["kategorie"] for entry in KAT_CFG["socialniS
 # pridelovala plosne kazdemu UZIS mistu bez ohledu na druh, takze seznam v configu byl mrtvy.
 UZIS_DRUH_TO_KAT = KAT_CFG["zdravotniSluzby"]["druhyZarizeni"]
 UZIS_RELEVANT_DRUHY = set(UZIS_DRUH_TO_KAT)
+
+# Seznam kategorii pro pocty v meta.json se odvozuje z teze konfigurace, ne z natvrdo psaneho
+# seznamu. Driv byl vypsany v miste zapisu, takze pridani kategorie do configu (poradenstvi,
+# 11. 9. 2026) by se do meta.json nepromitlo a pocet by tise chybel.
+VSECHNY_KATEGORIE = sorted(
+    {k for entry in KAT_CFG["socialniSluzby"] for kat in entry["kategorie"].values() for k in kat}
+    | {k for kat in UZIS_DRUH_TO_KAT.values() for k in kat}
+)
 
 
 def kategorie_pro_sluzbu(druh_id: str, formy: list[str]) -> set[str]:
@@ -668,7 +676,7 @@ def main() -> None:
     print(f"Zapsano {len(mista_out)} mist do data/katalog.json")
 
     pocet_podle_kategorie = {
-        kat: sum(1 for m in mista_out if kat in m["kategorie"]) for kat in ["domovy", "terenni", "bezpeci", "zdravi"]
+        kat: sum(1 for m in mista_out if kat in m["kategorie"]) for kat in VSECHNY_KATEGORIE
     }
     meta = {
         "verzeSchematu": VERZE_SCHEMATU,

@@ -11,18 +11,19 @@
     {"druh": "DruhSocialniSluzby/8", "nazev": "odlehčovací služby", "kategorie": {"FormaSocialniSluzby/pob": ["domovy"], "FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
     {"druh": "DruhSocialniSluzby/10", "nazev": "denní stacionáře", "kategorie": {"FormaSocialniSluzby/amb": ["terenni"], "FormaSocialniSluzby/ter": ["terenni"]}},
     {"druh": "DruhSocialniSluzby/32", "nazev": "terénní programy", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"]}},
-    {"druh": "DruhSocialniSluzby/5", "nazev": "tísňová péče", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"]}}
+    {"druh": "DruhSocialniSluzby/5", "nazev": "tísňová péče", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"]}},
+    {"druh": "DruhSocialniSluzby/29", "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/33", "nazev": "sociální rehabilitace", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/9", "nazev": "centra denních služeb", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/6", "nazev": "průvodcovské a předčitatelské služby", "kategorie": {"FormaSocialniSluzby/ter": ["terenni"], "FormaSocialniSluzby/amb": ["terenni"]}},
+    {"druh": "DruhSocialniSluzby/18", "nazev": "telefonická krizová pomoc", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"], "FormaSocialniSluzby/amb": ["bezpeci"]}},
+    {"druh": "DruhSocialniSluzby/23", "nazev": "krizová pomoc", "kategorie": {"FormaSocialniSluzby/ter": ["bezpeci"], "FormaSocialniSluzby/amb": ["bezpeci"]}},
+    {"druh": "DruhSocialniSluzby/1", "nazev": "odborné sociální poradenství", "kategorie": {"FormaSocialniSluzby/ter": ["poradenstvi"], "FormaSocialniSluzby/amb": ["poradenstvi"]}}
   ],
+  "_pozn_doplneni_11_9_2026": "Poslednich sedm druhu vyse doplnil klient 11. 9. 2026 (viz CLAUDE.md 8.3, radek o zalozce Poradenstvi). Pobytova forma se u nich nemapuje zamerne - zadny z nich pobytove poskytovan neni a prazdna mapa formy znamena nezarazeno, ne chybu.",
   "_nepokryte_druhy_viz_claude_md_sekce_8": [
-    "DruhSocialniSluzby/1 odborné sociální poradenství (237 služeb)",
-    "DruhSocialniSluzby/29 sociálně aktivizační služby pro seniory a osoby se zdravotním postižením (85)",
-    "DruhSocialniSluzby/9 centra denních služeb (32)",
-    "DruhSocialniSluzby/33 sociální rehabilitace (23)",
-    "DruhSocialniSluzby/18 telefonická krizová pomoc (12)",
-    "DruhSocialniSluzby/30 sociálně terapeutické dílny (4)",
-    "DruhSocialniSluzby/6 průvodcovské a předčitatelské služby (4)",
+    "DruhSocialniSluzby/30 sociálně terapeutické dílny (4 služby)",
     "DruhSocialniSluzby/12 domovy pro osoby se zdravotním postižením (3)",
-    "DruhSocialniSluzby/23 krizová pomoc (3)",
     "DruhSocialniSluzby/19 tlumočnické služby (1)",
     "DruhSocialniSluzby/28 sociálně aktivizační služby pro rodiny s dětmi (1)"
   ],

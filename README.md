@@ -11,7 +11,7 @@ Repozitář sjednocuje data o sociálních a zdravotních službách pro seniory
 | [`data/zmeny.json`](https://raw.githubusercontent.com/zdenekpesicka/AutomatizaceKatalogu/main/data/zmeny.json) | ID přidaných, změněných a odebraných míst od posledního běhu se změnou |
 | [`schema/katalog.schema.json`](https://raw.githubusercontent.com/zdenekpesicka/AutomatizaceKatalogu/main/schema/katalog.schema.json) | JSON Schema (draft-07) pro validaci na straně příjemce |
 
-Soubory jsou statické, staví se přímo z větve `main`, žádné API se neprovozuje. Aktuální verze schématu je **1.2.0**, uvedená v `meta.json` i v `katalog.json`. `data/ukazka.json` je zmrazená ilustrace k dokumentaci ve verzi 1.0.0, neaktualizuje se a neodebírá se.
+Soubory jsou statické, staví se přímo z větve `main`, žádné API se neprovozuje. Aktuální verze schématu je **1.3.0**, uvedená v `meta.json` i v `katalog.json`. `data/ukazka.json` je zmrazená ilustrace k dokumentaci ve verzi 1.0.0, neaktualizuje se a neodebírá se.
 
 **Popis polí, sémantika ID, kategorie, souřadnice a práce se `zmeny.json`: [`data/dokumentace-rozhrani.md`](data/dokumentace-rozhrani.md).**
 

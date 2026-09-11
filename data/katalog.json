@@ -1,5 +1,5 @@
 {
-  "verzeSchematu": "1.2.0",
+  "verzeSchematu": "1.3.0",
   "mista": [
     {
       "id": "misto-11867906",
@@ -595,7 +595,9 @@
         "lat": 49.7861754,
         "lng": 14.6791704
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -1267,6 +1269,7 @@
         "lng": 14.471252
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -1592,7 +1595,9 @@
         "lat": 49.6745083,
         "lng": 18.343698
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -2600,6 +2605,7 @@
         "lng": 14.4924909
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -2751,6 +2757,7 @@
         "lng": 14.6938324
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -2902,6 +2909,7 @@
         "lng": 14.0767955
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -3102,6 +3110,7 @@
         "lng": 14.1370828
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -3214,7 +3223,10 @@
         "lat": 50.0289678,
         "lng": 15.1949808
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -3325,7 +3337,10 @@
         "lat": 49.9582198,
         "lng": 15.2789547
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -3436,7 +3451,9 @@
         "lat": 50.4227777,
         "lng": 14.905605
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -3510,6 +3527,7 @@
         "lng": 14.0096142
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -4949,6 +4967,7 @@
         "lng": 15.1624855
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -5343,7 +5362,9 @@
         "lat": 49.7123649,
         "lng": 13.1973347
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -5406,7 +5427,9 @@
         "lat": 49.5571162,
         "lng": 13.0697777
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -5469,7 +5492,9 @@
         "lat": 49.640128,
         "lng": 13.1660014
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -5532,7 +5557,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -10010,6 +10037,7 @@
         "lng": 14.7103081
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -11132,6 +11160,7 @@
         "lng": 16.270349
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -12058,7 +12087,9 @@
         "lat": 49.905883,
         "lng": 18.3564404
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -12832,7 +12863,8 @@
         "lng": 13.7383872
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "poradenstvi"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -13345,6 +13377,7 @@
         "lng": 18.2037093
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -14373,7 +14406,9 @@
         "lat": 49.7834988,
         "lng": 14.6936086
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -14562,7 +14597,9 @@
         "lat": 50.0442215,
         "lng": 15.7487497
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -14645,7 +14682,9 @@
         "lat": 49.7593294,
         "lng": 16.4615134
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -14729,6 +14768,7 @@
         "lng": 16.4080475
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -14861,7 +14901,9 @@
         "lat": 49.9527459,
         "lng": 15.7912222
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -14944,7 +14986,9 @@
         "lat": 49.9474595,
         "lng": 16.1491964
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -15086,7 +15130,9 @@
         "lat": 49.7597951,
         "lng": 16.6657846
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -15170,7 +15216,8 @@
         "lng": 12.6361842
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "poradenstvi"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -17473,6 +17520,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -19358,6 +19406,7 @@
         "lng": 18.5450223
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -19510,7 +19559,9 @@
         "lat": 49.8485164,
         "lng": 18.556588
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -19971,7 +20022,9 @@
         "lat": 49.5784792,
         "lng": 17.245023
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -20560,7 +20613,9 @@
         "lat": 50.0755566,
         "lng": 14.4032975
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -20630,7 +20685,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -20700,7 +20757,9 @@
         "lat": 50.1887237,
         "lng": 15.0430569
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -20770,7 +20829,9 @@
         "lat": 50.0276635,
         "lng": 15.2047001
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -20840,7 +20901,9 @@
         "lat": 49.9559998,
         "lng": 15.2720339
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -20910,7 +20973,9 @@
         "lat": 50.4147863,
         "lng": 14.9047313
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -20980,7 +21045,9 @@
         "lat": 49.964584,
         "lng": 14.0744517
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -21050,7 +21117,9 @@
         "lat": 50.3523436,
         "lng": 14.4851423
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -21120,7 +21189,9 @@
         "lat": 50.088941,
         "lng": 14.3441623
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -23298,7 +23369,9 @@
         "lat": 50.1433388,
         "lng": 14.0946267
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -23363,7 +23436,9 @@
         "lat": 50.143462,
         "lng": 14.0944977
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -23428,7 +23503,9 @@
         "lat": 50.2304726,
         "lng": 14.0820478
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -24134,195 +24211,6 @@
       ]
     },
     {
-      "id": "misto-10745904",
-      "kodAdresnihoMista": 10745904,
-      "adresa": {
-        "ulice": null,
-        "cisloDomovni": 1,
-        "cisloOrientacni": null,
-        "psc": "67154",
-        "obec": "Hostim",
-        "kodObce": "594121",
-        "castObce": "Hostim",
-        "okres": "Znojmo",
-        "kodOkresu": "CZ0647",
-        "kraj": "Jihomoravský kraj",
-        "kodKraje": "CZ064"
-      },
-      "souradnice": {
-        "lat": 49.0175599,
-        "lng": 15.8980754
-      },
-      "kategorie": [
-        "domovy"
-      ],
-      "poskytujeZdravotniPeci": true,
-      "sluzby": [
-        {
-          "id": "mpsv-388",
-          "zdroj": "MPSV",
-          "nazev": "Domov pro seniory Hostim,příspěvková organizace",
-          "poskytovatel": {
-            "nazev": "Domov pro seniory Hostim, příspěvková organizace",
-            "ico": "45671761"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/14",
-            "nazev": "domovy se zvláštním režimem"
-          },
-          "formy": [
-            {
-              "forma": "pob",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "luzka",
-                  "typNazev": "Počet lůžek",
-                  "pocet": 67
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "socialni@domovhostim.cz"
-            ],
-            "telefony": [
-              "515258229"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-10745912",
-      "kodAdresnihoMista": 10745912,
-      "adresa": {
-        "ulice": null,
-        "cisloDomovni": 2,
-        "cisloOrientacni": null,
-        "psc": "67154",
-        "obec": "Hostim",
-        "kodObce": "594121",
-        "castObce": "Hostim",
-        "okres": "Znojmo",
-        "kodOkresu": "CZ0647",
-        "kraj": "Jihomoravský kraj",
-        "kodKraje": "CZ064"
-      },
-      "souradnice": {
-        "lat": 49.0179073,
-        "lng": 15.8979106
-      },
-      "kategorie": [
-        "domovy"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-388",
-          "zdroj": "MPSV",
-          "nazev": "Domov pro seniory Hostim, příspěvková organizace",
-          "poskytovatel": {
-            "nazev": "Domov pro seniory Hostim, příspěvková organizace",
-            "ico": "45671761"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/14",
-            "nazev": "domovy se zvláštním režimem"
-          },
-          "formy": [
-            {
-              "forma": "pob",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "luzka",
-                  "typNazev": "Počet lůžek",
-                  "pocet": 67
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "socialni@domovhostim.cz"
-            ],
-            "telefony": [
-              "515258229"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-10746951",
-      "kodAdresnihoMista": 10746951,
-      "adresa": {
-        "ulice": null,
-        "cisloDomovni": 106,
-        "cisloOrientacni": null,
-        "psc": "67154",
-        "obec": "Hostim",
-        "kodObce": "594121",
-        "castObce": "Hostim",
-        "okres": "Znojmo",
-        "kodOkresu": "CZ0647",
-        "kraj": "Jihomoravský kraj",
-        "kodKraje": "CZ064"
-      },
-      "souradnice": {
-        "lat": 49.0176114,
-        "lng": 15.898563
-      },
-      "kategorie": [
-        "domovy"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-388",
-          "zdroj": "MPSV",
-          "nazev": "Domov pro seniory Hostim, příspěvková organizace",
-          "poskytovatel": {
-            "nazev": "Domov pro seniory Hostim, příspěvková organizace",
-            "ico": "45671761"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/14",
-            "nazev": "domovy se zvláštním režimem"
-          },
-          "formy": [
-            {
-              "forma": "pob",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "luzka",
-                  "typNazev": "Počet lůžek",
-                  "pocet": 67
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "socialni@domovhostim.cz"
-            ],
-            "telefony": [
-              "515258229"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "misto-25937383",
       "kodAdresnihoMista": 25937383,
       "adresa": {
@@ -24874,7 +24762,9 @@
         "lat": 48.8539637,
         "lng": 16.0494431
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -24947,7 +24837,9 @@
         "lat": 48.7604889,
         "lng": 16.8806113
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -25020,7 +24912,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -26802,7 +26696,8 @@
         "lng": 13.2765759
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "terenni"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -27011,6 +26906,7 @@
         "lng": 13.2920063
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -28006,7 +27902,8 @@
         "lng": 16.3951568
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "poradenstvi"
       ],
       "poskytujeZdravotniPeci": true,
       "sluzby": [
@@ -28288,6 +28185,7 @@
         "lng": 16.2524339
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -29785,7 +29683,9 @@
         "lat": 49.1997671,
         "lng": 16.6209974
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -30315,6 +30215,7 @@
         "lng": 16.6466481
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -30523,7 +30424,9 @@
         "lat": 49.4847023,
         "lng": 16.6641757
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -30597,6 +30500,7 @@
         "lng": 16.6484565
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -30700,6 +30604,7 @@
         "lng": 16.051225
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -32659,7 +32564,9 @@
         "lat": 49.3007137,
         "lng": 16.5343153
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -32733,7 +32640,9 @@
         "lat": 49.3483828,
         "lng": 16.4220332
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -34243,6 +34152,7 @@
         "lng": 14.9591042
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -34345,7 +34255,9 @@
         "lat": 49.0045049,
         "lng": 14.765423
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -34670,7 +34582,9 @@
         "lat": 49.7311222,
         "lng": 18.6200075
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -34977,6 +34891,7 @@
         "lng": 18.6131931
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -38205,7 +38120,9 @@
         "lat": 50.4976134,
         "lng": 15.5152073
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -38609,6 +38526,7 @@
         "lng": null
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -39281,6 +39199,7 @@
         "lng": 16.6568499
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -39442,7 +39361,8 @@
         "lng": 15.6744642
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "poradenstvi"
       ],
       "poskytujeZdravotniPeci": true,
       "sluzby": [
@@ -39558,6 +39478,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -39786,7 +39707,10 @@
         "lat": 49.4020709,
         "lng": 15.5849257
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -39900,6 +39824,7 @@
         "lng": 15.5729425
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -40004,7 +39929,9 @@
         "lat": 49.6116844,
         "lng": 15.5777374
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -40079,7 +40006,9 @@
         "lat": 49.431231,
         "lng": 15.2260709
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -40154,7 +40083,9 @@
         "lat": 49.5642716,
         "lng": 15.9352851
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -40229,7 +40160,9 @@
         "lat": 49.2130796,
         "lng": 15.8798891
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -42454,7 +42387,9 @@
         "lat": 49.1928315,
         "lng": 16.6079444
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -42734,6 +42669,7 @@
         "lng": 16.6592073
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -43122,7 +43058,9 @@
         "lat": 49.5972013,
         "lng": 17.262833
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -43691,7 +43629,9 @@
         "lat": 50.0358386,
         "lng": 15.7693393
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -43754,7 +43694,9 @@
         "lat": 50.0390549,
         "lng": 15.5606393
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -43817,7 +43759,9 @@
         "lat": 49.2060423,
         "lng": 16.5950158
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -44530,6 +44474,7 @@
         "lng": 14.0363954
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -45551,6 +45496,8 @@
         "lng": 16.3974925
       },
       "kategorie": [
+        "poradenstvi",
+        "terenni",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -45719,7 +45666,10 @@
         "lat": 49.9495052,
         "lng": 15.7877556
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -45858,7 +45808,10 @@
         "lat": 50.0442118,
         "lng": 15.7555459
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -45997,7 +45950,9 @@
         "lat": 49.9511602,
         "lng": 15.7939042
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -46072,7 +46027,9 @@
         "lat": 49.7572708,
         "lng": 16.4715218
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -46147,7 +46104,9 @@
         "lat": 49.9511566,
         "lng": 15.7936002
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -46222,7 +46181,9 @@
         "lat": 50.0872366,
         "lng": 16.4643842
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -46914,7 +46875,9 @@
         "lat": 49.7571506,
         "lng": 16.6649006
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -46989,7 +46952,9 @@
         "lat": 49.6333855,
         "lng": 16.7107685
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -47064,7 +47029,9 @@
         "lat": 49.7638568,
         "lng": 16.6648697
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -48084,6 +48051,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -50004,7 +49972,8 @@
         "lng": 16.2618756
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "terenni"
       ],
       "poskytujeZdravotniPeci": true,
       "sluzby": [
@@ -50343,6 +50312,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -50542,6 +50512,7 @@
         "lng": 16.2618367
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -50649,7 +50620,9 @@
         "lat": 49.8664351,
         "lng": 16.3157929
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -50727,6 +50700,7 @@
         "lng": 16.346511
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -52439,6 +52413,7 @@
         "lng": 15.2057522
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -53706,7 +53681,10 @@
         "lat": 49.6775985,
         "lng": 13.987847
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -56260,6 +56238,7 @@
         "lng": 15.5076743
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -56725,7 +56704,9 @@
         "lat": 49.952153,
         "lng": 15.2629896
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -57023,7 +57004,9 @@
         "lat": 49.3945971,
         "lng": 13.2931915
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -57097,7 +57080,9 @@
         "lat": 49.3952137,
         "lng": 13.2949452
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -59550,6 +59535,7 @@
         "lng": 16.3480546
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -59935,6 +59921,7 @@
         "lng": 17.6843389
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -60147,7 +60134,9 @@
         "lat": 49.2327107,
         "lng": 17.6849386
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -60752,7 +60741,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -61713,6 +61704,7 @@
         "lng": 17.6451078
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -62736,7 +62728,9 @@
         "lat": 49.317534,
         "lng": 14.1423066
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -63006,7 +63000,9 @@
         "lat": 50.3581634,
         "lng": 13.7947079
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -63071,7 +63067,9 @@
         "lat": 50.5388604,
         "lng": 14.1305058
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -63267,6 +63265,7 @@
         "lng": 15.7963461
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -63742,6 +63741,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": true,
@@ -66151,7 +66151,10 @@
         "lat": 48.9763153,
         "lng": 14.4867583
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci",
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -69813,6 +69816,7 @@
         "lng": 16.3963959
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -69927,7 +69931,9 @@
         "lat": 50.0824374,
         "lng": 16.7591724
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -70011,7 +70017,9 @@
         "lat": 49.9049072,
         "lng": 16.6077995
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -70095,7 +70103,9 @@
         "lat": 50.0418917,
         "lng": 16.7419942
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -70180,6 +70190,7 @@
         "lng": 16.5027669
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -70305,6 +70316,7 @@
         "lng": 16.5081124
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -70418,7 +70430,9 @@
         "lat": 49.8847077,
         "lng": 16.4461006
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -70502,7 +70516,9 @@
         "lat": 49.9015401,
         "lng": 16.4486848
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -70586,7 +70602,9 @@
         "lat": 50.0325408,
         "lng": 16.5082906
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -72170,7 +72188,8 @@
         "lng": 12.9296734
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "poradenstvi"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -75416,7 +75435,9 @@
         "lat": 48.9771131,
         "lng": 14.4780984
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -75481,6 +75502,7 @@
         "lng": 13.701986
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -75746,7 +75768,9 @@
         "lat": 49.4840319,
         "lng": 13.5773484
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -75885,7 +75909,9 @@
         "lat": 49.8453392,
         "lng": 18.1654565
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -76609,6 +76635,7 @@
         "lng": 13.8070374
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -77946,6 +77973,7 @@
         "lng": 13.6429429
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -78050,6 +78078,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": true,
@@ -78595,6 +78624,7 @@
         "lng": 13.5204279
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -78750,6 +78780,7 @@
         "lng": 13.5557481
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -78955,6 +78986,7 @@
         "lng": 13.2340641
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -79110,6 +79142,7 @@
         "lng": 13.4391777
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -79265,6 +79298,7 @@
         "lng": 13.6410169
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -79664,7 +79698,9 @@
         "lat": 49.5783345,
         "lng": 17.2574053
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -79794,7 +79830,9 @@
         "lat": 50.6412297,
         "lng": 13.834274
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -81000,7 +81038,7 @@
         {
           "id": "mpsv-1420",
           "zdroj": "MPSV",
-          "nazev": "Stacionář Magnolia",
+          "nazev": "Stacionář Magnolia Vsetín",
           "poskytovatel": {
             "nazev": "Charita Vsetín",
             "ico": "44740778"
@@ -81389,7 +81427,9 @@
         "lat": 50.6609482,
         "lng": 14.0366126
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -81464,7 +81504,9 @@
         "lat": 50.7778508,
         "lng": 14.2171134
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -82150,7 +82192,9 @@
         "lat": 49.964144,
         "lng": 14.0711535
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -82214,7 +82258,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -82278,7 +82324,9 @@
         "lat": 49.9479081,
         "lng": 14.0365131
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -82342,7 +82390,9 @@
         "lat": 49.9480288,
         "lng": 14.0367169
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -82743,7 +82793,9 @@
         "lat": 50.7621513,
         "lng": 15.0361855
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -82817,6 +82869,7 @@
         "lng": 15.1730736
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -83015,7 +83068,9 @@
         "lat": 50.9237606,
         "lng": 15.0799756
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -83088,7 +83143,9 @@
         "lat": 50.7598336,
         "lng": 14.5481913
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -83161,7 +83218,9 @@
         "lat": 50.6885492,
         "lng": 14.5333554
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -83568,7 +83627,9 @@
         "lat": 49.7737149,
         "lng": 18.2506273
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -83782,7 +83843,9 @@
         "lat": 50.7719242,
         "lng": 15.0581197
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -83975,7 +84038,10 @@
         "lat": 50.4224537,
         "lng": 14.9066479
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci",
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -84218,6 +84284,7 @@
         "lng": 13.9107633
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -84322,7 +84389,9 @@
         "lat": 48.8109781,
         "lng": 14.3236496
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -84385,7 +84454,9 @@
         "lat": 49.1461734,
         "lng": 15.0017139
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -84486,7 +84557,9 @@
         "lat": 49.3008316,
         "lng": 14.1483947
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -84549,7 +84622,9 @@
         "lat": 49.0108421,
         "lng": 13.9952053
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -84819,7 +84894,9 @@
         "lat": 48.9752561,
         "lng": 14.4723628
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -86213,7 +86290,9 @@
         "lat": 50.6632937,
         "lng": 14.0323473
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -88476,6 +88555,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -88710,7 +88790,9 @@
         "lat": 49.7440104,
         "lng": 16.9275206
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -88786,6 +88868,7 @@
         "lng": 16.8732948
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -88902,6 +88985,7 @@
         "lng": 16.8820776
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -90935,7 +91019,9 @@
         "lat": 49.6696706,
         "lng": 18.3456831
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -91925,8 +92011,7 @@
               "osobni.asistence@charitahb.cz"
             ],
             "telefony": [
-              "569426070",
-              "777736046"
+              "777 630 447"
             ]
           }
         },
@@ -92108,72 +92193,6 @@
       ]
     },
     {
-      "id": "misto-9599134",
-      "kodAdresnihoMista": 9599134,
-      "adresa": {
-        "ulice": "Bělohradská",
-        "cisloDomovni": 1128,
-        "cisloOrientacni": null,
-        "psc": "58001",
-        "obec": "Havlíčkův Brod",
-        "kodObce": "568414",
-        "castObce": "Havlíčkův Brod",
-        "okres": "Havlíčkův Brod",
-        "kodOkresu": "CZ0631",
-        "kraj": "Kraj Vysočina",
-        "kodKraje": "CZ063"
-      },
-      "souradnice": {
-        "lat": 49.6033062,
-        "lng": 15.5818796
-      },
-      "kategorie": [
-        "terenni"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-7211",
-          "zdroj": "MPSV",
-          "nazev": "Osobní asistence",
-          "poskytovatel": {
-            "nazev": "Oblastní charita Havlíčkův Brod",
-            "ico": "15060233"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 13
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2003-07-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "http://www.hb.charita.cz"
-            ],
-            "emaily": [
-              "osobni.asistence@charitahb.cz"
-            ],
-            "telefony": [
-              "569426070",
-              "777736046"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "misto-27259269",
       "kodAdresnihoMista": 27259269,
       "adresa": {
@@ -92233,8 +92252,7 @@
               "osobni.asistence@charitahb.cz"
             ],
             "telefony": [
-              "569426070",
-              "777736046"
+              "777 630 447"
             ]
           }
         },
@@ -92642,7 +92660,9 @@
         "lat": 50.1424983,
         "lng": 14.0945772
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -92713,7 +92733,9 @@
         "lat": 50.1437733,
         "lng": 14.120171
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -93019,6 +93041,7 @@
         "lng": 13.6589598
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -94360,7 +94383,8 @@
         "lng": 13.4478871
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "poradenstvi"
       ],
       "poskytujeZdravotniPeci": true,
       "sluzby": [
@@ -94472,7 +94496,9 @@
         "lat": 50.4931591,
         "lng": 13.4459143
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -94545,7 +94571,10 @@
         "lat": 49.7305721,
         "lng": 13.405735
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -94646,7 +94675,9 @@
         "lat": 49.439496,
         "lng": 12.9250285
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -94710,6 +94741,7 @@
         "lng": 13.5942823
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -94812,7 +94844,9 @@
         "lat": 49.4415729,
         "lng": 12.9273964
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -94876,6 +94910,7 @@
         "lng": 12.6370728
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -95401,6 +95436,7 @@
       },
       "kategorie": [
         "bezpeci",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -97033,7 +97069,9 @@
         "lat": 50.1433691,
         "lng": 14.1152646
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -97114,7 +97152,9 @@
         "lat": 49.688795,
         "lng": 14.0083431
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -97243,7 +97283,9 @@
         "lat": 50.4165168,
         "lng": 14.9081631
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -97324,7 +97366,9 @@
         "lat": 50.0249893,
         "lng": 15.1998577
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -97406,6 +97450,8 @@
         "lng": 13.728615
       },
       "kategorie": [
+        "poradenstvi",
+        "terenni",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -97598,7 +97644,9 @@
         "lat": 50.2397007,
         "lng": 14.3127315
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -97679,7 +97727,9 @@
         "lat": 49.9651594,
         "lng": 14.0689613
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -97761,6 +97811,7 @@
         "lng": 14.1033156
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -97984,7 +98035,9 @@
         "lat": 49.7786121,
         "lng": 14.6841869
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -98066,6 +98119,7 @@
         "lng": 14.488724
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -98355,7 +98409,10 @@
         "lat": 49.7458103,
         "lng": 13.372625
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -98533,7 +98590,10 @@
         "lat": 49.778899,
         "lng": 13.3750149
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -98802,6 +98862,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -101154,6 +101215,7 @@
         "lng": 17.452826
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -101521,6 +101583,7 @@
         "lng": 17.4707296
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -101688,7 +101751,9 @@
         "lat": 49.3077467,
         "lng": 14.1504275
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -102266,7 +102331,9 @@
         "lat": 48.7876164,
         "lng": 14.7808836
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -102329,7 +102396,9 @@
         "lat": 48.8029391,
         "lng": 14.3134177
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -102392,7 +102461,9 @@
         "lat": 48.8402226,
         "lng": 14.6367379
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -102455,7 +102526,9 @@
         "lat": 48.7388984,
         "lng": 14.4943284
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -102949,6 +103022,7 @@
         "lng": 14.5368864
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -103147,6 +103221,7 @@
         "lng": 15.329333
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -103346,6 +103421,7 @@
         "lng": 15.0420426
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -103990,7 +104066,9 @@
         "lat": 50.1849939,
         "lng": 15.0415004
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -104063,7 +104141,9 @@
         "lat": 50.1968991,
         "lng": 14.6780142
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -104136,7 +104216,9 @@
         "lat": 50.1633408,
         "lng": 14.7501397
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -104209,7 +104291,9 @@
         "lat": 50.2073701,
         "lng": 15.2978856
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -104282,7 +104366,9 @@
         "lat": 50.1481943,
         "lng": 15.123379
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -104355,7 +104441,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -104483,7 +104571,9 @@
         "lat": 50.4195601,
         "lng": 14.9106968
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -104931,7 +105021,9 @@
         "lat": 49.7409838,
         "lng": 13.5955115
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -105004,7 +105096,9 @@
         "lat": 49.3940433,
         "lng": 13.2940256
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -105077,7 +105171,9 @@
         "lat": 49.7423881,
         "lng": 13.3772812
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -105217,6 +105313,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -105357,6 +105454,7 @@
         "lng": 14.494428
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -105501,6 +105599,7 @@
         "lng": 13.9070373
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -105644,6 +105743,7 @@
         "lng": 13.9963729
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -105787,6 +105887,7 @@
         "lng": 14.3281418
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -108893,7 +108994,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -108957,7 +109060,9 @@
         "lat": 50.7655812,
         "lng": 15.0719456
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -109029,7 +109134,9 @@
         "lat": 50.5951904,
         "lng": 15.1624574
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -109101,7 +109208,9 @@
         "lat": 50.6114768,
         "lng": 15.4984696
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -109173,7 +109282,9 @@
         "lat": 50.6018057,
         "lng": 15.3222979
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -109245,7 +109356,9 @@
         "lat": 50.7215487,
         "lng": 15.170012
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -109317,7 +109430,9 @@
         "lat": 50.7546482,
         "lng": 15.0824175
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -110597,7 +110712,9 @@
         "lat": 49.9081251,
         "lng": 15.390512
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -110666,7 +110783,9 @@
         "lat": 50.0268099,
         "lng": 15.2009627
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -110735,7 +110854,9 @@
         "lat": 49.7820147,
         "lng": 14.6890623
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -110858,7 +110979,9 @@
         "lat": 49.7425437,
         "lng": 15.0902744
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -111320,7 +111443,9 @@
         "lat": 50.0090066,
         "lng": 14.4249589
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -111384,6 +111509,7 @@
         "lng": 14.4405575
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -111671,7 +111797,9 @@
         "lat": 48.7562792,
         "lng": 16.8806872
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -111961,7 +112089,9 @@
         "lat": 50.7187605,
         "lng": 15.1712531
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -112165,7 +112295,9 @@
         "lat": 50.7646787,
         "lng": 15.0640679
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -112239,7 +112371,9 @@
         "lat": 50.7383176,
         "lng": 15.2948033
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -112430,7 +112564,9 @@
         "lat": 49.9519124,
         "lng": 15.2692597
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -112508,6 +112644,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -112661,7 +112798,10 @@
         "lat": 50.7383951,
         "lng": 15.0579146
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -112772,7 +112912,10 @@
         "lat": 50.7670604,
         "lng": 15.0615632
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -112883,7 +113026,9 @@
         "lat": 50.7662864,
         "lng": 15.080892
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -112994,7 +113139,9 @@
         "lat": 50.6918671,
         "lng": 14.5500526
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -113067,7 +113214,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -113140,7 +113289,9 @@
         "lat": 49.4664941,
         "lng": 17.112
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -114408,6 +114559,7 @@
         "lng": 18.2567719
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -114520,7 +114672,9 @@
         "lat": 49.8489145,
         "lng": 18.5576243
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -114593,7 +114747,9 @@
         "lat": 49.8644952,
         "lng": 18.5370191
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -114837,7 +114993,8 @@
         "lng": 18.2280795
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "terenni"
       ],
       "poskytujeZdravotniPeci": true,
       "sluzby": [
@@ -115225,7 +115382,9 @@
         "lat": 49.7943356,
         "lng": 18.4115831
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -116842,7 +117001,9 @@
         "lat": 49.2743276,
         "lng": 16.9974945
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -116916,7 +117077,9 @@
         "lat": 49.2740347,
         "lng": 16.9808839
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -116990,7 +117153,9 @@
         "lat": 49.274196,
         "lng": 16.9951977
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -117064,7 +117229,9 @@
         "lat": 49.8352713,
         "lng": 18.2896325
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -117137,7 +117304,9 @@
         "lat": 49.7931991,
         "lng": 18.2479144
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -117574,7 +117743,10 @@
         "lat": 50.0889833,
         "lng": 14.43127
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -117894,7 +118066,9 @@
         "lat": 48.8542444,
         "lng": 16.0461764
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -119080,7 +119254,10 @@
         "lat": 48.9607388,
         "lng": 14.4749907
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -119248,7 +119425,9 @@
         "lat": 49.7807504,
         "lng": 13.3759345
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -120677,6 +120856,7 @@
         "lng": 18.1471594
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -121932,7 +122112,9 @@
         "lat": 49.2967943,
         "lng": 17.3941795
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -122581,7 +122763,9 @@
         "lat": 49.5927837,
         "lng": 18.3595372
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -123228,7 +123412,9 @@
         "lat": 50.2373618,
         "lng": 12.8925698
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -123306,7 +123492,9 @@
         "lat": 50.2329735,
         "lng": 12.8832721
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -123385,6 +123573,7 @@
         "lng": 12.3737814
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -124811,7 +125000,9 @@
         "lat": 49.6600427,
         "lng": 17.8305423
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -124884,7 +125075,9 @@
         "lat": 49.7770241,
         "lng": 17.7540503
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -124957,7 +125150,9 @@
         "lat": 49.7139497,
         "lng": 17.9058994
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -125031,6 +125226,7 @@
         "lng": 17.6284771
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -125263,7 +125459,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -125826,6 +126024,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -126143,7 +126342,8 @@
         "lng": 18.2631329
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "terenni"
       ],
       "poskytujeZdravotniPeci": true,
       "sluzby": [
@@ -126246,7 +126446,9 @@
         "lat": 49.7917154,
         "lng": 18.2322541
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -126319,7 +126521,9 @@
         "lat": 49.7894028,
         "lng": 18.2255118
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -126574,7 +126778,9 @@
         "lat": 50.2307907,
         "lng": 12.8756778
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -126778,7 +126984,9 @@
         "lat": 49.9914282,
         "lng": 14.6545672
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -126857,7 +127065,9 @@
         "lat": 49.6368392,
         "lng": 14.640545
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -127674,6 +127884,7 @@
         "lng": 12.6417479
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -127877,6 +128088,7 @@
         "lng": 12.8593766
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -128175,7 +128387,10 @@
         "lat": 49.9499008,
         "lng": 12.71067
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -128459,6 +128674,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": true,
@@ -128964,7 +129180,9 @@
         "lat": 50.4228098,
         "lng": 14.9050178
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -129044,7 +129262,9 @@
         "lat": 50.4232438,
         "lng": 14.9047943
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -129124,7 +129344,9 @@
         "lat": 50.4213643,
         "lng": 14.908684
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -129526,7 +129748,9 @@
         "lat": 49.9359581,
         "lng": 17.9102277
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -129599,7 +129823,9 @@
         "lat": 49.921432,
         "lng": 17.8361065
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -130556,7 +130782,9 @@
         "lat": 50.0885948,
         "lng": 14.4191116
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -131460,7 +131688,9 @@
         "lat": 50.092277,
         "lng": 14.4464426
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -131734,6 +131964,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -132014,7 +132245,9 @@
         "lat": 50.0812056,
         "lng": 14.458544
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -132088,7 +132321,9 @@
         "lat": 49.9639839,
         "lng": 14.0751161
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -132162,7 +132397,9 @@
         "lat": 50.105645,
         "lng": 14.5604271
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -132236,7 +132473,9 @@
         "lat": 50.0820299,
         "lng": 14.45646
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -132664,6 +132903,7 @@
       },
       "kategorie": [
         "domovy",
+        "terenni",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -133168,6 +133408,7 @@
         "lng": 17.6728696
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -134021,7 +134262,9 @@
         "lat": 49.0856485,
         "lng": 17.9131969
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -134293,7 +134536,9 @@
         "lat": 50.0654442,
         "lng": 14.4317671
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -135020,7 +135265,9 @@
         "lat": 49.8456868,
         "lng": 18.1743841
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -135096,7 +135343,9 @@
         "lat": 49.794233,
         "lng": 18.4078482
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -136735,7 +136984,9 @@
         "lat": 50.0855083,
         "lng": 14.454483
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -136808,7 +137059,9 @@
         "lat": 50.0775806,
         "lng": 14.4458925
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -136884,7 +137137,9 @@
         "lat": 50.665477,
         "lng": 14.0659584
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -137025,7 +137280,9 @@
         "lat": 49.4524488,
         "lng": 17.4521981
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -137386,7 +137643,9 @@
         "lat": 50.0781175,
         "lng": 14.4049502
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -137450,7 +137709,9 @@
         "lat": 50.0811182,
         "lng": 14.429614
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -137523,7 +137784,9 @@
         "lat": 50.6622902,
         "lng": 14.0419652
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -137733,7 +137996,9 @@
         "lat": 50.0302188,
         "lng": 14.4867641
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -137796,7 +138061,9 @@
         "lat": 50.0152271,
         "lng": 14.4416337
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -138395,7 +138662,9 @@
         "lat": 50.1267988,
         "lng": 14.415577
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -138468,7 +138737,9 @@
         "lat": 50.0929295,
         "lng": 14.4535911
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -138541,7 +138812,9 @@
         "lat": 50.0806404,
         "lng": 14.4498687
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -138795,7 +139068,9 @@
         "lat": 50.088365,
         "lng": 14.4259481
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -138869,7 +139144,9 @@
         "lat": 50.0937061,
         "lng": 14.3493456
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -138944,7 +139221,9 @@
         "lng": 14.4144342
       },
       "kategorie": [
+        "bezpeci",
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -139396,6 +139675,7 @@
         "lng": 17.9028555
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -139513,6 +139793,7 @@
         "lng": 17.464212
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -139629,7 +139910,9 @@
         "lat": 50.0891229,
         "lng": 17.7036899
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -139705,6 +139988,7 @@
         "lng": 18.0104608
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -139820,6 +140104,7 @@
         "lng": 18.2822624
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -139937,6 +140222,7 @@
         "lng": 18.3353755
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -140053,7 +140339,9 @@
         "lat": 49.6401867,
         "lng": 18.1431786
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -140714,7 +141002,9 @@
         "lat": 50.0827463,
         "lng": 14.4296319
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -140787,7 +141077,9 @@
         "lat": 49.1954062,
         "lng": 16.6141621
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -140848,7 +141140,9 @@
         "lat": 49.8494121,
         "lng": 18.2729477
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -140909,7 +141203,9 @@
         "lat": 50.2115298,
         "lng": 15.8216744
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -140971,6 +141267,7 @@
         "lng": 15.0603595
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -141069,7 +141366,9 @@
         "lat": 49.5985719,
         "lng": 17.2752698
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -141130,7 +141429,9 @@
         "lat": 50.0821124,
         "lng": 12.3684912
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -141191,7 +141492,9 @@
         "lat": 49.5903695,
         "lng": 16.8888984
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -141252,7 +141555,9 @@
         "lat": 49.2269605,
         "lng": 17.6711129
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -141315,7 +141620,9 @@
         "lat": 50.0779635,
         "lng": 14.4236554
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -141388,7 +141695,9 @@
         "lat": 49.2010767,
         "lng": 16.615403
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -141527,7 +141836,9 @@
         "lat": 49.596273,
         "lng": 17.2614266
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -142055,6 +142366,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": true,
@@ -143430,7 +143742,9 @@
         "lat": 50.1016808,
         "lng": 14.4451206
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -143503,7 +143817,9 @@
         "lat": 49.3419972,
         "lng": 17.9844
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -143577,7 +143893,9 @@
         "lat": 49.3388213,
         "lng": 18.2015682
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -143651,7 +143969,9 @@
         "lat": 49.3657968,
         "lng": 18.3105417
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -143725,7 +144045,9 @@
         "lat": 49.1407094,
         "lng": 18.0090291
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -144165,7 +144487,9 @@
         "lat": 50.108533,
         "lng": 14.4363731
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -144271,7 +144595,9 @@
         "lat": 49.746841,
         "lng": 13.3761195
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -144377,7 +144703,9 @@
         "lat": 49.1972927,
         "lng": 16.6192308
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -144471,7 +144799,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -144577,7 +144907,9 @@
         "lat": 49.8398679,
         "lng": 18.2821186
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -144684,6 +145016,7 @@
         "lng": 17.5361685
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -144845,7 +145178,9 @@
         "lat": 50.2311554,
         "lng": 14.088686
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -144951,7 +145286,9 @@
         "lat": 49.4043289,
         "lng": 15.5876056
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145057,7 +145394,9 @@
         "lat": 48.974217,
         "lng": 14.4810059
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145163,7 +145502,9 @@
         "lat": 50.772148,
         "lng": 15.0613692
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145257,7 +145598,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145363,7 +145706,9 @@
         "lat": 50.6607138,
         "lng": 14.0385038
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145469,7 +145814,9 @@
         "lat": 50.0359249,
         "lng": 15.7758261
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145575,7 +145922,9 @@
         "lat": 50.2099297,
         "lng": 15.8128805
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145681,7 +146030,9 @@
         "lat": 50.0801881,
         "lng": 14.4481159
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145819,7 +146170,9 @@
         "lat": 50.0068796,
         "lng": 14.421771
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145896,7 +146249,9 @@
         "lat": 50.1032041,
         "lng": 14.4744719
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -145973,7 +146328,9 @@
         "lat": 50.0979145,
         "lng": 14.4021698
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -146050,7 +146407,9 @@
         "lat": 50.0778311,
         "lng": 14.4429022
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -146127,7 +146486,9 @@
         "lat": 50.1219306,
         "lng": 14.4539715
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -146204,7 +146565,9 @@
         "lat": 50.0740781,
         "lng": 14.4594395
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -146281,7 +146644,9 @@
         "lat": 50.0838322,
         "lng": 14.4585964
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -146358,7 +146723,9 @@
         "lat": 50.1050676,
         "lng": 14.5670551
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -146421,7 +146788,9 @@
         "lat": 50.0757705,
         "lng": 14.4214169
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -146627,7 +146996,9 @@
         "lat": 49.4765107,
         "lng": 17.105621
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -147641,6 +148012,7 @@
         "lng": 17.3024946
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -149059,7 +149431,9 @@
         "lat": 50.0780076,
         "lng": 14.4151626
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -149187,6 +149561,7 @@
         "lng": 16.312334
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -149826,7 +150201,9 @@
         "lat": 49.6890782,
         "lng": 14.0081357
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -149972,6 +150349,7 @@
         "lng": 14.5557594
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -150715,7 +151093,9 @@
         "lat": 50.0319346,
         "lng": 15.7744492
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -150789,6 +151169,7 @@
         "lng": 15.8148212
       },
       "kategorie": [
+        "terenni",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -151020,7 +151401,10 @@
         "lat": 49.6327125,
         "lng": 14.0442446
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -151253,6 +151637,7 @@
         "lng": 14.3649535
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -151987,6 +152372,7 @@
         "lng": 15.4598089
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -152130,6 +152516,7 @@
         "lng": 15.2864436
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -152459,7 +152846,9 @@
         "lat": 49.0887245,
         "lng": 17.8751289
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -152532,7 +152921,9 @@
         "lat": 49.1410384,
         "lng": 18.0092482
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -153768,7 +154159,9 @@
         "lat": 49.8262843,
         "lng": 18.1782388
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -153843,6 +154236,7 @@
         "lng": 13.9968408
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -153947,7 +154341,9 @@
         "lat": 49.0591869,
         "lng": 13.7757792
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -154142,7 +154538,9 @@
         "lat": 50.6858542,
         "lng": 14.5488331
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -154222,6 +154620,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -154370,6 +154769,7 @@
         "lng": 15.0567842
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -154518,7 +154918,10 @@
         "lat": 50.1649996,
         "lng": 16.2739592
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -154620,7 +155023,9 @@
         "lat": 50.4737537,
         "lng": 14.9401358
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -154683,7 +155088,9 @@
         "lat": 49.7827733,
         "lng": 14.6911536
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -154746,7 +155153,9 @@
         "lat": 49.6423302,
         "lng": 14.6406393
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -155649,7 +156058,9 @@
         "lat": 49.9458887,
         "lng": 15.2022155
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -156898,7 +157309,10 @@
         "lat": 50.0949744,
         "lng": 14.4544747
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -157803,6 +158217,7 @@
         "lng": 14.6791465
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -159301,6 +159716,7 @@
         "lng": 14.9650951
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -159495,6 +159911,7 @@
         "lng": 14.9106361
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -160193,6 +160610,7 @@
         "lng": 15.247214
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -160436,6 +160854,7 @@
         "lng": 15.2534969
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -160612,6 +161031,7 @@
         "lng": 15.1855661
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -160763,6 +161183,7 @@
         "lng": 15.1229122
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -161528,6 +161949,7 @@
         "lng": 14.4142724
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -161804,6 +162226,7 @@
       "kategorie": [
         "bezpeci",
         "domovy",
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -163673,6 +164096,7 @@
         "lng": 15.0069113
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -163843,6 +164267,7 @@
         "lng": 14.774249
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -164012,7 +164437,9 @@
         "lat": 48.8544746,
         "lng": 17.126926
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -164359,6 +164786,7 @@
         "lng": 14.6796039
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -164809,7 +165237,9 @@
         "lat": 49.5957007,
         "lng": 18.0072485
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -165105,7 +165535,9 @@
         "lat": 49.8474167,
         "lng": 14.4177976
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -165416,6 +165848,7 @@
         "lng": 14.0954488
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -165554,7 +165987,9 @@
         "lat": 49.4756766,
         "lng": 17.088305
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -166147,7 +166582,9 @@
         "lat": 49.9742454,
         "lng": 14.392933
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -166275,7 +166712,9 @@
         "lat": 50.0909141,
         "lng": 17.7041741
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -166348,7 +166787,9 @@
         "lat": 49.6562765,
         "lng": 13.2900111
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -166411,7 +166852,9 @@
         "lat": 49.7400066,
         "lng": 13.3915123
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -167437,6 +167880,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -167898,7 +168342,9 @@
         "lat": 49.2603642,
         "lng": 13.9059583
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -167964,6 +168410,7 @@
         "lng": 16.4723576
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -168072,6 +168519,7 @@
         "lng": 16.7111885
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -168338,7 +168786,9 @@
         "lat": 50.9679671,
         "lng": 14.3571192
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -168401,7 +168851,9 @@
         "lat": 49.7959112,
         "lng": 18.4838096
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -168464,7 +168916,9 @@
         "lat": 49.8174883,
         "lng": 18.2337806
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -168528,6 +168982,7 @@
         "lng": 14.5579909
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -168986,7 +169441,9 @@
         "lat": 49.4728846,
         "lng": 17.9711935
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -171801,7 +172258,9 @@
         "lat": 49.9059183,
         "lng": 15.3993302
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -172506,7 +172965,9 @@
         "lat": 49.9575217,
         "lng": 15.2781296
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -175759,6 +176220,7 @@
       },
       "kategorie": [
         "bezpeci",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -175997,6 +176459,7 @@
       },
       "kategorie": [
         "bezpeci",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -176234,6 +176697,8 @@
         "lng": 16.6032432
       },
       "kategorie": [
+        "bezpeci",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -176503,7 +176968,9 @@
         "lat": 50.8152561,
         "lng": 14.9681813
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -176574,7 +177041,9 @@
         "lat": 50.8903961,
         "lng": 15.1924292
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -176645,7 +177114,9 @@
         "lat": 50.8811072,
         "lng": 15.1848565
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -177181,6 +177652,7 @@
         "lng": 14.0733006
       },
       "kategorie": [
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -177738,7 +178210,9 @@
         "lat": 49.9654243,
         "lng": 14.0715877
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -177789,7 +178263,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -178030,7 +178506,9 @@
         "lat": 50.0306149,
         "lng": 15.2040995
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -178103,7 +178581,9 @@
         "lat": 49.9559873,
         "lng": 15.2762398
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -179828,7 +180308,9 @@
         "lat": 49.6926681,
         "lng": 14.0065208
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -179901,7 +180383,9 @@
         "lat": 50.1976795,
         "lng": 14.6789302
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -179974,7 +180458,9 @@
         "lat": 49.9627949,
         "lng": 14.0714789
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -180047,7 +180533,9 @@
         "lat": 49.7854519,
         "lng": 14.6854432
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -180120,7 +180608,9 @@
         "lat": 50.3519011,
         "lng": 14.4740752
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -180193,7 +180683,9 @@
         "lat": 50.144118,
         "lng": 14.0997752
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -180266,7 +180758,9 @@
         "lat": 50.1641018,
         "lng": 14.3900717
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -180339,7 +180833,9 @@
         "lat": 50.1885219,
         "lng": 15.0399911
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -180412,7 +180908,9 @@
         "lat": 50.4144806,
         "lng": 14.9105779
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -180485,7 +180983,9 @@
         "lat": 50.1659188,
         "lng": 14.752984
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -181017,6 +181517,7 @@
         "lng": 12.8577317
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -184268,7 +184769,8 @@
         "lng": null
       },
       "kategorie": [
-        "domovy"
+        "domovy",
+        "poradenstvi"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -184370,7 +184872,9 @@
         "lat": 50.1443118,
         "lng": 14.0952908
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -184668,7 +185172,9 @@
         "lat": 50.0374681,
         "lng": 15.7746293
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -184741,7 +185247,9 @@
         "lat": 50.0339791,
         "lng": 15.7723369
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -184878,6 +185386,7 @@
         "lng": 15.3379237
       },
       "kategorie": [
+        "poradenstvi",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -185084,7 +185593,10 @@
         "lat": 50.0813257,
         "lng": 14.4281795
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -185669,7 +186181,9 @@
         "lat": 50.0838068,
         "lng": 14.4034392
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -185862,7 +186376,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -187990,7 +188506,9 @@
         "lat": 50.068615,
         "lng": 14.457761
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188053,7 +188571,9 @@
         "lat": 50.0670535,
         "lng": 14.4579418
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188219,7 +188739,9 @@
         "lat": 50.0185097,
         "lng": 14.4381329
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188293,6 +188815,7 @@
         "lng": 14.4712059
       },
       "kategorie": [
+        "poradenstvi",
         "terenni",
         "zdravi"
       ],
@@ -188430,7 +188953,9 @@
         "lat": 49.7381557,
         "lng": 13.3679613
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188493,7 +189018,9 @@
         "lat": 50.0799003,
         "lng": 14.4350029
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188556,7 +189083,9 @@
         "lat": 50.781197,
         "lng": 15.0676469
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188619,7 +189148,9 @@
         "lat": 50.0370683,
         "lng": 15.7750516
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188682,7 +189213,9 @@
         "lat": 49.5968003,
         "lng": 17.2636408
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188745,7 +189278,9 @@
         "lat": 49.1929566,
         "lng": 16.6087365
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -188808,7 +189343,9 @@
         "lat": 48.9747679,
         "lng": 14.4755987
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -189027,7 +189564,9 @@
         "lat": 49.7453691,
         "lng": 18.6100363
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -189367,7 +189906,9 @@
         "lat": null,
         "lng": null
       },
-      "kategorie": [],
+      "kategorie": [
+        "bezpeci"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -190308,7 +190849,9 @@
         "lat": 49.9921629,
         "lng": 14.7403139
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -190738,231 +191281,6 @@
       ]
     },
     {
-      "id": "misto-80048866",
-      "kodAdresnihoMista": 80048866,
-      "adresa": {
-        "ulice": "Mezi lány",
-        "cisloDomovni": 1034,
-        "cisloOrientacni": "1c",
-        "psc": "15800",
-        "obec": "Praha",
-        "kodObce": "554782",
-        "castObce": "Jinonice",
-        "okres": null,
-        "kodOkresu": null,
-        "kraj": "Hlavní město Praha",
-        "kodKraje": "CZ010"
-      },
-      "souradnice": {
-        "lat": null,
-        "lng": null
-      },
-      "kategorie": [
-        "terenni"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-7166",
-          "zdroj": "MPSV",
-          "nazev": "Sociální služba Marie Jarošová, z.ú.",
-          "poskytovatel": {
-            "nazev": "Sociální služba Marie Jarošová, z.ú.",
-            "ico": "21537364"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 2
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2024-10-01",
-          "datumPoskytovaniDo": "2026-09-11",
-          "kontakt": {
-            "weby": [
-              "www.domacipece-jarosova.cz"
-            ],
-            "emaily": [
-              "info@domacipece-jarosova.cz"
-            ],
-            "telefony": [
-              "722 222 886"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-28418671",
-      "kodAdresnihoMista": 28418671,
-      "adresa": {
-        "ulice": "Tepelská",
-        "cisloDomovni": 867,
-        "cisloOrientacni": "3a",
-        "psc": "35301",
-        "obec": "Mariánské Lázně",
-        "kodObce": "554642",
-        "castObce": "Úšovice",
-        "okres": "Cheb",
-        "kodOkresu": "CZ0411",
-        "kraj": "Karlovarský kraj",
-        "kodKraje": "CZ041"
-      },
-      "souradnice": {
-        "lat": 49.9497423,
-        "lng": 12.7134018
-      },
-      "kategorie": [
-        "terenni"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-7166",
-          "zdroj": "MPSV",
-          "nazev": "Sociální služba Marie Jarošová, z.ú.",
-          "poskytovatel": {
-            "nazev": "Sociální služba Marie Jarošová, z.ú.",
-            "ico": "21537364"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 2
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2024-10-01",
-          "datumPoskytovaniDo": "2026-09-11",
-          "kontakt": {
-            "weby": [
-              "www.domacipece-jarosova.cz"
-            ],
-            "emaily": [
-              "info@domacipece-jarosova.cz"
-            ],
-            "telefony": [
-              "722 222 886"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-22093842",
-      "kodAdresnihoMista": 22093842,
-      "adresa": {
-        "ulice": "Peroutkova",
-        "cisloDomovni": 1778,
-        "cisloOrientacni": "55",
-        "psc": "15000",
-        "obec": "Praha",
-        "kodObce": "554782",
-        "castObce": "Smíchov",
-        "okres": null,
-        "kodOkresu": null,
-        "kraj": "Hlavní město Praha",
-        "kodKraje": "CZ010"
-      },
-      "souradnice": {
-        "lat": 50.0630541,
-        "lng": 14.385146
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-7166",
-          "zdroj": "MPSV",
-          "nazev": "Sociální služba Marie Jarošová, z.ú.",
-          "poskytovatel": {
-            "nazev": "Sociální služba Marie Jarošová, z.ú.",
-            "ico": "21537364"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 2
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2024-10-01",
-          "datumPoskytovaniDo": "2026-09-11",
-          "kontakt": {
-            "weby": [
-              "www.domacipece-jarosova.cz"
-            ],
-            "emaily": [
-              "info@domacipece-jarosova.cz"
-            ],
-            "telefony": [
-              "722 222 886"
-            ]
-          }
-        },
-        {
-          "id": "uzis-162557",
-          "zdroj": "UZIS",
-          "nazev": "Domácí péče Marie Jarošová, s.r.o.",
-          "poskytovatel": {
-            "nazev": "Domácí péče Marie Jarošová, s.r.o.",
-            "ico": "09933611"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Fyzioterapeut",
-          "oboryPece": [
-            "Fyzioterapeut",
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [
-              "www.domacipece-jarosova.cz"
-            ],
-            "emaily": [
-              "info@domacipece-jarosova.cz"
-            ],
-            "telefony": [
-              "+420251563473"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "misto-8321591",
       "kodAdresnihoMista": 8321591,
       "adresa": {
@@ -191216,7 +191534,9 @@
         "lat": 49.19137,
         "lng": 16.5937806
       },
-      "kategorie": [],
+      "kategorie": [
+        "poradenstvi"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -192118,6 +192438,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -193726,7 +194047,9 @@
         "lat": 50.1549659,
         "lng": 15.4560236
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -193854,6 +194177,7 @@
       },
       "kategorie": [
         "domovy",
+        "poradenstvi",
         "terenni"
       ],
       "poskytujeZdravotniPeci": false,
@@ -194701,7 +195025,9 @@
         "lat": 50.4389694,
         "lng": 14.9299566
       },
-      "kategorie": [],
+      "kategorie": [
+        "terenni"
+      ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
@@ -195357,6 +195683,7 @@
         "lng": 14.6655119
       },
       "kategorie": [
+        "terenni",
         "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
@@ -195433,6 +195760,148 @@
               "procare@procare.cz"
             ],
             "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-5992974",
+      "kodAdresnihoMista": 5992974,
+      "adresa": {
+        "ulice": "Za Kovárnou",
+        "cisloDomovni": 174,
+        "cisloOrientacni": null,
+        "psc": "27326",
+        "obec": "Olovnice",
+        "kodObce": "532673",
+        "castObce": "Olovnice",
+        "okres": "Mělník",
+        "kodOkresu": "CZ0206",
+        "kraj": "Středočeský kraj",
+        "kodKraje": "CZ020"
+      },
+      "souradnice": {
+        "lat": 50.2343934,
+        "lng": 14.2358155
+      },
+      "kategorie": [
+        "poradenstvi",
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7647",
+          "zdroj": "MPSV",
+          "nazev": "Živá poradna pro seniory",
+          "poskytovatel": {
+            "nazev": "Živá akademie, o.,p.s.",
+            "ico": "26721333"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-08-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.zivaakademie.cz"
+            ],
+            "emaily": [
+              "zivaakademie@gmail.com"
+            ],
+            "telefony": [
+              "777 478 387"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-7648",
+          "zdroj": "MPSV",
+          "nazev": "Průvodce seniora Živá akademie",
+          "poskytovatel": {
+            "nazev": "Živá akademie, o.,p.s.",
+            "ico": "26721333"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/6",
+            "nazev": "průvodcovské a předčitatelské služby"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-08-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.zivaakademie.cz"
+            ],
+            "emaily": [
+              "zivaakademie@gmail.com"
+            ],
+            "telefony": [
+              "777 478 387"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-7649",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčení pro pečující Živá akademie",
+          "poskytovatel": {
+            "nazev": "Živá akademie, o.,p.s.",
+            "ico": "26721333"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-08-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.zivaakademie.cz"
+            ],
+            "emaily": [
+              "zivaakademie@gmail.com"
+            ],
+            "telefony": [
+              "777 478 387"
+            ]
           }
         }
       ]
@@ -207351,6 +207820,62 @@
             ],
             "telefony": [
               "+420482323324"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-22093842",
+      "kodAdresnihoMista": 22093842,
+      "adresa": {
+        "ulice": "Peroutkova",
+        "cisloDomovni": null,
+        "cisloOrientacni": "1778/55",
+        "psc": "15000",
+        "obec": "Praha 5",
+        "kodObce": "554782",
+        "castObce": null,
+        "okres": "Hlavní město Praha",
+        "kodOkresu": "CZ0100",
+        "kraj": "Hlavní město Praha",
+        "kodKraje": "CZ010"
+      },
+      "souradnice": {
+        "lat": 50.0630488,
+        "lng": 14.3851446
+      },
+      "kategorie": [
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-162557",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Marie Jarošová, s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Marie Jarošová, s.r.o.",
+            "ico": "09933611"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Fyzioterapeut",
+          "oboryPece": [
+            "Fyzioterapeut",
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "www.domacipece-jarosova.cz"
+            ],
+            "emaily": [
+              "info@domacipece-jarosova.cz"
+            ],
+            "telefony": [
+              "+420251563473"
             ]
           }
         }

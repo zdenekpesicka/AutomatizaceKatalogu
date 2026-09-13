@@ -1,6 +1,6 @@
 {
   "verzeSchematu": "1.4.0",
-  "hashKatalogu": "009e0bfdce1b80f7ca879a9c919a4aace59d2c19e67814afd946ca177ef9f947",
+  "hashKatalogu": "8da6efa9dd8dacabbd175b893fa6b9e70a892ebd14eee8049757952e6ac2c7bc",
   "pocetMist": 2907,
   "pocetSluzeb": 4003,
   "pocetMistPodleKategorie": {
@@ -15,7 +15,7 @@
   "pocetMistSPoskytovanimZdravotniPece": 429,
   "pocetMistBezSouradnic": 109,
   "datumZdrojovychDat": {
-    "mpsv": "2026-09-10",
+    "mpsv": "2026-09-12",
     "uzis": "2026-09-01",
     "ruian": "2026-08-31"
   }

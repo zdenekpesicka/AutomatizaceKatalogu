@@ -92894,6 +92894,71 @@
       ]
     },
     {
+      "id": "misto-9605665",
+      "kodAdresnihoMista": 9605665,
+      "adresa": {
+        "ulice": "U Trojice",
+        "cisloDomovni": 2005,
+        "cisloOrientacni": null,
+        "psc": "58001",
+        "obec": "Havlíčkův Brod",
+        "kodObce": "568414",
+        "castObce": "Havlíčkův Brod",
+        "okres": "Havlíčkův Brod",
+        "kodOkresu": "CZ0631",
+        "kraj": "Kraj Vysočina",
+        "kodKraje": "CZ063"
+      },
+      "souradnice": {
+        "lat": 49.6090891,
+        "lng": 15.5806397
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7211",
+          "zdroj": "MPSV",
+          "nazev": "Osobní asistence",
+          "poskytovatel": {
+            "nazev": "Oblastní charita Havlíčkův Brod",
+            "ico": "15060233"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/3",
+            "nazev": "osobní asistence"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 13
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2003-07-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.hb.charita.cz"
+            ],
+            "emaily": [
+              "osobni.asistence@charitahb.cz"
+            ],
+            "telefony": [
+              "777 630 447"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-26180715",
       "kodAdresnihoMista": 26180715,
       "adresa": {

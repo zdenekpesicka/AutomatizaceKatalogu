@@ -34902,7 +34902,7 @@
               "ilona.kaszperov@ceskytesin.charita.cz"
             ],
             "telefony": [
-              "731 133 260"
+              "731 133 261"
             ]
           }
         }
@@ -34967,7 +34967,7 @@
               "ilona.kaszperov@ceskytesin.charita.cz"
             ],
             "telefony": [
-              "731 133 260"
+              "731 133 261"
             ]
           }
         }
@@ -104578,6 +104578,69 @@
       ]
     },
     {
+      "id": "misto-4461088",
+      "kodAdresnihoMista": 4461088,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": 99,
+        "cisloOrientacni": null,
+        "psc": "74753",
+        "obec": "Jakartovice",
+        "kodObce": "507377",
+        "castObce": "Jakartovice",
+        "okres": "Opava",
+        "kodOkresu": "CZ0805",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": 49.9155166,
+        "lng": 17.6878973
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7651",
+          "zdroj": "MPSV",
+          "nazev": "Oblastní spolek Českého červeného kříže Karviná",
+          "poskytovatel": {
+            "nazev": "Oblastní spolek Českého červeného kříže Karviná",
+            "ico": "00426458"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 18
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-09-14",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [],
+            "emaily": [
+              "geroct@volny.cz"
+            ],
+            "telefony": [
+              "792 374 930"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-14041928",
       "kodAdresnihoMista": 14041928,
       "adresa": {
@@ -162955,13 +163018,13 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "pece-doma.cz"
+              "www.sestricka.cz"
             ],
             "emaily": [
-              "lukaskova@pece-doma.cz"
+              "petra.vavreckova@sestricka.cz"
             ],
             "telefony": [
-              "379 725 085"
+              "733 127 120"
             ]
           }
         },

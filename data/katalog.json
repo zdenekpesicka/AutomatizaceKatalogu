@@ -11251,7 +11251,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 10
+                  "pocet": 1
                 }
               ]
             },
@@ -67843,7 +67843,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 28
+                  "pocet": 20
                 }
               ]
             }
@@ -67882,7 +67882,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 4
+                  "pocet": 5
                 }
               ]
             }
@@ -106152,9 +106152,9 @@
               "forma": "amb",
               "kapacitaRegistrovana": [
                 {
-                  "typ": "interv",
-                  "typNazev": "Počet intervencí (30 min. jednání)",
-                  "pocet": 10
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
                 }
               ]
             }
@@ -106166,19 +106166,19 @@
               "http://www.hospicpt.cz"
             ],
             "emaily": [
-              "vzdelavani@hospicpt.cz",
+              "socialni@hospicpt.cz",
               "socialni@hospicveronika.cz",
               "info@hospicmarketa.cz",
-              "info@hospicjakub.cz",
+              "socialni2@hospicjakub.cz",
               "info@hospicvit.cz"
             ],
             "telefony": [
               "388 311 726",
-              "731 604 432",
-              "731 648 328",
+              "777 704 207",
+              "733 511 521",
               "732 182 466",
               "731 680 439",
-              "739 250 320"
+              "739 130 330"
             ]
           }
         },
@@ -106255,9 +106255,9 @@
               "forma": "amb",
               "kapacitaRegistrovana": [
                 {
-                  "typ": "interv",
-                  "typNazev": "Počet intervencí (30 min. jednání)",
-                  "pocet": 10
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
                 }
               ]
             }
@@ -106269,19 +106269,19 @@
               "http://www.hospicpt.cz"
             ],
             "emaily": [
-              "vzdelavani@hospicpt.cz",
+              "socialni@hospicpt.cz",
               "socialni@hospicveronika.cz",
               "info@hospicmarketa.cz",
-              "info@hospicjakub.cz",
+              "socialni2@hospicjakub.cz",
               "info@hospicvit.cz"
             ],
             "telefony": [
               "388 311 726",
-              "731 604 432",
-              "731 648 328",
+              "777 704 207",
+              "733 511 521",
               "732 182 466",
               "731 680 439",
-              "739 250 320"
+              "739 130 330"
             ]
           }
         },
@@ -106401,9 +106401,9 @@
               "forma": "amb",
               "kapacitaRegistrovana": [
                 {
-                  "typ": "interv",
-                  "typNazev": "Počet intervencí (30 min. jednání)",
-                  "pocet": 10
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
                 }
               ]
             }
@@ -106415,19 +106415,19 @@
               "http://www.hospicpt.cz"
             ],
             "emaily": [
-              "vzdelavani@hospicpt.cz",
+              "socialni@hospicpt.cz",
               "socialni@hospicveronika.cz",
               "info@hospicmarketa.cz",
-              "info@hospicjakub.cz",
+              "socialni2@hospicjakub.cz",
               "info@hospicvit.cz"
             ],
             "telefony": [
               "388 311 726",
-              "731 604 432",
-              "731 648 328",
+              "777 704 207",
+              "733 511 521",
               "732 182 466",
               "731 680 439",
-              "739 250 320"
+              "739 130 330"
             ]
           }
         },
@@ -106546,9 +106546,9 @@
               "forma": "amb",
               "kapacitaRegistrovana": [
                 {
-                  "typ": "interv",
-                  "typNazev": "Počet intervencí (30 min. jednání)",
-                  "pocet": 10
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
                 }
               ]
             }
@@ -106560,19 +106560,19 @@
               "http://www.hospicpt.cz"
             ],
             "emaily": [
-              "vzdelavani@hospicpt.cz",
+              "socialni@hospicpt.cz",
               "socialni@hospicveronika.cz",
               "info@hospicmarketa.cz",
-              "info@hospicjakub.cz",
+              "socialni2@hospicjakub.cz",
               "info@hospicvit.cz"
             ],
             "telefony": [
               "388 311 726",
-              "731 604 432",
-              "731 648 328",
+              "777 704 207",
+              "733 511 521",
               "732 182 466",
               "731 680 439",
-              "739 250 320"
+              "739 130 330"
             ]
           }
         },
@@ -106690,9 +106690,9 @@
               "forma": "amb",
               "kapacitaRegistrovana": [
                 {
-                  "typ": "interv",
-                  "typNazev": "Počet intervencí (30 min. jednání)",
-                  "pocet": 10
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
                 }
               ]
             }
@@ -106704,19 +106704,19 @@
               "http://www.hospicpt.cz"
             ],
             "emaily": [
-              "vzdelavani@hospicpt.cz",
+              "socialni@hospicpt.cz",
               "socialni@hospicveronika.cz",
               "info@hospicmarketa.cz",
-              "info@hospicjakub.cz",
+              "socialni2@hospicjakub.cz",
               "info@hospicvit.cz"
             ],
             "telefony": [
               "388 311 726",
-              "731 604 432",
-              "731 648 328",
+              "777 704 207",
+              "733 511 521",
               "732 182 466",
               "731 680 439",
-              "739 250 320"
+              "739 130 330"
             ]
           }
         },
@@ -121740,7 +121740,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 5
+                  "pocet": 6
                 }
               ]
             }
@@ -175079,7 +175079,34 @@
               "731 260 350"
             ]
           }
-        },
+        }
+      ]
+    },
+    {
+      "id": "misto-24876011",
+      "kodAdresnihoMista": 24876011,
+      "adresa": {
+        "ulice": "Jarošova",
+        "cisloDomovni": 861,
+        "cisloOrientacni": "15",
+        "psc": "73601",
+        "obec": "Havířov",
+        "kodObce": "555088",
+        "castObce": "Šumbark",
+        "okres": "Karviná",
+        "kodOkresu": "CZ0803",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": 49.7939851,
+        "lng": 18.401586
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
         {
           "id": "mpsv-6994",
           "zdroj": "MPSV",

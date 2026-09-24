@@ -18744,8 +18744,8 @@
               "forma": "pob",
               "kapacitaRegistrovana": [
                 {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
                   "pocet": 48
                 }
               ]
@@ -163637,7 +163637,7 @@
             }
           ],
           "datumPoskytovaniOd": "2012-09-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.vase-harmonie.cz"

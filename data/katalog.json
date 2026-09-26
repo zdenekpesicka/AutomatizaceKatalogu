@@ -143541,7 +143541,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 54
+                  "pocet": 55
                 }
               ]
             }
@@ -191840,7 +191840,7 @@
         {
           "id": "mpsv-7051",
           "zdroj": "MPSV",
-          "nazev": "Rezidence Vitalis, z.ú.",
+          "nazev": "Rezidence Vitalis, z.ú., Domov pro seniory Předhradí",
           "poskytovatel": {
             "nazev": "Rezidence Vitalis, z.ú.",
             "ico": "10899774"
@@ -191862,7 +191862,7 @@
             }
           ],
           "datumPoskytovaniOd": "2024-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [],
             "emaily": [

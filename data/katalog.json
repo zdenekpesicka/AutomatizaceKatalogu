@@ -114255,11 +114255,11 @@
       ]
     },
     {
-      "id": "misto-11279036",
-      "kodAdresnihoMista": 11279036,
+      "id": "misto-11267623",
+      "kodAdresnihoMista": 11267623,
       "adresa": {
-        "ulice": "Purgešova",
-        "cisloDomovni": 1399,
+        "ulice": "Komenského",
+        "cisloDomovni": 219,
         "cisloOrientacni": null,
         "psc": "75301",
         "obec": "Hranice",
@@ -114271,13 +114271,12 @@
         "kodKraje": "CZ071"
       },
       "souradnice": {
-        "lat": 49.5511213,
-        "lng": 17.7311633
+        "lat": 49.5480734,
+        "lng": 17.7379476
       },
       "kategorie": [
         "pecovatelske",
-        "terenni",
-        "zdravi"
+        "terenni"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -114360,30 +114359,41 @@
           }
         },
         {
-          "id": "uzis-56438",
-          "zdroj": "UZIS",
-          "nazev": "Charita Hranice",
+          "id": "mpsv-3624",
+          "zdroj": "MPSV",
+          "nazev": "Charitní pečovatelská služba středisko Lipník nad Bečvou",
           "poskytovatel": {
             "nazev": "Charita Hranice",
             "ico": "45180326"
           },
           "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
           },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 8
+                }
+              ]
+            }
           ],
+          "datumPoskytovaniOd": "2009-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "http://www.hranice.charita.cz"
+              "www.hranice.charita.cz"
             ],
             "emaily": [
-              "info@hranice.charita.cz"
+              "petra.sustalova@hranice.charita.cz"
             ],
             "telefony": [
-              "+420581601932"
+              "581 772 089",
+              "777 238 520"
             ]
           }
         }
@@ -118819,7 +118829,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 7
+                  "pocet": 4
                 }
               ]
             }
@@ -118831,7 +118841,7 @@
               "https://www.hustopece.cz/pecovatelska-sluzba"
             ],
             "emaily": [
-              "penzion@hustopece.cz"
+              "white@hustopece.cz"
             ],
             "telefony": [
               "702 207 313"
@@ -148056,7 +148066,7 @@
             ],
             "telefony": [
               "607 051 088",
-              "778 011 968",
+              "603 215 484",
               "778 463 630"
             ]
           }
@@ -181336,6 +181346,71 @@
             }
           ],
           "datumPoskytovaniOd": "2021-05-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.adamkovavila.cz"
+            ],
+            "emaily": [
+              "reditel@adamkovavila.cz"
+            ],
+            "telefony": [
+              "730 820 129"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-80145322",
+      "kodAdresnihoMista": 80145322,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": 699,
+        "cisloOrientacni": null,
+        "psc": "73904",
+        "obec": "Raškovice",
+        "kodObce": "549665",
+        "castObce": "Raškovice",
+        "okres": "Frýdek-Místek",
+        "kodOkresu": "CZ0802",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-6420",
+          "zdroj": "MPSV",
+          "nazev": "Adámkova vila, Domov se zvláštním režimem, z.ú.",
+          "poskytovatel": {
+            "nazev": "Adámkova vila, Domov se zvláštním režimem, z. ú.",
+            "ico": "09276181"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/14",
+            "nazev": "domovy se zvláštním režimem"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 37
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2021-01-01",
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
@@ -226828,6 +226903,62 @@
             ],
             "telefony": [
               "+420585011014"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-11279036",
+      "kodAdresnihoMista": 11279036,
+      "adresa": {
+        "ulice": "Purgešova",
+        "cisloDomovni": null,
+        "cisloOrientacni": "1399",
+        "psc": "75301",
+        "obec": "Hranice",
+        "kodObce": "513750",
+        "castObce": null,
+        "okres": "Přerov",
+        "kodOkresu": "CZ0714",
+        "kraj": "Olomoucký kraj",
+        "kodKraje": "CZ071"
+      },
+      "souradnice": {
+        "lat": 49.5511204,
+        "lng": 17.7311675
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-56438",
+          "zdroj": "UZIS",
+          "nazev": "Charita Hranice",
+          "poskytovatel": {
+            "nazev": "Charita Hranice",
+            "ico": "45180326"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.hranice.charita.cz"
+            ],
+            "emaily": [
+              "info@hranice.charita.cz"
+            ],
+            "telefony": [
+              "+420581601932"
             ]
           }
         }

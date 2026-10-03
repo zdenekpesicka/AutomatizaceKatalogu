@@ -58315,7 +58315,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 5
+                  "pocet": 7
                 }
               ]
             }
@@ -68230,7 +68230,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "http://www.dd-bohemia.wz.cz"
@@ -126542,7 +126542,7 @@
               "www.letokruhy-vs.cz"
             ],
             "emaily": [
-              "jitka.adamkova@letokruhy-vs.cz"
+              "martina.cahlikova@letokruhy-vs.cz"
             ],
             "telefony": [
               "605 469 559"

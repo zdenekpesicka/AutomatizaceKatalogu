@@ -1,13 +1,13 @@
 {
   "verzeSchematu": "1.4.0",
-  "hashKatalogu": "c06bffb57990b6c8c05f5c28d38bd10473866428a70164645ed8b7d08da7386f",
+  "hashKatalogu": "1f2a51147439da2156b4b6b061ca621f66c40d72997bbd3e3e880cbe5002c809",
   "pocetMist": 2914,
-  "pocetSluzeb": 4011,
+  "pocetSluzeb": 4007,
   "pocetMistPodleKategorie": {
     "bezpeci": 35,
     "domovy": 811,
-    "pecovatelske": 1329,
-    "poradenstvi": 375,
+    "pecovatelske": 1328,
+    "poradenstvi": 374,
     "terenni": 1822,
     "zdravi": 891
   },
@@ -15,7 +15,7 @@
   "pocetMistSPoskytovanimZdravotniPece": 443,
   "pocetMistBezSouradnic": 110,
   "datumZdrojovychDat": {
-    "mpsv": "2026-10-02",
+    "mpsv": "2026-10-03",
     "uzis": "2026-10-01",
     "ruian": "2026-09-30"
   }

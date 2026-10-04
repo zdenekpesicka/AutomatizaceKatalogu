@@ -14180,7 +14180,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 49
+                  "pocet": 47
                 }
               ]
             }
@@ -14218,7 +14218,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 62
+                  "pocet": 61
                 }
               ]
             }
@@ -28303,7 +28303,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 85
+                  "pocet": 95
                 }
               ]
             },
@@ -28325,7 +28325,7 @@
               "http://dolniujezd.charita.cz"
             ],
             "emaily": [
-              "chardolujezd@tiscali.cz"
+              "jana.kalibanova@du.hk.caritas.cz"
             ],
             "telefony": [
               "731 598 854",
@@ -30716,82 +30716,6 @@
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
-        {
-          "id": "mpsv-1372",
-          "zdroj": "MPSV",
-          "nazev": "Charitní pečovatelská služba Znojmo",
-          "poskytovatel": {
-            "nazev": "Diecézní charita Brno",
-            "ico": "44990260"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 15
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "http://znojmo.charita.cz/"
-            ],
-            "emaily": [
-              "chps@znojmo.charita.cz"
-            ],
-            "telefony": [
-              "731 402 781"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-1374",
-          "zdroj": "MPSV",
-          "nazev": "Osobní asistence Znojmo",
-          "poskytovatel": {
-            "nazev": "Diecézní charita Brno",
-            "ico": "44990260"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 9
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "http://znojmo.charita.cz/"
-            ],
-            "emaily": [
-              "osasistence@znojmo.charita.cz"
-            ],
-            "telefony": [
-              "604 294 188"
-            ]
-          }
-        },
         {
           "id": "mpsv-1384",
           "zdroj": "MPSV",
@@ -52150,7 +52074,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "muvrchlabi.cz"
@@ -101659,7 +101583,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 800
+                  "pocet": 21
                 }
               ]
             },
@@ -101669,7 +101593,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 5
                 }
               ]
             }
@@ -101735,7 +101659,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 800
+                  "pocet": 21
                 }
               ]
             },
@@ -101745,7 +101669,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 5
                 }
               ]
             }
@@ -101811,7 +101735,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 800
+                  "pocet": 21
                 }
               ]
             },
@@ -101821,7 +101745,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 5
                 }
               ]
             }
@@ -101887,7 +101811,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 800
+                  "pocet": 21
                 }
               ]
             },
@@ -101897,7 +101821,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 5
                 }
               ]
             }
@@ -101964,7 +101888,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 800
+                  "pocet": 21
                 }
               ]
             },
@@ -101974,7 +101898,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 5
                 }
               ]
             }
@@ -102116,7 +102040,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 800
+                  "pocet": 21
                 }
               ]
             },
@@ -102126,7 +102050,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 5
                 }
               ]
             }
@@ -102192,7 +102116,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 800
+                  "pocet": 21
                 }
               ]
             },
@@ -102202,7 +102126,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 5
                 }
               ]
             }
@@ -165231,24 +165155,24 @@
       ]
     },
     {
-      "id": "misto-30994845",
-      "kodAdresnihoMista": 30994845,
+      "id": "misto-14834006",
+      "kodAdresnihoMista": 14834006,
       "adresa": {
-        "ulice": "sídliště U Nádraží",
-        "cisloDomovni": 1302,
+        "ulice": "Novohradská",
+        "cisloDomovni": 226,
         "cisloOrientacni": null,
-        "psc": "37701",
-        "obec": "Jindřichův Hradec",
-        "kodObce": "545881",
-        "castObce": "Jindřichův Hradec II",
+        "psc": "37901",
+        "obec": "Třeboň",
+        "kodObce": "547336",
+        "castObce": "Třeboň II",
         "okres": "Jindřichův Hradec",
         "kodOkresu": "CZ0313",
         "kraj": "Jihočeský kraj",
         "kodKraje": "CZ031"
       },
       "souradnice": {
-        "lat": 49.1513288,
-        "lng": 15.0069113
+        "lat": 48.9985439,
+        "lng": 14.774249
       },
       "kategorie": [
         "pecovatelske",
@@ -165280,6 +165204,16 @@
                   "pocet": 1
                 }
               ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
             }
           ],
           "datumPoskytovaniOd": "2013-09-01",
@@ -165296,6 +165230,100 @@
             ]
           }
         },
+        {
+          "id": "mpsv-5457",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčovací služby - Hospicová péče sv. Kleofáše Třeboň",
+          "poskytovatel": {
+            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
+            "ico": "22707328"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2016-03-21",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.kleofas.cz"
+            ],
+            "emaily": [
+              "socialni.sluzby@kleofas.cz"
+            ],
+            "telefony": [
+              "739341087"
+            ]
+          }
+        },
+        {
+          "id": "uzis-68826",
+          "zdroj": "UZIS",
+          "nazev": "Hospicová péče sv. Kleofáše Třeboň, o.p.s.",
+          "poskytovatel": {
+            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
+            "ico": "22707328"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Fyzioterapeut",
+          "oboryPece": [
+            "Fyzioterapeut",
+            "paliativní medicína",
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [],
+            "emaily": [
+              "socialni.sluzby@kleofas.cz"
+            ],
+            "telefony": [
+              "+420739341087"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-30994845",
+      "kodAdresnihoMista": 30994845,
+      "adresa": {
+        "ulice": "sídliště U Nádraží",
+        "cisloDomovni": 1302,
+        "cisloOrientacni": null,
+        "psc": "37701",
+        "obec": "Jindřichův Hradec",
+        "kodObce": "545881",
+        "castObce": "Jindřichův Hradec II",
+        "okres": "Jindřichův Hradec",
+        "kodOkresu": "CZ0313",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 49.1513288,
+        "lng": 15.0069113
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
         {
           "id": "mpsv-5457",
           "zdroj": "MPSV",
@@ -165359,7 +165387,7 @@
             }
           ],
           "datumPoskytovaniOd": "2023-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.kleofas.cz"
@@ -165376,178 +165404,6 @@
           "id": "uzis-176926",
           "zdroj": "UZIS",
           "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
-          "poskytovatel": {
-            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
-            "ico": "22707328"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Fyzioterapeut",
-          "oboryPece": [
-            "Fyzioterapeut",
-            "paliativní medicína",
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "socialni.sluzby@kleofas.cz"
-            ],
-            "telefony": [
-              "+420739341087"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-14834006",
-      "kodAdresnihoMista": 14834006,
-      "adresa": {
-        "ulice": "Novohradská",
-        "cisloDomovni": 226,
-        "cisloOrientacni": null,
-        "psc": "37901",
-        "obec": "Třeboň",
-        "kodObce": "547336",
-        "castObce": "Třeboň II",
-        "okres": "Jindřichův Hradec",
-        "kodOkresu": "CZ0313",
-        "kraj": "Jihočeský kraj",
-        "kodKraje": "CZ031"
-      },
-      "souradnice": {
-        "lat": 48.9985439,
-        "lng": 14.774249
-      },
-      "kategorie": [
-        "pecovatelske",
-        "poradenstvi",
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-4656",
-          "zdroj": "MPSV",
-          "nazev": "Sociální poradenství - Hospicová péče sv. Kleofáše",
-          "poskytovatel": {
-            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
-            "ico": "22707328"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/1",
-            "nazev": "odborné sociální poradenství"
-          },
-          "formy": [
-            {
-              "forma": "amb",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 1
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2013-09-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.kleofas.cz"
-            ],
-            "emaily": [
-              "socialni.sluzby@kleofas.cz"
-            ],
-            "telefony": [
-              "739341087"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-5457",
-          "zdroj": "MPSV",
-          "nazev": "Odlehčovací služby - Hospicová péče sv. Kleofáše Třeboň",
-          "poskytovatel": {
-            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
-            "ico": "22707328"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/8",
-            "nazev": "odlehčovací služby"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 3
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2016-03-21",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.kleofas.cz"
-            ],
-            "emaily": [
-              "socialni.sluzby@kleofas.cz"
-            ],
-            "telefony": [
-              "739341087"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-6857",
-          "zdroj": "MPSV",
-          "nazev": "Osobní asistence - Hospicová péče sv. Kleofáše",
-          "poskytovatel": {
-            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
-            "ico": "22707328"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 2
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2023-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.kleofas.cz"
-            ],
-            "emaily": [
-              "socialni.sluzby@kleofas.cz"
-            ],
-            "telefony": [
-              "739341087"
-            ]
-          }
-        },
-        {
-          "id": "uzis-68826",
-          "zdroj": "UZIS",
-          "nazev": "Hospicová péče sv. Kleofáše Třeboň, o.p.s.",
           "poskytovatel": {
             "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
             "ico": "22707328"
@@ -180117,7 +179973,7 @@
             }
           ],
           "datumPoskytovaniOd": "2020-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [],
             "emaily": [

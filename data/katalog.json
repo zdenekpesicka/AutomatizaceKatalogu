@@ -30689,6 +30689,110 @@
       ]
     },
     {
+      "id": "misto-80152997",
+      "kodAdresnihoMista": 80152997,
+      "adresa": {
+        "ulice": "Sládkova",
+        "cisloDomovni": 5155,
+        "cisloOrientacni": "22",
+        "psc": "66902",
+        "obec": "Znojmo",
+        "kodObce": "593711",
+        "castObce": "Znojmo",
+        "okres": "Znojmo",
+        "kodOkresu": "CZ0647",
+        "kraj": "Jihomoravský kraj",
+        "kodKraje": "CZ064"
+      },
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "pecovatelske",
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-1372",
+          "zdroj": "MPSV",
+          "nazev": "Charitní pečovatelská služba Znojmo",
+          "poskytovatel": {
+            "nazev": "Diecézní charita Brno",
+            "ico": "44990260"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 15
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://znojmo.charita.cz/"
+            ],
+            "emaily": [
+              "chps@znojmo.charita.cz"
+            ],
+            "telefony": [
+              "731 402 781"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-1374",
+          "zdroj": "MPSV",
+          "nazev": "Osobní asistence Znojmo",
+          "poskytovatel": {
+            "nazev": "Diecézní charita Brno",
+            "ico": "44990260"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/3",
+            "nazev": "osobní asistence"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 9
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://znojmo.charita.cz/"
+            ],
+            "emaily": [
+              "osasistence@znojmo.charita.cz"
+            ],
+            "telefony": [
+              "604 294 188"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-10984089",
       "kodAdresnihoMista": 10984089,
       "adresa": {

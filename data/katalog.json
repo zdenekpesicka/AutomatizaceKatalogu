@@ -711,9 +711,21 @@
       ]
     },
     {
-      "id": "misto-bezadresy-4674-f7e6ac50",
-      "kodAdresnihoMista": null,
-      "adresa": null,
+      "id": "misto-80093344",
+      "kodAdresnihoMista": 80093344,
+      "adresa": {
+        "ulice": "U vojenské nemocnice",
+        "cisloDomovni": 1200,
+        "cisloOrientacni": "1",
+        "psc": "16200",
+        "obec": "Praha",
+        "kodObce": "554782",
+        "castObce": "Břevnov",
+        "okres": null,
+        "kodOkresu": null,
+        "kraj": "Hlavní město Praha",
+        "kodKraje": "CZ010"
+      },
       "souradnice": {
         "lat": null,
         "lng": null
@@ -760,22 +772,7 @@
               "973 208 430"
             ]
           }
-        }
-      ]
-    },
-    {
-      "id": "misto-bezadresy-5473-754d0fb5",
-      "kodAdresnihoMista": null,
-      "adresa": null,
-      "souradnice": {
-        "lat": null,
-        "lng": null
-      },
-      "kategorie": [
-        "domovy"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
+        },
         {
           "id": "mpsv-5473",
           "zdroj": "MPSV",
@@ -12862,7 +12859,7 @@
             }
           ],
           "datumPoskytovaniOd": "2012-01-02",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "http://www.ddkytin.cz"
@@ -16405,7 +16402,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.domovsokolnice.cz"
@@ -16474,7 +16471,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.domovsokolnice.cz"
@@ -16543,7 +16540,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.domovsokolnice.cz"
@@ -16612,7 +16609,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.domovsokolnice.cz"
@@ -17814,12 +17811,14 @@
             ],
             "emaily": [
               "info@ddunhost.cz",
-              "reditelka@ddunhost.cz"
+              "reditelka@ddunhost.cz",
+              "socprac@ddunhost.cz"
             ],
             "telefony": [
               "774 412 140",
-              "775 777 729",
-              "312 698 406"
+              "312 698 406",
+              "725 994 537",
+              "725 712 990"
             ]
           }
         }
@@ -49528,7 +49527,7 @@
           "zdroj": "MPSV",
           "nazev": "Domov seniorů Mistra Křišťana Prachatice",
           "poskytovatel": {
-            "nazev": "Domov seniorů Mistra Křišťana Prachatice",
+            "nazev": "Centrum sociální podpory, příspěvková organizace",
             "ico": "00477109"
           },
           "druhSluzby": {
@@ -80359,7 +80358,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "http://www.kehila-teplice.cz"
@@ -81967,7 +81966,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.prosapia.cz"
@@ -82045,7 +82044,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.prosapia.cz"
@@ -149993,7 +149992,7 @@
             }
           ],
           "datumPoskytovaniOd": "2026-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.senevida.cz"
@@ -161797,7 +161796,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -161835,7 +161834,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -161883,7 +161882,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -161950,7 +161949,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162046,7 +162045,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162084,7 +162083,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162132,7 +162131,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162225,7 +162224,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162263,7 +162262,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162311,7 +162310,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162378,7 +162377,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162416,7 +162415,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162464,7 +162463,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-01",
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -165259,6 +165258,188 @@
       ]
     },
     {
+      "id": "misto-30994845",
+      "kodAdresnihoMista": 30994845,
+      "adresa": {
+        "ulice": "sídliště U Nádraží",
+        "cisloDomovni": 1302,
+        "cisloOrientacni": null,
+        "psc": "37701",
+        "obec": "Jindřichův Hradec",
+        "kodObce": "545881",
+        "castObce": "Jindřichův Hradec II",
+        "okres": "Jindřichův Hradec",
+        "kodOkresu": "CZ0313",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 49.1513288,
+        "lng": 15.0069113
+      },
+      "kategorie": [
+        "pecovatelske",
+        "poradenstvi",
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-4656",
+          "zdroj": "MPSV",
+          "nazev": "Sociální poradenství - Hospicová péče sv. Kleofáše",
+          "poskytovatel": {
+            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
+            "ico": "22707328"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2013-09-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.kleofas.cz"
+            ],
+            "emaily": [
+              "socialni.sluzby@kleofas.cz"
+            ],
+            "telefony": [
+              "739341087"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-5457",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčovací služby  - Hospicová péče sv. Kleofáše",
+          "poskytovatel": {
+            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
+            "ico": "22707328"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2016-03-21",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.kleofas.cz"
+            ],
+            "emaily": [
+              "socialni.sluzby@kleofas.cz"
+            ],
+            "telefony": [
+              "739341087"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-6857",
+          "zdroj": "MPSV",
+          "nazev": "Osobní asistence - Hospicová péče sv. Kleofáše",
+          "poskytovatel": {
+            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
+            "ico": "22707328"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/3",
+            "nazev": "osobní asistence"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2023-01-01",
+          "datumPoskytovaniDo": "2026-12-31",
+          "kontakt": {
+            "weby": [
+              "www.kleofas.cz"
+            ],
+            "emaily": [
+              "socialni.sluzby@kleofas.cz"
+            ],
+            "telefony": [
+              "739341087"
+            ]
+          }
+        },
+        {
+          "id": "uzis-176926",
+          "zdroj": "UZIS",
+          "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
+          "poskytovatel": {
+            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
+            "ico": "22707328"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Fyzioterapeut",
+          "oboryPece": [
+            "Fyzioterapeut",
+            "paliativní medicína",
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [],
+            "emaily": [
+              "socialni.sluzby@kleofas.cz"
+            ],
+            "telefony": [
+              "+420739341087"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-14834006",
       "kodAdresnihoMista": 14834006,
       "adresa": {
@@ -165373,100 +165554,6 @@
           }
         },
         {
-          "id": "uzis-68826",
-          "zdroj": "UZIS",
-          "nazev": "Hospicová péče sv. Kleofáše Třeboň, o.p.s.",
-          "poskytovatel": {
-            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
-            "ico": "22707328"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Fyzioterapeut",
-          "oboryPece": [
-            "Fyzioterapeut",
-            "paliativní medicína",
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "socialni.sluzby@kleofas.cz"
-            ],
-            "telefony": [
-              "+420739341087"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-30994845",
-      "kodAdresnihoMista": 30994845,
-      "adresa": {
-        "ulice": "sídliště U Nádraží",
-        "cisloDomovni": 1302,
-        "cisloOrientacni": null,
-        "psc": "37701",
-        "obec": "Jindřichův Hradec",
-        "kodObce": "545881",
-        "castObce": "Jindřichův Hradec II",
-        "okres": "Jindřichův Hradec",
-        "kodOkresu": "CZ0313",
-        "kraj": "Jihočeský kraj",
-        "kodKraje": "CZ031"
-      },
-      "souradnice": {
-        "lat": 49.1513288,
-        "lng": 15.0069113
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-5457",
-          "zdroj": "MPSV",
-          "nazev": "Odlehčovací služby  - Hospicová péče sv. Kleofáše",
-          "poskytovatel": {
-            "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
-            "ico": "22707328"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/8",
-            "nazev": "odlehčovací služby"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 3
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2016-03-21",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.kleofas.cz"
-            ],
-            "emaily": [
-              "socialni.sluzby@kleofas.cz"
-            ],
-            "telefony": [
-              "739341087"
-            ]
-          }
-        },
-        {
           "id": "mpsv-6857",
           "zdroj": "MPSV",
           "nazev": "Osobní asistence - Hospicová péče sv. Kleofáše",
@@ -165505,9 +165592,9 @@
           }
         },
         {
-          "id": "uzis-176926",
+          "id": "uzis-68826",
           "zdroj": "UZIS",
-          "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
+          "nazev": "Hospicová péče sv. Kleofáše Třeboň, o.p.s.",
           "poskytovatel": {
             "nazev": "Hospicová péče sv. Kleofáše, o.p.s.",
             "ico": "22707328"
@@ -165939,7 +166026,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "www.ruah.cz"
+              "www.socialnipece24.cz"
             ],
             "emaily": [
               "vackova@ruah.cz"
@@ -165992,7 +166079,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "www.ruah.cz"
+              "www.socialnipece24.cz"
             ],
             "emaily": [
               "socialni@ruah.cz"
@@ -169116,7 +169203,7 @@
             }
           ],
           "datumPoskytovaniOd": "2014-07-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.jistotydomova.cz"
@@ -169164,7 +169251,7 @@
             }
           ],
           "datumPoskytovaniOd": "2014-07-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.jistotydomova.cz"
@@ -169197,6 +169284,16 @@
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
                   "pocet": 3
+                }
+              ]
+            },
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 5
                 }
               ]
             }
@@ -193584,7 +193681,7 @@
             }
           ],
           "datumPoskytovaniOd": "2025-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.seniorgarden.cz"
@@ -193622,7 +193719,7 @@
             }
           ],
           "datumPoskytovaniOd": "2025-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.seniorgarden.cz"
@@ -193664,7 +193761,7 @@
             }
           ],
           "datumPoskytovaniOd": "2025-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "www.seniorgarden.cz"
@@ -196529,10 +196626,10 @@
             ],
             "emaily": [
               "aneta.rudolska@humanocare24.cz",
-              "daniela.siskova@humanocare24.cz"
+              "marcela.vltavska@humanocare24.cz"
             ],
             "telefony": [
-              "724 766 431",
+              "774 485 866",
               "774 499 455"
             ]
           }
@@ -196596,10 +196693,10 @@
             ],
             "emaily": [
               "aneta.rudolska@humanocare24.cz",
-              "daniela.siskova@humanocare24.cz"
+              "marcela.vltavska@humanocare24.cz"
             ],
             "telefony": [
-              "724 766 431",
+              "774 485 866",
               "774 499 455"
             ]
           }

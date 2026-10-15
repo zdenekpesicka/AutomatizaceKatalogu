@@ -1,8 +1,20 @@
 {
   "verzeSchematu": "1.4.0",
-  "pridano": [],
+  "pridano": [
+    "misto-19546394"
+  ],
   "zmeneno": [
-    "misto-80149373"
+    "misto-18841201",
+    "misto-19546416",
+    "misto-20781458",
+    "misto-21054819",
+    "misto-21477728",
+    "misto-24532690",
+    "misto-553336",
+    "misto-737062",
+    "misto-901750",
+    "misto-9857486",
+    "misto-9859616"
   ],
   "odebrano": []
 }

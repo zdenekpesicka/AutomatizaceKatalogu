@@ -105549,7 +105549,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 24
+                  "pocet": 25
                 }
               ]
             },
@@ -105625,7 +105625,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 24
+                  "pocet": 25
                 }
               ]
             },
@@ -105701,7 +105701,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 24
+                  "pocet": 25
                 }
               ]
             },
@@ -105777,7 +105777,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 24
+                  "pocet": 25
                 }
               ]
             },
@@ -105853,7 +105853,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 24
+                  "pocet": 25
                 }
               ]
             },
@@ -105929,7 +105929,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 4
+                  "pocet": 5
                 }
               ]
             },
@@ -105939,7 +105939,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 1
+                  "pocet": 6
                 }
               ]
             }
@@ -105951,10 +105951,13 @@
               "www.zapad.diakonie.cz"
             ],
             "emaily": [
-              "poradna@diakoniezapad.cz"
+              "teren@diakoniezapad.cz"
             ],
             "telefony": [
-              "731 670 193"
+              "731 125 836",
+              "734 393 161",
+              "735 795 556",
+              "775 720 492"
             ]
           }
         }
@@ -106005,7 +106008,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 4
+                  "pocet": 5
                 }
               ]
             },
@@ -106015,7 +106018,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 1
+                  "pocet": 6
                 }
               ]
             }
@@ -106027,10 +106030,13 @@
               "www.zapad.diakonie.cz"
             ],
             "emaily": [
-              "poradna@diakoniezapad.cz"
+              "teren@diakoniezapad.cz"
             ],
             "telefony": [
-              "731 670 193"
+              "731 125 836",
+              "734 393 161",
+              "735 795 556",
+              "775 720 492"
             ]
           }
         }
@@ -106081,7 +106087,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 4
+                  "pocet": 5
                 }
               ]
             },
@@ -106091,7 +106097,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 1
+                  "pocet": 6
                 }
               ]
             }
@@ -106103,10 +106109,13 @@
               "www.zapad.diakonie.cz"
             ],
             "emaily": [
-              "poradna@diakoniezapad.cz"
+              "teren@diakoniezapad.cz"
             ],
             "telefony": [
-              "731 670 193"
+              "731 125 836",
+              "734 393 161",
+              "735 795 556",
+              "775 720 492"
             ]
           }
         }
@@ -154567,7 +154576,7 @@
         {
           "id": "mpsv-3722",
           "zdroj": "MPSV",
-          "nazev": "Odlehčovací služby",
+          "nazev": "Odlehčovací služby Oblastního spolku Českého červeného kříže",
           "poskytovatel": {
             "nazev": "Oblastní spolek Českého červeného kříže Brno",
             "ico": "00426296"
@@ -154583,7 +154592,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 11
+                  "pocet": 16
                 }
               ]
             },
@@ -154637,6 +154646,84 @@
             ],
             "telefony": [
               "+420541212318"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-19546394",
+      "kodAdresnihoMista": 19546394,
+      "adresa": {
+        "ulice": "Ondřeje Veselého",
+        "cisloDomovni": 470,
+        "cisloOrientacni": "5b",
+        "psc": "62700",
+        "obec": "Brno",
+        "kodObce": "582786",
+        "castObce": "Slatina",
+        "okres": "Brno-město",
+        "kodOkresu": "CZ0642",
+        "kraj": "Jihomoravský kraj",
+        "kodKraje": "CZ064"
+      },
+      "souradnice": {
+        "lat": 49.1748917,
+        "lng": 16.6906962
+      },
+      "kategorie": [
+        "domovy",
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-3722",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčovací služba Oblastního spolku Českého červeného kříže",
+          "poskytovatel": {
+            "nazev": "Oblastní spolek Českého červeného kříže Brno",
+            "ico": "00426296"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 16
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2009-05-20",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.cck-brno.cz"
+            ],
+            "emaily": [
+              "cck@cck-brno.cz"
+            ],
+            "telefony": [
+              "538752021",
+              "538752122",
+              "734863770"
             ]
           }
         }
@@ -160781,9 +160868,9 @@
         {
           "id": "mpsv-4304",
           "zdroj": "MPSV",
-          "nazev": "Farní charita Dobruška",
+          "nazev": "Charita Dobruška",
           "poskytovatel": {
-            "nazev": "Farní charita Dobruška",
+            "nazev": "Charita Dobruška",
             "ico": "73635391"
           },
           "druhSluzby": {
@@ -160847,9 +160934,9 @@
         {
           "id": "mpsv-4304",
           "zdroj": "MPSV",
-          "nazev": "Farní charita Dobruška",
+          "nazev": "Charita Dobruška",
           "poskytovatel": {
-            "nazev": "Farní charita Dobruška",
+            "nazev": "Charita Dobruška",
             "ico": "73635391"
           },
           "druhSluzby": {

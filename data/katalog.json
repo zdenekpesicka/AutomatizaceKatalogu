@@ -39434,7 +39434,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "http://www.ligavozic.cz"
@@ -118881,6 +118881,74 @@
             ],
             "telefony": [
               "702 207 313"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-10989927",
+      "kodAdresnihoMista": 10989927,
+      "adresa": {
+        "ulice": "Pontassievská",
+        "cisloDomovni": 918,
+        "cisloOrientacni": "1",
+        "psc": "66902",
+        "obec": "Znojmo",
+        "kodObce": "593711",
+        "castObce": "Znojmo",
+        "okres": "Znojmo",
+        "kodOkresu": "CZ0647",
+        "kraj": "Jihomoravský kraj",
+        "kodKraje": "CZ064"
+      },
+      "souradnice": {
+        "lat": 48.8553972,
+        "lng": 16.0534917
+      },
+      "kategorie": [
+        "pecovatelske",
+        "poradenstvi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-2254",
+          "zdroj": "MPSV",
+          "nazev": "Centrum odborného sociálního poradenství",
+          "poskytovatel": {
+            "nazev": "Centrum sociálních služeb Znojmo, příspěvková organizace",
+            "ico": "45671770"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-08",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.cssznojmo.cz"
+            ],
+            "emaily": [
+              "poradna@cssznojmo.cz"
+            ],
+            "telefony": [
+              "604 372 557",
+              "703886783",
+              "737701460"
             ]
           }
         }

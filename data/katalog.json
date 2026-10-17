@@ -144223,7 +144223,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 131
+                  "pocet": 120
                 }
               ]
             }
@@ -144261,7 +144261,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 107
+                  "pocet": 104
                 }
               ]
             }
@@ -158890,8 +158890,7 @@
               "fosaops@fosaops.org"
             ],
             "telefony": [
-              "775 350 117",
-              "271 910 016"
+              "775 350 117"
             ]
           }
         }

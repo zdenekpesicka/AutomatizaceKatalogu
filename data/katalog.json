@@ -151175,7 +151175,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 13
+                  "pocet": 14
                 }
               ]
             }
@@ -181252,7 +181252,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 2
+                  "pocet": 4
                 }
               ]
             }

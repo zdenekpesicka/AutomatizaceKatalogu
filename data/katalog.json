@@ -197537,6 +197537,96 @@
       ]
     },
     {
+      "id": "misto-21876525",
+      "kodAdresnihoMista": 21876525,
+      "adresa": {
+        "ulice": "náměstí Prezidenta Masaryka",
+        "cisloDomovni": 106,
+        "cisloOrientacni": null,
+        "psc": "14800",
+        "obec": "Praha",
+        "kodObce": "554782",
+        "castObce": "Kunratice",
+        "okres": null,
+        "kodOkresu": null,
+        "kraj": "Hlavní město Praha",
+        "kodKraje": "CZ010"
+      },
+      "souradnice": {
+        "lat": 50.0138558,
+        "lng": 14.4850774
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7672",
+          "zdroj": "MPSV",
+          "nazev": "Denní stacionář Senior Inn",
+          "poskytovatel": {
+            "nazev": "SENIOR INN z.s.",
+            "ico": "05975280"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/10",
+            "nazev": "denní stacionáře"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 9
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-10-20",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.stacionar-praha4.cz"
+            ],
+            "emaily": [
+              "stacionar@seniorinn.cz"
+            ],
+            "telefony": [
+              "605 000 715"
+            ]
+          }
+        },
+        {
+          "id": "uzis-180968",
+          "zdroj": "UZIS",
+          "nazev": "Senior INN Domácí péče s.r.o.",
+          "poskytovatel": {
+            "nazev": "Senior INN Domácí péče s.r.o.",
+            "ico": "23929201"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [],
+            "emaily": [
+              "slepickova@24domacipece.cz"
+            ],
+            "telefony": []
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-7715277",
       "kodAdresnihoMista": 7715277,
       "adresa": {
@@ -202407,58 +202497,6 @@
             "telefony": [
               "+420731433115"
             ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-21876525",
-      "kodAdresnihoMista": 21876525,
-      "adresa": {
-        "ulice": "náměstí Prezidenta Masaryka",
-        "cisloDomovni": null,
-        "cisloOrientacni": "106",
-        "psc": "14800",
-        "obec": "Praha 4",
-        "kodObce": "554782",
-        "castObce": null,
-        "okres": "Hlavní město Praha",
-        "kodOkresu": "CZ0100",
-        "kraj": "Hlavní město Praha",
-        "kodKraje": "CZ010"
-      },
-      "souradnice": {
-        "lat": 50.0138514,
-        "lng": 14.4850738
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "uzis-180968",
-          "zdroj": "UZIS",
-          "nazev": "Senior INN Domácí péče s.r.o.",
-          "poskytovatel": {
-            "nazev": "Senior INN Domácí péče s.r.o.",
-            "ico": "23929201"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "slepickova@24domacipece.cz"
-            ],
-            "telefony": []
           }
         }
       ]

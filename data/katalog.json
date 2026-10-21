@@ -103139,7 +103139,7 @@
           "zdroj": "MPSV",
           "nazev": "BEZPLATNÁ PORADNA MEZI PARAGRAFY",
           "poskytovatel": {
-            "nazev": "ICOS Český Krumlov, o.p. s.",
+            "nazev": "ICOS Český Krumlov, o.p.s.",
             "ico": "70815089"
           },
           "druhSluzby": {
@@ -103205,7 +103205,7 @@
           "zdroj": "MPSV",
           "nazev": "BEZPLATNÁ PORADNA MEZI PARAGRAFY",
           "poskytovatel": {
-            "nazev": "ICOS Český Krumlov, o.p. s.",
+            "nazev": "ICOS Český Krumlov, o.p.s.",
             "ico": "70815089"
           },
           "druhSluzby": {
@@ -103271,7 +103271,7 @@
           "zdroj": "MPSV",
           "nazev": "BEZPLATNÁ PORADNA MEZI PERAGRAFY",
           "poskytovatel": {
-            "nazev": "ICOS Český Krumlov, o.p. s.",
+            "nazev": "ICOS Český Krumlov, o.p.s.",
             "ico": "70815089"
           },
           "druhSluzby": {
@@ -103337,7 +103337,7 @@
           "zdroj": "MPSV",
           "nazev": "BEZPLATNÁ PORADNA MEZI PARAGRAFY",
           "poskytovatel": {
-            "nazev": "ICOS Český Krumlov, o.p. s.",
+            "nazev": "ICOS Český Krumlov, o.p.s.",
             "ico": "70815089"
           },
           "druhSluzby": {
@@ -103402,7 +103402,7 @@
           "zdroj": "MPSV",
           "nazev": "Osobní asistence Český Krumlov",
           "poskytovatel": {
-            "nazev": "ICOS Český Krumlov, o.p. s.",
+            "nazev": "ICOS Český Krumlov, o.p.s.",
             "ico": "70815089"
           },
           "druhSluzby": {
@@ -137439,10 +137439,11 @@
               "http://www.nadeje.cz"
             ],
             "emaily": [
-              "brno@nadeje.cz"
+              "brno@nadeje.cz",
+              "sabina.holasova@nadeje.cz"
             ],
             "telefony": [
-              "771 260 238"
+              "775 889 698"
             ]
           }
         }
@@ -197622,6 +197623,59 @@
               "slepickova@24domacipece.cz"
             ],
             "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-bezadresy-7682-4a90420f",
+      "kodAdresnihoMista": null,
+      "adresa": null,
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7682",
+          "zdroj": "MPSV",
+          "nazev": "Senior-komplex Praha - Zbraslav s.r.o.",
+          "poskytovatel": {
+            "nazev": "Senior-komplex Praha - Zbraslav s.r.o.",
+            "ico": "21479071"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/14",
+            "nazev": "domovy se zvláštním režimem"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 30
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-09-24",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.senior-komplex.cz"
+            ],
+            "emaily": [
+              "kepkova@semior-komplex.cz"
+            ],
+            "telefony": [
+              "608 081 551"
+            ]
           }
         }
       ]

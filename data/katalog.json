@@ -96545,11 +96545,11 @@
       ]
     },
     {
-      "id": "misto-18840914",
-      "kodAdresnihoMista": 18840914,
+      "id": "misto-31449816",
+      "kodAdresnihoMista": 31449816,
       "adresa": {
         "ulice": "Šunychelská",
-        "cisloDomovni": 1159,
+        "cisloDomovni": 1201,
         "cisloOrientacni": null,
         "psc": "73581",
         "obec": "Bohumín",
@@ -96561,13 +96561,13 @@
         "kodKraje": "CZ080"
       },
       "souradnice": {
-        "lat": 49.9095264,
-        "lng": 18.3580445
+        "lat": 49.909508,
+        "lng": 18.3584255
       },
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": true,
+      "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
           "id": "mpsv-1744",
@@ -137911,10 +137911,12 @@
               "www.nadeje.cz"
             ],
             "emaily": [
-              "brno@nadeje.cz"
+              "brno@nadeje.cz",
+              "michaela.fickova@nadeje.cz"
             ],
             "telefony": [
-              "541 422 271"
+              "541 422 271",
+              "773 797 084"
             ]
           }
         }
@@ -178663,7 +178665,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 30
+                  "pocet": 5
                 }
               ]
             }

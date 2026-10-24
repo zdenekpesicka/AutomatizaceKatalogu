@@ -90789,6 +90789,42 @@
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
+          "id": "mpsv-1597",
+          "zdroj": "MPSV",
+          "nazev": "Domov pro seniory",
+          "poskytovatel": {
+            "nazev": "Charita Studénka",
+            "ico": "44937377"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 36
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2005-04-11",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [],
+            "emaily": [
+              "info@studenka.charita.cz"
+            ],
+            "telefony": [
+              "556401726"
+            ]
+          }
+        },
+        {
           "id": "mpsv-7551",
           "zdroj": "MPSV",
           "nazev": "Odlehčovací slsužba",
@@ -93456,7 +93492,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 268
+                  "pocet": 237
                 }
               ]
             }
@@ -111286,7 +111322,7 @@
         {
           "id": "mpsv-2025",
           "zdroj": "MPSV",
-          "nazev": "Charitní pečovatelská služba",
+          "nazev": "Pečovatelská služba",
           "poskytovatel": {
             "nazev": "Charita Frenštát pod Radhoštěm",
             "ico": "49590588"
@@ -111324,7 +111360,7 @@
         {
           "id": "mpsv-4602",
           "zdroj": "MPSV",
-          "nazev": "Charitní asistenční služba",
+          "nazev": "Osobní asistence",
           "poskytovatel": {
             "nazev": "Charita Frenštát pod Radhoštěm",
             "ico": "49590588"
@@ -112235,11 +112271,11 @@
       ]
     },
     {
-      "id": "misto-23088036",
-      "kodAdresnihoMista": 23088036,
+      "id": "misto-26935422",
+      "kodAdresnihoMista": 26935422,
       "adresa": {
-        "ulice": "Havlíčkova",
-        "cisloDomovni": 12,
+        "ulice": "Erbenova",
+        "cisloDomovni": 2355,
         "cisloOrientacni": null,
         "psc": "54401",
         "obec": "Dvůr Králové nad Labem",
@@ -112251,8 +112287,8 @@
         "kodKraje": "CZ052"
       },
       "souradnice": {
-        "lat": 50.433179,
-        "lng": 15.8150178
+        "lat": 50.4291532,
+        "lng": 15.815168
       },
       "kategorie": [
         "terenni"
@@ -147402,24 +147438,18 @@
               "www.csspraha.cz"
             ],
             "emaily": [
-              "martina.sladkova@csspraha.cz",
+              "ivana.svobodova2@csspraha.cz",
+              "vit.palacky@csspraha.cz",
               "martina.sladkova@csspraha.cz",
               "viola@csspraha.cz",
-              "jitka.douchova@csspraha.cz",
-              "jana.banotova@csspraha.cz",
-              "dana.zackova@csspraha.cz",
-              "magdalena.zuzankova@csspraha.cz",
-              "renata.vesela@csspraha.cz"
+              "simona.pilecka@csspraha.cz"
             ],
             "telefony": [
-              "604 299 661",
               "773 666 784",
               "604 299 661",
-              "734 179 674",
-              "731 056 164",
-              "731 056 704",
-              "731 056 749",
-              "603 864 175"
+              "770 199 982",
+              "734 660 618",
+              "774 745 680"
             ]
           }
         }
@@ -147482,24 +147512,18 @@
               "www.csspraha.cz"
             ],
             "emaily": [
-              "martina.sladkova@csspraha.cz",
+              "ivana.svobodova2@csspraha.cz",
+              "vit.palacky@csspraha.cz",
               "martina.sladkova@csspraha.cz",
               "viola@csspraha.cz",
-              "jitka.douchova@csspraha.cz",
-              "jana.banotova@csspraha.cz",
-              "dana.zackova@csspraha.cz",
-              "magdalena.zuzankova@csspraha.cz",
-              "renata.vesela@csspraha.cz"
+              "simona.pilecka@csspraha.cz"
             ],
             "telefony": [
-              "604 299 661",
               "773 666 784",
               "604 299 661",
-              "734 179 674",
-              "731 056 164",
-              "731 056 704",
-              "731 056 749",
-              "603 864 175"
+              "770 199 982",
+              "734 660 618",
+              "774 745 680"
             ]
           }
         }
@@ -147562,24 +147586,18 @@
               "www.csspraha.cz"
             ],
             "emaily": [
-              "martina.sladkova@csspraha.cz",
+              "ivana.svobodova2@csspraha.cz",
+              "vit.palacky@csspraha.cz",
               "martina.sladkova@csspraha.cz",
               "viola@csspraha.cz",
-              "jitka.douchova@csspraha.cz",
-              "jana.banotova@csspraha.cz",
-              "dana.zackova@csspraha.cz",
-              "magdalena.zuzankova@csspraha.cz",
-              "renata.vesela@csspraha.cz"
+              "simona.pilecka@csspraha.cz"
             ],
             "telefony": [
-              "604 299 661",
               "773 666 784",
               "604 299 661",
-              "734 179 674",
-              "731 056 164",
-              "731 056 704",
-              "731 056 749",
-              "603 864 175"
+              "770 199 982",
+              "734 660 618",
+              "774 745 680"
             ]
           }
         }
@@ -147642,24 +147660,18 @@
               "www.csspraha.cz"
             ],
             "emaily": [
-              "martina.sladkova@csspraha.cz",
+              "ivana.svobodova2@csspraha.cz",
+              "vit.palacky@csspraha.cz",
               "martina.sladkova@csspraha.cz",
               "viola@csspraha.cz",
-              "jitka.douchova@csspraha.cz",
-              "jana.banotova@csspraha.cz",
-              "dana.zackova@csspraha.cz",
-              "magdalena.zuzankova@csspraha.cz",
-              "renata.vesela@csspraha.cz"
+              "simona.pilecka@csspraha.cz"
             ],
             "telefony": [
-              "604 299 661",
               "773 666 784",
               "604 299 661",
-              "734 179 674",
-              "731 056 164",
-              "731 056 704",
-              "731 056 749",
-              "603 864 175"
+              "770 199 982",
+              "734 660 618",
+              "774 745 680"
             ]
           }
         }
@@ -147722,24 +147734,18 @@
               "www.csspraha.cz"
             ],
             "emaily": [
-              "martina.sladkova@csspraha.cz",
+              "ivana.svobodova2@csspraha.cz",
+              "vit.palacky@csspraha.cz",
               "martina.sladkova@csspraha.cz",
               "viola@csspraha.cz",
-              "jitka.douchova@csspraha.cz",
-              "jana.banotova@csspraha.cz",
-              "dana.zackova@csspraha.cz",
-              "magdalena.zuzankova@csspraha.cz",
-              "renata.vesela@csspraha.cz"
+              "simona.pilecka@csspraha.cz"
             ],
             "telefony": [
-              "604 299 661",
               "773 666 784",
               "604 299 661",
-              "734 179 674",
-              "731 056 164",
-              "731 056 704",
-              "731 056 749",
-              "603 864 175"
+              "770 199 982",
+              "734 660 618",
+              "774 745 680"
             ]
           }
         }
@@ -147802,24 +147808,18 @@
               "www.csspraha.cz"
             ],
             "emaily": [
-              "martina.sladkova@csspraha.cz",
+              "ivana.svobodova2@csspraha.cz",
+              "vit.palacky@csspraha.cz",
               "martina.sladkova@csspraha.cz",
               "viola@csspraha.cz",
-              "jitka.douchova@csspraha.cz",
-              "jana.banotova@csspraha.cz",
-              "dana.zackova@csspraha.cz",
-              "magdalena.zuzankova@csspraha.cz",
-              "renata.vesela@csspraha.cz"
+              "simona.pilecka@csspraha.cz"
             ],
             "telefony": [
-              "604 299 661",
               "773 666 784",
               "604 299 661",
-              "734 179 674",
-              "731 056 164",
-              "731 056 704",
-              "731 056 749",
-              "603 864 175"
+              "770 199 982",
+              "734 660 618",
+              "774 745 680"
             ]
           }
         }
@@ -147882,24 +147882,18 @@
               "www.csspraha.cz"
             ],
             "emaily": [
-              "martina.sladkova@csspraha.cz",
+              "ivana.svobodova2@csspraha.cz",
+              "vit.palacky@csspraha.cz",
               "martina.sladkova@csspraha.cz",
               "viola@csspraha.cz",
-              "jitka.douchova@csspraha.cz",
-              "jana.banotova@csspraha.cz",
-              "dana.zackova@csspraha.cz",
-              "magdalena.zuzankova@csspraha.cz",
-              "renata.vesela@csspraha.cz"
+              "simona.pilecka@csspraha.cz"
             ],
             "telefony": [
-              "604 299 661",
               "773 666 784",
               "604 299 661",
-              "734 179 674",
-              "731 056 164",
-              "731 056 704",
-              "731 056 749",
-              "603 864 175"
+              "770 199 982",
+              "734 660 618",
+              "774 745 680"
             ]
           }
         }

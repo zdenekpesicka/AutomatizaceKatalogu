@@ -26355,7 +26355,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 88
+                  "pocet": 42
                 }
               ]
             }
@@ -26461,7 +26461,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 88
+                  "pocet": 42
                 }
               ]
             }
@@ -34849,7 +34849,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 20
+                  "pocet": 18
                 }
               ]
             }
@@ -34914,7 +34914,72 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 20
+                  "pocet": 18
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "1998-08-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.ceskytesin.caritas.cz"
+            ],
+            "emaily": [
+              "ilona.kaszperov@ceskytesin.charita.cz"
+            ],
+            "telefony": [
+              "731 133 261"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-5766770",
+      "kodAdresnihoMista": 5766770,
+      "adresa": {
+        "ulice": "Hrabinská",
+        "cisloDomovni": 499,
+        "cisloOrientacni": "17",
+        "psc": "73701",
+        "obec": "Český Těšín",
+        "kodObce": "598933",
+        "castObce": "Český Těšín",
+        "okres": "Karviná",
+        "kodOkresu": "CZ0803",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": 49.7492007,
+        "lng": 18.6162659
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-569",
+          "zdroj": "MPSV",
+          "nazev": "Charitní dům pokojného stáří",
+          "poskytovatel": {
+            "nazev": "Charita Český Těšín",
+            "ico": "60337842"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 18
                 }
               ]
             }
@@ -109742,6 +109807,45 @@
               "733 742 058"
             ]
           }
+        },
+        {
+          "id": "mpsv-2034",
+          "zdroj": "MPSV",
+          "nazev": "Centrum denních služeb",
+          "poskytovatel": {
+            "nazev": "Charita Vyškov",
+            "ico": "65841875"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/9",
+            "nazev": "centra denních služeb"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 25
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://www.vyskov.charita.cz"
+            ],
+            "emaily": [
+              "cds@vyskov.charita.cz"
+            ],
+            "telefony": [
+              "728 729 997",
+              "731 640 506"
+            ]
+          }
         }
       ]
     },
@@ -136821,7 +136925,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 2
+                  "pocet": 4
                 }
               ]
             },
@@ -136831,7 +136935,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 7
+                  "pocet": 4
                 }
               ]
             }
@@ -193331,7 +193435,7 @@
           "kontakt": {
             "weby": [],
             "emaily": [
-              "reditel@dstrebon.cz"
+              "reditel@dstrebonsko.cz"
             ],
             "telefony": [
               "602 879 448"
@@ -193394,7 +193498,7 @@
           "kontakt": {
             "weby": [],
             "emaily": [
-              "reditel@dstrebon.cz"
+              "reditel@dstrebonsko.cz"
             ],
             "telefony": [
               "602 879 448"
@@ -193457,7 +193561,7 @@
           "kontakt": {
             "weby": [],
             "emaily": [
-              "reditel@dstrebon.cz"
+              "reditel@dstrebonsko.cz"
             ],
             "telefony": [
               "602 879 448"

@@ -52651,7 +52651,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 96
+                  "pocet": 111
                 }
               ]
             }
@@ -52716,7 +52716,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 96
+                  "pocet": 111
                 }
               ]
             }
@@ -70730,7 +70730,7 @@
             }
           ],
           "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2026-12-31",
           "kontakt": {
             "weby": [
               "http://www.uo.charita.cz"
@@ -97673,29 +97673,29 @@
       ]
     },
     {
-      "id": "misto-8415994",
-      "kodAdresnihoMista": 8415994,
+      "id": "misto-8225729",
+      "kodAdresnihoMista": 8225729,
       "adresa": {
-        "ulice": "17. listopadu",
-        "cisloDomovni": 538,
-        "cisloOrientacni": "57",
-        "psc": "74301",
-        "obec": "Bílovec",
-        "kodObce": "599247",
-        "castObce": "Bílovec",
-        "okres": "Nový Jičín",
-        "kodOkresu": "CZ0804",
+        "ulice": "Jarmily Glazarové",
+        "cisloDomovni": 245,
+        "cisloOrientacni": null,
+        "psc": "74283",
+        "obec": "Klimkovice",
+        "kodObce": "599549",
+        "castObce": "Klimkovice",
+        "okres": "Ostrava-město",
+        "kodOkresu": "CZ0806",
         "kraj": "Moravskoslezský kraj",
         "kodKraje": "CZ080"
       },
       "souradnice": {
-        "lat": 49.7630075,
-        "lng": 18.0174773
+        "lat": 49.7848855,
+        "lng": 18.1358521
       },
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-1768",
@@ -97716,7 +97716,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 24
+                  "pocet": 21
                 }
               ]
             }
@@ -117724,7 +117724,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "http://www.ostrava.diakonie.cz"
+              "http://ostrava.diakonie.cz"
             ],
             "emaily": [
               "kastovska@diakonieostrava.cz"
@@ -117762,7 +117762,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "http://www.ostrava.diakonie.cz"
+              "http://ostrava.diakonie.cz"
             ],
             "emaily": [
               "ryznarova@diakonieostrava.cz"
@@ -117800,7 +117800,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "http://www.ostrava.diakonie.cz"
+              "http://ostrava.diakonie.cz"
             ],
             "emaily": [
               "ryznarova@diakonieostrava.cz"
@@ -117838,8 +117838,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "http://www.ostrava.diakonie.cz",
-              "http://www.diakonie.cz"
+              "http://ostrava.diakonie.cz"
             ],
             "emaily": [
               "ryznarova@diakonieostrava.cz"
@@ -117915,7 +117914,7 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "www.ostrava.diakonie.cz"
+              "ostrava.diakonie.cz"
             ],
             "emaily": [
               "bicanova@diakonieostrava.cz"
@@ -192294,10 +192293,10 @@
           "kontakt": {
             "weby": [],
             "emaily": [
-              "farkasova@domovpredhradi.cz"
+              "seemannova@domovpredhradi.cz"
             ],
             "telefony": [
-              "603 828 040"
+              "725 820 707"
             ]
           }
         }

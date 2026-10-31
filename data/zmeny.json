@@ -1,17 +1,25 @@
 {
   "verzeSchematu": "1.4.0",
   "pridano": [
-    "misto-8225729"
+    "misto-80152190",
+    "misto-80152196",
+    "misto-8487006"
   ],
   "zmeneno": [
-    "misto-1182391",
-    "misto-21156395",
-    "misto-21165530",
-    "misto-3328007",
-    "misto-5691206",
-    "misto-8483868"
+    "misto-11382937",
+    "misto-11427795",
+    "misto-11475927",
+    "misto-11589639",
+    "misto-14816288",
+    "misto-232165",
+    "misto-233579",
+    "misto-241644",
+    "misto-6237711",
+    "misto-74552236",
+    "misto-96016",
+    "misto-bezadresy-5048-8cb6db55"
   ],
   "odebrano": [
-    "misto-8415994"
+    "misto-17299608"
   ]
 }

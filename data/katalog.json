@@ -18101,72 +18101,6 @@
       ]
     },
     {
-      "id": "misto-17299608",
-      "kodAdresnihoMista": 17299608,
-      "adresa": {
-        "ulice": "Sadová",
-        "cisloDomovni": 618,
-        "cisloOrientacni": null,
-        "psc": "26272",
-        "obec": "Březnice",
-        "kodObce": "540013",
-        "castObce": "Březnice",
-        "okres": "Příbram",
-        "kodOkresu": "CZ020B",
-        "kraj": "Středočeský kraj",
-        "kodKraje": "CZ020"
-      },
-      "souradnice": {
-        "lat": 49.559675,
-        "lng": 13.9541316
-      },
-      "kategorie": [
-        "domovy"
-      ],
-      "poskytujeZdravotniPeci": true,
-      "sluzby": [
-        {
-          "id": "mpsv-259",
-          "zdroj": "MPSV",
-          "nazev": "Domov Březnice, poskytovatel sociálních služeb",
-          "poskytovatel": {
-            "nazev": "Domov Březnice, poskytovatel sociálních služeb",
-            "ico": "61903302"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/13",
-            "nazev": "domovy pro seniory"
-          },
-          "formy": [
-            {
-              "forma": "pob",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "luzka",
-                  "typNazev": "Počet lůžek",
-                  "pocet": 35
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": "2026-10-31",
-          "kontakt": {
-            "weby": [
-              "http://www.domovbreznice.cz"
-            ],
-            "emaily": [
-              "reditelka@domovbreznice.cz"
-            ],
-            "telefony": [
-              "318682614",
-              "318682633"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "misto-19168497",
       "kodAdresnihoMista": 19168497,
       "adresa": {
@@ -49541,7 +49475,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 2
+                  "pocet": 1
                 }
               ]
             }
@@ -66389,7 +66323,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 15
                 }
               ]
             }
@@ -66465,7 +66399,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 15
                 }
               ]
             }
@@ -66541,7 +66475,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 14
+                  "pocet": 15
                 }
               ]
             }
@@ -99149,7 +99083,7 @@
         {
           "id": "mpsv-1792",
           "zdroj": "MPSV",
-          "nazev": "Domov pro seniory a pečovatelská služba Česká Kamenice, příspěvková organizace",
+          "nazev": "Domov pod Jehlou",
           "poskytovatel": {
             "nazev": "Domov pro seniory a pečovatelská služba Česká Kamenice, příspěvková organizace",
             "ico": "47274565"
@@ -99165,7 +99099,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 68
+                  "pocet": 84
                 }
               ]
             }
@@ -99187,7 +99121,7 @@
         {
           "id": "mpsv-3638",
           "zdroj": "MPSV",
-          "nazev": "Domov pro seniory a pečovatelská služba Česká Kamenice, příspěvková organizace",
+          "nazev": "Domov pod Jehlou",
           "poskytovatel": {
             "nazev": "Domov pro seniory a pečovatelská služba Česká Kamenice, příspěvková organizace",
             "ico": "47274565"
@@ -99209,6 +99143,136 @@
             }
           ],
           "datumPoskytovaniOd": "2009-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://ddceskakamenice.cz"
+            ],
+            "emaily": [
+              "reditelka@ddceskakamenice.cz"
+            ],
+            "telefony": [
+              "412582878"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-80152196",
+      "kodAdresnihoMista": 80152196,
+      "adresa": {
+        "ulice": "U Benaru",
+        "cisloDomovni": 243,
+        "cisloOrientacni": null,
+        "psc": "40721",
+        "obec": "Česká Kamenice",
+        "kodObce": "562394",
+        "castObce": "Dolní Kamenice",
+        "okres": "Děčín",
+        "kodOkresu": "CZ0421",
+        "kraj": "Ústecký kraj",
+        "kodKraje": "CZ042"
+      },
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-1792",
+          "zdroj": "MPSV",
+          "nazev": "Domov Benar 1",
+          "poskytovatel": {
+            "nazev": "Domov pro seniory a pečovatelská služba Česká Kamenice, příspěvková organizace",
+            "ico": "47274565"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 84
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "http://ddceskakamenice.cz"
+            ],
+            "emaily": [
+              "reditelka@ddceskakamenice.cz"
+            ],
+            "telefony": [
+              "412582878"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-80152190",
+      "kodAdresnihoMista": 80152190,
+      "adresa": {
+        "ulice": "U Benaru",
+        "cisloDomovni": 242,
+        "cisloOrientacni": null,
+        "psc": "40721",
+        "obec": "Česká Kamenice",
+        "kodObce": "562394",
+        "castObce": "Dolní Kamenice",
+        "okres": "Děčín",
+        "kodOkresu": "CZ0421",
+        "kraj": "Ústecký kraj",
+        "kodKraje": "CZ042"
+      },
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-1792",
+          "zdroj": "MPSV",
+          "nazev": "Domov Benar 2",
+          "poskytovatel": {
+            "nazev": "Domov pro seniory a pečovatelská služba Česká Kamenice, příspěvková organizace",
+            "ico": "47274565"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 84
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-01",
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
@@ -162050,7 +162114,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162088,7 +162152,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162136,7 +162200,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162203,7 +162267,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162299,7 +162363,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162337,7 +162401,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162385,7 +162449,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162478,7 +162542,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162516,7 +162580,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162564,7 +162628,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162631,7 +162695,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162669,7 +162733,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -162717,7 +162781,7 @@
             }
           ],
           "datumPoskytovaniOd": "2011-11-01",
-          "datumPoskytovaniDo": "2027-01-01",
+          "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
               "www.lccdp.cz"
@@ -174726,7 +174790,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 37
+                  "pocet": 49
                 }
               ]
             }
@@ -175136,13 +175200,11 @@
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
-              "www.moje-sestra.cz"
+              "www.dp-dacice.cz"
             ],
-            "emaily": [
-              "marta@dp-dacice.cz"
-            ],
+            "emaily": [],
             "telefony": [
-              "775224862"
+              "771 231 146"
             ]
           }
         },
@@ -197774,6 +197836,71 @@
             ],
             "telefony": [
               "608 081 551"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-8487006",
+      "kodAdresnihoMista": 8487006,
+      "adresa": {
+        "ulice": "Masarykova",
+        "cisloDomovni": 586,
+        "cisloOrientacni": null,
+        "psc": "74258",
+        "obec": "Příbor",
+        "kodObce": "599808",
+        "castObce": "Příbor",
+        "okres": "Nový Jičín",
+        "kodOkresu": "CZ0804",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": 49.6447416,
+        "lng": 18.139644
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7691",
+          "zdroj": "MPSV",
+          "nazev": "Clementas Příbor, z.ú.",
+          "poskytovatel": {
+            "nazev": "Clementas Příbor, z.ú.",
+            "ico": "24592820"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/14",
+            "nazev": "domovy se zvláštním režimem"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 96
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-10-19",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.clementas.cz"
+            ],
+            "emaily": [
+              "pribor@clementas.cz"
+            ],
+            "telefony": [
+              "591 155 650"
             ]
           }
         }

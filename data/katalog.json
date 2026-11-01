@@ -10672,7 +10672,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-122",
@@ -10794,7 +10794,8 @@
           "oborPece": "Ergoterapeut",
           "oboryPece": [
             "Ergoterapeut",
-            "Fyzioterapeut"
+            "Fyzioterapeut",
+            "Všeobecná sestra"
           ],
           "kontakt": {
             "weby": [
@@ -15306,7 +15307,7 @@
         "pecovatelske",
         "poradenstvi"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-203",
@@ -15410,7 +15411,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-204",
@@ -15475,7 +15476,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-205",
@@ -24178,7 +24179,7 @@
         {
           "id": "mpsv-7436",
           "zdroj": "MPSV",
-          "nazev": "Denní stacionář p. Marie ustavičné pomoci",
+          "nazev": "Denní stacionář P. Marie ustavičné pomoci",
           "poskytovatel": {
             "nazev": "Charita Kralupy nad Vltavou",
             "ico": "26520800"
@@ -24206,10 +24207,10 @@
               "www.charita.kralupy.cz"
             ],
             "emaily": [
-              "kovarova@nasefarnost.cz"
+              "stacionar@nasefarnost.cz"
             ],
             "telefony": [
-              "724 170 796"
+              "734 284 060"
             ]
           }
         }
@@ -25274,7 +25275,7 @@
               "veselinadmoravou@sestricka.cz"
             ],
             "telefony": [
-              "+420530514391"
+              "+420725982207"
             ]
           }
         }
@@ -28350,9 +28351,9 @@
         {
           "id": "uzis-31095",
           "zdroj": "UZIS",
-          "nazev": "Farní charita Dolní Újezd",
+          "nazev": "Charita Dolní Újezd",
           "poskytovatel": {
-            "nazev": "Farní charita Dolní Újezd",
+            "nazev": "Charita Dolní Újezd",
             "ico": "49324357"
           },
           "druhSluzby": {
@@ -34621,7 +34622,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": true,
+      "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
           "id": "mpsv-543",
@@ -36437,7 +36438,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-584",
@@ -49816,9 +49817,9 @@
         {
           "id": "uzis-160767",
           "zdroj": "UZIS",
-          "nazev": "Oblastní charita Polička",
+          "nazev": "Charita Polička",
           "poskytovatel": {
-            "nazev": "Oblastní charita Polička",
+            "nazev": "Charita Polička",
             "ico": "49325515"
           },
           "druhSluzby": {
@@ -50838,9 +50839,9 @@
         {
           "id": "uzis-31111",
           "zdroj": "UZIS",
-          "nazev": "Oblastní charita Polička",
+          "nazev": "Charita Polička",
           "poskytovatel": {
-            "nazev": "Oblastní charita Polička",
+            "nazev": "Charita Polička",
             "ico": "49325515"
           },
           "druhSluzby": {
@@ -54071,11 +54072,9 @@
         "lng": 13.8059282
       },
       "kategorie": [
-        "domovy",
-        "terenni",
-        "zdravi"
+        "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-1041",
@@ -54115,32 +54114,6 @@
               "605 354 151",
               "731 402 994",
               "733 220 649"
-            ]
-          }
-        },
-        {
-          "id": "uzis-9877",
-          "zdroj": "UZIS",
-          "nazev": "Charita Prachatice-Vimperk",
-          "poskytovatel": {
-            "nazev": "Charita Prachatice-Vimperk",
-            "ico": "41881133"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": null,
-          "oboryPece": [],
-          "kontakt": {
-            "weby": [
-              "http://vimperk.charita.cz/"
-            ],
-            "emaily": [
-              "info@fch-vimperk.cz"
-            ],
-            "telefony": [
-              "+420388412738"
             ]
           }
         }
@@ -69001,7 +68974,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-1103",
@@ -86582,7 +86555,7 @@
         "pecovatelske",
         "terenni"
       ],
-      "poskytujeZdravotniPeci": true,
+      "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
           "id": "mpsv-1566",
@@ -111384,11 +111357,9 @@
             "weby": [
               "http://www.pecevcelka.cz"
             ],
-            "emaily": [
-              "veronika.tousova@tthomecare.cz"
-            ],
+            "emaily": [],
             "telefony": [
-              "+420602881946"
+              "+420601152011"
             ]
           }
         }
@@ -112455,8 +112426,8 @@
         "kodKraje": "CZ052"
       },
       "souradnice": {
-        "lat": 50.4291532,
-        "lng": 15.815168
+        "lat": 50.4290856,
+        "lng": 15.8150404
       },
       "kategorie": [
         "terenni"
@@ -116162,7 +116133,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": true,
+      "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
           "id": "mpsv-2906",
@@ -119108,6 +119079,74 @@
       "souradnice": {
         "lat": 48.8553972,
         "lng": 16.0534917
+      },
+      "kategorie": [
+        "pecovatelske",
+        "poradenstvi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-2254",
+          "zdroj": "MPSV",
+          "nazev": "Centrum odborného sociálního poradenství",
+          "poskytovatel": {
+            "nazev": "Centrum sociálních služeb Znojmo, příspěvková organizace",
+            "ico": "45671770"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2007-01-08",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.cssznojmo.cz"
+            ],
+            "emaily": [
+              "poradna@cssznojmo.cz"
+            ],
+            "telefony": [
+              "604 372 557",
+              "703886783",
+              "737701460"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-30193508",
+      "kodAdresnihoMista": 30193508,
+      "adresa": {
+        "ulice": "Vančurova",
+        "cisloDomovni": 3612,
+        "cisloOrientacni": "17b",
+        "psc": "66902",
+        "obec": "Znojmo",
+        "kodObce": "593711",
+        "castObce": "Znojmo",
+        "okres": "Znojmo",
+        "kodOkresu": "CZ0647",
+        "kraj": "Jihomoravský kraj",
+        "kodKraje": "CZ064"
+      },
+      "souradnice": {
+        "lat": 48.866328,
+        "lng": 16.0448009
       },
       "kategorie": [
         "pecovatelske",
@@ -124112,7 +124151,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-2382",
@@ -124178,7 +124217,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-2382",
@@ -129191,7 +129230,8 @@
       "kategorie": [
         "pecovatelske",
         "poradenstvi",
-        "terenni"
+        "terenni",
+        "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -129368,6 +129408,32 @@
             ],
             "telefony": [
               "728663237"
+            ]
+          }
+        },
+        {
+          "id": "uzis-139841",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Sokolov s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Sokolov s.r.o.",
+            "ico": "09438041"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
             ]
           }
         }
@@ -135818,7 +135884,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": true,
+      "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
           "id": "mpsv-2715",
@@ -153645,7 +153711,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": true,
+      "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
           "id": "mpsv-3921",
@@ -153710,7 +153776,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": true,
+      "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
           "id": "mpsv-4563",
@@ -174912,6 +174978,71 @@
       ]
     },
     {
+      "id": "misto-80154846",
+      "kodAdresnihoMista": 80154846,
+      "adresa": {
+        "ulice": "Rudoltická",
+        "cisloDomovni": 1339,
+        "cisloOrientacni": "10",
+        "psc": "15500",
+        "obec": "Praha",
+        "kodObce": "554782",
+        "castObce": "Řeporyje",
+        "okres": null,
+        "kodOkresu": null,
+        "kraj": "Hlavní město Praha",
+        "kodKraje": "CZ010"
+      },
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-5494",
+          "zdroj": "MPSV",
+          "nazev": "Dům u Agáty 2 - Domov pro seniory",
+          "poskytovatel": {
+            "nazev": "Dům u Agáty s.r.o.",
+            "ico": "24219690"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/13",
+            "nazev": "domovy pro seniory"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 49
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2016-05-09",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.dumuagaty.cz"
+            ],
+            "emaily": [
+              "info@uagaty.cz"
+            ],
+            "telefony": [
+              "602 286 995"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-13986031",
       "kodAdresnihoMista": 13986031,
       "adresa": {
@@ -184210,7 +184341,8 @@
       },
       "kategorie": [
         "pecovatelske",
-        "terenni"
+        "terenni",
+        "zdravi"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -184363,6 +184495,32 @@
             ],
             "telefony": [
               "778 480 225"
+            ]
+          }
+        },
+        {
+          "id": "uzis-139603",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
             ]
           }
         }
@@ -186260,7 +186418,7 @@
       "kategorie": [
         "domovy"
       ],
-      "poskytujeZdravotniPeci": false,
+      "poskytujeZdravotniPeci": true,
       "sluzby": [
         {
           "id": "mpsv-6593",
@@ -189333,7 +189491,7 @@
             ],
             "emaily": [],
             "telefony": [
-              "+420800030303"
+              "+420601152011"
             ]
           }
         }
@@ -197907,6 +198065,253 @@
       ]
     },
     {
+      "id": "misto-23293241",
+      "kodAdresnihoMista": 23293241,
+      "adresa": {
+        "ulice": "Táboritů",
+        "cisloDomovni": null,
+        "cisloOrientacni": "237/1",
+        "psc": "77900",
+        "obec": "Olomouc",
+        "kodObce": "500496",
+        "castObce": null,
+        "okres": "Olomouc",
+        "kodOkresu": "CZ0712",
+        "kraj": "Olomoucký kraj",
+        "kodKraje": "CZ071"
+      },
+      "souradnice": {
+        "lat": 49.5990732,
+        "lng": 17.2786263
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-183732",
+          "zdroj": "UZIS",
+          "nazev": "ProCare Medical s.r.o.",
+          "poskytovatel": {
+            "nazev": "ProCare Medical s.r.o.",
+            "ico": "27571271"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.procare.cz"
+            ],
+            "emaily": [
+              "procare@procare.cz"
+            ],
+            "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-26844907",
+      "kodAdresnihoMista": 26844907,
+      "adresa": {
+        "ulice": "Bezručova",
+        "cisloDomovni": null,
+        "cisloOrientacni": "1190/19",
+        "psc": "36001",
+        "obec": "Karlovy Vary",
+        "kodObce": "554961",
+        "castObce": null,
+        "okres": "Karlovy Vary",
+        "kodOkresu": "CZ0412",
+        "kraj": "Karlovarský kraj",
+        "kodKraje": "CZ041"
+      },
+      "souradnice": {
+        "lat": 50.232175,
+        "lng": 12.8752179
+      },
+      "kategorie": [
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-183650",
+          "zdroj": "UZIS",
+          "nazev": "Zařízení následné rehabilitační a hospicové péče, příspěvková organizace",
+          "poskytovatel": {
+            "nazev": "Zařízení následné rehabilitační a hospicové péče, příspěvková organizace",
+            "ico": "69979821"
+          },
+          "druhSluzby": {
+            "kod": "110",
+            "nazev": "Léčebna pro dlouhodobě nemocné (LDN)"
+          },
+          "oborPece": "paliativní medicína",
+          "oboryPece": [
+            "paliativní medicína"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.rehos-nejdek.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420353176721"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-9223479",
+      "kodAdresnihoMista": 9223479,
+      "adresa": {
+        "ulice": "Na Valích",
+        "cisloDomovni": null,
+        "cisloOrientacni": "510",
+        "psc": "44001",
+        "obec": "Louny",
+        "kodObce": "565971",
+        "castObce": null,
+        "okres": "Louny",
+        "kodOkresu": "CZ0424",
+        "kraj": "Ústecký kraj",
+        "kodKraje": "CZ042"
+      },
+      "souradnice": {
+        "lat": 50.3556813,
+        "lng": 13.8000655
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-183613",
+          "zdroj": "UZIS",
+          "nazev": "AHC Nemocnice Duchcov - ambulance s.r.o.",
+          "poskytovatel": {
+            "nazev": "AHC Nemocnice Duchcov - ambulance s.r.o.",
+            "ico": "28391250"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.nedu.cz"
+            ],
+            "emaily": [
+              "info@nedu.cz"
+            ],
+            "telefony": [
+              "+420417514711"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-20801866",
+      "kodAdresnihoMista": 20801866,
+      "adresa": {
+        "ulice": "Boženy Němcové",
+        "cisloDomovni": null,
+        "cisloOrientacni": "2042",
+        "psc": "35601",
+        "obec": "Sokolov",
+        "kodObce": "560286",
+        "castObce": null,
+        "okres": "Sokolov",
+        "kodOkresu": "CZ0413",
+        "kraj": "Karlovarský kraj",
+        "kodKraje": "CZ041"
+      },
+      "souradnice": {
+        "lat": 50.1762953,
+        "lng": 12.6482004
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-174890",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Marie Jarošová, s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Marie Jarošová, s.r.o.",
+            "ico": "09933611"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "www.domacipece-jarosova.cz"
+            ],
+            "emaily": [
+              "info@domacipece-jarosova.cz"
+            ],
+            "telefony": [
+              "+420251563473"
+            ]
+          }
+        },
+        {
+          "id": "uzis-183429",
+          "zdroj": "UZIS",
+          "nazev": "S námi doma s.r.o.",
+          "poskytovatel": {
+            "nazev": "S námi doma s.r.o.",
+            "ico": "26375231"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "https://s-nami-doma.webnode.cz/"
+            ],
+            "emaily": [
+              "kdp@seznam.cz"
+            ],
+            "telefony": [
+              "+420776612500"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-7715277",
       "kodAdresnihoMista": 7715277,
       "adresa": {
@@ -198064,7 +198469,7 @@
               "veselinadmoravou@sestricka.cz"
             ],
             "telefony": [
-              "+420530514391"
+              "+420725982207"
             ]
           }
         }
@@ -199247,7 +199652,7 @@
             ],
             "emaily": [],
             "telefony": [
-              "+420800030303"
+              "+420601152011"
             ]
           }
         }
@@ -199578,6 +199983,114 @@
               "smeralova@seznam.cz"
             ],
             "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-4305639",
+      "kodAdresnihoMista": 4305639,
+      "adresa": {
+        "ulice": "Hlučínská",
+        "cisloDomovni": null,
+        "cisloOrientacni": "41",
+        "psc": "74722",
+        "obec": "Dolní Benešov",
+        "kodObce": "506702",
+        "castObce": null,
+        "okres": "Opava",
+        "kodOkresu": "CZ0805",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": 49.918901,
+        "lng": 18.1191791
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-182209",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-8686033",
+      "kodAdresnihoMista": 8686033,
+      "adresa": {
+        "ulice": "Tovární",
+        "cisloDomovni": null,
+        "cisloOrientacni": "66",
+        "psc": "38101",
+        "obec": "Český Krumlov",
+        "kodObce": "545392",
+        "castObce": null,
+        "okres": "Český Krumlov",
+        "kodOkresu": "CZ0312",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 48.8266248,
+        "lng": 14.3347079
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-182202",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+            "ico": "08700656"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
           }
         }
       ]
@@ -200839,7 +201352,7 @@
             ],
             "emaily": [],
             "telefony": [
-              "+420800030303"
+              "+420601152011"
             ]
           }
         }
@@ -200929,62 +201442,6 @@
       "sluzby": [
         {
           "id": "uzis-181889",
-          "zdroj": "UZIS",
-          "nazev": "Advantis Medical s.r.o.",
-          "poskytovatel": {
-            "nazev": "Advantis Medical s.r.o.",
-            "ico": "24774880"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [
-              "http://www.advantismedical.cz"
-            ],
-            "emaily": [
-              "ivana.mareckova@euc.cz"
-            ],
-            "telefony": [
-              "+420773380738"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-25951190",
-      "kodAdresnihoMista": 25951190,
-      "adresa": {
-        "ulice": "U Bažantnice",
-        "cisloDomovni": null,
-        "cisloOrientacni": "849",
-        "psc": "56151",
-        "obec": "Letohrad",
-        "kodObce": "580538",
-        "castObce": null,
-        "okres": "Ústí nad Orlicí",
-        "kodOkresu": "CZ0534",
-        "kraj": "Pardubický kraj",
-        "kodKraje": "CZ053"
-      },
-      "souradnice": {
-        "lat": 50.0418136,
-        "lng": 16.5077658
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "uzis-181887",
           "zdroj": "UZIS",
           "nazev": "Advantis Medical s.r.o.",
           "poskytovatel": {
@@ -201509,7 +201966,7 @@
             ],
             "emaily": [],
             "telefony": [
-              "+420800030303"
+              "+420601152011"
             ]
           }
         }
@@ -202258,9 +202715,9 @@
         {
           "id": "uzis-181621",
           "zdroj": "UZIS",
-          "nazev": "Oblastní charita Polička",
+          "nazev": "Charita Polička",
           "poskytovatel": {
-            "nazev": "Oblastní charita Polička",
+            "nazev": "Charita Polička",
             "ico": "49325515"
           },
           "druhSluzby": {
@@ -203608,7 +204065,7 @@
         {
           "id": "uzis-180225",
           "zdroj": "UZIS",
-          "nazev": "Domov třetího věku s.r.o.",
+          "nazev": "Domov třetího věku s.r.o., Vila Milena",
           "poskytovatel": {
             "nazev": "Domov třetího věku s.r.o.",
             "ico": "06934226"
@@ -203629,6 +204086,60 @@
               "info@dumzitykabatove.cz"
             ],
             "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-19801823",
+      "kodAdresnihoMista": 19801823,
+      "adresa": {
+        "ulice": "Budějovická",
+        "cisloDomovni": null,
+        "cisloOrientacni": "543/4",
+        "psc": "39002",
+        "obec": "Tábor",
+        "kodObce": "552046",
+        "castObce": null,
+        "okres": "Tábor",
+        "kodOkresu": "CZ0317",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 49.412374,
+        "lng": 14.6673999
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-180164",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+            "ico": "08700656"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
           }
         }
       ]
@@ -203848,15 +204359,15 @@
       ]
     },
     {
-      "id": "misto-uzis-bezadresy-259989",
-      "kodAdresnihoMista": null,
+      "id": "misto-24301957",
+      "kodAdresnihoMista": 24301957,
       "adresa": {
         "ulice": "Nemocniční",
         "cisloDomovni": null,
         "cisloOrientacni": "945",
         "psc": "75501",
         "obec": "Vsetín",
-        "kodObce": null,
+        "kodObce": "541630",
         "castObce": null,
         "okres": "Vsetín",
         "kodOkresu": "CZ0723",
@@ -203864,8 +204375,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": null,
-        "lng": null
+        "lat": 49.3340188,
+        "lng": 17.9986088
       },
       "kategorie": [
         "terenni",
@@ -204168,90 +204679,6 @@
             ],
             "telefony": [
               "+420776612500"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-25072048",
-      "kodAdresnihoMista": 25072048,
-      "adresa": {
-        "ulice": "Osvoboditelů",
-        "cisloDomovni": null,
-        "cisloOrientacni": "2649",
-        "psc": "44001",
-        "obec": "Louny",
-        "kodObce": "565971",
-        "castObce": null,
-        "okres": "Louny",
-        "kodOkresu": "CZ0424",
-        "kraj": "Ústecký kraj",
-        "kodKraje": "CZ042"
-      },
-      "souradnice": {
-        "lat": 50.3553163,
-        "lng": 13.8010316
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "uzis-179678",
-          "zdroj": "UZIS",
-          "nazev": "AHC Nemocnice Duchcov - ambulance s.r.o.",
-          "poskytovatel": {
-            "nazev": "AHC Nemocnice Duchcov - ambulance s.r.o.",
-            "ico": "28391250"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [
-              "http://www.nedu.cz"
-            ],
-            "emaily": [
-              "info@nedu.cz"
-            ],
-            "telefony": [
-              "+420417514711"
-            ]
-          }
-        },
-        {
-          "id": "uzis-174614",
-          "zdroj": "UZIS",
-          "nazev": "PROMEDICUS domácí péče s.r.o.",
-          "poskytovatel": {
-            "nazev": "PROMEDICUS domácí péče s.r.o.",
-            "ico": "01690124"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [
-              "http://www.promedicus24.cz"
-            ],
-            "emaily": [
-              "info@promedicus24.cz"
-            ],
-            "telefony": [
-              "+420800030303"
             ]
           }
         }
@@ -204753,60 +205180,6 @@
             "telefony": [
               "+420731517088"
             ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-25123947",
-      "kodAdresnihoMista": 25123947,
-      "adresa": {
-        "ulice": "Železniční",
-        "cisloDomovni": null,
-        "cisloOrientacni": "469/4",
-        "psc": "77900",
-        "obec": "Olomouc",
-        "kodObce": "500496",
-        "castObce": null,
-        "okres": "Olomouc",
-        "kodOkresu": "CZ0712",
-        "kraj": "Olomoucký kraj",
-        "kodKraje": "CZ071"
-      },
-      "souradnice": {
-        "lat": 49.6074353,
-        "lng": 17.2878244
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "uzis-179151",
-          "zdroj": "UZIS",
-          "nazev": "ProCare Medical s.r.o.",
-          "poskytovatel": {
-            "nazev": "ProCare Medical s.r.o.",
-            "ico": "27571271"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [
-              "http://www.procare.cz"
-            ],
-            "emaily": [
-              "procare@procare.cz"
-            ],
-            "telefony": []
           }
         }
       ]
@@ -206169,6 +206542,32 @@
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
+          "id": "uzis-162714",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+            "ico": "08700656"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        },
+        {
           "id": "uzis-177791",
           "zdroj": "UZIS",
           "nazev": "Soukromá Ošetřovatelská Služba-SOS s.r.o.",
@@ -206964,7 +207363,7 @@
               "veselinadmoravou@sestricka.cz"
             ],
             "telefony": [
-              "+420530514391"
+              "+420725982207"
             ]
           }
         }
@@ -207511,6 +207910,60 @@
       ]
     },
     {
+      "id": "misto-10349979",
+      "kodAdresnihoMista": 10349979,
+      "adresa": {
+        "ulice": "Kotojedská",
+        "cisloDomovni": null,
+        "cisloOrientacni": "459/11",
+        "psc": "76701",
+        "obec": "Kroměříž",
+        "kodObce": "588296",
+        "castObce": null,
+        "okres": "Kroměříž",
+        "kodOkresu": "CZ0721",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.2951331,
+        "lng": 17.3979358
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-176397",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-85932728",
       "kodAdresnihoMista": 85932728,
       "adresa": {
@@ -207996,6 +208449,114 @@
               "alena.davidkova@gmail.com"
             ],
             "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-18442692",
+      "kodAdresnihoMista": 18442692,
+      "adresa": {
+        "ulice": "Bezděkovská",
+        "cisloDomovni": null,
+        "cisloOrientacni": "162",
+        "psc": "38601",
+        "obec": "Strakonice",
+        "kodObce": "550787",
+        "castObce": null,
+        "okres": "Strakonice",
+        "kodOkresu": "CZ0316",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 49.2555659,
+        "lng": 13.9106614
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-175998",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+            "ico": "08700656"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-5567742",
+      "kodAdresnihoMista": 5567742,
+      "adresa": {
+        "ulice": "E. Destinové",
+        "cisloDomovni": null,
+        "cisloOrientacni": "745",
+        "psc": "39901",
+        "obec": "Milevsko",
+        "kodObce": "549576",
+        "castObce": null,
+        "okres": "Písek",
+        "kodOkresu": "CZ0314",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 49.4470579,
+        "lng": 14.3662495
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-175997",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+            "ico": "08700656"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
           }
         }
       ]
@@ -208730,62 +209291,6 @@
       ]
     },
     {
-      "id": "misto-20801866",
-      "kodAdresnihoMista": 20801866,
-      "adresa": {
-        "ulice": "Boženy Němcové",
-        "cisloDomovni": null,
-        "cisloOrientacni": "2042",
-        "psc": "35601",
-        "obec": "Sokolov",
-        "kodObce": "560286",
-        "castObce": null,
-        "okres": "Sokolov",
-        "kodOkresu": "CZ0413",
-        "kraj": "Karlovarský kraj",
-        "kodKraje": "CZ041"
-      },
-      "souradnice": {
-        "lat": 50.1762953,
-        "lng": 12.6482004
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "uzis-174890",
-          "zdroj": "UZIS",
-          "nazev": "Domácí péče Marie Jarošová, s.r.o.",
-          "poskytovatel": {
-            "nazev": "Domácí péče Marie Jarošová, s.r.o.",
-            "ico": "09933611"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [
-              "www.domacipece-jarosova.cz"
-            ],
-            "emaily": [
-              "info@domacipece-jarosova.cz"
-            ],
-            "telefony": [
-              "+420251563473"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "misto-26304406",
       "kodAdresnihoMista": 26304406,
       "adresa": {
@@ -208898,6 +209403,62 @@
       ]
     },
     {
+      "id": "misto-25072048",
+      "kodAdresnihoMista": 25072048,
+      "adresa": {
+        "ulice": "Osvoboditelů",
+        "cisloDomovni": null,
+        "cisloOrientacni": "2649",
+        "psc": "44001",
+        "obec": "Louny",
+        "kodObce": "565971",
+        "castObce": null,
+        "okres": "Louny",
+        "kodOkresu": "CZ0424",
+        "kraj": "Ústecký kraj",
+        "kodKraje": "CZ042"
+      },
+      "souradnice": {
+        "lat": 50.3553163,
+        "lng": 13.8010316
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-174614",
+          "zdroj": "UZIS",
+          "nazev": "PROMEDICUS domácí péče s.r.o.",
+          "poskytovatel": {
+            "nazev": "PROMEDICUS domácí péče s.r.o.",
+            "ico": "01690124"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.promedicus24.cz"
+            ],
+            "emaily": [
+              "info@promedicus24.cz"
+            ],
+            "telefony": [
+              "+420800030303"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-5376726",
       "kodAdresnihoMista": 5376726,
       "adresa": {
@@ -208945,7 +209506,7 @@
             ],
             "emaily": [],
             "telefony": [
-              "+420800030303"
+              "+420601152011"
             ]
           }
         }
@@ -209387,6 +209948,60 @@
       ]
     },
     {
+      "id": "misto-17149461",
+      "kodAdresnihoMista": 17149461,
+      "adresa": {
+        "ulice": null,
+        "cisloDomovni": null,
+        "cisloOrientacni": "300",
+        "psc": "75611",
+        "obec": "Valašská Polanka",
+        "kodObce": "544990",
+        "castObce": null,
+        "okres": "Vsetín",
+        "kodOkresu": "CZ0723",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.2624431,
+        "lng": 17.9959366
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-173940",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-26454360",
       "kodAdresnihoMista": 26454360,
       "adresa": {
@@ -209548,6 +210163,222 @@
             ],
             "telefony": [
               "+420321756111"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-25123866",
+      "kodAdresnihoMista": 25123866,
+      "adresa": {
+        "ulice": "Krapkova",
+        "cisloDomovni": null,
+        "cisloOrientacni": "1159/3",
+        "psc": "77900",
+        "obec": "Olomouc",
+        "kodObce": "500496",
+        "castObce": null,
+        "okres": "Olomouc",
+        "kodOkresu": "CZ0712",
+        "kraj": "Olomoucký kraj",
+        "kodKraje": "CZ071"
+      },
+      "souradnice": {
+        "lat": 49.5947763,
+        "lng": 17.2420238
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-173812",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-11223057",
+      "kodAdresnihoMista": 11223057,
+      "adresa": {
+        "ulice": "Husova",
+        "cisloDomovni": null,
+        "cisloOrientacni": "691/16",
+        "psc": "75002",
+        "obec": "Přerov",
+        "kodObce": "511382",
+        "castObce": null,
+        "okres": "Přerov",
+        "kodOkresu": "CZ0714",
+        "kraj": "Olomoucký kraj",
+        "kodKraje": "CZ071"
+      },
+      "souradnice": {
+        "lat": 49.448659,
+        "lng": 17.4446029
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-173711",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-24822001",
+      "kodAdresnihoMista": 24822001,
+      "adresa": {
+        "ulice": "Sádky",
+        "cisloDomovni": null,
+        "cisloOrientacni": "1615/4",
+        "psc": "79601",
+        "obec": "Prostějov",
+        "kodObce": "589250",
+        "castObce": null,
+        "okres": "Prostějov",
+        "kodOkresu": "CZ0713",
+        "kraj": "Olomoucký kraj",
+        "kodKraje": "CZ071"
+      },
+      "souradnice": {
+        "lat": 49.4705681,
+        "lng": 17.1153511
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-173710",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-14258374",
+      "kodAdresnihoMista": 14258374,
+      "adresa": {
+        "ulice": "Gen. Svobody",
+        "cisloDomovni": null,
+        "cisloOrientacni": "48/22",
+        "psc": "78701",
+        "obec": "Šumperk",
+        "kodObce": "523704",
+        "castObce": null,
+        "okres": "Šumperk",
+        "kodOkresu": "CZ0715",
+        "kraj": "Olomoucký kraj",
+        "kodKraje": "CZ071"
+      },
+      "souradnice": {
+        "lat": 49.9671673,
+        "lng": 16.9725163
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-173709",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
             ]
           }
         }
@@ -209719,6 +210550,142 @@
       ]
     },
     {
+      "id": "misto-17700973",
+      "kodAdresnihoMista": 17700973,
+      "adresa": {
+        "ulice": "Vodňanská",
+        "cisloDomovni": null,
+        "cisloOrientacni": "375",
+        "psc": "38301",
+        "obec": "Prachatice",
+        "kodObce": "550094",
+        "castObce": null,
+        "okres": "Prachatice",
+        "kodOkresu": "CZ0315",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 49.0152576,
+        "lng": 14.0015689
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-173374",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+            "ico": "08700656"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-23430508",
+      "kodAdresnihoMista": 23430508,
+      "adresa": {
+        "ulice": "Matice školské",
+        "cisloDomovni": null,
+        "cisloOrientacni": "1786/17",
+        "psc": "37001",
+        "obec": "České Budějovice",
+        "kodObce": "544256",
+        "castObce": null,
+        "okres": "České Budějovice",
+        "kodOkresu": "CZ0311",
+        "kraj": "Jihočeský kraj",
+        "kodKraje": "CZ031"
+      },
+      "souradnice": {
+        "lat": 48.9666031,
+        "lng": 14.4760919
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-150134",
+          "zdroj": "UZIS",
+          "nazev": "Advantis Medical s.r.o.",
+          "poskytovatel": {
+            "nazev": "Advantis Medical s.r.o.",
+            "ico": "24774880"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.advantismedical.cz"
+            ],
+            "emaily": [
+              "ivana.mareckova@euc.cz"
+            ],
+            "telefony": [
+              "+420773380738"
+            ]
+          }
+        },
+        {
+          "id": "uzis-173372",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+            "ico": "08700656"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-18184219",
       "kodAdresnihoMista": 18184219,
       "adresa": {
@@ -209872,13 +210839,11 @@
           ],
           "kontakt": {
             "weby": [
-              "plankova@pecevcelka.cz"
+              "http://www.pecevcelka.cz"
             ],
-            "emaily": [
-              "tomas.buchta@euc.cz"
-            ],
+            "emaily": [],
             "telefony": [
-              "+420724285758"
+              "+420601152011"
             ]
           }
         }
@@ -209928,13 +210893,11 @@
           ],
           "kontakt": {
             "weby": [
-              "plankova@pecevcelka.cz"
+              "http://www.pecevcelka.cz"
             ],
-            "emaily": [
-              "tomas.buchta@euc.cz"
-            ],
+            "emaily": [],
             "telefony": [
-              "+420724285758"
+              "+420601152011"
             ]
           }
         }
@@ -209984,13 +210947,11 @@
           ],
           "kontakt": {
             "weby": [
-              "plankova@pecevcelka.cz"
+              "http://www.pecevcelka.cz"
             ],
-            "emaily": [
-              "tomas.buchta@euc.cz"
-            ],
+            "emaily": [],
             "telefony": [
-              "+420724285758"
+              "+420601152011"
             ]
           }
         }
@@ -210761,13 +211722,11 @@
           ],
           "kontakt": {
             "weby": [
-              "plankova@pecevcelka.cz"
+              "http://www.pecevcelka.cz"
             ],
-            "emaily": [
-              "tomas.buchta@euc.cz"
-            ],
+            "emaily": [],
             "telefony": [
-              "+420724285758"
+              "+420601152011"
             ]
           }
         }
@@ -212545,62 +213504,6 @@
       ]
     },
     {
-      "id": "misto-23430508",
-      "kodAdresnihoMista": 23430508,
-      "adresa": {
-        "ulice": "Matice školské",
-        "cisloDomovni": null,
-        "cisloOrientacni": "1786/17",
-        "psc": "37001",
-        "obec": "České Budějovice",
-        "kodObce": "544256",
-        "castObce": null,
-        "okres": "České Budějovice",
-        "kodOkresu": "CZ0311",
-        "kraj": "Jihočeský kraj",
-        "kodKraje": "CZ031"
-      },
-      "souradnice": {
-        "lat": 48.9666031,
-        "lng": 14.4760919
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "uzis-150134",
-          "zdroj": "UZIS",
-          "nazev": "Advantis Medical s.r.o.",
-          "poskytovatel": {
-            "nazev": "Advantis Medical s.r.o.",
-            "ico": "24774880"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [
-              "http://www.advantismedical.cz"
-            ],
-            "emaily": [
-              "ivana.mareckova@euc.cz"
-            ],
-            "telefony": [
-              "+420773380738"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "misto-12178811",
       "kodAdresnihoMista": 12178811,
       "adresa": {
@@ -212812,7 +213715,7 @@
             ],
             "emaily": [],
             "telefony": [
-              "+420800030303"
+              "+420601152011"
             ]
           }
         }
@@ -213138,6 +214041,60 @@
               "ostrava@ma-domacipece.cz"
             ],
             "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-40873820",
+      "kodAdresnihoMista": 40873820,
+      "adresa": {
+        "ulice": "Malá",
+        "cisloDomovni": null,
+        "cisloOrientacni": "5654",
+        "psc": "76001",
+        "obec": "Zlín",
+        "kodObce": "585068",
+        "castObce": null,
+        "okres": "Zlín",
+        "kodOkresu": "CZ0724",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.2273604,
+        "lng": 17.6563854
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-139602",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
           }
         }
       ]
@@ -213956,6 +214913,60 @@
             ],
             "telefony": [
               "+420491601111"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-30925380",
+      "kodAdresnihoMista": 30925380,
+      "adresa": {
+        "ulice": "Plzeňská",
+        "cisloDomovni": null,
+        "cisloOrientacni": "1084",
+        "psc": "33011",
+        "obec": "Třemošná",
+        "kodObce": "559521",
+        "castObce": null,
+        "okres": "Plzeň-sever",
+        "kodOkresu": "CZ0325",
+        "kraj": "Plzeňský kraj",
+        "kodKraje": "CZ032"
+      },
+      "souradnice": {
+        "lat": 49.8157837,
+        "lng": 13.3953988
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-138289",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Plzeň-sever s.r.o.",
+            "ico": "08700656"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
             ]
           }
         }
@@ -215651,7 +216662,7 @@
             ],
             "emaily": [],
             "telefony": [
-              "+420800030303"
+              "+420601152011"
             ]
           }
         }
@@ -217360,8 +218371,10 @@
             "kod": "350",
             "nazev": "Domácí zdravotní péče"
           },
-          "oborPece": null,
-          "oboryPece": [],
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
           "kontakt": {
             "weby": [
               "www.sdruzeniveleta.cz"
@@ -217694,9 +218707,7 @@
             "weby": [
               "www.pecevcelka.cz"
             ],
-            "emaily": [
-              "plankova@pecevcelka.cz"
-            ],
+            "emaily": [],
             "telefony": [
               "+420601152011"
             ]
@@ -220620,58 +221631,6 @@
             "telefony": [
               "+420777948339"
             ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-10495495",
-      "kodAdresnihoMista": 10495495,
-      "adresa": {
-        "ulice": "Jakubské náměstí",
-        "cisloDomovni": null,
-        "cisloOrientacni": "18",
-        "psc": "79841",
-        "obec": "Kostelec na Hané",
-        "kodObce": "589632",
-        "castObce": null,
-        "okres": "Prostějov",
-        "kodOkresu": "CZ0713",
-        "kraj": "Olomoucký kraj",
-        "kodKraje": "CZ071"
-      },
-      "souradnice": {
-        "lat": 49.5157588,
-        "lng": 17.0574994
-      },
-      "kategorie": [
-        "terenni",
-        "zdravi"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "uzis-117286",
-          "zdroj": "UZIS",
-          "nazev": "Hedvika Navrátilová",
-          "poskytovatel": {
-            "nazev": "Hedvika Navrátilová",
-            "ico": "04851544"
-          },
-          "druhSluzby": {
-            "kod": "350",
-            "nazev": "Domácí zdravotní péče"
-          },
-          "oborPece": "Všeobecná sestra",
-          "oboryPece": [
-            "Všeobecná sestra"
-          ],
-          "kontakt": {
-            "weby": [],
-            "emaily": [
-              "vikulka2103@gmail.com"
-            ],
-            "telefony": []
           }
         }
       ]
@@ -224533,6 +225492,60 @@
       ]
     },
     {
+      "id": "misto-40741214",
+      "kodAdresnihoMista": 40741214,
+      "adresa": {
+        "ulice": "Grmelova",
+        "cisloDomovni": null,
+        "cisloOrientacni": "2106/13a",
+        "psc": "70900",
+        "obec": "Ostrava",
+        "kodObce": "554821",
+        "castObce": null,
+        "okres": "Ostrava-město",
+        "kodOkresu": "CZ0806",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": 49.8347273,
+        "lng": 18.2486327
+      },
+      "kategorie": [
+        "terenni",
+        "zdravi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "uzis-64336",
+          "zdroj": "UZIS",
+          "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+          "poskytovatel": {
+            "nazev": "Domácí péče Včelka Ostrava s.r.o.",
+            "ico": "29383978"
+          },
+          "druhSluzby": {
+            "kod": "350",
+            "nazev": "Domácí zdravotní péče"
+          },
+          "oborPece": "Všeobecná sestra",
+          "oboryPece": [
+            "Všeobecná sestra"
+          ],
+          "kontakt": {
+            "weby": [
+              "http://www.pecevcelka.cz"
+            ],
+            "emaily": [],
+            "telefony": [
+              "+420601152011"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-25692241",
       "kodAdresnihoMista": 25692241,
       "adresa": {
@@ -226830,7 +227843,7 @@
               "veselinadmoravou@sestricka.cz"
             ],
             "telefony": [
-              "+420530514391"
+              "+420725982207"
             ]
           }
         }
@@ -226886,7 +227899,7 @@
               "veselinadmoravou@sestricka.cz"
             ],
             "telefony": [
-              "+420530514391"
+              "+420725982207"
             ]
           }
         }
@@ -226938,11 +227951,9 @@
             "weby": [
               "http://www.pecevcelka.cz"
             ],
-            "emaily": [
-              "veronika.tousova@tthomecare.cz"
-            ],
+            "emaily": [],
             "telefony": [
-              "+420602881946"
+              "+420601152011"
             ]
           }
         }
@@ -226996,7 +228007,7 @@
             ],
             "emaily": [],
             "telefony": [
-              "+420800030303"
+              "+420601152011"
             ]
           }
         }

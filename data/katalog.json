@@ -156584,6 +156584,7 @@
         "lng": 14.9401358
       },
       "kategorie": [
+        "domovy",
         "pecovatelske"
       ],
       "poskytujeZdravotniPeci": false,
@@ -156613,6 +156614,44 @@
             }
           ],
           "datumPoskytovaniOd": "2009-10-13",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.dcjizera.cz"
+            ],
+            "emaily": [
+              "info@dcjizera.cz"
+            ],
+            "telefony": [
+              "725 787 577"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-7692",
+          "zdroj": "MPSV",
+          "nazev": "Denní centrum pro seniory JIZERA, z. ú.",
+          "poskytovatel": {
+            "nazev": "Denní centrum pro seniory JIZERA, z. ú.",
+            "ico": "22838457"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-11-02",
           "datumPoskytovaniDo": null,
           "kontakt": {
             "weby": [
@@ -197942,6 +197981,71 @@
               "slepickova@24domacipece.cz"
             ],
             "telefony": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-22624031",
+      "kodAdresnihoMista": 22624031,
+      "adresa": {
+        "ulice": "V úžlabině",
+        "cisloDomovni": 2050,
+        "cisloOrientacni": "4",
+        "psc": "10000",
+        "obec": "Praha",
+        "kodObce": "554782",
+        "castObce": "Strašnice",
+        "okres": null,
+        "kodOkresu": null,
+        "kraj": "Hlavní město Praha",
+        "kodKraje": "CZ010"
+      },
+      "souradnice": {
+        "lat": 50.0785957,
+        "lng": 14.4959597
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7680",
+          "zdroj": "MPSV",
+          "nazev": "Teosa z.s.",
+          "poskytovatel": {
+            "nazev": "Teosa z.s.",
+            "ico": "29633397"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/3",
+            "nazev": "osobní asistence"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 2
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-11-02",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.teosa.cz"
+            ],
+            "emaily": [
+              "teosa@teosa.cz"
+            ],
+            "telefony": [
+              "739 090 980"
+            ]
           }
         }
       ]

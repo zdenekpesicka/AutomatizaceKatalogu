@@ -736,44 +736,6 @@
       "poskytujeZdravotniPeci": false,
       "sluzby": [
         {
-          "id": "mpsv-4674",
-          "zdroj": "MPSV",
-          "nazev": "Domov Vlčí mák - Domov se zvláštním režimem",
-          "poskytovatel": {
-            "nazev": "Ústřední vojenská nemocnice - Vojenská fakultní nemocnice Praha",
-            "ico": "61383082"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/14",
-            "nazev": "domovy se zvláštním režimem"
-          },
-          "formy": [
-            {
-              "forma": "pob",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "luzka",
-                  "typNazev": "Počet lůžek",
-                  "pocet": 30
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2013-09-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.uvn.cz"
-            ],
-            "emaily": [
-              "jana.zoufala@uvn.cz"
-            ],
-            "telefony": [
-              "973 208 430"
-            ]
-          }
-        },
-        {
           "id": "mpsv-5473",
           "zdroj": "MPSV",
           "nazev": "Domov Vlčí mák - Domov pro seniory",
@@ -7859,11 +7821,11 @@
       ]
     },
     {
-      "id": "misto-74133217",
-      "kodAdresnihoMista": 74133217,
+      "id": "misto-2119153",
+      "kodAdresnihoMista": 2119153,
       "adresa": {
-        "ulice": "Husova",
-        "cisloDomovni": 536,
+        "ulice": "T. G. Masaryka",
+        "cisloDomovni": 29,
         "cisloOrientacni": null,
         "psc": "27716",
         "obec": "Všetaty",
@@ -7875,8 +7837,8 @@
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 50.2858112,
-        "lng": 14.5899131
+        "lat": 50.2830952,
+        "lng": 14.5903949
       },
       "kategorie": [
         "pecovatelske",
@@ -7958,113 +7920,6 @@
             ],
             "telefony": [
               "315685190"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "misto-28140478",
-      "kodAdresnihoMista": 28140478,
-      "adresa": {
-        "ulice": "Dolní Kasárna",
-        "cisloDomovni": 969,
-        "cisloOrientacni": null,
-        "psc": "25067",
-        "obec": "Klecany",
-        "kodObce": "538311",
-        "castObce": "Klecany",
-        "okres": "Praha-východ",
-        "kodOkresu": "CZ0209",
-        "kraj": "Středočeský kraj",
-        "kodKraje": "CZ020"
-      },
-      "souradnice": {
-        "lat": 50.1792276,
-        "lng": 14.412898
-      },
-      "kategorie": [
-        "pecovatelske",
-        "terenni"
-      ],
-      "poskytujeZdravotniPeci": false,
-      "sluzby": [
-        {
-          "id": "mpsv-4607",
-          "zdroj": "MPSV",
-          "nazev": "Charita Neratovice",
-          "poskytovatel": {
-            "nazev": "Charita Neratovice",
-            "ico": "47009730"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/29",
-            "nazev": "sociálně aktivizační služby pro seniory a osoby se zdravotním postižením"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 200
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2012-05-07",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "https://neratovice.charita.cz/"
-            ],
-            "emaily": [
-              "reditelka@charita-neratovice.cz"
-            ],
-            "telefony": [
-              "315685190"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-4392",
-          "zdroj": "MPSV",
-          "nazev": "ANTONIA senior services s.r.o.",
-          "poskytovatel": {
-            "nazev": "ANTONIA senior services s.r.o.",
-            "ico": "24153621"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 16
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2011-12-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.antonia.cz"
-            ],
-            "emaily": [
-              "m.novotna8@email.cz",
-              "vedouci.antonia@gmail.com",
-              "info@antonia.cz"
-            ],
-            "telefony": [
-              "702 006 596",
-              "608 505 045"
             ]
           }
         }
@@ -49154,11 +49009,11 @@
       ]
     },
     {
-      "id": "misto-24979902",
-      "kodAdresnihoMista": 24979902,
+      "id": "misto-4208102",
+      "kodAdresnihoMista": 4208102,
       "adresa": {
-        "ulice": "Vodní",
-        "cisloDomovni": 1972,
+        "ulice": "Padělky I",
+        "cisloDomovni": 49,
         "cisloOrientacni": null,
         "psc": "76001",
         "obec": "Zlín",
@@ -49170,8 +49025,8 @@
         "kodKraje": "CZ072"
       },
       "souradnice": {
-        "lat": 49.2291831,
-        "lng": 17.6681321
+        "lat": 49.2319035,
+        "lng": 17.6764065
       },
       "kategorie": [
         "terenni"
@@ -93132,7 +92987,7 @@
       "id": "misto-27075796",
       "kodAdresnihoMista": 27075796,
       "adresa": {
-        "ulice": null,
+        "ulice": "Pod Lesíkem",
         "cisloDomovni": 15,
         "cisloOrientacni": null,
         "psc": "58232",
@@ -97252,7 +97107,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 117
+                  "pocet": 126
                 }
               ]
             }
@@ -97291,7 +97146,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 22
+                  "pocet": 26
                 }
               ]
             }
@@ -97386,7 +97241,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 117
+                  "pocet": 126
                 }
               ]
             }
@@ -97425,7 +97280,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 22
+                  "pocet": 26
                 }
               ]
             }
@@ -97492,7 +97347,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 117
+                  "pocet": 126
                 }
               ]
             }
@@ -163125,6 +162980,75 @@
           "id": "mpsv-4392",
           "zdroj": "MPSV",
           "nazev": "Pečovatelská služba ANTONIA",
+          "poskytovatel": {
+            "nazev": "ANTONIA senior services s.r.o.",
+            "ico": "24153621"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/4",
+            "nazev": "pečovatelská služba"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 16
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2011-12-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.antonia.cz"
+            ],
+            "emaily": [
+              "m.novotna8@email.cz",
+              "vedouci.antonia@gmail.com",
+              "info@antonia.cz"
+            ],
+            "telefony": [
+              "702 006 596",
+              "608 505 045"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-28140478",
+      "kodAdresnihoMista": 28140478,
+      "adresa": {
+        "ulice": "Dolní Kasárna",
+        "cisloDomovni": 969,
+        "cisloOrientacni": null,
+        "psc": "25067",
+        "obec": "Klecany",
+        "kodObce": "538311",
+        "castObce": "Klecany",
+        "okres": "Praha-východ",
+        "kodOkresu": "CZ0209",
+        "kraj": "Středočeský kraj",
+        "kodKraje": "CZ020"
+      },
+      "souradnice": {
+        "lat": 50.1792276,
+        "lng": 14.412898
+      },
+      "kategorie": [
+        "pecovatelske",
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-4392",
+          "zdroj": "MPSV",
+          "nazev": "ANTONIA senior services s.r.o.",
           "poskytovatel": {
             "nazev": "ANTONIA senior services s.r.o.",
             "ico": "24153621"

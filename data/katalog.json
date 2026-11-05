@@ -70403,8 +70403,7 @@
       },
       "kategorie": [
         "pecovatelske",
-        "poradenstvi",
-        "terenni"
+        "poradenstvi"
       ],
       "poskytujeZdravotniPeci": false,
       "sluzby": [
@@ -70464,45 +70463,6 @@
               "734 281 415",
               "731 420 344",
               "731 402 331"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-1138",
-          "zdroj": "MPSV",
-          "nazev": "Charitní pečovatelská služba Letohrad",
-          "poskytovatel": {
-            "nazev": "Oblastní charita Ústí nad Orlicí",
-            "ico": "44468920"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/4",
-            "nazev": "pečovatelská služba"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 3
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2007-01-01",
-          "datumPoskytovaniDo": "2026-12-31",
-          "kontakt": {
-            "weby": [
-              "http://www.uo.charita.cz"
-            ],
-            "emaily": [
-              "chps.let@uo.hk.caritas.cz"
-            ],
-            "telefony": [
-              "465 621 281",
-              "734 769 712"
             ]
           }
         }
@@ -111718,15 +111678,14 @@
               "www.diakonie-stred.cz"
             ],
             "emaily": [
-              "kottinkova.marketa@diakonie-stred.cz",
               "podlipska.kamila@diakonie-stred.cz",
-              "zemanova.andrea@diakonie-stred.cz"
+              "hajkova.adela@diakonie-stred.cz"
             ],
             "telefony": [
               "734 516 733",
               "734 410 990",
               "734 410 990",
-              "739 385 545",
+              "734 516 733",
               "734 516 733"
             ]
           }
@@ -111790,15 +111749,14 @@
               "www.diakonie-stred.cz"
             ],
             "emaily": [
-              "kottinkova.marketa@diakonie-stred.cz",
               "podlipska.kamila@diakonie-stred.cz",
-              "zemanova.andrea@diakonie-stred.cz"
+              "hajkova.adela@diakonie-stred.cz"
             ],
             "telefony": [
               "734 516 733",
               "734 410 990",
               "734 410 990",
-              "739 385 545",
+              "734 516 733",
               "734 516 733"
             ]
           }
@@ -111862,15 +111820,14 @@
               "www.diakonie-stred.cz"
             ],
             "emaily": [
-              "kottinkova.marketa@diakonie-stred.cz",
               "podlipska.kamila@diakonie-stred.cz",
-              "zemanova.andrea@diakonie-stred.cz"
+              "hajkova.adela@diakonie-stred.cz"
             ],
             "telefony": [
               "734 516 733",
               "734 410 990",
               "734 410 990",
-              "739 385 545",
+              "734 516 733",
               "734 516 733"
             ]
           }
@@ -111988,15 +111945,14 @@
               "www.diakonie-stred.cz"
             ],
             "emaily": [
-              "kottinkova.marketa@diakonie-stred.cz",
               "podlipska.kamila@diakonie-stred.cz",
-              "zemanova.andrea@diakonie-stred.cz"
+              "hajkova.adela@diakonie-stred.cz"
             ],
             "telefony": [
               "734 516 733",
               "734 410 990",
               "734 410 990",
-              "739 385 545",
+              "734 516 733",
               "734 516 733"
             ]
           }

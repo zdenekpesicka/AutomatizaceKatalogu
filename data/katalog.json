@@ -47276,7 +47276,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 2
+                  "pocet": 3
                 }
               ]
             }
@@ -68994,7 +68994,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 127
+                  "pocet": 130
                 }
               ]
             }
@@ -69062,7 +69062,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 127
+                  "pocet": 130
                 }
               ]
             }
@@ -98909,7 +98909,7 @@
         {
           "id": "mpsv-3638",
           "zdroj": "MPSV",
-          "nazev": "Domov pod Jehlou",
+          "nazev": "Domov pro seniory a pečovatelská služba Česká Kamenice",
           "poskytovatel": {
             "nazev": "Domov pro seniory a pečovatelská služba Česká Kamenice, příspěvková organizace",
             "ico": "47274565"
@@ -167089,7 +167089,7 @@
             }
           ],
           "datumPoskytovaniOd": "2014-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-20",
           "kontakt": {
             "weby": [
               "www.css-hvozdy.cz"

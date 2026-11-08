@@ -114561,7 +114561,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 48
+                  "pocet": 68
                 }
               ]
             }
@@ -114626,7 +114626,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 48
+                  "pocet": 68
                 }
               ]
             }
@@ -114697,7 +114697,7 @@
             }
           ],
           "datumPoskytovaniOd": "2019-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-31",
           "kontakt": {
             "weby": [
               "www.diakoniecce-sobotin.cz"
@@ -114762,7 +114762,7 @@
             }
           ],
           "datumPoskytovaniOd": "2019-01-01",
-          "datumPoskytovaniDo": null,
+          "datumPoskytovaniDo": "2027-01-31",
           "kontakt": {
             "weby": [
               "www.diakoniecce-sobotin.cz"
@@ -145332,6 +145332,83 @@
       "souradnice": {
         "lat": 49.1407094,
         "lng": 18.0090291
+      },
+      "kategorie": [
+        "pecovatelske",
+        "poradenstvi"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-3257",
+          "zdroj": "MPSV",
+          "nazev": "Kontaktní pracoviště Občanské poradny Vsetín",
+          "poskytovatel": {
+            "nazev": "Vzdělávací a komunitní centrum Integra Vsetín o.p.s.",
+            "ico": "26842149"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/1",
+            "nazev": "odborné sociální poradenství"
+          },
+          "formy": [
+            {
+              "forma": "amb",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 3
+                }
+              ]
+            },
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 1
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2008-02-19",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.vkci.cz"
+            ],
+            "emaily": [
+              "sona.zelikova@vkci.cz",
+              "poradna@vkci.cz"
+            ],
+            "telefony": [
+              "774 262 243"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-24305898",
+      "kodAdresnihoMista": 24305898,
+      "adresa": {
+        "ulice": "Dolní náměstí",
+        "cisloDomovni": 1356,
+        "cisloOrientacni": null,
+        "psc": "75501",
+        "obec": "Vsetín",
+        "kodObce": "541630",
+        "castObce": "Vsetín",
+        "okres": "Vsetín",
+        "kodOkresu": "CZ0723",
+        "kraj": "Zlínský kraj",
+        "kodKraje": "CZ072"
+      },
+      "souradnice": {
+        "lat": 49.3395246,
+        "lng": 17.9940724
       },
       "kategorie": [
         "pecovatelske",

@@ -197710,24 +197710,24 @@
       ]
     },
     {
-      "id": "misto-5992974",
-      "kodAdresnihoMista": 5992974,
+      "id": "misto-25267302",
+      "kodAdresnihoMista": 25267302,
       "adresa": {
-        "ulice": "Za Kovárnou",
-        "cisloDomovni": 174,
+        "ulice": "Vodárenská",
+        "cisloDomovni": 732,
         "cisloOrientacni": null,
-        "psc": "27326",
-        "obec": "Olovnice",
-        "kodObce": "532673",
-        "castObce": "Olovnice",
+        "psc": "27801",
+        "obec": "Kralupy nad Vltavou",
+        "kodObce": "534951",
+        "castObce": "Lobeček",
         "okres": "Mělník",
         "kodOkresu": "CZ0206",
         "kraj": "Středočeský kraj",
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 50.2343934,
-        "lng": 14.2358155
+        "lat": 50.2457607,
+        "lng": 14.3237238
       },
       "kategorie": [
         "pecovatelske",

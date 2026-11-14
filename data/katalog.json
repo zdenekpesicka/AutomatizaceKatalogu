@@ -61096,8 +61096,7 @@
               "chops@mchp.charita.cz"
             ],
             "telefony": [
-              "377 462 139",
-              "377 320 245"
+              "377 462 139"
             ]
           }
         },
@@ -67634,7 +67633,7 @@
                 {
                   "typ": "luzka",
                   "typNazev": "Počet lůžek",
-                  "pocet": 20
+                  "pocet": 16
                 }
               ]
             }
@@ -187638,7 +187637,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 9
+                  "pocet": 7
                 }
               ]
             }
@@ -187715,7 +187714,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 9
+                  "pocet": 7
                 }
               ]
             }

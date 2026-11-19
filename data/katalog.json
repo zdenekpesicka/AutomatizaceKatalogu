@@ -20644,12 +20644,12 @@
       ]
     },
     {
-      "id": "misto-1221493",
-      "kodAdresnihoMista": 1221493,
+      "id": "misto-1213211",
+      "kodAdresnihoMista": 1213211,
       "adresa": {
-        "ulice": "Velké Valy",
-        "cisloDomovni": 995,
-        "cisloOrientacni": "6",
+        "ulice": "Náměstí Přemyslovců",
+        "cisloDomovni": 15,
+        "cisloOrientacni": "10",
         "psc": "28802",
         "obec": "Nymburk",
         "kodObce": "537004",
@@ -20660,8 +20660,8 @@
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 50.1887237,
-        "lng": 15.0430569
+        "lat": 50.1850691,
+        "lng": 15.0416971
       },
       "kategorie": [
         "pecovatelske",
@@ -20936,24 +20936,24 @@
       ]
     },
     {
-      "id": "misto-5923867",
-      "kodAdresnihoMista": 5923867,
+      "id": "misto-5927544",
+      "kodAdresnihoMista": 5927544,
       "adresa": {
-        "ulice": "Husovo nám.",
-        "cisloDomovni": 64,
-        "cisloOrientacni": "35",
+        "ulice": "Plzeňská",
+        "cisloDomovni": 27,
+        "cisloOrientacni": "8",
         "psc": "26601",
         "obec": "Beroun",
         "kodObce": "531057",
-        "castObce": "Beroun-Centrum",
+        "castObce": "Beroun-Město",
         "okres": "Beroun",
         "kodOkresu": "CZ0202",
         "kraj": "Středočeský kraj",
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 49.964584,
-        "lng": 14.0744517
+        "lat": 49.9628101,
+        "lng": 14.0695944
       },
       "kategorie": [
         "pecovatelske",
@@ -21009,12 +21009,12 @@
       ]
     },
     {
-      "id": "misto-11660040",
-      "kodAdresnihoMista": 11660040,
+      "id": "misto-11662085",
+      "kodAdresnihoMista": 11662085,
       "adresa": {
-        "ulice": "Bezručova",
-        "cisloDomovni": 109,
-        "cisloOrientacni": null,
+        "ulice": "Pražská",
+        "cisloDomovni": 343,
+        "cisloOrientacni": "36",
         "psc": "27601",
         "obec": "Mělník",
         "kodObce": "534676",
@@ -21025,8 +21025,8 @@
         "kodKraje": "CZ020"
       },
       "souradnice": {
-        "lat": 50.3523436,
-        "lng": 14.4851423
+        "lat": 50.3492051,
+        "lng": 14.480251
       },
       "kategorie": [
         "pecovatelske",
@@ -37326,13 +37326,15 @@
               "http://www.nmps.cz/dps.php"
             ],
             "emaily": [
-              "dps@nmps.cz"
+              "dps@nmps.cz",
+              "pauchova@nmps.cz"
             ],
             "telefony": [
               "728 206 033",
               "607 955 767",
               "482 360 350",
-              "482 325 141"
+              "482 325 141",
+              "721 681 991"
             ]
           }
         }
@@ -129202,7 +129204,7 @@
                 {
                   "typ": "klient",
                   "typNazev": "Počet klientů",
-                  "pocet": 6
+                  "pocet": 11
                 }
               ]
             }

@@ -129148,82 +129148,6 @@
           }
         },
         {
-          "id": "mpsv-6952",
-          "zdroj": "MPSV",
-          "nazev": "Osobní asistence Aladinka",
-          "poskytovatel": {
-            "nazev": "Centrum služeb Aladinka, z.ú.",
-            "ico": "19296835"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/3",
-            "nazev": "osobní asistence"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 8
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2024-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.aladinka.cz"
-            ],
-            "emaily": [
-              "odvarkova@aladinka.cz"
-            ],
-            "telefony": [
-              "728663237"
-            ]
-          }
-        },
-        {
-          "id": "mpsv-6953",
-          "zdroj": "MPSV",
-          "nazev": "Odlehčovací služba Aladinka",
-          "poskytovatel": {
-            "nazev": "Centrum služeb Aladinka, z.ú.",
-            "ico": "19296835"
-          },
-          "druhSluzby": {
-            "kod": "DruhSocialniSluzby/8",
-            "nazev": "odlehčovací služby"
-          },
-          "formy": [
-            {
-              "forma": "ter",
-              "kapacitaRegistrovana": [
-                {
-                  "typ": "klient",
-                  "typNazev": "Počet klientů",
-                  "pocet": 11
-                }
-              ]
-            }
-          ],
-          "datumPoskytovaniOd": "2024-01-01",
-          "datumPoskytovaniDo": null,
-          "kontakt": {
-            "weby": [
-              "www.aladinka.cz"
-            ],
-            "emaily": [
-              "odvarkova@aladinka.cz"
-            ],
-            "telefony": [
-              "728663237"
-            ]
-          }
-        },
-        {
           "id": "uzis-139841",
           "zdroj": "UZIS",
           "nazev": "Domácí péče Včelka Sokolov s.r.o.",
@@ -191811,6 +191735,109 @@
             "telefony": [
               "703 629 431",
               "732 860 725"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "misto-20795912",
+      "kodAdresnihoMista": 20795912,
+      "adresa": {
+        "ulice": "Karla Havlíčka Borovského",
+        "cisloDomovni": 1420,
+        "cisloOrientacni": null,
+        "psc": "35601",
+        "obec": "Sokolov",
+        "kodObce": "560286",
+        "castObce": "Sokolov",
+        "okres": "Sokolov",
+        "kodOkresu": "CZ0413",
+        "kraj": "Karlovarský kraj",
+        "kodKraje": "CZ041"
+      },
+      "souradnice": {
+        "lat": 50.1799042,
+        "lng": 12.6478712
+      },
+      "kategorie": [
+        "terenni"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-6952",
+          "zdroj": "MPSV",
+          "nazev": "Osobní asistence Aladinka",
+          "poskytovatel": {
+            "nazev": "Centrum služeb Aladinka, z.ú.",
+            "ico": "19296835"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/3",
+            "nazev": "osobní asistence"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 8
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2024-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.aladinka.cz"
+            ],
+            "emaily": [
+              "odvarkova@aladinka.cz"
+            ],
+            "telefony": [
+              "728663237"
+            ]
+          }
+        },
+        {
+          "id": "mpsv-6953",
+          "zdroj": "MPSV",
+          "nazev": "Odlehčovací služba Aladinka",
+          "poskytovatel": {
+            "nazev": "Centrum služeb Aladinka, z.ú.",
+            "ico": "19296835"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/8",
+            "nazev": "odlehčovací služby"
+          },
+          "formy": [
+            {
+              "forma": "ter",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "klient",
+                  "typNazev": "Počet klientů",
+                  "pocet": 11
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2024-01-01",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.aladinka.cz"
+            ],
+            "emaily": [
+              "odvarkova@aladinka.cz"
+            ],
+            "telefony": [
+              "728663237"
             ]
           }
         }

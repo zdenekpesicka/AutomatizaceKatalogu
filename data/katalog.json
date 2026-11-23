@@ -198154,6 +198154,71 @@
       ]
     },
     {
+      "id": "misto-80156242",
+      "kodAdresnihoMista": 80156242,
+      "adresa": {
+        "ulice": "Skalky",
+        "cisloDomovni": 2328,
+        "cisloOrientacni": "100",
+        "psc": "74101",
+        "obec": "Nový Jičín",
+        "kodObce": "599191",
+        "castObce": "Nový Jičín",
+        "okres": "Nový Jičín",
+        "kodOkresu": "CZ0804",
+        "kraj": "Moravskoslezský kraj",
+        "kodKraje": "CZ080"
+      },
+      "souradnice": {
+        "lat": null,
+        "lng": null
+      },
+      "kategorie": [
+        "domovy"
+      ],
+      "poskytujeZdravotniPeci": false,
+      "sluzby": [
+        {
+          "id": "mpsv-7710",
+          "zdroj": "MPSV",
+          "nazev": "Senior-komplex Nový Jičín s.r.o.",
+          "poskytovatel": {
+            "nazev": "Senior-komplex Nový Jičín s.r.o.",
+            "ico": "18039634"
+          },
+          "druhSluzby": {
+            "kod": "DruhSocialniSluzby/14",
+            "nazev": "domovy se zvláštním režimem"
+          },
+          "formy": [
+            {
+              "forma": "pob",
+              "kapacitaRegistrovana": [
+                {
+                  "typ": "luzka",
+                  "typNazev": "Počet lůžek",
+                  "pocet": 60
+                }
+              ]
+            }
+          ],
+          "datumPoskytovaniOd": "2026-11-23",
+          "datumPoskytovaniDo": null,
+          "kontakt": {
+            "weby": [
+              "www.senior-komplex.cz"
+            ],
+            "emaily": [
+              "tauchman@senior-komplex.cz"
+            ],
+            "telefony": [
+              "739 900 897"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "misto-23293241",
       "kodAdresnihoMista": 23293241,
       "adresa": {
